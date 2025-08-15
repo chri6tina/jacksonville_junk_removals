@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AlertTriangle, Truck, Shield, Clock, DollarSign, CheckCircle, Star, Phone, Flask, Battery, Paint, Leaf } from 'lucide-react'
+import { AlertTriangle, Truck, Shield, Clock, DollarSign, CheckCircle, Star, Phone, TestTube, Battery, Palette, Leaf } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Hazardous Waste Removal Jacksonville - Professional Hazardous Material Disposal',
@@ -13,7 +13,7 @@ const hazardousWasteServices = [
     name: 'Chemical Waste Removal',
     description: 'Safe disposal of chemical waste and hazardous liquids',
     startingPrice: 300,
-    icon: Flask,
+    icon: TestTube,
     features: ['Chemical Disposal', 'Safe Handling', 'Licensed Service', 'EPA Compliance']
   },
   {
@@ -27,7 +27,7 @@ const hazardousWasteServices = [
     name: 'Paint & Solvent Removal',
     description: 'Paint, solvents, and coating disposal services',
     startingPrice: 200,
-    icon: Paint,
+    icon: Palette,
     features: ['Paint Disposal', 'Solvent Removal', 'Safe Handling', 'Eco-Friendly']
   },
   {
@@ -48,7 +48,7 @@ const hazardousWasteServices = [
     name: 'Laboratory Cleanout',
     description: 'Laboratory and research facility cleanouts',
     startingPrice: 400,
-    icon: Flask,
+    icon: TestTube,
     features: ['Lab Cleanout', 'Research Facilities', 'Specialized Service', 'Safety First']
   }
 ]
@@ -367,7 +367,7 @@ export default function HazardousWasteRemovalPage() {
             <div className="space-y-6">
               <div className="flex items-start space-x-4">
                 <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
-                  <Flask className="w-5 h-5 text-blue-600" />
+                  <TestTube className="w-5 h-5 text-blue-600" />
                 </div>
                 <div>
                   <h3 className="font-semibold text-gray-900 mb-2">Chemical Waste</h3>
@@ -391,7 +391,7 @@ export default function HazardousWasteRemovalPage() {
               
               <div className="flex items-start space-x-4">
                 <div className="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0">
-                  <Paint className="w-5 h-5 text-purple-600" />
+                  <Palette className="w-5 h-5 text-purple-600" />
                 </div>
                 <div>
                   <h3 className="font-semibold text-gray-900 mb-2">Paint & Coatings</h3>

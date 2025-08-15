@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { Garage, Truck, Shield, Clock, DollarSign, CheckCircle, Star, Phone, Home, Building2, Leaf, Package } from 'lucide-react'
+import { Warehouse, Truck, Shield, Clock, DollarSign, CheckCircle, Star, Phone, Home, Building2, Leaf, Package } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Garage Cleanout Jacksonville - Professional Garage Organization Services',
@@ -13,14 +13,14 @@ const garageServices = [
     name: 'Full Garage Cleanout',
     description: 'Complete garage cleanup and organization',
     startingPrice: 200,
-    icon: Garage,
+    icon: Warehouse,
     features: ['Complete Cleanout', 'Organization', 'Storage Solutions', 'Professional Service']
   },
   {
     name: 'Partial Garage Cleanout',
     description: 'Targeted cleanup of specific areas',
     startingPrice: 150,
-    icon: Garage,
+    icon: Warehouse,
     features: ['Targeted Cleanup', 'Area Focus', 'Flexible Service', 'Cost Effective']
   },
   {
@@ -113,7 +113,7 @@ export default function GarageCleanoutPage() {
       <div className="bg-gray-900 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="inline-flex items-center space-x-2 bg-yellow-400 text-gray-900 px-4 py-2 rounded-md mb-6">
-            <Garage className="w-5 h-5" />
+            <Warehouse className="w-5 h-5" />
             <span className="text-sm font-bold">GARAGE SERVICES</span>
           </div>
           

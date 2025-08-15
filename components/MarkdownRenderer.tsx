@@ -19,11 +19,11 @@ export default function MarkdownRenderer({ content }: MarkdownRendererProps) {
 
     // Lists
     html = html.replace(/^- (.*$)/gim, '<li class="ml-6 mb-2">$1</li>')
-    html = html.replace(/(<li.*<\/li>)/s, '<ul class="list-disc text-gray-700 mb-4">$1</ul>')
+    html = html.replace(/(<li.*<\/li>)/g, '<ul class="list-disc text-gray-700 mb-4">$1</ul>')
 
     // Numbered lists
     html = html.replace(/^\d+\. (.*$)/gim, '<li class="ml-6 mb-2">$1</li>')
-    html = html.replace(/(<li.*<\/li>)/s, '<ol class="list-decimal text-gray-700 mb-4">$1</ol>')
+    html = html.replace(/(<li.*<\/li>)/g, '<ol class="list-decimal text-gray-700 mb-4">$1</ol>')
 
     // Paragraphs
     html = html.replace(/\n\n/g, '</p><p class="text-gray-700 mb-4 leading-relaxed">')

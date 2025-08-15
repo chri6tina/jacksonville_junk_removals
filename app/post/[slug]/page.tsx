@@ -5,17 +5,18 @@ import { contentfulClient } from '@/lib/contentful'
 import { notFound } from 'next/navigation'
 
 interface BlogPostPageProps {
-  params: {
+  params: Promise<{
     slug: string
-  }
+  }>
 }
 
 // Generate metadata for the page
 export async function generateMetadata({ params }: BlogPostPageProps): Promise<Metadata> {
   try {
+    const { slug } = await params
     const response = await contentfulClient.getEntries({
       content_type: 'jjrBlogPost',
-      'fields.slug': params.slug,
+      'fields.slug': slug,
       limit: 1,
     })
 
@@ -94,7 +95,8 @@ async function getBlogPost(slug: string) {
 }
 
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
-  const post = await getBlogPost(params.slug)
+  const { slug } = await params
+  const post = await getBlogPost(slug)
 
   if (!post) {
     notFound()
