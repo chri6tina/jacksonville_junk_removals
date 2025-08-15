@@ -83,8 +83,8 @@ export async function getBlogPosts(): Promise<BlogPost[]> {
     
     // Sort items to ensure newest first (fallback sorting)
     const sortedItems = response.items.sort((a, b) => {
-      const dateA = a.fields.dateAndTime || a.sys.createdAt
-      const dateB = b.fields.dateAndTime || b.sys.createdAt
+      const dateA = String(a.fields.dateAndTime || a.sys.createdAt)
+      const dateB = String(b.fields.dateAndTime || b.sys.createdAt)
       return new Date(dateB).getTime() - new Date(dateA).getTime()
     })
     
