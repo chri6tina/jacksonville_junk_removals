@@ -116,8 +116,9 @@ export default function PerformanceMonitor() {
     }
 
     // Resource timing
+    let resourceObserver: PerformanceObserver | undefined
     if ('performance' in window) {
-      const resourceObserver = new PerformanceObserver((list) => {
+      resourceObserver = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           const resourceEntry = entry as PerformanceResourceTiming
           if (resourceEntry.initiatorType === 'img' || resourceEntry.initiatorType === 'script') {
