@@ -44,6 +44,10 @@ export interface ContentfulResponse {
 // Helper function to get blog posts
 export async function getBlogPosts(): Promise<BlogPost[]> {
   try {
+    console.log('🔍 Starting Contentful API call...')
+    console.log('📡 Space ID:', 'xpopyri6s8gv')
+    console.log('🔑 Access Token:', 'fXf7iLPe24GN4mAnW3slX5-isvDyi33KzlY14CHeWYI'.substring(0, 10) + '...')
+    
     const response = await contentfulClient.getEntries({
       content_type: 'jjrBlogPost',
       order: ['-fields.dateAndTime'] as any, // Use the correct field name
@@ -51,12 +55,29 @@ export async function getBlogPosts(): Promise<BlogPost[]> {
       limit: 100,
     })
 
+    console.log('✅ Contentful response received:', {
+      total: response.total,
+      items: response.items?.length || 0,
+      hasItems: !!response.items,
+      firstItem: response.items?.[0] ? 'exists' : 'none'
+    })
+
     if (!response.items || response.items.length === 0) {
-      console.log('📝 No blog posts found in Contentful')
+      console.log('⚠️ No blog posts found. Response details:', {
+        total: response.total,
+        items: response.items,
+        sys: response.sys
+      })
       return []
     }
 
     console.log(`📝 Found ${response.items.length} blog posts in Contentful`)
+    
+    // Log the first item to see what fields are available
+    if (response.items.length > 0) {
+      console.log('🔍 First item fields:', Object.keys(response.items[0].fields))
+      console.log('🔍 First item content type:', response.items[0].sys.contentType?.sys?.id)
+    }
     
     return response.items.map(item => {
       console.log('📝 Processing post:', item.fields.title)
@@ -95,6 +116,15 @@ export async function getBlogPosts(): Promise<BlogPost[]> {
         name: error.name
       })
     }
+    
+    // Log additional error context
+    if (error && typeof error === 'object' && 'status' in error) {
+      console.error('🔍 HTTP Status:', (error as any).status)
+    }
+    if (error && typeof error === 'object' && 'statusText' in error) {
+      console.error('🔍 HTTP Status Text:', (error as any).statusText)
+    }
+    
     return []
   }
 }
