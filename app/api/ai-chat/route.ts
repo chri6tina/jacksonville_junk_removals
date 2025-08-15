@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import OpenAI from 'openai'
+import { getWebsiteContent, generateAISystemPrompt } from '@/lib/websiteContent'
 
 // Initialize OpenAI client with API key from environment variables
 const openai = new OpenAI({
@@ -19,35 +20,11 @@ export async function POST(request: NextRequest) {
 
     const { message, conversationHistory, userContext } = await request.json()
 
-    // Create system prompt for junk removal expertise
-    const systemPrompt = `You are an expert AI assistant for Jacksonville Junk Removals, a professional junk removal company serving Jacksonville, Florida and surrounding areas.
-
-Your expertise includes:
-- Junk removal services (mattress, furniture, appliance, construction debris, garage cleanout, etc.)
-- Pricing information and quotes
-- Scheduling and availability
-- Service areas (Jacksonville Beach, Riverside, Southside, Mandarin, Arlington, Orange Park, San Marco)
-- Eco-friendly disposal practices
-- Same-day and emergency services
-
-Key information:
-- Company: Jacksonville Junk Removals
-- Phone: (904) 456-3851
-- Service area: Jacksonville, FL and surrounding areas
-- Same-day service available
-- Weekend appointments available (premium pricing)
-- Free estimates and quotes
-
-Guidelines:
-- Be helpful, professional, and friendly
-- Provide accurate pricing when possible (starting prices)
-- Always offer to help with quotes or scheduling
-- Mention same-day service for urgent requests
-- Keep responses concise but informative
-- If you don't know specific details, suggest calling or using the online tools
-- Never make up pricing or availability you're unsure about
-
-Current conversation context: ${userContext || 'New conversation'}`
+    // Fetch real website content for AI to use
+    const websiteContent = await getWebsiteContent()
+    
+    // Generate dynamic system prompt from your actual website content
+    const systemPrompt = generateAISystemPrompt(websiteContent) + `\n\nCurrent conversation context: ${userContext || 'New conversation'}`
 
     // Prepare conversation messages
     const messages = [
@@ -78,6 +55,12 @@ Current conversation context: ${userContext || 'New conversation'}`
       aiResponseLength: aiResponse.length,
       tokensUsed: completion.usage?.total_tokens || 0,
       model: completion.model,
+      websiteContentUsed: {
+        servicesCount: websiteContent.services.length,
+        locationsCount: websiteContent.locations.length,
+        specialOffersCount: websiteContent.specialOffers.length,
+        blogPostsCount: websiteContent.blogPosts.length
+      }
     })
 
     return NextResponse.json({
