@@ -2,6 +2,14 @@
 
 import { useEffect } from 'react'
 
+// Google Analytics gtag type declaration
+declare global {
+  function gtag(...args: any[]): void
+  interface Window {
+    gtag: (...args: any[]) => void
+  }
+}
+
 export default function PerformanceMonitor() {
   useEffect(() => {
     // Only run in production
