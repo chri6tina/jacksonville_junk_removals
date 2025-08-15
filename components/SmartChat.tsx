@@ -1,15 +1,14 @@
 'use client'
 
 import { useState, useRef, useEffect } from 'react'
-import { MessageCircle, X, Send, Phone, Clock, User, Bot, Brain, Zap, TrendingUp, MapPin, Calendar, DollarSign, Truck, Shield, Star } from 'lucide-react'
+import { MessageCircle, X, Send, Phone, Clock, User, Truck, Shield, Star } from 'lucide-react'
 
 interface ChatMessage {
   id: string
   text: string
   sender: 'user' | 'agent'
   timestamp: Date
-  type: 'text' | 'quick-reply' | 'service-card' | 'pricing-info' | 'location-info'
-  metadata?: any
+  type: 'text'
 }
 
 interface UserIntent {
@@ -25,7 +24,7 @@ export default function SmartChat() {
   const [messages, setMessages] = useState<ChatMessage[]>([
     {
       id: '1',
-      text: 'Hi! 👋 I\'m your AI-powered assistant for Jacksonville Junk Removals. I can help you with quotes, scheduling, service information, and much more! How can I assist you today?',
+      text: 'Hi there! 👋 I\'m here to help you with your junk removal needs. I can assist with quotes, scheduling, service information, and answer any questions you have. How can I help you today?',
       sender: 'agent',
       timestamp: new Date(),
       type: 'text'
@@ -35,30 +34,9 @@ export default function SmartChat() {
   const [isTyping, setIsTyping] = useState(false)
   const [conversationContext, setConversationContext] = useState<string[]>([])
   const [userPreferences, setUserPreferences] = useState<Record<string, any>>({})
-  const [suggestedServices, setSuggestedServices] = useState<string[]>([])
   
   const messagesEndRef = useRef<HTMLDivElement>(null)
   const inputRef = useRef<HTMLInputElement>(null)
-
-  // Enhanced quick replies based on context
-  const getContextualQuickReplies = () => {
-    if (conversationContext.includes('pricing')) {
-      return ['Get detailed quote', 'Service pricing', 'Special offers', 'Payment options']
-    }
-    if (conversationContext.includes('scheduling')) {
-      return ['Book now', 'Available dates', 'Same-day service', 'Weekend options']
-    }
-    if (conversationContext.includes('location')) {
-      return ['Service areas', 'Check coverage', 'Local pricing', 'Area-specific services']
-    }
-    return [
-      'Get a free quote',
-      'Schedule service',
-      'Pricing information',
-      'Service areas',
-      'Speak to someone'
-    ]
-  }
 
   // AI-like intent recognition
   const analyzeIntent = (text: string): UserIntent => {
@@ -159,7 +137,7 @@ export default function SmartChat() {
       })
 
       if (!response.ok) {
-        throw new Error('AI service unavailable')
+        throw new Error('Service unavailable')
       }
 
       const data = await response.json()
@@ -172,7 +150,7 @@ export default function SmartChat() {
       return data.response
 
     } catch (error) {
-      console.error('AI API Error:', error)
+      console.error('API Error:', error)
       // Fallback to rule-based responses
       return generateFallbackResponse(primary, entities, context)
     }
@@ -231,26 +209,6 @@ export default function SmartChat() {
     return 'Thank you for your message! I\'d be happy to help you with your junk removal needs. Based on our conversation, I can assist with quotes, scheduling, service information, or any other questions. What would be most helpful for you right now?'
   }
 
-  // Suggest relevant services based on context
-  const getServiceSuggestions = (context: string[]) => {
-    const suggestions: string[] = []
-    
-    if (context.includes('mattress-service')) {
-      suggestions.push('Furniture Removal', 'Appliance Removal', 'Garage Cleanout')
-    }
-    if (context.includes('furniture-service')) {
-      suggestions.push('Mattress Removal', 'Appliance Removal', 'Office Cleanout')
-    }
-    if (context.includes('commercial')) {
-      suggestions.push('Office Furniture Removal', 'Retail Store Cleanout', 'Construction Debris')
-    }
-    if (context.includes('urgent')) {
-      suggestions.push('Same-Day Service', 'Emergency Cleanup', 'Quick Removal')
-    }
-    
-    return suggestions.length > 0 ? suggestions : ['Mattress Removal', 'Furniture Removal', 'Appliance Removal', 'Garage Cleanout']
-  }
-
   const handleSendMessage = async (text: string) => {
     if (!text.trim()) return
 
@@ -283,10 +241,6 @@ export default function SmartChat() {
       setMessages(prev => [...prev, agentMessage])
       setIsTyping(false)
       
-      // Update suggested services
-      const suggestions = getServiceSuggestions(intent.context)
-      setSuggestedServices(suggestions)
-      
       // Store user preferences
       if (intent.entities.length > 0) {
         setUserPreferences(prev => ({
@@ -310,14 +264,6 @@ export default function SmartChat() {
       setMessages(prev => [...prev, agentMessage])
       setIsTyping(false)
     }
-  }
-
-  const handleQuickReply = (reply: string) => {
-    handleSendMessage(reply)
-  }
-
-  const handleServiceSuggestion = (service: string) => {
-    handleSendMessage(`Tell me more about ${service}`)
   }
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -344,9 +290,9 @@ export default function SmartChat() {
       <div className="fixed bottom-4 right-4 z-50">
         <button
           onClick={() => setIsMinimized(false)}
-          className="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-4 rounded-full shadow-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200 hover:scale-110"
+          className="bg-gray-900 hover:bg-gray-800 text-white p-4 rounded-full shadow-lg transition-all duration-200 hover:scale-110"
         >
-          <Brain className="w-6 h-6" />
+          <MessageCircle className="w-6 h-6" />
         </button>
       </div>
     )
@@ -354,31 +300,31 @@ export default function SmartChat() {
 
   return (
     <>
-      {/* Smart Chat Widget */}
+      {/* Chat Widget */}
       <div className={`fixed bottom-4 right-4 z-50 transition-all duration-300 ${
         isOpen ? 'w-96 h-[600px]' : 'w-auto h-auto'
       }`}>
         {isOpen ? (
           <div className="bg-white rounded-2xl shadow-2xl border border-gray-200 h-full flex flex-col">
-            {/* Enhanced Header */}
-            <div className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-700 text-white p-4 rounded-t-2xl">
+            {/* Header */}
+            <div className="bg-gray-900 text-white p-4 rounded-t-2xl">
               <div className="flex items-center justify-between">
                 <div className="flex items-center">
                   <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center mr-3">
-                    <Brain className="w-6 h-6 text-blue-600" />
+                    <Truck className="w-6 h-6 text-gray-900" />
                   </div>
                   <div>
-                    <h3 className="font-semibold">AI Assistant</h3>
-                    <div className="flex items-center text-sm">
+                    <h3 className="font-semibold">Customer Service</h3>
+                    <div className="flex items-center text-sm text-gray-300">
                       <div className="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></div>
-                      <span>Smart & Learning</span>
+                      <span>Online Now</span>
                     </div>
                   </div>
                 </div>
                 <div className="flex items-center space-x-2">
                   <button
                     onClick={() => setIsMinimized(true)}
-                    className="p-1 hover:bg-white/20 rounded transition-colors"
+                    className="p-1 hover:bg-gray-800 rounded transition-colors"
                   >
                     <X className="w-4 h-4" />
                   </button>
@@ -397,13 +343,13 @@ export default function SmartChat() {
                     <div
                       className={`max-w-xs lg:max-w-md px-4 py-2 rounded-2xl ${
                         message.sender === 'user'
-                          ? 'bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-br-md'
+                          ? 'bg-gray-900 text-white rounded-br-md'
                           : 'bg-white text-gray-800 rounded-bl-md shadow-sm border border-gray-100'
                       }`}
                     >
                       <p className="text-sm">{message.text}</p>
                       <p className={`text-xs mt-1 ${
-                        message.sender === 'user' ? 'text-blue-100' : 'text-gray-500'
+                        message.sender === 'user' ? 'text-gray-300' : 'text-gray-500'
                       }`}>
                         {message.timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
                       </p>
@@ -415,10 +361,10 @@ export default function SmartChat() {
                   <div className="flex justify-start">
                     <div className="bg-white text-gray-800 rounded-2xl rounded-bl-md shadow-sm px-4 py-2 border border-gray-100">
                       <div className="flex items-center space-x-1">
-                        <Brain className="w-4 h-4 text-purple-600 mr-2" />
-                        <div className="w-2 h-2 bg-purple-400 rounded-full animate-bounce"></div>
-                        <div className="w-2 h-2 bg-purple-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
-                        <div className="w-2 h-2 bg-purple-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
+                        <Truck className="w-4 h-4 text-gray-600 mr-2" />
+                        <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></div>
+                        <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
+                        <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
                       </div>
                     </div>
                   </div>
@@ -428,48 +374,6 @@ export default function SmartChat() {
               </div>
             </div>
 
-            {/* Smart Quick Replies */}
-            {messages.length > 1 && (
-              <div className="px-4 pb-2">
-                <div className="text-xs text-gray-500 mb-2 flex items-center">
-                  <Zap className="w-3 h-3 mr-1" />
-                  Smart suggestions:
-                </div>
-                <div className="flex flex-wrap gap-2">
-                  {getContextualQuickReplies().map((reply) => (
-                    <button
-                      key={reply}
-                      onClick={() => handleQuickReply(reply)}
-                      className="bg-gradient-to-r from-blue-50 to-purple-50 border border-blue-200 text-blue-700 px-3 py-1 rounded-full text-xs hover:from-blue-100 hover:to-purple-100 transition-all duration-200"
-                    >
-                      {reply}
-                    </button>
-                  ))}
-                </div>
-              </div>
-            )}
-
-            {/* Service Suggestions */}
-            {suggestedServices.length > 0 && messages.length > 2 && (
-              <div className="px-4 pb-2">
-                <div className="text-xs text-gray-500 mb-2 flex items-center">
-                  <TrendingUp className="w-3 h-3 mr-1" />
-                  You might also like:
-                </div>
-                <div className="flex flex-wrap gap-2">
-                  {suggestedServices.slice(0, 3).map((service) => (
-                    <button
-                      key={service}
-                      onClick={() => handleServiceSuggestion(service)}
-                      className="bg-gradient-to-r from-green-50 to-emerald-50 border border-green-200 text-green-700 px-3 py-1 rounded-full text-xs hover:from-green-100 hover:to-emerald-100 transition-all duration-200"
-                    >
-                      {service}
-                    </button>
-                  ))}
-                </div>
-              </div>
-            )}
-
             {/* Input */}
             <div className="p-4 border-t border-gray-200">
               <form onSubmit={handleSubmit} className="flex space-x-2">
@@ -478,32 +382,28 @@ export default function SmartChat() {
                   type="text"
                   value={inputText}
                   onChange={(e) => setInputText(e.target.value)}
-                  placeholder="Ask me anything about junk removal..."
-                  className="flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                  placeholder="Type your message here..."
+                  className="flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500 focus:border-transparent"
                 />
                 <button
                   type="submit"
                   disabled={!inputText.trim()}
-                  className="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-2 rounded-lg hover:from-blue-700 hover:to-purple-700 disabled:bg-gray-300 disabled:cursor-not-allowed transition-all duration-200"
+                  className="bg-gray-900 hover:bg-gray-800 text-white p-2 rounded-lg disabled:bg-gray-300 disabled:cursor-not-allowed transition-all duration-200"
                 >
                   <Send className="w-4 h-4" />
                 </button>
               </form>
             </div>
 
-            {/* Enhanced Footer */}
-            <div className="px-4 py-2 bg-gradient-to-r from-gray-50 to-blue-50 rounded-b-2xl text-xs text-gray-500 text-center">
+            {/* Footer */}
+            <div className="px-4 py-2 bg-gray-100 rounded-b-2xl text-xs text-gray-500 text-center">
               <div className="flex items-center justify-center space-x-4">
                 <div className="flex items-center">
-                  <Brain className="w-3 h-3 mr-1 text-purple-600" />
-                  <span>AI Powered</span>
-                </div>
-                <div className="flex items-center">
-                  <Shield className="w-3 h-3 mr-1 text-green-600" />
+                  <Shield className="w-3 h-3 mr-1 text-gray-600" />
                   <span>Secure Chat</span>
                 </div>
                 <div className="flex items-center">
-                  <Star className="w-3 h-3 mr-1 text-yellow-600" />
+                  <Star className="w-3 h-3 mr-1 text-gray-600" />
                   <span>24/7 Available</span>
                 </div>
               </div>
@@ -512,9 +412,9 @@ export default function SmartChat() {
         ) : (
           <button
             onClick={() => setIsOpen(true)}
-            className="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-4 rounded-full shadow-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200 hover:scale-110"
+            className="bg-gray-900 hover:bg-gray-800 text-white p-4 rounded-full shadow-lg transition-all duration-200 hover:scale-110"
           >
-            <Brain className="w-6 h-6" />
+            <MessageCircle className="w-6 h-6" />
           </button>
         )}
       </div>
