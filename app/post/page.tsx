@@ -1,10 +1,10 @@
 import Link from 'next/link'
 import { ArrowRight, Calendar, Clock, User } from 'lucide-react'
-import { getBlogPosts } from '@/lib/contentful'
+import { getBlogPosts, BlogPost } from '@/lib/contentful'
 
 export default async function BlogPage() {
-  let posts = []
-  let error = null
+  let posts: BlogPost[] = []
+  let error: string | null = null
 
   try {
     posts = await getBlogPosts()
