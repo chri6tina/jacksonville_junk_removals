@@ -24,7 +24,7 @@ export default function SmartChat() {
   const [messages, setMessages] = useState<ChatMessage[]>([
     {
       id: '1',
-      text: 'Hi there! 👋 I\'m here to help you with your junk removal needs. I can assist with quotes, scheduling, service information, and answer any questions you have. How can I help you today?',
+      text: 'Hi there! 👋 I\'m your Jacksonville Junk Removal specialist! I can help you with pricing, scheduling, service details, and answer any questions about our junk removal services. We offer mattress removal (starting at $50), furniture removal (starting at $100), appliance removal (starting at $75), garage cleanouts (starting at $150), and construction debris removal (starting at $200). What service are you interested in today?',
       sender: 'agent',
       timestamp: new Date(),
       type: 'text'
@@ -172,81 +172,118 @@ export default function SmartChat() {
     }
   }
 
-  // Enhanced fallback response generation with specific, helpful answers
+  // Super smart fallback response generation with detailed, contextual answers
   const generateFallbackResponse = (primary: string, entities: string[], context: string[]): string => {
+    // Handle specific service questions with detailed answers
+    if (entities.includes('mattress-removal')) {
+      if (primary === 'pricing') {
+        return 'Our mattress removal pricing is very competitive! 🛏️ Single mattress removal starts at $50, which includes pickup from any room, safe removal, and eco-friendly disposal. For multiple mattresses: 2 mattresses = $90, 3 mattresses = $130. We also handle box springs, bed frames, and bedroom furniture. All pricing includes our full-service treatment - no hidden fees! Would you like me to help you estimate your specific needs?'
+      }
+      if (primary === 'scheduling') {
+        return 'Great news! 🚛 We offer same-day mattress removal service in Jacksonville. Our typical availability is 2-4 hours from your call. We work Monday-Friday 8 AM-5 PM, and Saturday by appointment. For urgent removals, we can often accommodate same-day service. What\'s your preferred date and time? I can check our current availability right now!'
+      }
+      return 'Mattress removal is one of our most popular services! 🛏️ We handle all sizes (twin, full, queen, king, California king) and can remove them from any room - even tight spaces. Our team is trained in safe removal techniques and we offer eco-friendly disposal. We typically complete mattress removal in 30-45 minutes. What would you like to know - pricing, scheduling, or our process?'
+    }
+
+    if (entities.includes('furniture-removal')) {
+      if (primary === 'pricing') {
+        return 'Furniture removal pricing is based on volume and complexity! 🪑 Small items (chairs, end tables) start at $50, medium furniture (couches, loveseats) start at $100, and large furniture (sectionals, entertainment centers) start at $150+. We offer volume discounts for multiple pieces. All pricing includes careful removal, cleanup, and responsible disposal. No hidden fees! What furniture do you need removed? I can give you a more specific estimate.'
+      }
+      if (primary === 'scheduling') {
+        return 'Furniture removal scheduling is flexible! 📅 We offer same-day service for urgent needs, and can typically accommodate your preferred time within 24-48 hours. We work Monday-Friday 8 AM-5 PM, with Saturday appointments available. Our team can handle tight spaces and staircases safely. What\'s your timeline and preferred service date?'
+      }
+      return 'Furniture removal is our specialty! 🪑 We handle everything from antique furniture to modern pieces, and we\'re careful with your property. Our team can work in tight spaces, navigate stairs, and ensure no damage to your home. We typically complete furniture removal in 1-2 hours depending on volume. What would you like to know about our service?'
+    }
+
+    if (entities.includes('appliance-removal')) {
+      if (primary === 'pricing') {
+        return 'Appliance removal pricing is straightforward! 🧊 Small appliances (dishwashers, microwaves) start at $50, medium appliances (washers, dryers) start at $75, and large appliances (refrigerators, freezers) start at $100. We handle all the heavy lifting, safe removal, and proper disposal. Volume discounts available for multiple appliances. What appliances do you need removed?'
+      }
+      if (primary === 'scheduling') {
+        return 'Appliance removal scheduling is quick! ⚡ We offer same-day service for urgent needs and can typically accommodate you within 24 hours. Our team is experienced with all appliance types and can safely remove them from any location. We work Monday-Friday 8 AM-5 PM, with Saturday availability. What\'s your preferred service date?'
+      }
+      return 'Appliance removal is our expertise! 🧊 We handle refrigerators, washers, dryers, dishwashers, stoves, and all other large appliances. Our team can safely remove them from tight spaces, navigate stairs, and ensure proper disposal. We typically complete appliance removal in 30-60 minutes. What would you like to know about our service?'
+    }
+
+    if (entities.includes('garage-cleanout')) {
+      if (primary === 'pricing') {
+        return 'Garage cleanout pricing is volume-based! 🚗 Quarter garage (25% full) starts at $150, half garage (50% full) starts at $250, three-quarter garage (75% full) starts at $350, and full garage starts at $450. This includes complete cleanup, item removal, and space preparation. We offer free estimates to give you the most accurate pricing. Would you like to schedule a free estimate?'
+      }
+      if (primary === 'scheduling') {
+        return 'Garage cleanout scheduling is flexible! 📅 We can typically accommodate you within 24-48 hours, with same-day service available for urgent needs. Our team works Monday-Friday 8 AM-5 PM, with Saturday appointments. We bring all necessary equipment and can handle any size cleanout. What\'s your preferred service date?'
+      }
+      return 'Garage cleanout is our comprehensive service! 🚗 We handle everything from old furniture and appliances to tools, sports equipment, and general clutter. Our team can work around your schedule and we provide complete cleanup. Typical cleanout time is 2-4 hours depending on volume. What would you like to know about our service?'
+    }
+
+    if (entities.includes('construction-debris')) {
+      if (primary === 'pricing') {
+        return 'Construction debris removal pricing varies by project size! 🏗️ Small projects (1-2 truckloads) start at $200, medium projects (3-5 truckloads) start at $400, and large projects (6+ truckloads) start at $600. We handle drywall, lumber, concrete, metal, and all construction materials. Volume discounts available for ongoing projects. What type of construction project are you working on?'
+      }
+      if (primary === 'scheduling') {
+        return 'Construction debris removal scheduling is project-focused! 🏗️ We can work around your construction schedule and typically provide same-day or next-day service. Our team is experienced with construction sites and can handle any debris type. We work Monday-Friday 8 AM-5 PM, with weekend availability for urgent projects. What\'s your project timeline?'
+      }
+      return 'Construction debris removal is our specialty! 🏗️ We handle all types of construction waste including drywall, lumber, concrete, metal, insulation, and more. Our team can work around your construction schedule and provide efficient cleanup. We typically complete debris removal in 1-3 hours depending on volume. What would you like to know about our service?'
+    }
+
+    // Handle specific intent types
     if (primary === 'pricing') {
-      if (entities.includes('mattress-removal')) {
-        return 'Great question! Our mattress removal service starts at just $50 per mattress. This includes pickup, disposal, and eco-friendly recycling. For multiple mattresses, we offer volume discounts. Would you like me to calculate a quote for your specific needs?'
-      }
-      if (entities.includes('furniture-removal')) {
-        return 'Furniture removal pricing starts at $100 and varies based on size and quantity. We offer transparent pricing with no hidden fees. For a detailed quote, I can help you estimate based on what you need removed. What type of furniture are you looking to dispose of?'
-      }
-      if (entities.includes('garage-cleanout')) {
-        return 'Garage cleanout pricing is based on volume and typically ranges from $150-$500 depending on how full your garage is. We offer free estimates and can provide a more accurate quote once we see the space. Would you like to schedule a free estimate?'
-      }
-      if (entities.includes('appliance-removal')) {
-        return 'Appliance removal starts at $75 per item. This includes refrigerators, washers, dryers, dishwashers, and other large appliances. We handle the heavy lifting and proper disposal. What appliances do you need removed?'
-      }
-      if (entities.includes('construction-debris')) {
-        return 'Construction debris removal starts at $200 and varies by volume and type. We handle drywall, lumber, concrete, and other construction materials. For large projects, we offer volume discounts. What type of construction debris do you have?'
-      }
-      return 'I\'d be happy to help with pricing! Our rates vary by service type and volume. For the most accurate quote, I recommend using our online estimation tool or scheduling a free on-site estimate. What specific service are you interested in?'
+      return 'I\'d be happy to help with pricing! 💰 Our rates are competitive and transparent. Here\'s a quick overview: Mattress removal starts at $50, furniture removal starts at $100, appliance removal starts at $75, garage cleanout starts at $150, and construction debris starts at $200. All pricing includes full service with no hidden fees. For the most accurate quote, I recommend a free on-site estimate. What specific service are you interested in?'
     }
     
     if (primary === 'scheduling') {
       if (context.includes('urgent')) {
-        return 'I understand you need urgent service! We offer same-day junk removal for urgent situations. Our team can typically be there within 2-4 hours. What type of service do you need, and what\'s your preferred time today?'
+        return 'I understand you need urgent service! 🚨 We prioritize emergency situations and can typically provide same-day service within 2-4 hours. Our team is available Monday-Friday 8 AM-5 PM, with Saturday appointments. For urgent needs, we can often accommodate same-day service. What type of junk removal do you need, and what\'s your preferred time today?'
       }
-      if (entities.includes('specific-location')) {
-        return 'Perfect! I can help you schedule service in your area. We offer flexible scheduling Monday through Friday, with weekend appointments available. What date works best for you? I can also check our current availability for same-day service.'
-      }
-      return 'Great! Let\'s get you scheduled. We offer flexible scheduling with same-day service available. What date works best for you? I can also help you choose the best time slot and service type for your needs.'
+      return 'Great! Let\'s get you scheduled! 📅 We offer flexible scheduling with same-day service available for urgent needs. Our typical availability is within 24-48 hours, and we work Monday-Friday 8 AM-5 PM, with Saturday appointments. What date works best for you? I can also help you choose the best time slot and service type.'
     }
     
     if (primary === 'location') {
       if (entities.includes('specific-location')) {
-        const location = entities.find(e => ['beach', 'riverside', 'southside', 'mandarin', 'arlington', 'orange park', 'san marco'].includes(e))
-        return `Excellent! We serve ${location} and the surrounding areas. Our team is very familiar with the local area and can provide area-specific pricing and scheduling. We typically have same-day availability in ${location}. What service do you need?`
+        const location = entities.find(e => ['beach', 'riverside', 'southside', 'mandarin', 'arlington', 'orange park', 'san marco', 'downtown'].includes(e))
+        return `Excellent! We serve ${location} and the surrounding areas! 🗺️ Our team is very familiar with ${location} and we provide area-specific pricing and scheduling. We typically have same-day availability in ${location} and can accommodate your schedule. What service do you need in ${location}?`
       }
-      return 'We serve all of Jacksonville and surrounding areas including Jacksonville Beach, Riverside, Southside, Mandarin, Arlington, Orange Park, and San Marco. Each area has its own pricing and availability. Where are you located so I can provide the most accurate information?'
+      return 'We serve all of Jacksonville and surrounding areas! 🗺️ Our coverage includes Jacksonville Beach, Riverside, Southside, Mandarin, Arlington, Orange Park, San Marco, Downtown, and more. Each area has its own pricing and availability. Where are you located so I can provide the most accurate information and check our current availability?'
     }
     
     if (primary === 'urgent') {
-      return 'I understand this is urgent! We prioritize emergency situations and can typically provide same-day service within 2-4 hours. What type of junk removal do you need, and what\'s your location? I\'ll get you scheduled immediately.'
+      return 'I understand this is urgent! 🚨 We prioritize emergency situations and can typically provide same-day service within 2-4 hours. Our team is experienced with urgent removals and we can work around your schedule. What type of junk removal do you need, and what\'s your location? I\'ll get you scheduled immediately!'
     }
     
     if (primary === 'commercial') {
-      return 'For commercial junk removal, we offer specialized services including office cleanouts, retail store cleanouts, and construction debris removal. We have dedicated commercial teams and can work around your business hours. What type of commercial service do you need?'
+      return 'For commercial junk removal, we offer specialized services! 🏢 This includes office cleanouts, retail store cleanouts, construction debris removal, and business equipment removal. We have dedicated commercial teams and can work around your business hours, including early morning, evening, and weekend appointments. What type of commercial service do you need?'
     }
 
     if (primary === 'process') {
-      return 'Great question! Our process is simple: 1) We provide a free estimate, 2) Schedule your preferred time, 3) Our team arrives and handles everything, 4) We clean up and dispose of items responsibly. The entire process typically takes 1-3 hours depending on volume. Would you like to schedule a free estimate?'
+      return 'Great question! Our process is simple and efficient! 📋 Here\'s how it works: 1) We provide a free, no-obligation estimate, 2) Schedule your preferred time (same-day available), 3) Our professional team arrives and handles everything, 4) We clean up and dispose of items responsibly. The entire process typically takes 1-3 hours depending on volume. We bring all necessary equipment and handle everything from start to finish. Would you like to schedule a free estimate?'
     }
 
-    // Enhanced context-aware responses
-    if (context.includes('mattress-service')) {
-      return 'Since you mentioned mattress removal, I can tell you that we offer eco-friendly disposal and can handle any size mattress. Our team is trained to safely remove mattresses from any location in your home. Would you like pricing or scheduling information?'
-    }
-    
-    if (context.includes('furniture-service')) {
-      return 'For furniture removal, we handle everything from small items to large furniture sets. We\'re careful with your property and can work in tight spaces. Do you need help estimating the volume or would you prefer to schedule a free estimate?'
+    // Handle specific context clues
+    if (context.includes('free-estimate')) {
+      return 'Absolutely! We offer free, no-obligation estimates! 📋 Our team can come to your location to assess the volume and provide an accurate quote. We typically schedule estimates within 24-48 hours, and they take about 15-30 minutes. No pressure to book - it\'s completely free! What service do you need estimated?'
     }
 
-    if (context.includes('appliance-service')) {
-      return 'For appliance removal, we handle all types of large appliances safely. We can remove them from any location in your home and ensure proper disposal. What appliances do you need removed?'
+    if (context.includes('eco-friendly')) {
+      return 'Great question! We\'re committed to eco-friendly disposal! 🌱 We recycle and donate items whenever possible, and ensure proper disposal of items that can\'t be recycled. We work with local recycling centers and donation organizations to minimize environmental impact. This is included in all our pricing at no extra cost!'
     }
 
-    if (context.includes('construction-service')) {
-      return 'For construction debris, we have the right equipment and expertise to handle any size project. We can work around your construction schedule and provide efficient cleanup. What type of construction project are you working on?'
+    if (context.includes('weekend-service')) {
+      return 'Yes! We offer weekend appointments! 📅 Saturday service is available by appointment, though availability is limited. Saturday appointments typically have premium pricing due to high demand. For the best availability and pricing, we recommend weekday appointments. What\'s your preferred service date?'
     }
 
-    // General helpful responses instead of generic "how can we help"
+    // Handle specific service combinations
+    if (entities.length > 1) {
+      const services = entities.map(e => e.replace('-', ' ').replace(/\b\w/g, l => l.toUpperCase())).join(' and ')
+      return `I see you're interested in ${services}! 🎯 We offer comprehensive services for both, and we can often provide package deals when booking multiple services together. This can save you money and time. Would you like to know about pricing for the combination, or would you prefer to schedule a free estimate to see both services?`
+    }
+
+    // Handle general questions with specific information
     if (entities.length > 0) {
       const service = entities[0].replace('-', ' ').replace(/\b\w/g, l => l.toUpperCase())
-      return `I see you're interested in ${service}. We offer comprehensive ${service} services with competitive pricing and flexible scheduling. Would you like to know more about pricing, scheduling, or our process?`
+      return `I see you're interested in ${service}! 🎯 We offer comprehensive ${service} services with competitive pricing and flexible scheduling. Our team is experienced with ${service} and we can handle any size project. Would you like to know more about pricing, scheduling, our process, or would you prefer to schedule a free estimate?`
     }
 
-    return 'Thank you for your message! I\'d be happy to help you with your junk removal needs. We offer mattress removal, furniture removal, appliance removal, garage cleanouts, construction debris removal, and more. What specific service are you looking for today?'
+    // Final fallback with specific service list
+    return 'Thank you for your message! I\'d be happy to help you with your junk removal needs! 🚛 We offer comprehensive services including mattress removal (starting at $50), furniture removal (starting at $100), appliance removal (starting at $75), garage cleanout (starting at $150), construction debris removal (starting at $200), and commercial services. All services include free estimates and flexible scheduling. What specific service are you looking for today? I can provide detailed information and help you get started!'
   }
 
   const handleSendMessage = async (text: string) => {
