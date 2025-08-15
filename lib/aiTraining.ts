@@ -288,10 +288,10 @@ export class AITrainingSystem {
     
     if (intent === 'scheduling') {
       const availability = context.includes('urgent') ? service.availability.urgent : service.availability.standard
-      return `Great! For ${service.Service}, we're available ${availability.join(', ')}. ${context.includes('urgent') ? 'Since this is urgent, we can provide same-day service.' : 'What date works best for you?'}`
+      return `Great! For ${service.service}, we're available ${availability.join(', ')}. ${context.includes('urgent') ? 'Since this is urgent, we can provide same-day service.' : 'What date works best for you?'}`
     }
 
-    return `I'd be happy to help with ${service.Service}! What specific information do you need - pricing, scheduling, or process details?`
+    return `I'd be happy to help with ${service.service}! What specific information do you need - pricing, scheduling, or process details?`
   }
 
   // Get fallback response
