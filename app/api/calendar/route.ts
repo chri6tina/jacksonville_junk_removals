@@ -7,6 +7,16 @@ import {
   getNextAvailableTime,
   type BookingRequest 
 } from '@/lib/googleCalendar'
+import { 
+  createAppointment, 
+  getAppointment, 
+  updateAppointment, 
+  getAllAppointments,
+  getUpcomingAppointments,
+  getServiceAnalytics,
+  getOverallAnalytics,
+  type StoredAppointment 
+} from '@/lib/database'
 
 // GET /api/calendar/availability?date=2024-01-15&service=mattress-removal
 export async function GET(request: NextRequest) {
@@ -79,18 +89,38 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // Book the appointment
+    // Book the appointment in Google Calendar
     const result = await bookAppointment(body)
 
     if (result.success) {
+      // Store in local database as backup
+      const storedAppointment: Omit<StoredAppointment, 'id' | 'createdAt' | 'updatedAt'> = {
+        appointmentId: result.appointmentId || `google_${Date.now()}`,
+        customerName: body.customerName,
+        customerEmail: body.customerEmail,
+        customerPhone: body.customerPhone,
+        serviceType: body.serviceType,
+        preferredDate: body.preferredDate,
+        preferredTime: body.preferredTime,
+        address: body.address,
+        description: body.description,
+        urgent: body.urgent,
+        status: 'scheduled',
+        googleCalendarId: result.appointmentId
+      }
+
+      const storedResult = await createAppointment(storedAppointment)
+
       return NextResponse.json({
         success: true,
         message: result.message,
         appointmentId: result.appointmentId,
+        storedId: storedResult.id,
         booking: {
           ...body,
           confirmed: true,
-          bookingTime: new Date().toISOString()
+          bookingTime: new Date().toISOString(),
+          storedId: storedResult.id
         }
       })
     } else {
