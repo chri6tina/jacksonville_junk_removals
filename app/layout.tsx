@@ -7,6 +7,7 @@ import Footer from '@/components/Footer'
 import StructuredData from '@/components/StructuredData'
 import PerformanceMonitor from '@/components/PerformanceMonitor'
 import ServiceWorkerRegistration from '@/components/ServiceWorkerRegistration'
+import LiveChat from '@/components/LiveChat'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -59,6 +60,7 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
+        <LiveChat />
       </body>
     </html>
   )

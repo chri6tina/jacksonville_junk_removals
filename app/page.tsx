@@ -4,6 +4,8 @@ import Process from '@/components/Process'
 import SpecialOffer from '@/components/SpecialOffer'
 import ServiceAreas from '@/components/ServiceAreas'
 import Testimonials from '@/components/Testimonials'
+import ReviewsSection from '@/components/ReviewsSection'
+import BookingCalendar from '@/components/BookingCalendar'
 
 export default function Home() {
   return (
@@ -14,6 +16,8 @@ export default function Home() {
       <SpecialOffer />
       <ServiceAreas />
       <Testimonials />
+      <ReviewsSection />
+      <BookingCalendar />
     </>
   )
 }
