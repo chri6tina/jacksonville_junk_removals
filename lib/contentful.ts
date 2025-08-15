@@ -50,7 +50,7 @@ export async function getBlogPosts(): Promise<BlogPost[]> {
     
     const response = await contentfulClient.getEntries({
       content_type: 'jjrBlogPost',
-      order: ['-fields.dateAndTime'] as any, // Use the correct field name
+      order: ['-sys.createdAt', '-fields.dateAndTime'] as any, // Order by creation date first, then by custom date
       include: 2, // Include linked entries for category and media
       limit: 100,
     })
@@ -77,9 +77,25 @@ export async function getBlogPosts(): Promise<BlogPost[]> {
     if (response.items.length > 0) {
       console.log('🔍 First item fields:', Object.keys(response.items[0].fields))
       console.log('🔍 First item content type:', response.items[0].sys.contentType?.sys?.id)
+      console.log('🔍 First item creation date:', response.items[0].sys.createdAt)
+      console.log('🔍 First item custom date:', response.items[0].fields.dateAndTime)
     }
     
-    return response.items.map(item => {
+    // Sort items to ensure newest first (fallback sorting)
+    const sortedItems = response.items.sort((a, b) => {
+      const dateA = a.fields.dateAndTime || a.sys.createdAt
+      const dateB = b.fields.dateAndTime || b.sys.createdAt
+      return new Date(dateB).getTime() - new Date(dateA).getTime()
+    })
+    
+    console.log('📅 Posts after sorting (newest first):', sortedItems.map(item => ({
+      title: item.fields.title,
+      createdAt: item.sys.createdAt,
+      customDate: item.fields.dateAndTime,
+      finalDate: item.fields.dateAndTime || item.sys.createdAt
+    })))
+    
+    return sortedItems.map(item => {
       console.log('📝 Processing post:', item.fields.title)
       
       // Map fields using the exact field IDs from your content type
