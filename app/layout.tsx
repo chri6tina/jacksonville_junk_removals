@@ -4,6 +4,9 @@ import './globals.css'
 import ContactBar from '@/components/ContactBar'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import StructuredData from '@/components/StructuredData'
+import PerformanceMonitor from '@/components/PerformanceMonitor'
+import ServiceWorkerRegistration from '@/components/ServiceWorkerRegistration'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -13,6 +16,7 @@ export const metadata: Metadata = {
   keywords: 'junk removal Jacksonville, Florida, same day service, eco-friendly disposal, mattress removal, commercial cleanout',
   authors: [{ name: 'Jacksonville Junk Removals' }],
   viewport: 'width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes',
+  manifest: '/manifest.json',
   openGraph: {
     title: 'Jacksonville Junk Removals - #1 Junk Removal Company in Jacksonville, FL',
     description: 'Professional junk removal services in Jacksonville, Florida. Same-day service, transparent pricing, eco-friendly disposal.',
@@ -25,6 +29,15 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  other: {
+    'mobile-web-app-capable': 'yes',
+    'apple-mobile-web-app-capable': 'yes',
+    'apple-mobile-web-app-status-bar-style': 'default',
+    'apple-mobile-web-app-title': 'JJR Junk',
+    'application-name': 'Jacksonville Junk Removals',
+    'msapplication-TileColor': '#00C5F5',
+    'theme-color': '#00C5F5',
+  },
 }
 
 export default function RootLayout({
@@ -34,7 +47,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <StructuredData />
+      </head>
       <body className={inter.className}>
+        <PerformanceMonitor />
+        <ServiceWorkerRegistration />
         <ContactBar />
         <Header />
         <main className="min-h-screen">

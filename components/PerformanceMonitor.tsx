@@ -1,0 +1,134 @@
+'use client'
+
+import { useEffect } from 'react'
+
+export default function PerformanceMonitor() {
+  useEffect(() => {
+    // Only run in production
+    if (process.env.NODE_ENV !== 'production') return
+
+    // Core Web Vitals monitoring
+    const observer = new PerformanceObserver((list) => {
+      for (const entry of list.getEntries()) {
+        // Log Core Web Vitals
+        if (entry.entryType === 'largest-contentful-paint') {
+          console.log('LCP:', entry.startTime)
+          // Send to analytics service
+          if (typeof gtag !== 'undefined') {
+            gtag('event', 'web_vitals', {
+              event_category: 'Web Vitals',
+              event_label: 'LCP',
+              value: Math.round(entry.startTime),
+            })
+          }
+        }
+
+        if (entry.entryType === 'first-input') {
+          console.log('FID:', entry.processingStart - entry.startTime)
+          if (typeof gtag !== 'undefined') {
+            gtag('event', 'web_vitals', {
+              event_category: 'Web Vitals',
+              event_label: 'FID',
+              value: Math.round(entry.processingStart - entry.startTime),
+            })
+          }
+        }
+
+        if (entry.entryType === 'layout-shift') {
+          const layoutShiftEntry = entry as any
+          if (!layoutShiftEntry.hadRecentInput) {
+            console.log('CLS:', layoutShiftEntry.value)
+            if (typeof gtag !== 'undefined') {
+              gtag('event', 'web_vitals', {
+                event_category: 'Web Vitals',
+                event_label: 'CLS',
+                value: Math.round(layoutShiftEntry.value * 1000) / 1000,
+              })
+            }
+          }
+        }
+      }
+    })
+
+    // Observe Core Web Vitals
+    observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] })
+
+    // Navigation timing
+    if ('performance' in window) {
+      window.addEventListener('load', () => {
+        setTimeout(() => {
+          const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
+          if (navigation) {
+            const metrics = {
+              dns: navigation.domainLookupEnd - navigation.domainLookupStart,
+              tcp: navigation.connectEnd - navigation.connectStart,
+              ttfb: navigation.responseStart - navigation.requestStart,
+              domContentLoaded: navigation.domContentLoadedEventEnd - navigation.navigationStart,
+              loadComplete: navigation.loadEventEnd - navigation.navigationStart,
+            }
+
+            console.log('Performance Metrics:', metrics)
+
+            // Send to analytics
+            if (typeof gtag !== 'undefined') {
+              gtag('event', 'performance_metrics', {
+                event_category: 'Performance',
+                event_label: 'Page Load',
+                value: Math.round(metrics.loadComplete),
+                custom_parameters: {
+                  dns: Math.round(metrics.dns),
+                  tcp: Math.round(metrics.tcp),
+                  ttfb: Math.round(metrics.ttfb),
+                  domContentLoaded: Math.round(metrics.domContentLoaded),
+                },
+              })
+            }
+          }
+        }, 0)
+      })
+    }
+
+    // Resource timing
+    if ('performance' in window) {
+      const resourceObserver = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          const resourceEntry = entry as PerformanceResourceTiming
+          if (resourceEntry.initiatorType === 'img' || resourceEntry.initiatorType === 'script') {
+            console.log(`${resourceEntry.initiatorType} load time:`, resourceEntry.duration)
+          }
+        }
+      })
+
+      resourceObserver.observe({ entryTypes: ['resource'] })
+    }
+
+    // Error tracking
+    window.addEventListener('error', (event) => {
+      console.error('JavaScript Error:', event.error)
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'exception', {
+          description: event.error?.message || 'Unknown error',
+          fatal: false,
+        })
+      }
+    })
+
+    // Unhandled promise rejections
+    window.addEventListener('unhandledrejection', (event) => {
+      console.error('Unhandled Promise Rejection:', event.reason)
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'exception', {
+          description: 'Unhandled Promise Rejection',
+          fatal: false,
+        })
+      }
+    })
+
+    return () => {
+      observer.disconnect()
+      resourceObserver?.disconnect()
+    }
+  }, [])
+
+  return null // This component doesn't render anything
+}

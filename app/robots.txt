@@ -1,0 +1,18 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://jacksonvillejunkremovals.com/sitemap.xml
+
+# Disallow admin areas
+Disallow: /admin/
+Disallow: /api/
+
+# Allow important pages
+Allow: /post/
+Allow: /services/
+Allow: /estimation/
+Allow: /contact/
+
+# Crawl delay (optional)
+Crawl-delay: 1
