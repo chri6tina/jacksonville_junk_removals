@@ -38,7 +38,7 @@ export default function SmartChat() {
   const messagesEndRef = useRef<HTMLDivElement>(null)
   const inputRef = useRef<HTMLInputElement>(null)
 
-  // AI-like intent recognition
+  // Enhanced intent recognition with better pattern matching
   const analyzeIntent = (text: string): UserIntent => {
     const lowerText = text.toLowerCase()
     const words = lowerText.split(' ')
@@ -48,62 +48,67 @@ export default function SmartChat() {
     const entities: string[] = []
     const context: string[] = []
 
-    // Service type detection
-    if (lowerText.includes('mattress') || lowerText.includes('bed')) {
+    // Enhanced service type detection
+    if (lowerText.includes('mattress') || lowerText.includes('bed') || lowerText.includes('box spring')) {
       entities.push('mattress-removal')
       context.push('mattress-service')
       confidence += 0.3
     }
-    if (lowerText.includes('furniture') || lowerText.includes('couch') || lowerText.includes('chair')) {
+    if (lowerText.includes('furniture') || lowerText.includes('couch') || lowerText.includes('chair') || lowerText.includes('sofa') || lowerText.includes('table') || lowerText.includes('desk')) {
       entities.push('furniture-removal')
       context.push('furniture-service')
       confidence += 0.3
     }
-    if (lowerText.includes('appliance') || lowerText.includes('refrigerator') || lowerText.includes('washer')) {
+    if (lowerText.includes('appliance') || lowerText.includes('refrigerator') || lowerText.includes('washer') || lowerText.includes('dryer') || lowerText.includes('dishwasher') || lowerText.includes('stove') || lowerText.includes('oven')) {
       entities.push('appliance-removal')
       context.push('appliance-service')
       confidence += 0.3
     }
-    if (lowerText.includes('construction') || lowerText.includes('debris') || lowerText.includes('renovation')) {
+    if (lowerText.includes('construction') || lowerText.includes('debris') || lowerText.includes('renovation') || lowerText.includes('drywall') || lowerText.includes('lumber') || lowerText.includes('concrete')) {
       entities.push('construction-debris')
       context.push('construction-service')
       confidence += 0.3
     }
-    if (lowerText.includes('garage') || lowerText.includes('cleanout')) {
+    if (lowerText.includes('garage') || lowerText.includes('cleanout') || lowerText.includes('basement') || lowerText.includes('attic')) {
       entities.push('garage-cleanout')
       context.push('garage-service')
       confidence += 0.3
     }
+    if (lowerText.includes('office') || lowerText.includes('commercial') || lowerText.includes('business') || lowerText.includes('retail') || lowerText.includes('store')) {
+      entities.push('commercial-junk-removal')
+      context.push('commercial-service')
+      confidence += 0.3
+    }
 
-    // Intent detection
-    if (lowerText.includes('quote') || lowerText.includes('price') || lowerText.includes('cost') || lowerText.includes('how much')) {
+    // Enhanced intent detection
+    if (lowerText.includes('quote') || lowerText.includes('price') || lowerText.includes('cost') || lowerText.includes('how much') || lowerText.includes('$$') || lowerText.includes('dollars')) {
       primary = 'pricing'
       context.push('pricing')
       confidence += 0.4
     }
-    if (lowerText.includes('schedule') || lowerText.includes('book') || lowerText.includes('appointment') || lowerText.includes('when')) {
+    if (lowerText.includes('schedule') || lowerText.includes('book') || lowerText.includes('appointment') || lowerText.includes('when') || lowerText.includes('available') || lowerText.includes('time')) {
       primary = 'scheduling'
       context.push('scheduling')
       confidence += 0.4
     }
-    if (lowerText.includes('area') || lowerText.includes('location') || lowerText.includes('jacksonville') || lowerText.includes('serve')) {
+    if (lowerText.includes('area') || lowerText.includes('location') || lowerText.includes('jacksonville') || lowerText.includes('serve') || lowerText.includes('coverage') || lowerText.includes('where')) {
       primary = 'location'
       context.push('location')
       confidence += 0.4
     }
-    if (lowerText.includes('urgent') || lowerText.includes('emergency') || lowerText.includes('same day') || lowerText.includes('asap')) {
+    if (lowerText.includes('urgent') || lowerText.includes('emergency') || lowerText.includes('same day') || lowerText.includes('asap') || lowerText.includes('today') || lowerText.includes('immediate')) {
       primary = 'urgent'
       context.push('urgent')
       confidence += 0.5
     }
-    if (lowerText.includes('commercial') || lowerText.includes('business') || lowerText.includes('office')) {
-      primary = 'commercial'
-      context.push('commercial')
+    if (lowerText.includes('process') || lowerText.includes('how does') || lowerText.includes('what happens') || lowerText.includes('steps')) {
+      primary = 'process'
+      context.push('process')
       confidence += 0.3
     }
 
-    // Location detection
-    const locations = ['beach', 'riverside', 'southside', 'mandarin', 'arlington', 'orange park', 'san marco']
+    // Enhanced location detection
+    const locations = ['beach', 'riverside', 'southside', 'mandarin', 'arlington', 'orange park', 'san marco', 'downtown', 'southside', 'northside']
     locations.forEach(location => {
       if (lowerText.includes(location)) {
         entities.push(location)
@@ -111,6 +116,17 @@ export default function SmartChat() {
         confidence += 0.2
       }
     })
+
+    // Additional context clues
+    if (lowerText.includes('free') || lowerText.includes('estimate') || lowerText.includes('quote')) {
+      context.push('free-estimate')
+    }
+    if (lowerText.includes('eco') || lowerText.includes('green') || lowerText.includes('recycle')) {
+      context.push('eco-friendly')
+    }
+    if (lowerText.includes('weekend') || lowerText.includes('saturday') || lowerText.includes('sunday')) {
+      context.push('weekend-service')
+    }
 
     return { primary, confidence: Math.min(confidence, 1), entities, context }
   }
@@ -156,7 +172,7 @@ export default function SmartChat() {
     }
   }
 
-  // Fallback response generation (original logic)
+  // Enhanced fallback response generation with specific, helpful answers
   const generateFallbackResponse = (primary: string, entities: string[], context: string[]): string => {
     if (primary === 'pricing') {
       if (entities.includes('mattress-removal')) {
@@ -167,6 +183,12 @@ export default function SmartChat() {
       }
       if (entities.includes('garage-cleanout')) {
         return 'Garage cleanout pricing is based on volume and typically ranges from $150-$500 depending on how full your garage is. We offer free estimates and can provide a more accurate quote once we see the space. Would you like to schedule a free estimate?'
+      }
+      if (entities.includes('appliance-removal')) {
+        return 'Appliance removal starts at $75 per item. This includes refrigerators, washers, dryers, dishwashers, and other large appliances. We handle the heavy lifting and proper disposal. What appliances do you need removed?'
+      }
+      if (entities.includes('construction-debris')) {
+        return 'Construction debris removal starts at $200 and varies by volume and type. We handle drywall, lumber, concrete, and other construction materials. For large projects, we offer volume discounts. What type of construction debris do you have?'
       }
       return 'I\'d be happy to help with pricing! Our rates vary by service type and volume. For the most accurate quote, I recommend using our online estimation tool or scheduling a free on-site estimate. What specific service are you interested in?'
     }
@@ -197,7 +219,11 @@ export default function SmartChat() {
       return 'For commercial junk removal, we offer specialized services including office cleanouts, retail store cleanouts, and construction debris removal. We have dedicated commercial teams and can work around your business hours. What type of commercial service do you need?'
     }
 
-    // Fallback with context awareness
+    if (primary === 'process') {
+      return 'Great question! Our process is simple: 1) We provide a free estimate, 2) Schedule your preferred time, 3) Our team arrives and handles everything, 4) We clean up and dispose of items responsibly. The entire process typically takes 1-3 hours depending on volume. Would you like to schedule a free estimate?'
+    }
+
+    // Enhanced context-aware responses
     if (context.includes('mattress-service')) {
       return 'Since you mentioned mattress removal, I can tell you that we offer eco-friendly disposal and can handle any size mattress. Our team is trained to safely remove mattresses from any location in your home. Would you like pricing or scheduling information?'
     }
@@ -206,7 +232,21 @@ export default function SmartChat() {
       return 'For furniture removal, we handle everything from small items to large furniture sets. We\'re careful with your property and can work in tight spaces. Do you need help estimating the volume or would you prefer to schedule a free estimate?'
     }
 
-    return 'Thank you for your message! I\'d be happy to help you with your junk removal needs. Based on our conversation, I can assist with quotes, scheduling, service information, or any other questions. What would be most helpful for you right now?'
+    if (context.includes('appliance-service')) {
+      return 'For appliance removal, we handle all types of large appliances safely. We can remove them from any location in your home and ensure proper disposal. What appliances do you need removed?'
+    }
+
+    if (context.includes('construction-service')) {
+      return 'For construction debris, we have the right equipment and expertise to handle any size project. We can work around your construction schedule and provide efficient cleanup. What type of construction project are you working on?'
+    }
+
+    // General helpful responses instead of generic "how can we help"
+    if (entities.length > 0) {
+      const service = entities[0].replace('-', ' ').replace(/\b\w/g, l => l.toUpperCase())
+      return `I see you're interested in ${service}. We offer comprehensive ${service} services with competitive pricing and flexible scheduling. Would you like to know more about pricing, scheduling, or our process?`
+    }
+
+    return 'Thank you for your message! I\'d be happy to help you with your junk removal needs. We offer mattress removal, furniture removal, appliance removal, garage cleanouts, construction debris removal, and more. What specific service are you looking for today?'
   }
 
   const handleSendMessage = async (text: string) => {
