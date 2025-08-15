@@ -137,14 +137,49 @@ export default function SmartChat() {
     return { primary, confidence: Math.min(confidence, 1), entities, context }
   }
 
-  // Smart response generation
-  const generateSmartResponse = (userText: string, intent: UserIntent): string => {
+  // Smart response generation using OpenAI API
+  const generateSmartResponse = async (userText: string, intent: UserIntent): Promise<string> => {
     const { primary, entities, context } = intent
     
     // Update conversation context
     setConversationContext(prev => [...new Set([...prev, ...context])])
     
-    // Generate personalized response based on intent and context
+    try {
+      // Call OpenAI API
+      const response = await fetch('/api/ai-chat', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          message: userText,
+          conversationHistory: messages.slice(-5), // Last 5 messages for context
+          userContext: context.join(', ')
+        })
+      })
+
+      if (!response.ok) {
+        throw new Error('AI service unavailable')
+      }
+
+      const data = await response.json()
+      
+      if (data.error) {
+        // Fallback to rule-based responses if AI fails
+        return generateFallbackResponse(primary, entities, context)
+      }
+
+      return data.response
+
+    } catch (error) {
+      console.error('AI API Error:', error)
+      // Fallback to rule-based responses
+      return generateFallbackResponse(primary, entities, context)
+    }
+  }
+
+  // Fallback response generation (original logic)
+  const generateFallbackResponse = (primary: string, entities: string[], context: string[]): string => {
     if (primary === 'pricing') {
       if (entities.includes('mattress-removal')) {
         return 'Great question! Our mattress removal service starts at just $50 per mattress. This includes pickup, disposal, and eco-friendly recycling. For multiple mattresses, we offer volume discounts. Would you like me to calculate a quote for your specific needs?'
@@ -234,9 +269,9 @@ export default function SmartChat() {
     // Analyze user intent
     const intent = analyzeIntent(text)
     
-    // Generate smart response
-    setTimeout(() => {
-      const response = generateSmartResponse(text, intent)
+    // Generate smart response using AI
+    try {
+      const response = await generateSmartResponse(text, intent)
       const agentMessage: ChatMessage = {
         id: (Date.now() + 1).toString(),
         text: response,
@@ -260,7 +295,21 @@ export default function SmartChat() {
           lastIntent: intent.primary
         }))
       }
-    }, 1500)
+    } catch (error) {
+      console.error('Error generating response:', error)
+      // Fallback response
+      const fallbackResponse = generateFallbackResponse(intent.primary, intent.entities, intent.context)
+      const agentMessage: ChatMessage = {
+        id: (Date.now() + 1).toString(),
+        text: fallbackResponse,
+        sender: 'agent',
+        timestamp: new Date(),
+        type: 'text'
+      }
+      
+      setMessages(prev => [...prev, agentMessage])
+      setIsTyping(false)
+    }
   }
 
   const handleQuickReply = (reply: string) => {
