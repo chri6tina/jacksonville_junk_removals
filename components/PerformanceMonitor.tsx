@@ -10,6 +10,24 @@ declare global {
   }
 }
 
+// Performance API type declarations
+interface PerformanceEventTiming extends PerformanceEntry {
+  processingStart: number
+  processingEnd: number
+  target?: EventTarget
+}
+
+interface LayoutShift extends PerformanceEntry {
+  value: number
+  hadRecentInput: boolean
+  lastInputTime: number
+  sources?: Array<{
+    node?: Node
+    currentRect?: DOMRectReadOnly
+    previousRect?: DOMRectReadOnly
+  }>
+}
+
 export default function PerformanceMonitor() {
   useEffect(() => {
     // Only run in production
@@ -32,18 +50,19 @@ export default function PerformanceMonitor() {
         }
 
         if (entry.entryType === 'first-input') {
-          console.log('FID:', entry.processingStart - entry.startTime)
+          const firstInputEntry = entry as PerformanceEventTiming
+          console.log('FID:', firstInputEntry.processingStart - firstInputEntry.startTime)
           if (typeof gtag !== 'undefined') {
             gtag('event', 'web_vitals', {
               event_category: 'Web Vitals',
               event_label: 'FID',
-              value: Math.round(entry.processingStart - entry.startTime),
+              value: Math.round(firstInputEntry.processingStart - firstInputEntry.startTime),
             })
           }
         }
 
         if (entry.entryType === 'layout-shift') {
-          const layoutShiftEntry = entry as any
+          const layoutShiftEntry = entry as LayoutShift
           if (!layoutShiftEntry.hadRecentInput) {
             console.log('CLS:', layoutShiftEntry.value)
             if (typeof gtag !== 'undefined') {
