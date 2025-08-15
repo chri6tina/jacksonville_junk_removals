@@ -90,8 +90,8 @@ export default function PerformanceMonitor() {
               dns: navigation.domainLookupEnd - navigation.domainLookupStart,
               tcp: navigation.connectEnd - navigation.connectStart,
               ttfb: navigation.responseStart - navigation.requestStart,
-              domContentLoaded: navigation.domContentLoadedEventEnd - navigation.navigationStart,
-              loadComplete: navigation.loadEventEnd - navigation.navigationStart,
+              domContentLoaded: navigation.domContentLoadedEventEnd - navigation.fetchStart,
+              loadComplete: navigation.loadEventEnd - navigation.fetchStart,
             }
 
             console.log('Performance Metrics:', metrics)
