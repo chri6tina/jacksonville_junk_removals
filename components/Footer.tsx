@@ -54,50 +54,50 @@ const Footer = () => {
 
   return (
     <footer className="bg-gray-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 lg:gap-8">
           {/* Company Info */}
-          <div className="lg:col-span-2">
-            <div className="flex items-center space-x-3 mb-6">
-              <div className="w-12 h-12 bg-gray-700 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">JJR</span>
+          <div className="sm:col-span-2">
+            <div className="flex items-center space-x-3 mb-4 sm:mb-6">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gray-700 rounded-lg flex items-center justify-center flex-shrink-0">
+                <span className="text-white font-bold text-base sm:text-lg">JJR</span>
               </div>
-              <h3 className="text-2xl font-bold">Jacksonville Junk Removals</h3>
+              <h3 className="text-xl sm:text-2xl font-bold">Jacksonville Junk Removals</h3>
             </div>
             
-            <p className="text-gray-300 mb-6 max-w-md">
+            <p className="text-gray-300 mb-4 sm:mb-6 max-w-md text-sm sm:text-base">
               Professional, eco-friendly junk removal services in Jacksonville and surrounding areas. 
               We're committed to responsible disposal and community service.
             </p>
 
             {/* Contact Info */}
-            <div className="space-y-3 mb-6">
+            <div className="space-y-2 sm:space-y-3 mb-4 sm:mb-6">
               <div className="flex items-center space-x-3">
-                <Phone className="w-5 h-5 text-gray-400" />
-                <span className="text-gray-300">(904) 742-3531</span>
+                <Phone className="w-4 h-4 sm:w-5 sm:h-5 text-gray-400 flex-shrink-0" />
+                <span className="text-gray-300 text-sm sm:text-base">(904) 742-3531</span>
               </div>
               <div className="flex items-center space-x-3">
-                <Mail className="w-5 h-5 text-gray-400" />
-                <span className="text-gray-300">info@jacksonvillejunkremovals.com</span>
+                <Mail className="w-4 h-4 sm:w-5 sm:h-5 text-gray-400 flex-shrink-0" />
+                <span className="text-gray-300 text-sm sm:text-base">info@jacksonvillejunkremovals.com</span>
               </div>
               <div className="flex items-center space-x-3">
-                <MapPin className="w-5 h-5 text-gray-400" />
-                <span className="text-gray-300">Jacksonville, FL & Surrounding Areas</span>
+                <MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-gray-400 flex-shrink-0" />
+                <span className="text-gray-300 text-sm sm:text-base">Jacksonville, FL & Surrounding Areas</span>
               </div>
             </div>
 
             {/* Social Media */}
-            <div className="flex space-x-4">
+            <div className="flex space-x-3 sm:space-x-4">
               {socialLinks.map((social) => (
                 <a
                   key={social.name}
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 bg-gray-700 hover:bg-gray-600 rounded-lg flex items-center justify-center transition-colors duration-200"
+                  className="w-9 h-9 sm:w-10 sm:h-10 bg-gray-700 hover:bg-gray-600 rounded-lg flex items-center justify-center transition-colors duration-200"
                   aria-label={social.name}
                 >
-                  <social.icon className="w-5 h-5" />
+                  <social.icon className="w-4 h-4 sm:w-5 sm:h-5" />
                 </a>
               ))}
             </div>
@@ -105,13 +105,13 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
-            <ul className="space-y-2">
+            <h4 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4">Quick Links</h4>
+            <ul className="space-y-1 sm:space-y-2">
               {quickLinks.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-gray-300 hover:text-white transition-colors duration-200"
+                    className="text-gray-300 hover:text-white transition-colors duration-200 text-sm sm:text-base"
                   >
                     {link.name}
                   </Link>
@@ -122,13 +122,13 @@ const Footer = () => {
 
           {/* Services */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Our Services</h4>
-            <ul className="space-y-2">
+            <h4 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4">Our Services</h4>
+            <ul className="space-y-1 sm:space-y-2">
               {services.map((service) => (
                 <li key={service.name}>
                   <Link
                     href={service.href}
-                    className="text-gray-300 hover:text-white transition-colors duration-200"
+                    className="text-gray-300 hover:text-white transition-colors duration-200 text-sm sm:text-base"
                   >
                     {service.name}
                   </Link>
@@ -139,13 +139,13 @@ const Footer = () => {
 
           {/* Service Areas */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Service Areas</h4>
-            <ul className="space-y-2">
+            <h4 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4">Service Areas</h4>
+            <ul className="space-y-1 sm:space-y-2">
               {areas.map((area) => (
                 <li key={area.name}>
                   <Link
                     href={area.href}
-                    className="text-gray-300 hover:text-white transition-colors duration-200"
+                    className="text-gray-300 hover:text-white transition-colors duration-200 text-sm sm:text-base"
                   >
                     {area.name}
                   </Link>
@@ -156,19 +156,19 @@ const Footer = () => {
         </div>
 
         {/* Newsletter Signup */}
-        <div className="border-t border-gray-700 mt-12 pt-8">
+        <div className="border-t border-gray-700 mt-8 sm:mt-12 pt-6 sm:pt-8">
           <div className="max-w-2xl mx-auto text-center">
-            <h4 className="text-xl font-semibold mb-4">Stay Updated</h4>
-            <p className="text-gray-300 mb-6">
+            <h4 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4">Stay Updated</h4>
+            <p className="text-gray-300 mb-4 sm:mb-6 text-sm sm:text-base">
               Get the latest junk removal tips, special offers, and company updates delivered to your inbox.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 px-4 py-3 rounded-lg bg-gray-800 border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:border-gray-400"
+                className="flex-1 px-3 sm:px-4 py-2 sm:py-3 rounded-lg bg-gray-800 border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:border-gray-400 text-sm sm:text-base"
               />
-              <button className="bg-gray-700 hover:bg-gray-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-200 flex items-center justify-center space-x-2">
+              <button className="bg-gray-700 hover:bg-gray-600 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-semibold transition-all duration-200 flex items-center justify-center space-x-2 text-sm sm:text-base">
                 <Send className="w-4 h-4" />
                 <span>Subscribe</span>
               </button>
@@ -177,65 +177,67 @@ const Footer = () => {
         </div>
 
         {/* Trust Indicators */}
-        <div className="border-t border-gray-700 mt-8 pt-8">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+        <div className="border-t border-gray-700 mt-6 sm:mt-8 pt-6 sm:pt-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             <div className="flex items-center space-x-3">
-              <div className="w-12 h-12 bg-gray-700 rounded-lg flex items-center justify-center">
-                <Shield className="w-6 h-6 text-white" />
+              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gray-700 rounded-lg flex items-center justify-center flex-shrink-0">
+                <Shield className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
               </div>
               <div>
-                <h5 className="font-semibold">Licensed & Insured</h5>
-                <p className="text-sm text-gray-300">Fully bonded for your protection</p>
+                <h5 className="font-semibold text-sm sm:text-base">Licensed & Insured</h5>
+                <p className="text-xs sm:text-sm text-gray-300">Fully bonded for your protection</p>
               </div>
             </div>
             
             <div className="flex items-center space-x-3">
-              <div className="w-12 h-12 bg-gray-700 rounded-lg flex items-center justify-center">
-                <Leaf className="w-6 h-6 text-white" />
+              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gray-700 rounded-lg flex items-center justify-center flex-shrink-0">
+                <Leaf className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
               </div>
               <div>
-                <h5 className="font-semibold">Eco-Friendly</h5>
-                <p className="text-sm text-gray-300">Recycling & donation focus</p>
+                <h5 className="font-semibold text-sm sm:text-base">Eco-Friendly</h5>
+                <p className="text-xs sm:text-sm text-gray-300">Recycling & donation focus</p>
               </div>
             </div>
             
             <div className="flex items-center space-x-3">
-              <div className="w-12 h-12 bg-gray-700 rounded-lg flex items-center justify-center">
-                <Clock className="w-6 h-6 text-white" />
+              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gray-700 rounded-lg flex items-center justify-center flex-shrink-0">
+                <Clock className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
               </div>
               <div>
-                <h5 className="font-semibold">Same Day Service</h5>
-                <p className="text-sm text-gray-300">Quick response times</p>
+                <h5 className="font-semibold text-sm sm:text-base">Same Day Service</h5>
+                <p className="text-xs sm:text-sm text-gray-300">Quick response times</p>
               </div>
             </div>
             
             <div className="flex items-center space-x-3">
-              <div className="w-12 h-12 bg-gray-700 rounded-lg flex items-center justify-center">
-                <Truck className="w-6 h-6 text-white" />
+              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gray-700 rounded-lg flex items-center justify-center flex-shrink-0">
+                <Truck className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
               </div>
               <div>
-                <h5 className="font-semibold">Free Estimates</h5>
-                <p className="text-sm text-gray-300">No hidden fees</p>
+                <h5 className="font-semibold text-sm sm:text-base">Free Estimates</h5>
+                <p className="text-xs sm:text-sm text-gray-300">No hidden fees</p>
               </div>
             </div>
           </div>
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-gray-700 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-300 text-sm">
+        <div className="border-t border-gray-700 mt-6 sm:mt-8 pt-6 sm:pt-8 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+          <p className="text-gray-300 text-xs sm:text-sm text-center md:text-left">
             © {currentYear} Jacksonville Junk Removals. All rights reserved.
           </p>
           
-          <div className="flex items-center space-x-6 mt-4 md:mt-0">
-            <Link href="/privacy" className="text-gray-300 hover:text-white text-sm transition-colors duration-200">
-              Privacy Policy
-            </Link>
-            <Link href="/terms" className="text-gray-300 hover:text-white text-sm transition-colors duration-200">
-              Terms of Service
-            </Link>
-            <div className="flex items-center space-x-2 text-gray-300 text-sm">
-              <Leaf className="w-4 h-4 text-gray-400" />
+          <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-6">
+            <div className="flex items-center space-x-4">
+              <Link href="/privacy" className="text-gray-300 hover:text-white text-xs sm:text-sm transition-colors duration-200">
+                Privacy Policy
+              </Link>
+              <Link href="/terms" className="text-gray-300 hover:text-white text-xs sm:text-sm transition-colors duration-200">
+                Terms of Service
+              </Link>
+            </div>
+            <div className="flex items-center space-x-2 text-gray-300 text-xs sm:text-sm">
+              <Leaf className="w-3 h-3 sm:w-4 sm:h-4 text-gray-400" />
               <span>Eco-Friendly Disposal</span>
             </div>
           </div>
