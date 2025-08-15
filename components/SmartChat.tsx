@@ -168,7 +168,7 @@ export default function SmartChat() {
       }
       
       // Track location history
-      const locationEntity = entities.find(e => ['beach', 'riverside', 'southside', 'mandarin', 'arlington', 'orange park', 'san marco', 'downtown'].includes(e))
+      const locationEntity = entities.find(e => ['beach', 'riverside', 'southside', 'mandarin', 'orange park', 'san marco', 'downtown'].includes(e))
       if (locationEntity) {
         newMemory.locationHistory = [...new Set([...prev.locationHistory, locationEntity])].slice(-3)
         newMemory.lastLocation = locationEntity
@@ -178,6 +178,14 @@ export default function SmartChat() {
       newMemory.lastIntent = primary
       if (primary === 'pricing') newMemory.pricingQueries += 1
       if (primary === 'scheduling') newMemory.schedulingQueries += 1
+      
+      // Track what we've already discussed to prevent repetition
+      if (primary === 'general' && entities.length > 0) {
+        // If user mentions a service we've already discussed, don't repeat basic info
+        if (prev.serviceHistory.includes(entities[0])) {
+          newMemory.lastIntent = 'follow-up'
+        }
+      }
       
       return newMemory
     })
@@ -243,7 +251,7 @@ export default function SmartChat() {
       return generateSmartScheduling(entities, context, userText)
     }
     
-    // Use conversation memory for personalized responses
+    // Use conversation memory for personalized responses and prevent repetition
     if (conversationMemory.lastService && conversationMemory.lastLocation) {
       if (primary === 'scheduling') {
         return `For ${conversationMemory.lastService.replace('-', ' ')} in ${conversationMemory.lastLocation}, we have same-day availability or can schedule within 24 hours. What date works best for you?`
@@ -263,13 +271,17 @@ export default function SmartChat() {
       return `We offer same-day service or scheduling within 24-48 hours. What's your preferred date?`
     }
     
-    // Handle specific service questions professionally
+    // Handle specific service questions professionally with context awareness
     if (entities.includes('mattress-removal')) {
       if (primary === 'pricing') {
         return 'Mattress removal starts at $50. Multiple mattress discounts available. Would you like a specific estimate?'
       }
       if (primary === 'scheduling') {
         return 'Same-day mattress removal available. We work Monday-Friday 8 AM-5 PM, Saturday by appointment. What date works for you?'
+      }
+      // Check if we already discussed this service to avoid repetition
+      if (conversationMemory.serviceHistory.includes('mattress-removal')) {
+        return 'What specific information do you need about mattress removal? Pricing, scheduling, or process?'
       }
       return 'Mattress removal takes 30-45 minutes. We handle all sizes and locations. What would you like to know?'
     }
@@ -280,6 +292,10 @@ export default function SmartChat() {
       }
       if (primary === 'scheduling') {
         return 'Same-day furniture removal available. We work Monday-Friday 8 AM-5 PM, Saturday by appointment. What date works for you?'
+      }
+      // Check if we already discussed this service to avoid repetition
+      if (conversationMemory.serviceHistory.includes('furniture-removal')) {
+        return 'What specific information do you need about furniture removal? Pricing, scheduling, or process?'
       }
       return 'Furniture removal takes 1-2 hours. We handle all types and locations safely. What would you like to know?'
     }
@@ -345,6 +361,12 @@ export default function SmartChat() {
     if (primary === 'process') {
       return 'Our process: 1) Free estimate, 2) Schedule service, 3) Team handles everything, 4) Complete cleanup. Takes 1-3 hours. Would you like to schedule an estimate?'
     }
+    
+    // Handle follow-up questions when user has already specified a service
+    if (primary === 'follow-up' || (conversationMemory.serviceHistory.length > 0 && primary === 'general')) {
+      const lastService = conversationMemory.lastService.replace('-', ' ').replace(/\b\w/g, l => l.toUpperCase())
+      return `For ${lastService}, I can help with pricing, scheduling, or process details. What would you like to know?`
+    }
 
     // Handle specific context clues professionally
     if (context.includes('free-estimate')) {
@@ -368,11 +390,20 @@ export default function SmartChat() {
     // Handle general questions with specific information
     if (entities.length > 0) {
       const service = entities[0].replace('-', ' ').replace(/\b\w/g, l => l.toUpperCase())
+      // Don't ask what service they need if they already specified one
+      if (conversationMemory.serviceHistory.includes(entities[0])) {
+        return `For ${service}, what specific information do you need? Pricing, scheduling, or process details?`
+      }
       return `We offer ${service} with competitive pricing and flexible scheduling. What would you like to know?`
     }
 
-    // Final fallback with specific service list
-    return 'We offer mattress removal ($50), furniture removal ($100), appliance removal ($75), garage cleanout ($150), construction debris ($200), and commercial services. What service do you need?'
+    // Only ask for service if we have no context at all
+    if (conversationMemory.serviceHistory.length === 0) {
+      return 'We offer mattress removal ($50), furniture removal ($100), appliance removal ($75), garage cleanout ($150), construction debris ($200), and commercial services. What service do you need?'
+    }
+    
+    // If we have service context but user is asking general questions
+    return `I can help with ${conversationMemory.lastService.replace('-', ' ')}. What would you like to know - pricing, scheduling, or process?`
   }
 
   const handleSendMessage = async (text: string) => {
