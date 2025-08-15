@@ -232,6 +232,11 @@ export default function SmartChat() {
       return calculateSmartPricing(entities, context, userText)
     }
     
+    // Use smart scheduling assistant for scheduling questions
+    if (primary === 'scheduling' && entities.length > 0 && userText) {
+      return generateSmartScheduling(entities, context, userText)
+    }
+    
     // Use conversation memory for personalized responses
     if (conversationMemory.lastService && conversationMemory.lastLocation) {
       if (primary === 'scheduling') {
@@ -541,6 +546,160 @@ export default function SmartChat() {
     return response
   }
 
+  // Smart scheduling assistant with availability checking
+  const generateSmartScheduling = (entities: string[], context: string[], userText: string): string => {
+    const lowerText = userText.toLowerCase()
+    const now = new Date()
+    const currentHour = now.getHours()
+    const currentDay = now.getDay() // 0 = Sunday, 1 = Monday, etc.
+    
+    // Extract timing preferences
+    const timing = {
+      urgent: lowerText.includes('urgent') || lowerText.includes('emergency') || lowerText.includes('same day') || lowerText.includes('asap') || lowerText.includes('today') || lowerText.includes('immediate') || lowerText.includes('rush') || lowerText.includes('quick') || lowerText.includes('fast') || lowerText.includes('now'),
+      today: lowerText.includes('today') || lowerText.includes('this afternoon') || lowerText.includes('this evening'),
+      tomorrow: lowerText.includes('tomorrow') || lowerText.includes('next day'),
+      thisWeek: lowerText.includes('this week') || lowerText.includes('week') || lowerText.includes('soon'),
+      weekend: lowerText.includes('weekend') || lowerText.includes('saturday') || lowerText.includes('sunday'),
+      specific: lowerText.includes('monday') || lowerText.includes('tuesday') || lowerText.includes('wednesday') || lowerText.includes('thursday') || lowerText.includes('friday') || lowerText.includes('saturday') || lowerText.includes('sunday')
+    }
+    
+    // Extract time of day preferences
+    const timeOfDay = {
+      morning: lowerText.includes('morning') || lowerText.includes('am') || lowerText.includes('early'),
+      afternoon: lowerText.includes('afternoon') || lowerText.includes('pm') || lowerText.includes('midday'),
+      evening: lowerText.includes('evening') || lowerText.includes('night') || lowerText.includes('late')
+    }
+    
+    // Calculate available slots
+    const getAvailableSlots = () => {
+      const slots = []
+      
+      if (timing.urgent) {
+        // Same-day urgent service
+        if (currentDay >= 1 && currentDay <= 5) { // Monday-Friday
+          if (currentHour < 14) { // Before 2 PM
+            slots.push('Today 2-4 PM (urgent service)')
+            slots.push('Today 4-6 PM (urgent service)')
+          } else if (currentHour < 16) { // Before 4 PM
+            slots.push('Today 4-6 PM (urgent service)')
+          }
+        }
+        slots.push('Tomorrow morning (urgent service)')
+      }
+      
+      if (timing.today) {
+        if (currentDay >= 1 && currentDay <= 5) { // Monday-Friday
+          if (currentHour < 12) { // Before noon
+            slots.push('Today 1-3 PM')
+            slots.push('Today 3-5 PM')
+          } else if (currentHour < 14) { // Before 2 PM
+            slots.push('Today 3-5 PM')
+          }
+        }
+      }
+      
+      if (timing.tomorrow || timing.thisWeek) {
+        // Next business day
+        const nextBusinessDay = currentDay === 5 ? 'Monday' : currentDay === 6 ? 'Monday' : currentDay === 0 ? 'Monday' : 'Tomorrow'
+        slots.push(`${nextBusinessDay} 8-10 AM`)
+        slots.push(`${nextBusinessDay} 10 AM-12 PM`)
+        slots.push(`${nextBusinessDay} 1-3 PM`)
+        slots.push(`${nextBusinessDay} 3-5 PM`)
+      }
+      
+      if (timing.weekend) {
+        slots.push('Saturday 9-11 AM (premium pricing)')
+        slots.push('Saturday 11 AM-1 PM (premium pricing)')
+      }
+      
+      // Default slots if no specific timing
+      if (slots.length === 0) {
+        const nextDay = currentDay === 5 ? 'Monday' : currentDay === 6 ? 'Monday' : currentDay === 0 ? 'Monday' : 'Tomorrow'
+        slots.push(`${nextDay} 8-10 AM`)
+        slots.push(`${nextDay} 10 AM-12 PM`)
+        slots.push(`${nextDay} 1-3 PM`)
+        slots.push(`${nextDay} 3-5 PM`)
+      }
+      
+      return slots
+    }
+    
+    // Generate smart scheduling response
+    let response = 'Perfect! Let me help you schedule your service! 📅\n\n'
+    
+    if (timing.urgent) {
+      response += '🚨 **URGENT SERVICE AVAILABLE** 🚨\n'
+      response += 'I understand you need immediate assistance. We prioritize urgent situations!\n\n'
+    }
+    
+    const availableSlots = getAvailableSlots()
+    response += '**Available Time Slots:**\n'
+    availableSlots.forEach((slot, index) => {
+      response += `${index + 1}. ${slot}\n`
+    })
+    
+    response += '\n**Service Details:**\n'
+    if (entities.includes('mattress-removal')) {
+      response += '• Mattress removal typically takes 30-45 minutes\n'
+      response += '• We can work around your schedule\n'
+      response += '• Same-day service available for urgent needs\n'
+    } else if (entities.includes('furniture-removal')) {
+      response += '• Furniture removal typically takes 1-2 hours\n'
+      response += '• We handle all sizes and complexity levels\n'
+      response += '• Same-day service available for urgent needs\n'
+    } else if (entities.includes('garage-cleanout')) {
+      response += '• Garage cleanout typically takes 2-4 hours\n'
+      response += '• We bring all necessary equipment\n'
+      response += '• Can work around your schedule\n'
+    } else if (entities.includes('appliance-removal')) {
+      response += '• Appliance removal typically takes 30-60 minutes\n'
+      response += '• We handle all appliance types safely\n'
+      response += '• Same-day service available for urgent needs\n'
+    } else if (entities.includes('construction-debris')) {
+      response += '• Construction debris removal varies by project size\n'
+      response += '• We can work around your construction schedule\n'
+      response += '• Same-day service available for urgent projects\n'
+    }
+    
+    response += '\n**What would you like to do?**\n'
+    response += '1. Book one of the available slots above\n'
+    response += '2. Request a different time\n'
+    response += '3. Schedule a free estimate first\n'
+    response += '4. Get more information about our process'
+    
+    return response
+  }
+
+  // Handle quick actions for scheduling
+  const handleQuickAction = (action: string) => {
+    let message = ''
+    
+    switch (action) {
+      case 'book-urgent':
+        message = 'I need urgent same-day service as soon as possible'
+        break
+      case 'book-today':
+        message = 'I would like to schedule service for today'
+        break
+      case 'book-tomorrow':
+        message = 'I would like to schedule service for tomorrow'
+        break
+      case 'book-weekend':
+        message = 'I would like to schedule service for the weekend'
+        break
+      case 'free-estimate':
+        message = 'I would like to schedule a free estimate first'
+        break
+      case 'more-info':
+        message = 'Tell me more about your process and what to expect'
+        break
+      default:
+        message = action
+    }
+    
+    handleSendMessage(message)
+  }
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     handleSendMessage(inputText)
@@ -648,6 +807,45 @@ export default function SmartChat() {
                 <div ref={messagesEndRef} />
               </div>
             </div>
+
+            {/* Quick Action Buttons for Scheduling */}
+            {conversationContext.includes('scheduling') && (
+              <div className="px-4 py-2 border-t border-gray-200 bg-gray-50">
+                <div className="text-xs text-gray-600 mb-2 font-medium">Quick Actions:</div>
+                <div className="flex flex-wrap gap-2">
+                  <button
+                    onClick={() => handleQuickAction('book-urgent')}
+                    className="bg-red-600 hover:bg-red-700 text-white px-3 py-1 rounded text-xs font-medium transition-colors"
+                  >
+                    🚨 Urgent Service
+                  </button>
+                  <button
+                    onClick={() => handleQuickAction('book-today')}
+                    className="bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded text-xs font-medium transition-colors"
+                  >
+                    📅 Today
+                  </button>
+                  <button
+                    onClick={() => handleQuickAction('book-tomorrow')}
+                    className="bg-green-600 hover:bg-green-700 text-white px-3 py-1 rounded text-xs font-medium transition-colors"
+                  >
+                    🌅 Tomorrow
+                  </button>
+                  <button
+                    onClick={() => handleQuickAction('book-weekend')}
+                    className="bg-purple-600 hover:bg-purple-700 text-white px-3 py-1 rounded text-xs font-medium transition-colors"
+                  >
+                    🎉 Weekend
+                  </button>
+                  <button
+                    onClick={() => handleQuickAction('free-estimate')}
+                    className="bg-gray-600 hover:bg-gray-700 text-white px-3 py-1 rounded text-xs font-medium transition-colors"
+                  >
+                    📋 Free Estimate
+                  </button>
+                </div>
+              </div>
+            )}
 
             {/* Input */}
             <div className="p-4 border-t border-gray-200">
