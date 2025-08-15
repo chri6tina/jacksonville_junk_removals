@@ -34,11 +34,28 @@ export default function SmartChat() {
   const [isTyping, setIsTyping] = useState(false)
   const [conversationContext, setConversationContext] = useState<string[]>([])
   const [userPreferences, setUserPreferences] = useState<Record<string, any>>({})
+  const [conversationMemory, setConversationMemory] = useState<{
+    lastService: string
+    lastLocation: string
+    lastIntent: string
+    serviceHistory: string[]
+    locationHistory: string[]
+    pricingQueries: number
+    schedulingQueries: number
+  }>({
+    lastService: '',
+    lastLocation: '',
+    lastIntent: '',
+    serviceHistory: [],
+    locationHistory: [],
+    pricingQueries: 0,
+    schedulingQueries: 0
+  })
   
   const messagesEndRef = useRef<HTMLDivElement>(null)
   const inputRef = useRef<HTMLInputElement>(null)
 
-  // Enhanced intent recognition with better pattern matching
+  // Super intelligent intent recognition with advanced pattern matching
   const analyzeIntent = (text: string): UserIntent => {
     const lowerText = text.toLowerCase()
     const words = lowerText.split(' ')
@@ -48,67 +65,67 @@ export default function SmartChat() {
     const entities: string[] = []
     const context: string[] = []
 
-    // Enhanced service type detection
-    if (lowerText.includes('mattress') || lowerText.includes('bed') || lowerText.includes('box spring')) {
+    // Advanced service type detection with synonyms
+    if (lowerText.includes('mattress') || lowerText.includes('bed') || lowerText.includes('box spring') || lowerText.includes('boxspring') || lowerText.includes('bedding') || lowerText.includes('sleep')) {
       entities.push('mattress-removal')
       context.push('mattress-service')
       confidence += 0.3
     }
-    if (lowerText.includes('furniture') || lowerText.includes('couch') || lowerText.includes('chair') || lowerText.includes('sofa') || lowerText.includes('table') || lowerText.includes('desk')) {
+    if (lowerText.includes('furniture') || lowerText.includes('couch') || lowerText.includes('chair') || lowerText.includes('sofa') || lowerText.includes('table') || lowerText.includes('desk') || lowerText.includes('dresser') || lowerText.includes('bookshelf') || lowerText.includes('entertainment center') || lowerText.includes('tv stand')) {
       entities.push('furniture-removal')
       context.push('furniture-service')
       confidence += 0.3
     }
-    if (lowerText.includes('appliance') || lowerText.includes('refrigerator') || lowerText.includes('washer') || lowerText.includes('dryer') || lowerText.includes('dishwasher') || lowerText.includes('stove') || lowerText.includes('oven')) {
+    if (lowerText.includes('appliance') || lowerText.includes('refrigerator') || lowerText.includes('washer') || lowerText.includes('dryer') || lowerText.includes('dishwasher') || lowerText.includes('stove') || lowerText.includes('oven') || lowerText.includes('microwave') || lowerText.includes('freezer') || lowerText.includes('washing machine')) {
       entities.push('appliance-removal')
       context.push('appliance-service')
       confidence += 0.3
     }
-    if (lowerText.includes('construction') || lowerText.includes('debris') || lowerText.includes('renovation') || lowerText.includes('drywall') || lowerText.includes('lumber') || lowerText.includes('concrete')) {
+    if (lowerText.includes('construction') || lowerText.includes('debris') || lowerText.includes('renovation') || lowerText.includes('drywall') || lowerText.includes('lumber') || lowerText.includes('concrete') || lowerText.includes('insulation') || lowerText.includes('roofing') || lowerText.includes('flooring') || lowerText.includes('tile')) {
       entities.push('construction-debris')
       context.push('construction-service')
       confidence += 0.3
     }
-    if (lowerText.includes('garage') || lowerText.includes('cleanout') || lowerText.includes('basement') || lowerText.includes('attic')) {
+    if (lowerText.includes('garage') || lowerText.includes('cleanout') || lowerText.includes('basement') || lowerText.includes('attic') || lowerText.includes('storage') || lowerText.includes('clutter') || lowerText.includes('junk') || lowerText.includes('stuff')) {
       entities.push('garage-cleanout')
       context.push('garage-service')
       confidence += 0.3
     }
-    if (lowerText.includes('office') || lowerText.includes('commercial') || lowerText.includes('business') || lowerText.includes('retail') || lowerText.includes('store')) {
+    if (lowerText.includes('office') || lowerText.includes('commercial') || lowerText.includes('business') || lowerText.includes('retail') || lowerText.includes('store') || lowerText.includes('warehouse') || lowerText.includes('restaurant') || lowerText.includes('shop')) {
       entities.push('commercial-junk-removal')
       context.push('commercial-service')
       confidence += 0.3
     }
 
-    // Enhanced intent detection
-    if (lowerText.includes('quote') || lowerText.includes('price') || lowerText.includes('cost') || lowerText.includes('how much') || lowerText.includes('$$') || lowerText.includes('dollars')) {
+    // Advanced intent detection with natural language
+    if (lowerText.includes('quote') || lowerText.includes('price') || lowerText.includes('cost') || lowerText.includes('how much') || lowerText.includes('$$') || lowerText.includes('dollars') || lowerText.includes('estimate') || lowerText.includes('pricing') || lowerText.includes('rate') || lowerText.includes('fee')) {
       primary = 'pricing'
       context.push('pricing')
       confidence += 0.4
     }
-    if (lowerText.includes('schedule') || lowerText.includes('book') || lowerText.includes('appointment') || lowerText.includes('when') || lowerText.includes('available') || lowerText.includes('time')) {
+    if (lowerText.includes('schedule') || lowerText.includes('book') || lowerText.includes('appointment') || lowerText.includes('when') || lowerText.includes('available') || lowerText.includes('time') || lowerText.includes('calendar') || lowerText.includes('reserve') || lowerText.includes('set up') || lowerText.includes('arrange')) {
       primary = 'scheduling'
       context.push('scheduling')
       confidence += 0.4
     }
-    if (lowerText.includes('area') || lowerText.includes('location') || lowerText.includes('jacksonville') || lowerText.includes('serve') || lowerText.includes('coverage') || lowerText.includes('where')) {
+    if (lowerText.includes('area') || lowerText.includes('location') || lowerText.includes('jacksonville') || lowerText.includes('serve') || lowerText.includes('coverage') || lowerText.includes('where') || lowerText.includes('neighborhood') || lowerText.includes('city') || lowerText.includes('county')) {
       primary = 'location'
       context.push('location')
       confidence += 0.4
     }
-    if (lowerText.includes('urgent') || lowerText.includes('emergency') || lowerText.includes('same day') || lowerText.includes('asap') || lowerText.includes('today') || lowerText.includes('immediate')) {
+    if (lowerText.includes('urgent') || lowerText.includes('emergency') || lowerText.includes('same day') || lowerText.includes('asap') || lowerText.includes('today') || lowerText.includes('immediate') || lowerText.includes('rush') || lowerText.includes('quick') || lowerText.includes('fast') || lowerText.includes('now')) {
       primary = 'urgent'
       context.push('urgent')
       confidence += 0.5
     }
-    if (lowerText.includes('process') || lowerText.includes('how does') || lowerText.includes('what happens') || lowerText.includes('steps')) {
+    if (lowerText.includes('process') || lowerText.includes('how does') || lowerText.includes('what happens') || lowerText.includes('steps') || lowerText.includes('procedure') || lowerText.includes('work') || lowerText.includes('method') || lowerText.includes('approach')) {
       primary = 'process'
       context.push('process')
       confidence += 0.3
     }
 
-    // Enhanced location detection
-    const locations = ['beach', 'riverside', 'southside', 'mandarin', 'arlington', 'orange park', 'san marco', 'downtown', 'southside', 'northside']
+    // Advanced location detection with variations
+    const locations = ['beach', 'riverside', 'southside', 'mandarin', 'arlington', 'orange park', 'san marco', 'downtown', 'northside', 'westside', 'eastside', 'clay county', 'duval county']
     locations.forEach(location => {
       if (lowerText.includes(location)) {
         entities.push(location)
@@ -117,26 +134,62 @@ export default function SmartChat() {
       }
     })
 
-    // Additional context clues
-    if (lowerText.includes('free') || lowerText.includes('estimate') || lowerText.includes('quote')) {
+    // Advanced context clues with natural language
+    if (lowerText.includes('free') || lowerText.includes('estimate') || lowerText.includes('quote') || lowerText.includes('no cost') || lowerText.includes('complimentary')) {
       context.push('free-estimate')
     }
-    if (lowerText.includes('eco') || lowerText.includes('green') || lowerText.includes('recycle')) {
+    if (lowerText.includes('eco') || lowerText.includes('green') || lowerText.includes('recycle') || lowerText.includes('environmental') || lowerText.includes('sustainable') || lowerText.includes('donate')) {
       context.push('eco-friendly')
     }
-    if (lowerText.includes('weekend') || lowerText.includes('saturday') || lowerText.includes('sunday')) {
+    if (lowerText.includes('weekend') || lowerText.includes('saturday') || lowerText.includes('sunday') || lowerText.includes('off hours') || lowerText.includes('after hours')) {
       context.push('weekend-service')
+    }
+    if (lowerText.includes('volume') || lowerText.includes('bulk') || lowerText.includes('multiple') || lowerText.includes('several') || lowerText.includes('lots of') || lowerText.includes('many')) {
+      context.push('bulk-service')
+    }
+    if (lowerText.includes('heavy') || lowerText.includes('large') || lowerText.includes('big') || lowerText.includes('oversized') || lowerText.includes('difficult') || lowerText.includes('challenging')) {
+      context.push('difficult-removal')
     }
 
     return { primary, confidence: Math.min(confidence, 1), entities, context }
+  }
+
+  // Update conversation memory for smarter responses
+  const updateConversationMemory = (intent: UserIntent, userText: string) => {
+    const { primary, entities, context } = intent
+    
+    setConversationMemory(prev => {
+      const newMemory = { ...prev }
+      
+      // Track service history
+      if (entities.length > 0) {
+        newMemory.serviceHistory = [...new Set([...prev.serviceHistory, ...entities])].slice(-5)
+        newMemory.lastService = entities[0]
+      }
+      
+      // Track location history
+      const locationEntity = entities.find(e => ['beach', 'riverside', 'southside', 'mandarin', 'arlington', 'orange park', 'san marco', 'downtown'].includes(e))
+      if (locationEntity) {
+        newMemory.locationHistory = [...new Set([...prev.locationHistory, locationEntity])].slice(-3)
+        newMemory.lastLocation = locationEntity
+      }
+      
+      // Track intent patterns
+      newMemory.lastIntent = primary
+      if (primary === 'pricing') newMemory.pricingQueries += 1
+      if (primary === 'scheduling') newMemory.schedulingQueries += 1
+      
+      return newMemory
+    })
   }
 
   // Smart response generation using OpenAI API
   const generateSmartResponse = async (userText: string, intent: UserIntent): Promise<string> => {
     const { primary, entities, context } = intent
     
-    // Update conversation context
+    // Update conversation context and memory
     setConversationContext(prev => [...new Set([...prev, ...context])])
+    updateConversationMemory(intent, userText)
     
     try {
       // Call OpenAI API
@@ -160,7 +213,7 @@ export default function SmartChat() {
       
       if (data.error) {
         // Fallback to rule-based responses if AI fails
-        return generateFallbackResponse(primary, entities, context)
+        return generateFallbackResponse(primary, entities, context, userText)
       }
 
       return data.response
@@ -168,12 +221,37 @@ export default function SmartChat() {
     } catch (error) {
       console.error('API Error:', error)
       // Fallback to rule-based responses
-      return generateFallbackResponse(primary, entities, context)
+      return generateFallbackResponse(primary, entities, context, userText)
     }
   }
 
   // Super smart fallback response generation with detailed, contextual answers
-  const generateFallbackResponse = (primary: string, entities: string[], context: string[]): string => {
+  const generateFallbackResponse = (primary: string, entities: string[], context: string[], userText?: string): string => {
+    // Use smart pricing calculator for detailed pricing questions
+    if (primary === 'pricing' && entities.length > 0 && userText) {
+      return calculateSmartPricing(entities, context, userText)
+    }
+    
+    // Use conversation memory for personalized responses
+    if (conversationMemory.lastService && conversationMemory.lastLocation) {
+      if (primary === 'scheduling') {
+        return `Great! I remember you're interested in ${conversationMemory.lastService.replace('-', ' ')} in ${conversationMemory.lastLocation}! 📅 We have excellent availability in your area. For ${conversationMemory.lastService.replace('-', ' ')} in ${conversationMemory.lastLocation}, we can typically provide same-day service or schedule you within 24 hours. What date works best for you?`
+      }
+      
+      if (primary === 'pricing') {
+        return `Perfect! Since you're asking about ${conversationMemory.lastService.replace('-', ' ')} in ${conversationMemory.lastLocation}, I can give you area-specific pricing. ${conversationMemory.lastService.replace('-', ' ')} in ${conversationMemory.lastLocation} starts at our standard rates, but we often have special pricing for local customers. Would you like me to calculate a specific estimate for your needs?`
+      }
+    }
+    
+    // Handle repeated questions with memory
+    if (conversationMemory.pricingQueries > 1 && primary === 'pricing') {
+      return `I see you've asked about pricing a few times! 💰 Let me give you the most comprehensive breakdown. Our pricing is transparent with no hidden fees. For the most accurate quote tailored to your specific situation, I strongly recommend a free on-site estimate. This way you'll get exact pricing for your exact needs. Would you like to schedule that free estimate?`
+    }
+    
+    if (conversationMemory.schedulingQueries > 1 && primary === 'scheduling') {
+      return `I notice you've asked about scheduling a couple times! 📅 Let me make this super clear: We offer flexible scheduling with same-day service available. Our typical availability is within 24-48 hours. Since you seem ready to book, would you like me to help you choose a specific date and time? I can check our current availability right now!`
+    }
+    
     // Handle specific service questions with detailed answers
     if (entities.includes('mattress-removal')) {
       if (primary === 'pricing') {
@@ -341,6 +419,126 @@ export default function SmartChat() {
       setMessages(prev => [...prev, agentMessage])
       setIsTyping(false)
     }
+  }
+
+  // Smart pricing calculator based on user descriptions
+  const calculateSmartPricing = (entities: string[], context: string[], userText: string): string => {
+    const lowerText = userText.toLowerCase()
+    
+    // Extract quantity indicators
+    const quantity = {
+      single: lowerText.includes('one') || lowerText.includes('single') || lowerText.includes('1') || lowerText.includes('just') || lowerText.includes('only'),
+      multiple: lowerText.includes('two') || lowerText.includes('three') || lowerText.includes('2') || lowerText.includes('3') || lowerText.includes('couple') || lowerText.includes('few'),
+      bulk: lowerText.includes('many') || lowerText.includes('lots') || lowerText.includes('several') || lowerText.includes('multiple') || lowerText.includes('bunch') || lowerText.includes('pile')
+    }
+    
+    // Extract size indicators
+    const size = {
+      small: lowerText.includes('small') || lowerText.includes('little') || lowerText.includes('tiny') || lowerText.includes('mini'),
+      medium: lowerText.includes('medium') || lowerText.includes('regular') || lowerText.includes('standard') || lowerText.includes('normal'),
+      large: lowerText.includes('large') || lowerText.includes('big') || lowerText.includes('huge') || lowerText.includes('oversized') || lowerText.includes('king')
+    }
+    
+    // Extract complexity indicators
+    const complexity = {
+      simple: lowerText.includes('simple') || lowerText.includes('easy') || lowerText.includes('basic') || lowerText.includes('straightforward'),
+      complex: lowerText.includes('complex') || lowerText.includes('difficult') || lowerText.includes('challenging') || lowerText.includes('tight') || lowerText.includes('stairs') || lowerText.includes('narrow')
+    }
+    
+    let basePrice = 0
+    let adjustments = []
+    
+    if (entities.includes('mattress-removal')) {
+      basePrice = 50
+      if (quantity.multiple) {
+        basePrice = 90
+        adjustments.push('Volume discount applied for multiple mattresses')
+      } else if (quantity.bulk) {
+        basePrice = 130
+        adjustments.push('Bulk discount for multiple items')
+      }
+      if (size.large) {
+        basePrice += 25
+        adjustments.push('Large mattress premium')
+      }
+      if (complexity.complex) {
+        basePrice += 30
+        adjustments.push('Complex removal (stairs/tight spaces)')
+      }
+    }
+    
+    if (entities.includes('furniture-removal')) {
+      if (size.small) basePrice = 50
+      else if (size.medium) basePrice = 100
+      else if (size.large) basePrice = 150
+      else basePrice = 100
+      
+      if (quantity.multiple) {
+        basePrice = Math.round(basePrice * 1.5)
+        adjustments.push('Multiple item discount')
+      } else if (quantity.bulk) {
+        basePrice = Math.round(basePrice * 2)
+        adjustments.push('Bulk service discount')
+      }
+      
+      if (complexity.complex) {
+        basePrice += 50
+        adjustments.push('Complex removal (stairs/tight spaces)')
+      }
+    }
+    
+    if (entities.includes('appliance-removal')) {
+      if (size.small) basePrice = 50
+      else if (size.medium) basePrice = 75
+      else if (size.large) basePrice = 100
+      else basePrice = 75
+      
+      if (quantity.multiple) {
+        basePrice = Math.round(basePrice * 1.3)
+        adjustments.push('Multiple appliance discount')
+      }
+      
+      if (complexity.complex) {
+        basePrice += 40
+        adjustments.push('Complex removal (tight spaces/stairs)')
+      }
+    }
+    
+    if (entities.includes('garage-cleanout')) {
+      if (lowerText.includes('quarter') || lowerText.includes('25%') || lowerText.includes('little')) basePrice = 150
+      else if (lowerText.includes('half') || lowerText.includes('50%') || lowerText.includes('medium')) basePrice = 250
+      else if (lowerText.includes('three quarter') || lowerText.includes('75%') || lowerText.includes('mostly')) basePrice = 350
+      else if (lowerText.includes('full') || lowerText.includes('100%') || lowerText.includes('completely')) basePrice = 450
+      else basePrice = 250
+      
+      if (complexity.complex) {
+        basePrice += 75
+        adjustments.push('Complex cleanout (heavy items/tight spaces)')
+      }
+    }
+    
+    if (entities.includes('construction-debris')) {
+      if (lowerText.includes('small') || lowerText.includes('little') || lowerText.includes('minor')) basePrice = 200
+      else if (lowerText.includes('medium') || lowerText.includes('moderate') || lowerText.includes('average')) basePrice = 400
+      else if (lowerText.includes('large') || lowerText.includes('major') || lowerText.includes('big')) basePrice = 600
+      else basePrice = 400
+      
+      if (context.includes('ongoing')) {
+        basePrice = Math.round(basePrice * 0.8)
+        adjustments.push('Ongoing project discount')
+      }
+    }
+    
+    // Format the response
+    let response = `Based on your description, I estimate your ${entities[0]?.replace('-', ' ')} service at approximately $${basePrice}. `
+    
+    if (adjustments.length > 0) {
+      response += `\n\nPrice adjustments:\n${adjustments.map(adj => `• ${adj}`).join('\n')}`
+    }
+    
+    response += `\n\nThis is an estimate based on your description. For the most accurate pricing, I recommend a free on-site estimate. Would you like to schedule one?`
+    
+    return response
   }
 
   const handleSubmit = (e: React.FormEvent) => {
