@@ -16,31 +16,6 @@ export default async function BlogPage() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Post Order Debug */}
-      {posts.length > 0 && (
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          <div className="p-3 bg-blue-50 rounded border border-blue-200">
-            <h4 className="font-medium text-blue-800 mb-2">Post Order (Newest First):</h4>
-            <div className="space-y-2">
-              {posts.slice(0, 5).map((post, index) => (
-                <div key={post.id} className="flex items-center justify-between text-xs">
-                  <span className="font-medium">#{index + 1}: {post.title}</span>
-                  <span className="text-blue-600">
-                    {new Date(post.publishDate).toLocaleDateString('en-US', {
-                      month: 'short',
-                      day: 'numeric',
-                      year: 'numeric',
-                      hour: '2-digit',
-                      minute: '2-digit'
-                    })}
-                  </span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      )}
-
       {/* Posts Grid */}
       {!error && posts.length > 0 && (
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
