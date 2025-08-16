@@ -13,22 +13,22 @@ const Hero = () => {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Content */}
           <div className="space-y-8">
-            {/* Professional Badge */}
-            <div className="inline-flex items-center space-x-2 bg-gray-100 border border-gray-200 rounded-md px-4 py-2">
-              <div className="w-2 h-2 bg-gray-900 rounded-full"></div>
-              <span className="text-sm font-medium text-gray-900">Jacksonville's Trusted Choice</span>
+            {/* Local Business Badge */}
+            <div className="inline-flex items-center space-x-2 bg-blue-50 border border-blue-200 rounded-md px-4 py-2">
+              <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+              <span className="text-sm font-medium text-blue-800">Family Owned & Operated in Jacksonville</span>
             </div>
 
             <div className="space-y-6">
               <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
-                Professional Junk Removal
+                Your Neighbors in
                 <br />
-                <span className="text-gray-900">Jacksonville, Florida</span>
+                <span className="text-blue-600">Jacksonville Junk Removal</span>
               </h1>
               
               <p className="text-xl text-gray-600 leading-relaxed max-w-2xl">
-                Reliable, efficient junk removal services with same-day availability. 
-                We handle residential, commercial, and construction debris with professional care.
+                We're not just another company - we're your Jacksonville neighbors who care about keeping our community clean. 
+                Same-day service, fair pricing, and the personal touch only a local business can provide.
               </p>
             </div>
 
@@ -49,51 +49,51 @@ const Hero = () => {
               </Link>
             </div>
 
-            {/* Trust Indicators */}
+            {/* Local Trust Indicators */}
             <div className="pt-6">
               <div className="flex flex-wrap items-center gap-6 text-sm">
                 <div className="flex items-center space-x-2">
-                  <CheckCircle className="w-5 h-5 text-green-600" />
-                  <span className="text-gray-600">Licensed & Insured</span>
+                  <CheckCircle className="w-5 h-5 text-blue-600" />
+                  <span className="text-gray-600">Jacksonville Licensed & Insured</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <CheckCircle className="w-5 h-5 text-green-600" />
-                  <span className="text-gray-600">Free Estimates</span>
+                  <CheckCircle className="w-5 h-5 text-blue-600" />
+                  <span className="text-gray-600">Free Local Estimates</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <CheckCircle className="w-5 h-5 text-green-600" />
-                  <span className="text-gray-600">Same Day Service</span>
+                  <CheckCircle className="w-5 h-5 text-blue-600" />
+                  <span className="text-gray-600">Same-Day Jacksonville Service</span>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Professional Visual */}
+          {/* Local Business Visual */}
           <div className="relative">
-            <div className="bg-gradient-to-br from-gray-100 to-gray-200 rounded-lg p-12 h-[500px] flex flex-col items-center justify-center text-center">
-              <div className="w-24 h-24 bg-gray-900 rounded-lg flex items-center justify-center mb-6">
-                <div className="text-white text-4xl">🚛</div>
+            <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg p-12 h-[500px] flex flex-col items-center justify-center text-center">
+              <div className="w-24 h-24 bg-blue-600 rounded-lg flex items-center justify-center mb-6">
+                <div className="text-white text-4xl">🏠</div>
               </div>
-              <h3 className="text-2xl font-semibold text-gray-900 mb-3">
-                Professional Service
+              <h3 className="text-2xl font-semibold text-blue-800 mb-3">
+                Your Jacksonville Neighbors
               </h3>
-              <p className="text-gray-600 mb-8 max-w-sm">
-                Our experienced team provides efficient, reliable junk removal with attention to detail and customer satisfaction.
+              <p className="text-blue-700 mb-8 max-w-sm">
+                We know Jacksonville because we live here too. From the beaches to downtown, we're your local junk removal team.
               </p>
               
-              {/* Professional Stats */}
+              {/* Local Business Stats */}
               <div className="grid grid-cols-3 gap-8">
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-gray-900">500+</div>
-                  <div className="text-sm text-gray-500">Satisfied Clients</div>
+                  <div className="text-2xl font-bold text-blue-800">Local</div>
+                  <div className="text-sm text-blue-600">Family Business</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-gray-900">24hr</div>
-                  <div className="text-sm text-gray-500">Response Time</div>
+                  <div className="text-2xl font-bold text-blue-800">Same</div>
+                  <div className="text-sm text-blue-600">Day Service</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-gray-900">100%</div>
-                  <div className="text-sm text-gray-500">Eco-Friendly</div>
+                  <div className="text-2xl font-bold text-blue-800">Fair</div>
+                  <div className="text-sm text-blue-600">Local Pricing</div>
                 </div>
               </div>
             </div>
