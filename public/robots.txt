@@ -61,6 +61,7 @@ Allow: /storage-unit-cleanout
 Allow: /basement-cleanout
 Allow: /office-cleanout
 Allow: /warehouse-cleanout
+Allow: /apartment-cleanout
 
 # Block admin and technical pages
 Disallow: /admin
