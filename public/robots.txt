@@ -64,6 +64,7 @@ Allow: /warehouse-cleanout
 Allow: /apartment-cleanout
 Allow: /restaurant-cleanout
 Allow: /medical-office-cleanout
+Allow: /hotel-cleanout
 
 # Block admin and technical pages
 Disallow: /admin
