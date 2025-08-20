@@ -21,14 +21,14 @@ const Hero = () => {
 
             <div className="space-y-6">
               <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
-                Your Neighbors in
+                Jacksonville Junk Removal
                 <br />
-                <span className="text-blue-600">Jacksonville Junk Removal</span>
+                <span className="text-blue-600">Same-Day Service</span>
               </h1>
               
               <p className="text-xl text-gray-600 leading-relaxed max-w-2xl">
-                We're not just another company - we're your Jacksonville neighbors who care about keeping our community clean. 
-                Same-day service, fair pricing, and the personal touch only a local business can provide.
+                Jacksonville's trusted junk removal company with same-day service, fair pricing, and local expertise. 
+                We're your neighbors who care about keeping our community clean and clutter-free.
               </p>
             </div>
 
