@@ -55,6 +55,7 @@ Allow: /construction-debris-removal
 Allow: /commercial-cleanout
 Allow: /mattress-removal
 Allow: /hazardous-waste-removal
+Allow: /hot-tub-removal
 
 # Block admin and technical pages
 Disallow: /admin
