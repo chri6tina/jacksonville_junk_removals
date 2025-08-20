@@ -53,6 +53,7 @@ Allow: /appliance-removal
 Allow: /furniture-removal
 Allow: /construction-debris-removal
 Allow: /commercial-cleanout
+Allow: /mattress-removal
 
 # Block admin and technical pages
 Disallow: /admin
