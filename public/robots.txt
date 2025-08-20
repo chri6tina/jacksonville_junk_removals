@@ -54,6 +54,7 @@ Allow: /furniture-removal
 Allow: /construction-debris-removal
 Allow: /commercial-cleanout
 Allow: /mattress-removal
+Allow: /hazardous-waste-removal
 
 # Block admin and technical pages
 Disallow: /admin
