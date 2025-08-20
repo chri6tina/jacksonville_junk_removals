@@ -46,6 +46,8 @@ Allow: /same-day-junk-removal
 Allow: /emergency-cleanup
 Allow: /hoarding-cleanup
 Allow: /estate-cleanout
+Allow: /renovation-cleanup
+Allow: /senior-cleanout
 
 # Block admin and technical pages
 Disallow: /admin
