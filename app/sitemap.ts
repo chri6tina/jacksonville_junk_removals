@@ -28,6 +28,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/office-furniture-removal',
     '/retail-store-cleanout',
     '/estate-cleanout',
+    '/storm-cleanup',
   ]
 
   // Location pages
@@ -64,7 +65,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: page === '/post' ? 'daily' : page === '/services' || page === '/estimation' ? 'weekly' : 'monthly',
     priority: page === '' ? 1 : 
               page === '/services' || page === '/estimation' ? 0.9 : 
-              page === '/mattress-removal' || page === '/furniture-removal' || page === '/appliance-removal' ? 0.85 :
+              page === '/mattress-removal' || page === '/furniture-removal' || page === '/appliance-removal' || page === '/storm-cleanup' ? 0.85 :
               page === '/garage-cleanout' || page === '/construction-debris-removal' ? 0.8 :
               page.includes('junk-removal-') ? 0.75 : 0.7,
   }))
