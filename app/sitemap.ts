@@ -61,7 +61,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return allPages.map((page) => ({
     url: `${baseUrl}${page}`,
     lastModified: new Date(),
-    changeFrequency: page === '/post' ? 'daily' : 'weekly',
-    priority: page === '' ? 1 : page === '/services' || page === '/estimation' ? 0.9 : 0.8,
+    changeFrequency: page === '/post' ? 'daily' : page === '/services' || page === '/estimation' ? 'weekly' : 'monthly',
+    priority: page === '' ? 1 : 
+              page === '/services' || page === '/estimation' ? 0.9 : 
+              page === '/mattress-removal' || page === '/furniture-removal' || page === '/appliance-removal' ? 0.85 :
+              page === '/garage-cleanout' || page === '/construction-debris-removal' ? 0.8 :
+              page.includes('junk-removal-') ? 0.75 : 0.7,
   }))
 }

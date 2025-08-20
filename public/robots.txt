@@ -1,0 +1,51 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://jacksonvillejunkremovals.com/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
+
+# Allow all important pages
+Allow: /services
+Allow: /mattress-removal
+Allow: /furniture-removal
+Allow: /appliance-removal
+Allow: /garage-cleanout
+Allow: /construction-debris-removal
+Allow: /contact
+Allow: /estimation
+Allow: /locations
+
+# Allow location-specific pages
+Allow: /junk-removal-jacksonville-beach
+Allow: /junk-removal-riverside
+Allow: /junk-removal-southside
+Allow: /junk-removal-mandarin
+Allow: /junk-removal-arlington
+Allow: /junk-removal-orange-park
+Allow: /junk-removal-san-marco
+
+# Block admin and technical pages
+Disallow: /admin
+Disallow: /api
+Disallow: /_next
+Disallow: /static
+
+# Block search and filter pages that could create duplicate content
+Disallow: /*?*
+Disallow: /*&*
+
+# Allow Google and Bing bots with different settings
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0.5
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 0.5
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 1

@@ -254,7 +254,7 @@ export default function SmartChat() {
     // Use conversation memory for personalized responses and prevent repetition
     if (conversationMemory.lastService && conversationMemory.lastLocation) {
       if (primary === 'scheduling') {
-        return `For ${conversationMemory.lastService.replace('-', ' ')} in ${conversationMemory.lastLocation}, we have same-day availability or can schedule within 24 hours. What date works best for you?`
+        return `📅 **SCHEDULING FOR ${conversationMemory.lastService.replace('-', ' ').toUpperCase()} IN ${conversationMemory.lastLocation.toUpperCase()}** 📅\n\n**Same-Day Service:** Available today if you call before 2 PM\n**Next-Day Service:** Tomorrow 8 AM-5 PM\n**Weekend Service:** Saturday by appointment (premium pricing)\n\nWhat works best for you?`
       }
       
       if (primary === 'pricing') {
@@ -268,7 +268,7 @@ export default function SmartChat() {
     }
     
     if (conversationMemory.schedulingQueries > 1 && primary === 'scheduling') {
-      return `We offer same-day service or scheduling within 24-48 hours. What's your preferred date?`
+      return `📅 **SCHEDULING OPTIONS** 📅\n\n**Same-Day Service:** Available today if you call before 2 PM\n**Next-Day Service:** Tomorrow 8 AM-5 PM\n**Weekend Service:** Saturday by appointment (premium pricing)\n\nWhat service do you need scheduled?`
     }
     
     // Handle specific service questions professionally with context awareness
@@ -277,7 +277,7 @@ export default function SmartChat() {
         return 'Mattress removal starts at $50. Multiple mattress discounts available. Would you like a specific estimate?'
       }
       if (primary === 'scheduling') {
-        return 'Same-day mattress removal available. We work Monday-Friday 8 AM-5 PM, Saturday by appointment. What date works for you?'
+        return 'Perfect! For mattress removal, here are your options:\n\n**Same-Day Service:** Available today if you call before 2 PM\n**Next-Day Service:** Tomorrow 8 AM-5 PM\n**Weekend Service:** Saturday by appointment (premium pricing)\n\nWhat works best for you?'
       }
       // Check if we already discussed this service to avoid repetition
       if (conversationMemory.serviceHistory.includes('mattress-removal')) {
@@ -291,7 +291,7 @@ export default function SmartChat() {
         return 'Furniture removal starts at $50 for small items, $100 for medium, $150+ for large. Volume discounts available. What furniture do you need removed?'
       }
       if (primary === 'scheduling') {
-        return 'Same-day furniture removal available. We work Monday-Friday 8 AM-5 PM, Saturday by appointment. What date works for you?'
+        return 'Great! For furniture removal, here are your options:\n\n**Same-Day Service:** Available today if you call before 2 PM\n**Next-Day Service:** Tomorrow 8 AM-5 PM\n**Weekend Service:** Saturday by appointment (premium pricing)\n\nWhat works best for you?'
       }
       // Check if we already discussed this service to avoid repetition
       if (conversationMemory.serviceHistory.includes('furniture-removal')) {
@@ -305,7 +305,7 @@ export default function SmartChat() {
         return 'Appliance removal starts at $50 for small, $75 for medium, $100 for large. Volume discounts available. What appliances do you need removed?'
       }
       if (primary === 'scheduling') {
-        return 'Same-day appliance removal available. We work Monday-Friday 8 AM-5 PM, Saturday by appointment. What date works for you?'
+        return 'Excellent! For appliance removal, here are your options:\n\n**Same-Day Service:** Available today if you call before 2 PM\n**Next-Day Service:** Tomorrow 8 AM-5 PM\n**Weekend Service:** Saturday by appointment (premium pricing)\n\nWhat works best for you?'
       }
       return 'Appliance removal takes 30-60 minutes. We handle all types safely. What would you like to know?'
     }
@@ -315,7 +315,7 @@ export default function SmartChat() {
         return 'Garage cleanout starts at $150 for quarter, $250 for half, $350 for three-quarter, $450 for full. Free estimates available. Would you like to schedule one?'
       }
       if (primary === 'scheduling') {
-        return 'Garage cleanout available within 24-48 hours. We work Monday-Friday 8 AM-5 PM, Saturday by appointment. What date works for you?'
+        return 'Perfect! For garage cleanout, here are your options:\n\n**Same-Day Service:** Available today if you call before 2 PM\n**Next-Day Service:** Tomorrow 8 AM-5 PM\n**Weekend Service:** Saturday by appointment (premium pricing)\n\nWhat works best for you?'
       }
       return 'Garage cleanout takes 2-4 hours. We handle all items and provide complete cleanup. What would you like to know?'
     }
@@ -325,7 +325,7 @@ export default function SmartChat() {
         return 'Construction debris removal starts at $200 for small, $400 for medium, $600 for large projects. Volume discounts available. What type of project are you working on?'
       }
       if (primary === 'scheduling') {
-        return 'Construction debris removal available same-day or next-day. We work Monday-Friday 8 AM-5 PM, weekend by appointment. What\'s your timeline?'
+        return 'Excellent! For construction debris removal, here are your options:\n\n**Same-Day Service:** Available today if you call before 2 PM\n**Next-Day Service:** Tomorrow 8 AM-5 PM\n**Weekend Service:** Saturday by appointment (premium pricing)\n\nWhat works best for you?'
       }
       return 'Construction debris removal takes 1-3 hours. We handle all materials and work around your schedule. What would you like to know?'
     }
@@ -337,9 +337,9 @@ export default function SmartChat() {
     
     if (primary === 'scheduling') {
       if (context.includes('urgent')) {
-        return 'Urgent service available same-day within 2-4 hours. Monday-Friday 8 AM-5 PM, Saturday by appointment. What type of service do you need?'
+        return '🚨 **URGENT SERVICE AVAILABLE** 🚨\n\n**Same-Day Service:** Available today within 2-4 hours if you call before 2 PM\n**Next-Day Service:** Tomorrow 8 AM-5 PM\n**Weekend Service:** Saturday by appointment (premium pricing)\n\nWhat type of service do you need?'
       }
-      return 'We offer same-day service or scheduling within 24-48 hours. Monday-Friday 8 AM-5 PM, Saturday by appointment. What date works for you?'
+      return '📅 **SCHEDULING OPTIONS** 📅\n\n**Same-Day Service:** Available today if you call before 2 PM\n**Next-Day Service:** Tomorrow 8 AM-5 PM\n**Weekend Service:** Saturday by appointment (premium pricing)\n\nWhat service do you need scheduled?'
     }
     
     if (primary === 'location') {

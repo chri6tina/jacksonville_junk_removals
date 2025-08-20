@@ -7,14 +7,17 @@ export default function StructuredData() {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "Jacksonville Junk Removals",
-    "description": "Professional junk removal services in Jacksonville, FL. Fast, reliable, and eco-friendly junk removal for homes and businesses.",
+    "alternateName": "JJR Junk Removal",
+    "description": "Jacksonville's premier junk removal company offering same-day service, free estimates, and eco-friendly disposal. Professional mattress removal, furniture removal, appliance removal, garage cleanout, and construction debris removal services.",
     "url": "https://jacksonvillejunkremovals.com",
     "telephone": "+1-904-456-3851",
     "email": "info@jacksonvillejunkremovals.com",
     "address": {
       "@type": "PostalAddress",
+      "streetAddress": "Jacksonville",
       "addressLocality": "Jacksonville",
       "addressRegion": "FL",
+      "postalCode": "32201",
       "addressCountry": "US"
     },
     "geo": {
@@ -36,7 +39,10 @@ export default function StructuredData() {
       "Mandarin",
       "Arlington",
       "Orange Park",
-      "San Marco"
+      "San Marco",
+      "Orange Park",
+      "Clay County",
+      "Duval County"
     ],
     "serviceArea": {
       "@type": "GeoCircle",
@@ -206,8 +212,10 @@ export default function StructuredData() {
       }
     ],
     "sameAs": [
+      "https://www.google.com/maps?cid=your-google-business-id",
       "https://www.facebook.com/jacksonvillejunkremovals",
-      "https://www.instagram.com/jacksonvillejunkremovals"
+      "https://www.instagram.com/jacksonvillejunkremovals",
+      "https://www.yelp.com/biz/jacksonville-junk-removals"
     ],
     "image": "https://jacksonvillejunkremovals.com/logo.png",
     "logo": "https://jacksonvillejunkremovals.com/logo.png",
