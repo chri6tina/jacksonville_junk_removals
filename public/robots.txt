@@ -56,6 +56,7 @@ Allow: /commercial-cleanout
 Allow: /mattress-removal
 Allow: /hazardous-waste-removal
 Allow: /hot-tub-removal
+Allow: /garage-cleanout
 
 # Block admin and technical pages
 Disallow: /admin
