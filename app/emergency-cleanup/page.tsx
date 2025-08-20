@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Phone, Clock, MapPin, Shield, Truck, CheckCircle, AlertTriangle, Zap, DollarSign, Star, Emergency } from 'lucide-react'
+import { Phone, Clock, MapPin, Shield, Truck, CheckCircle, AlertTriangle, Zap, DollarSign, Star, AlertCircle } from 'lucide-react'
 import SEOHead from '@/components/SEOHead'
 
 export default function EmergencyCleanupPage() {
@@ -20,7 +20,7 @@ export default function EmergencyCleanupPage() {
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
             <div className="text-center">
               <div className="flex justify-center mb-6">
-                <Emergency className="w-16 h-16 text-orange-400" />
+                <AlertCircle className="w-16 h-16 text-orange-400" />
               </div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
                 Emergency Cleanup Jacksonville
@@ -100,7 +100,7 @@ export default function EmergencyCleanupPage() {
               {/* Fire Damage */}
               <div className="bg-gray-50 rounded-lg p-8 border border-gray-200">
                 <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-6">
-                  <Emergency className="w-6 h-6 text-red-600" />
+                  <AlertCircle className="w-6 h-6 text-red-600" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">
                   Fire Damage Cleanup
