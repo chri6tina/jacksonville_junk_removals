@@ -42,6 +42,10 @@ Allow: /warehouse-cleanout
 Allow: /hotel-cleanout
 Allow: /school-cleanout
 Allow: /church-cleanout
+Allow: /same-day-junk-removal
+Allow: /emergency-cleanup
+Allow: /hoarding-cleanup
+Allow: /estate-cleanout
 
 # Block admin and technical pages
 Disallow: /admin

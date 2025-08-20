@@ -78,7 +78,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: page === '/post' ? 'daily' : page === '/services' || page === '/estimation' ? 'weekly' : 'monthly',
     priority: page === '' ? 1 : 
               page === '/services' || page === '/estimation' ? 0.9 : 
-              page === '/mattress-removal' || page === '/furniture-removal' || page === '/appliance-removal' || page === '/storm-cleanup' || page === '/hurricane-debris-removal' || page === '/tree-debris-removal' || page === '/foreclosure-cleanout' || page === '/medical-office-cleanout' || page === '/restaurant-cleanout' || page === '/apartment-cleanout' || page === '/storage-unit-cleanout' || page === '/basement-cleanout' || page === '/office-cleanout' || page === '/warehouse-cleanout' || page === '/hotel-cleanout' || page === '/school-cleanout' || page === '/church-cleanout' ? 0.85 :
+              page === '/mattress-removal' || page === '/furniture-removal' || page === '/appliance-removal' || page === '/storm-cleanup' || page === '/hurricane-debris-removal' || page === '/tree-debris-removal' || page === '/foreclosure-cleanout' || page === '/medical-office-cleanout' || page === '/restaurant-cleanout' || page === '/apartment-cleanout' || page === '/storage-unit-cleanout' || page === '/basement-cleanout' || page === '/office-cleanout' || page === '/warehouse-cleanout' || page === '/hotel-cleanout' || page === '/school-cleanout' || page === '/church-cleanout' || page === '/same-day-junk-removal' || page === '/emergency-cleanup' || page === '/hoarding-cleanup' || page === '/estate-cleanout' ? 0.85 :
               page === '/garage-cleanout' || page === '/construction-debris-removal' ? 0.8 :
               page.includes('junk-removal-') ? 0.75 : 0.7,
   }))

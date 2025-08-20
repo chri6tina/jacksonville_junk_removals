@@ -1,465 +1,465 @@
 import Link from 'next/link'
-import { Phone, Clock, MapPin, Shield, Truck, CheckCircle, Home, DollarSign, Star, Users, FileText } from 'lucide-react'
+import { Phone, Clock, MapPin, Shield, Truck, CheckCircle, AlertTriangle, Zap, DollarSign, Star, Emergency } from 'lucide-react'
 import SEOHead from '@/components/SEOHead'
 
-export default function EstateCleanoutPage() {
+export default function EmergencyCleanupPage() {
   return (
     <>
       <SEOHead
-        title="Estate Cleanout Jacksonville | Probate Cleanup | Estate Sale Cleanup (904) 456-3851"
-        description="Jacksonville estate cleanout service. Professional probate cleanup, estate sale cleanup, complete home cleanout. Licensed, insured, compassionate service. Call (904) 456-3851 for estate cleanout."
-        keywords="estate cleanout Jacksonville, probate cleanup Jacksonville, estate sale cleanup Jacksonville, home cleanout Jacksonville, estate cleanup service Jacksonville, Jacksonville estate cleanout, probate Jacksonville"
-        canonical="https://jacksonvillejunkremovals.com/estate-cleanout"
+        title="Emergency Cleanup Jacksonville | 24/7 Emergency Response | Disaster Cleanup (904) 456-3851"
+        description="Jacksonville emergency cleanup service. 24/7 emergency response, disaster cleanup, urgent cleanup, emergency junk removal. Professional, licensed, insured emergency service. Call (904) 456-3851 for immediate emergency response."
+        keywords="emergency cleanup Jacksonville, 24/7 emergency cleanup Jacksonville, disaster cleanup Jacksonville, urgent cleanup Jacksonville, emergency junk removal Jacksonville, emergency response Jacksonville, Jacksonville emergency service, immediate cleanup Jacksonville"
+        canonical="https://jacksonvillejunkremovals.com/emergency-cleanup"
         ogType="website"
       />
       
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-teal-900 via-teal-800 to-teal-700 text-white">
+        <section className="relative bg-gradient-to-br from-orange-900 via-orange-800 to-orange-700 text-white">
           <div className="absolute inset-0 bg-black bg-opacity-40"></div>
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
             <div className="text-center">
               <div className="flex justify-center mb-6">
-                <Home className="w-16 h-16 text-teal-400" />
+                <Emergency className="w-16 h-16 text-orange-400" />
               </div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-                Estate Cleanout Jacksonville
+                Emergency Cleanup Jacksonville
               </h1>
               <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto">
-                <span className="text-teal-300 font-bold">PROFESSIONAL & COMPASSIONATE</span><br />
-                Complete estate cleanout services for probate, estate sales, and home transitions. 
-                Professional cleanup throughout Jacksonville.
+                <span className="text-orange-300 font-bold">24/7 EMERGENCY RESPONSE</span><br />
+                When disaster strikes, we're here to help immediately. 
+                Professional emergency cleanup service throughout Jacksonville.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  href="/contact"
-                  className="bg-teal-500 hover:bg-teal-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 flex items-center justify-center space-x-2"
+                <a
+                  href="tel:+1-904-456-3851"
+                  className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 flex items-center justify-center space-x-2"
                 >
                   <Phone className="w-5 h-5" />
-                  <span>Get Estate Cleanout Quote</span>
-                </Link>
+                  <span>EMERGENCY: (904) 456-3851</span>
+                </a>
                 <Link
-                  href="/estimation"
-                  className="border-2 border-white text-white hover:bg-white hover:text-teal-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 flex items-center justify-center"
+                  href="/contact"
+                  className="border-2 border-white text-white hover:bg-white hover:text-orange-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 flex items-center justify-center"
                 >
-                  <span>Free Consultation</span>
+                  <span>Get Emergency Quote</span>
                 </Link>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Service Alert */}
-        <section className="bg-teal-600 text-white py-6">
+        {/* Emergency Alert */}
+        <section className="bg-orange-600 text-white py-6">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div className="flex items-center justify-center space-x-3">
-              <Home className="w-6 h-6" />
+              <AlertTriangle className="w-6 h-6" />
               <span className="text-lg font-semibold">
-                🏠 PROFESSIONAL ESTATE CLEANOUT SERVICES 🏠
+                🚨 24/7 EMERGENCY CLEANUP SERVICE AVAILABLE 🚨
               </span>
-              <Home className="w-6 h-6" />
+              <AlertTriangle className="w-6 h-6" />
             </div>
             <p className="mt-2 text-sm">
-              Call (904) 456-3851 for professional estate cleanout service
+              Call (904) 456-3851 for immediate emergency cleanup response
             </p>
           </div>
         </section>
 
-        {/* Estate Cleanout Services */}
+        {/* Emergency Services */}
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-                Estate Cleanout Services
+                Emergency Cleanup Services
               </h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                Comprehensive estate cleanout for all types of home transitions and estate situations
+                We handle all types of emergency cleanup situations with professional equipment and fast response
               </p>
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {/* Probate Cleanup */}
+              {/* Storm Damage */}
               <div className="bg-gray-50 rounded-lg p-8 border border-gray-200">
-                <div className="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center mb-6">
-                  <FileText className="w-6 h-6 text-teal-600" />
+                <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-6">
+                  <AlertTriangle className="w-6 h-6 text-orange-600" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                  Probate Cleanup
+                  Storm Damage Cleanup
                 </h3>
                 <p className="text-gray-600 mb-4">
-                  Complete cleanup for probate proceedings, estate administration, and legal requirements.
+                  Hurricane damage, flood cleanup, wind damage, and storm debris removal.
                 </p>
                 <ul className="text-sm text-gray-600 space-y-2">
-                  <li>• Estate administration support</li>
-                  <li>• Legal compliance</li>
-                  <li>• Property preparation</li>
-                  <li>• Documentation assistance</li>
+                  <li>• Hurricane debris removal</li>
+                  <li>• Flood damage cleanup</li>
+                  <li>• Wind damage cleanup</li>
+                  <li>• Emergency storm response</li>
                 </ul>
               </div>
 
-              {/* Estate Sale Cleanup */}
+              {/* Fire Damage */}
+              <div className="bg-gray-50 rounded-lg p-8 border border-gray-200">
+                <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-6">
+                  <Emergency className="w-6 h-6 text-red-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                  Fire Damage Cleanup
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  Post-fire cleanup, smoke damage restoration, and fire debris removal.
+                </p>
+                <ul className="text-sm text-gray-600 space-y-2">
+                  <li>• Fire debris removal</li>
+                  <li>• Smoke damage cleanup</li>
+                  <li>• Structural cleanup</li>
+                  <li>• Emergency fire response</li>
+                </ul>
+              </div>
+
+              {/* Water Damage */}
               <div className="bg-gray-50 rounded-lg p-8 border border-gray-200">
                 <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
-                  <DollarSign className="w-6 h-6 text-blue-600" />
+                  <Truck className="w-6 h-6 text-blue-600" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                  Estate Sale Cleanup
+                  Water Damage Cleanup
                 </h3>
                 <p className="text-gray-600 mb-4">
-                  Post-sale cleanup and preparation for property sale or rental.
+                  Burst pipes, flooding, water damage, and emergency water cleanup.
                 </p>
                 <ul className="text-sm text-gray-600 space-y-2">
-                  <li>• Post-sale cleanup</li>
-                  <li>• Property preparation</li>
-                  <li>• Sale-ready condition</li>
-                  <li>• Market preparation</li>
+                  <li>• Burst pipe cleanup</li>
+                  <li>• Flood damage restoration</li>
+                  <li>• Water damage cleanup</li>
+                  <li>• Emergency water response</li>
                 </ul>
               </div>
 
-              {/* Complete Home Cleanout */}
-              <div className="bg-gray-50 rounded-lg p-8 border border-gray-200">
-                <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
-                  <Home className="w-6 h-6 text-green-600" />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                  Complete Home Cleanout
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  Full home cleanout from top to bottom, including all rooms and areas.
-                </p>
-                <ul className="text-sm text-gray-600 space-y-2">
-                  <li>• Complete home cleanup</li>
-                  <li>• All room coverage</li>
-                  <li>• Attic to basement</li>
-                  <li>• Comprehensive service</li>
-                </ul>
-              </div>
-
-              {/* Furniture & Personal Items */}
+              {/* Structural Damage */}
               <div className="bg-gray-50 rounded-lg p-8 border border-gray-200">
                 <div className="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mb-6">
-                  <Users className="w-6 h-6 text-yellow-600" />
+                  <Shield className="w-6 h-6 text-yellow-600" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                  Furniture & Personal Items
+                  Structural Damage Cleanup
                 </h3>
                 <p className="text-gray-600 mb-4">
-                  Careful handling of furniture, personal items, and family heirlooms.
+                  Building collapse, structural damage, and emergency structural cleanup.
                 </p>
                 <ul className="text-sm text-gray-600 space-y-2">
-                  <li>• Furniture removal</li>
-                  <li>• Personal item handling</li>
-                  <li>• Heirloom protection</li>
-                  <li>• Respectful service</li>
+                  <li>• Building collapse cleanup</li>
+                  <li>• Structural debris removal</li>
+                  <li>• Emergency structural response</li>
+                  <li>• Safety cleanup</li>
                 </ul>
               </div>
 
-              {/* Appliance & Electronics */}
+              {/* Biohazard Cleanup */}
               <div className="bg-gray-50 rounded-lg p-8 border border-gray-200">
                 <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
-                  <Truck className="w-6 h-6 text-purple-600" />
+                  <CheckCircle className="w-6 h-6 text-purple-600" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                  Appliance & Electronics
+                  Biohazard Cleanup
                 </h3>
                 <p className="text-gray-600 mb-4">
-                  Professional removal and disposal of appliances and electronic equipment.
+                  Emergency biohazard cleanup, trauma cleanup, and hazardous material removal.
                 </p>
                 <ul className="text-sm text-gray-600 space-y-2">
-                  <li>• Appliance removal</li>
-                  <li>• Electronics disposal</li>
-                  <li>• Safe handling</li>
-                  <li>• Proper disposal</li>
+                  <li>• Trauma scene cleanup</li>
+                  <li>• Biohazard removal</li>
+                  <li>• Hazardous material cleanup</li>
+                  <li>• Emergency bio response</li>
                 </ul>
               </div>
 
-              {/* Property Restoration */}
+              {/* Vehicle Accidents */}
               <div className="bg-gray-50 rounded-lg p-8 border border-gray-200">
                 <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-6">
-                  <Shield className="w-6 h-6 text-indigo-600" />
+                  <Clock className="w-6 h-6 text-indigo-600" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                  Property Restoration
+                  Vehicle Accident Cleanup
                 </h3>
                 <p className="text-gray-600 mb-4">
-                  Complete property restoration to sale-ready or rental-ready condition.
+                  Car accident cleanup, road debris removal, and emergency traffic cleanup.
                 </p>
                 <ul className="text-sm text-gray-600 space-y-2">
-                  <li>• Property restoration</li>
-                  <li>• Sale preparation</li>
-                  <li>• Rental readiness</li>
-                  <li>• Market condition</li>
+                  <li>• Accident scene cleanup</li>
+                  <li>• Road debris removal</li>
+                  <li>• Traffic emergency cleanup</li>
+                  <li>• Fast road clearance</li>
                 </ul>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Why Estate Cleanout */}
+        {/* Why Emergency Service */}
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-                Why Choose Estate Cleanout Services?
+                Why Choose Our Emergency Cleanup Service?
               </h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                Professional estate cleanout provides numerous benefits for families and property owners
+                When every minute counts, you need a team that responds immediately
               </p>
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {/* Legal Compliance */}
+              {/* 24/7 Availability */}
               <div className="bg-white rounded-lg p-8 border border-gray-200 shadow-lg">
-                <div className="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center mb-6">
-                  <FileText className="w-6 h-6 text-teal-600" />
+                <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-6">
+                  <Clock className="w-6 h-6 text-orange-600" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                  Legal Compliance
+                  24/7 Emergency Response
                 </h3>
                 <p className="text-gray-600 mb-4">
-                  Ensure compliance with probate requirements, estate administration, and legal obligations.
+                  We're available around the clock for emergency situations. No waiting for business hours.
                 </p>
                 <ul className="text-sm text-gray-600 space-y-2">
-                  <li>• Probate compliance</li>
-                  <li>• Legal requirements</li>
-                  <li>• Documentation support</li>
+                  <li>• 24/7 availability</li>
+                  <li>• No waiting for business hours</li>
+                  <li>• Immediate response</li>
+                  <li>• Emergency hotline</li>
+                </ul>
+              </div>
+
+              {/* Fast Response */}
+              <div className="bg-white rounded-lg p-8 border border-gray-200 shadow-lg">
+                <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-6">
+                  <Zap className="w-6 h-6 text-red-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                  Lightning Fast Response
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  We respond within 1-2 hours for emergency situations. Every minute counts.
+                </p>
+                <ul className="text-sm text-gray-600 space-y-2">
+                  <li>• 1-2 hour response time</li>
+                  <li>• Emergency priority</li>
+                  <li>• Fast mobilization</li>
+                  <li>• Immediate action</li>
+                </ul>
+              </div>
+
+              {/* Professional Equipment */}
+              <div className="bg-white rounded-lg p-8 border border-gray-200 shadow-lg">
+                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+                  <Truck className="w-6 h-6 text-blue-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                  Professional Equipment
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  Heavy-duty equipment and tools to handle any emergency cleanup situation.
+                </p>
+                <ul className="text-sm text-gray-600 space-y-2">
+                  <li>• Heavy-duty trucks</li>
+                  <li>• Professional tools</li>
+                  <li>• Safety equipment</li>
+                  <li>• Emergency gear</li>
+                </ul>
+              </div>
+
+              {/* Licensed & Insured */}
+              <div className="bg-white rounded-lg p-8 border border-gray-200 shadow-lg">
+                <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
+                  <Shield className="w-6 h-6 text-green-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                  Licensed & Insured
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  Fully licensed and insured for emergency cleanup operations. Your protection is our priority.
+                </p>
+                <ul className="text-sm text-gray-600 space-y-2">
+                  <li>• Full licensing</li>
+                  <li>• Comprehensive insurance</li>
+                  <li>• Liability protection</li>
                   <li>• Professional standards</li>
                 </ul>
               </div>
 
-              {/* Property Value */}
-              <div className="bg-white rounded-lg p-8 border border-gray-200 shadow-lg">
-                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
-                  <DollarSign className="w-6 h-6 text-blue-600" />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                  Maximize Property Value
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  Clean, well-maintained properties command higher sale prices and faster sales.
-                </p>
-                <ul className="text-sm text-gray-600 space-y-2">
-                  <li>• Higher sale prices</li>
-                  <li>• Faster sales</li>
-                  <li>• Market appeal</li>
-                  <li>• Investment protection</li>
-                </ul>
-              </div>
-
-              {/* Family Relief */}
-              <div className="bg-white rounded-lg p-8 border border-gray-200 shadow-lg">
-                <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
-                  <Users className="w-6 h-6 text-green-600" />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                  Family Relief
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  Relieve family members of the emotional and physical burden of estate cleanup.
-                </p>
-                <ul className="text-sm text-gray-600 space-y-2">
-                  <li>• Emotional support</li>
-                  <li>• Physical relief</li>
-                  <li>• Professional handling</li>
-                  <li>• Family peace</li>
-                </ul>
-              </div>
-
-              {/* Time Savings */}
-              <div className="bg-white rounded-lg p-8 border border-gray-200 shadow-lg">
-                <div className="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mb-6">
-                  <Clock className="w-6 h-6 text-yellow-600" />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                  Time Savings
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  Professional teams work efficiently to complete estate cleanout quickly.
-                </p>
-                <ul className="text-sm text-gray-600 space-y-2">
-                  <li>• Fast completion</li>
-                  <li>• Efficient process</li>
-                  <li>• Professional speed</li>
-                  <li>• Time management</li>
-                </ul>
-              </div>
-
-              {/* Safety & Health */}
+              {/* Local Knowledge */}
               <div className="bg-white rounded-lg p-8 border border-gray-200 shadow-lg">
                 <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
-                  <Shield className="w-6 h-6 text-purple-600" />
+                  <MapPin className="w-6 h-6 text-purple-600" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                  Safety & Health
+                  Local Jacksonville Knowledge
                 </h3>
                 <p className="text-gray-600 mb-4">
-                  Safe handling of potentially hazardous materials and biohazards.
+                  We know Jacksonville neighborhoods, traffic patterns, and local emergency protocols.
                 </p>
                 <ul className="text-sm text-gray-600 space-y-2">
-                  <li>• Hazardous material handling</li>
-                  <li>• Biohazard cleanup</li>
-                  <li>• Safety protocols</li>
-                  <li>• Health protection</li>
+                  <li>• Local area knowledge</li>
+                  <li>• Traffic pattern awareness</li>
+                  <li>• Emergency protocols</li>
+                  <li>• Community connections</li>
                 </ul>
               </div>
 
-              {/* Professional Standards */}
+              {/* Experience */}
               <div className="bg-white rounded-lg p-8 border border-gray-200 shadow-lg">
                 <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-6">
                   <Star className="w-6 h-6 text-indigo-600" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                  Professional Standards
+                  Emergency Experience
                 </h3>
                 <p className="text-gray-600 mb-4">
-                  Licensed, insured, and trained professionals handle your estate with care.
+                  Years of experience handling emergency cleanup situations throughout Jacksonville.
                 </p>
                 <ul className="text-sm text-gray-600 space-y-2">
-                  <li>• Licensed service</li>
-                  <li>• Full insurance</li>
+                  <li>• Emergency experience</li>
+                  <li>• Crisis management</li>
                   <li>• Professional training</li>
-                  <li>• Quality assurance</li>
+                  <li>• Proven track record</li>
                 </ul>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Estate Cleanout Process */}
+        {/* Emergency Process */}
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-                Estate Cleanout Process
+                Emergency Response Process
               </h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                Our systematic approach ensures efficient and thorough estate cleanout
+                From emergency call to cleanup completion - here's how we handle urgent situations
               </p>
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {/* Step 1 */}
               <div className="text-center">
-                <div className="w-16 h-16 bg-teal-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                <div className="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-6">
                   <span className="text-white text-2xl font-bold">1</span>
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                  Initial Consultation
+                  Emergency Call
                 </h3>
                 <p className="text-gray-600">
-                  We meet to assess the estate, understand requirements, and create a customized plan.
+                  Call our 24/7 emergency hotline at (904) 456-3851. We answer immediately.
                 </p>
               </div>
 
               {/* Step 2 */}
               <div className="text-center">
-                <div className="w-16 h-16 bg-teal-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                <div className="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-6">
                   <span className="text-white text-2xl font-bold">2</span>
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                  Item Assessment
+                  Immediate Assessment
                 </h3>
                 <p className="text-gray-600">
-                  We evaluate all items, categorize them, and determine disposal or donation options.
+                  We assess the emergency situation and mobilize our team within minutes.
                 </p>
               </div>
 
               {/* Step 3 */}
               <div className="text-center">
-                <div className="w-16 h-16 bg-teal-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                <div className="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-6">
                   <span className="text-white text-2xl font-bold">3</span>
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                  Systematic Cleanout
+                  Fast Response
                 </h3>
                 <p className="text-gray-600">
-                  Our team works systematically through each area, handling items with care and respect.
+                  Our emergency crew arrives within 1-2 hours with full equipment and supplies.
                 </p>
               </div>
 
               {/* Step 4 */}
               <div className="text-center">
-                <div className="w-16 h-16 bg-teal-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                <div className="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-6">
                   <span className="text-white text-2xl font-bold">4</span>
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                  Final Restoration
+                  Emergency Cleanup
                 </h3>
                 <p className="text-gray-600">
-                  We clean, sanitize, and restore the property to its optimal condition.
+                  We work quickly and safely to restore your property and remove all emergency debris.
                 </p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Estate Situations */}
+        {/* Emergency Situations */}
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-                Estate Cleanout Situations
+                Emergency Situations We Handle
               </h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                We handle estate cleanout for various situations and circumstances
+                From natural disasters to accidents, we're equipped for any emergency cleanup need
               </p>
             </div>
 
             <div className="grid md:grid-cols-2 gap-8">
-              {/* Probate & Legal */}
+              {/* Natural Disasters */}
               <div className="bg-white rounded-lg p-8 border border-gray-200 shadow-lg">
                 <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">
-                  📋 Probate & Legal Situations
+                  🌪️ Natural Disasters
                 </h3>
                 <div className="space-y-4">
                   <div className="flex items-center space-x-3">
-                    <CheckCircle className="w-5 h-5 text-teal-600" />
-                    <span className="text-gray-700">Estate administration</span>
+                    <CheckCircle className="w-5 h-5 text-green-600" />
+                    <span className="text-gray-700">Hurricane damage cleanup</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <CheckCircle className="w-5 h-5 text-teal-600" />
-                    <span className="text-gray-700">Probate court requirements</span>
+                    <CheckCircle className="w-5 h-5 text-green-600" />
+                    <span className="text-gray-700">Flood damage restoration</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <CheckCircle className="w-5 h-5 text-teal-600" />
-                    <span className="text-gray-700">Legal compliance</span>
+                    <CheckCircle className="w-5 h-5 text-green-600" />
+                    <span className="text-gray-700">Tornado damage cleanup</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <CheckCircle className="w-5 h-5 text-teal-600" />
-                    <span className="text-gray-700">Documentation support</span>
+                    <CheckCircle className="w-5 h-5 text-green-600" />
+                    <span className="text-gray-700">Storm debris removal</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <CheckCircle className="w-5 h-5 text-teal-600" />
-                    <span className="text-gray-700">Property preparation</span>
+                    <CheckCircle className="w-5 h-5 text-green-600" />
+                    <span className="text-gray-700">Wind damage cleanup</span>
                   </div>
                 </div>
               </div>
 
-              {/* Property Transitions */}
+              {/* Accidents & Incidents */}
               <div className="bg-white rounded-lg p-8 border border-gray-200 shadow-lg">
                 <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">
-                  🏠 Property Transitions
+                  🚨 Accidents & Incidents
                 </h3>
                 <div className="space-y-4">
                   <div className="flex items-center space-x-3">
-                    <CheckCircle className="w-5 h-5 text-teal-600" />
-                    <span className="text-gray-700">Property sales</span>
+                    <CheckCircle className="w-5 h-5 text-green-600" />
+                    <span className="text-gray-700">Fire damage cleanup</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <CheckCircle className="w-5 h-5 text-teal-600" />
-                    <span className="text-gray-700">Rental preparation</span>
+                    <CheckCircle className="w-5 h-5 text-green-600" />
+                    <span className="text-gray-700">Vehicle accident cleanup</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <CheckCircle className="w-5 h-5 text-teal-600" />
-                    <span className="text-gray-700">Property transfers</span>
+                    <CheckCircle className="w-5 h-5 text-green-600" />
+                    <span className="text-gray-700">Building collapse cleanup</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <CheckCircle className="w-5 h-5 text-teal-600" />
-                    <span className="text-gray-700">Market preparation</span>
+                    <CheckCircle className="w-5 h-5 text-green-600" />
+                    <span className="text-gray-700">Chemical spill cleanup</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <CheckCircle className="w-5 h-5 text-teal-600" />
-                    <span className="text-gray-700">Investment properties</span>
+                    <CheckCircle className="w-5 h-5 text-green-600" />
+                    <span className="text-gray-700">Biohazard cleanup</span>
                   </div>
                 </div>
               </div>
@@ -472,10 +472,10 @@ export default function EstateCleanoutPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-                Why Jacksonville Trusts Our Estate Cleanout Service?
+                Why Jacksonville Trusts Our Emergency Service
               </h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                We're not just another cleanup company - we're your estate transition partners
+                We're not just another cleanup company - we're your emergency response team
               </p>
             </div>
 
@@ -483,57 +483,57 @@ export default function EstateCleanoutPage() {
               <div>
                 <div className="space-y-6">
                   <div className="flex items-start space-x-4">
-                    <div className="w-8 h-8 bg-teal-600 rounded-full flex items-center justify-center flex-shrink-0">
+                    <div className="w-8 h-8 bg-orange-600 rounded-full flex items-center justify-center flex-shrink-0">
                       <Star className="w-5 h-5 text-white" />
                     </div>
                     <div>
                       <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                        Estate Cleanout Expertise
+                        Local Emergency Response
                       </h3>
                       <p className="text-gray-600">
-                        Years of experience handling estate cleanouts, probate situations, and property transitions.
+                        We're based right here in Jacksonville and understand local emergency protocols and needs.
                       </p>
                     </div>
                   </div>
 
                   <div className="flex items-start space-x-4">
-                    <div className="w-8 h-8 bg-teal-600 rounded-full flex items-center justify-center flex-shrink-0">
+                    <div className="w-8 h-8 bg-orange-600 rounded-full flex items-center justify-center flex-shrink-0">
                       <Star className="w-5 h-5 text-white" />
                     </div>
                     <div>
                       <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                        Compassionate Service
+                        24/7 Availability
                       </h3>
                       <p className="text-gray-600">
-                        We understand the emotional nature of estate transitions and provide sensitive, respectful service.
+                        Emergencies don't wait for business hours. We're available 24/7 for immediate response.
                       </p>
                     </div>
                   </div>
 
                   <div className="flex items-start space-x-4">
-                    <div className="w-8 h-8 bg-teal-600 rounded-full flex items-center justify-center flex-shrink-0">
+                    <div className="w-8 h-8 bg-orange-600 rounded-full flex items-center justify-center flex-shrink-0">
                       <Star className="w-5 h-5 text-white" />
                     </div>
                     <div>
                       <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                        Professional Standards
+                        Fast Response Time
                       </h3>
                       <p className="text-gray-600">
-                        Licensed, insured, and trained professionals handle your estate with the highest standards.
+                        We respond within 1-2 hours for emergency situations. Every minute counts in emergencies.
                       </p>
                     </div>
                   </div>
 
                   <div className="flex items-start space-x-4">
-                    <div className="w-8 h-8 bg-teal-600 rounded-full flex items-center justify-center flex-shrink-0">
+                    <div className="w-8 h-8 bg-orange-600 rounded-full flex items-center justify-center flex-shrink-0">
                       <Star className="w-5 h-5 text-white" />
                     </div>
                     <div>
                       <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                        Local Jacksonville Service
+                        Professional Equipment
                       </h3>
                       <p className="text-gray-600">
-                        We're your neighbors, not a faceless corporation. Local knowledge and community connections matter.
+                        Heavy-duty equipment and professional tools to handle any emergency cleanup situation safely.
                       </p>
                     </div>
                   </div>
@@ -542,45 +542,45 @@ export default function EstateCleanoutPage() {
 
               <div className="bg-gray-50 rounded-lg p-8 shadow-lg">
                 <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">
-                  Estate Cleanout Areas We Serve
+                  Emergency Service Areas
                 </h3>
                 <div className="space-y-4">
                   <div className="flex items-center space-x-3">
-                    <MapPin className="w-5 h-5 text-teal-600" />
+                    <MapPin className="w-5 h-5 text-orange-600" />
                     <span className="text-gray-700">Jacksonville Beach</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <MapPin className="w-5 h-5 text-teal-600" />
+                    <MapPin className="w-5 h-5 text-orange-600" />
                     <span className="text-gray-700">Riverside</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <MapPin className="w-5 h-5 text-teal-600" />
+                    <MapPin className="w-5 h-5 text-orange-600" />
                     <span className="text-gray-700">Southside</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <MapPin className="w-5 h-5 text-teal-600" />
+                    <MapPin className="w-5 h-5 text-orange-600" />
                     <span className="text-gray-700">Mandarin</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <MapPin className="w-5 h-5 text-teal-600" />
+                    <MapPin className="w-5 h-5 text-orange-600" />
                     <span className="text-gray-700">Arlington</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <MapPin className="w-5 h-5 text-teal-600" />
+                    <MapPin className="w-5 h-5 text-orange-600" />
                     <span className="text-gray-700">Orange Park</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <MapPin className="w-5 h-5 text-teal-600" />
+                    <MapPin className="w-5 h-5 text-orange-600" />
                     <span className="text-gray-700">San Marco</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <MapPin className="w-5 h-5 text-teal-600" />
+                    <MapPin className="w-5 h-5 text-orange-600" />
                     <span className="text-gray-700">All of Duval County</span>
                   </div>
                 </div>
-                <div className="mt-6 p-4 bg-teal-100 rounded-lg">
-                  <p className="text-sm text-teal-800 text-center font-semibold">
-                    🏠 Professional Estate Cleanout Available in ALL Areas 🏠
+                <div className="mt-6 p-4 bg-orange-100 rounded-lg">
+                  <p className="text-sm text-orange-800 text-center font-semibold">
+                    🚨 24/7 Emergency Service Available in ALL Areas 🚨
                   </p>
                 </div>
               </div>
@@ -588,33 +588,35 @@ export default function EstateCleanoutPage() {
           </div>
         </section>
 
-        {/* Contact Section */}
-        <section className="py-20 bg-teal-900 text-white">
+        {/* Emergency Contact */}
+        <section className="py-20 bg-orange-900 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl lg:text-4xl font-bold mb-6">
-              Ready to Start Your Estate Cleanout?
+              Need Emergency Cleanup NOW?
             </h2>
             <p className="text-xl mb-8 max-w-3xl mx-auto">
-              Get started with a professional estate cleanout consultation
+              Don't wait - call our 24/7 emergency hotline for immediate response
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/contact"
-                className="bg-teal-500 hover:bg-teal-600 text-white px-8 py-4 rounded-lg font-semibold text-xl transition-colors duration-200 flex items-center justify-center space-x-2"
-              >
-                <Phone className="w-6 h-6" />
-                <span>Get Free Consultation</span>
-              </Link>
               <a
                 href="tel:+1-904-456-3851"
-                className="border-2 border-white text-white hover:bg-white hover:text-teal-900 px-8 py-4 rounded-lg font-semibold text-xl transition-colors duration-200 flex items-center justify-center"
+                className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-semibold text-xl transition-colors duration-200 flex items-center justify-center space-x-2"
               >
-                <span>Call (904) 456-3851</span>
+                <Phone className="w-6 h-6" />
+                <span>EMERGENCY: (904) 456-3851</span>
               </a>
+              <Link
+                href="/contact"
+                className="border-2 border-white text-white hover:bg-white hover:text-orange-900 px-8 py-4 rounded-lg font-semibold text-xl transition-colors duration-200 flex items-center justify-center"
+              >
+                <span>Get Emergency Quote</span>
+              </Link>
             </div>
-            <p className="mt-6 text-teal-200">
-              Professional estate cleanout services for Jacksonville families and property owners
-            </p>
+            <div className="mt-6 p-4 bg-orange-800 rounded-lg max-w-2xl mx-auto">
+              <p className="text-orange-100 font-semibold">
+                ⚡ 24/7 Emergency Response: We're here when you need us most! ⚡
+              </p>
+            </div>
           </div>
         </section>
 
@@ -626,68 +628,68 @@ export default function EstateCleanoutPage() {
                 Related Services
               </h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                We also provide these related estate and cleanup services
+                We also provide these related emergency and fast response services
               </p>
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               <Link
-                href="/hoarding-cleanup"
-                className="group bg-gray-50 rounded-lg p-6 text-center hover:bg-teal-50 transition-colors duration-200"
+                href="/same-day-junk-removal"
+                className="group bg-gray-50 rounded-lg p-6 text-center hover:bg-orange-50 transition-colors duration-200"
               >
-                <div className="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center mb-4 mx-auto group-hover:bg-teal-200 transition-colors duration-200">
-                  <Home className="w-6 h-6 text-teal-600" />
+                <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4 mx-auto group-hover:bg-orange-200 transition-colors duration-200">
+                  <Zap className="w-6 h-6 text-orange-600" />
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-teal-600 transition-colors duration-200">
-                  Hoarding Cleanup
+                <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-orange-600 transition-colors duration-200">
+                  Same-Day Service
                 </h3>
                 <p className="text-sm text-gray-600">
-                  Compassionate hoarding cleanup services
+                  Guaranteed same-day junk removal
                 </p>
               </Link>
 
               <Link
-                href="/furniture-removal"
-                className="group bg-gray-50 rounded-lg p-6 text-center hover:bg-teal-50 transition-colors duration-200"
+                href="/storm-cleanup"
+                className="group bg-gray-50 rounded-lg p-6 text-center hover:bg-orange-50 transition-colors duration-200"
               >
                 <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4 mx-auto group-hover:bg-blue-200 transition-colors duration-200">
                   <Truck className="w-6 h-6 text-blue-600" />
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors duration-200">
-                  Furniture Removal
+                  Storm Cleanup
                 </h3>
                 <p className="text-sm text-gray-600">
-                  Professional furniture removal services
+                  Hurricane and storm damage cleanup
                 </p>
               </Link>
 
               <Link
-                href="/appliance-removal"
-                className="group bg-gray-50 rounded-lg p-6 text-center hover:bg-teal-50 transition-colors duration-200"
+                href="/flood-cleanup"
+                className="group bg-gray-50 rounded-lg p-6 text-center hover:bg-orange-50 transition-colors duration-200"
               >
                 <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4 mx-auto group-hover:bg-green-200 transition-colors duration-200">
                   <CheckCircle className="w-6 h-6 text-green-600" />
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-green-600 transition-colors duration-200">
-                  Appliance Removal
+                  Flood Cleanup
                 </h3>
                 <p className="text-sm text-gray-600">
-                  Safe appliance removal and disposal
+                  Water damage and flood restoration
                 </p>
               </Link>
 
               <Link
-                href="/same-day-junk-removal"
-                className="group bg-gray-50 rounded-lg p-6 text-center hover:bg-teal-50 transition-colors duration-200"
+                href="/construction-debris-removal"
+                className="group bg-gray-50 rounded-lg p-6 text-center hover:bg-orange-50 transition-colors duration-200"
               >
-                <div className="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mb-4 mx-auto group-hover:bg-yellow-200 transition-colors duration-200">
-                  <Shield className="w-6 h-6 text-yellow-600" />
+                <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4 mx-auto group-hover:bg-purple-200 transition-colors duration-200">
+                  <Shield className="w-6 h-6 text-purple-600" />
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-yellow-600 transition-colors duration-200">
-                  Same-Day Service
+                <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-purple-600 transition-colors duration-200">
+                  Construction Debris
                 </h3>
                 <p className="text-sm text-gray-600">
-                  Fast same-day junk removal
+                  Construction and demolition cleanup
                 </p>
               </Link>
             </div>
