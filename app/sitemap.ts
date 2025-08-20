@@ -42,6 +42,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/hotel-cleanout',
     '/school-cleanout',
     '/church-cleanout',
+    '/same-day-junk-removal',
+    '/emergency-cleanup',
+    '/hoarding-cleanup',
+    '/renovation-cleanup',
+    '/senior-cleanout',
   ]
 
   // Location pages

@@ -48,6 +48,7 @@ Allow: /hoarding-cleanup
 Allow: /estate-cleanout
 Allow: /renovation-cleanup
 Allow: /senior-cleanout
+Allow: /yard-waste-removal
 
 # Block admin and technical pages
 Disallow: /admin
