@@ -58,6 +58,7 @@ Allow: /hazardous-waste-removal
 Allow: /hot-tub-removal
 Allow: /garage-cleanout
 Allow: /storage-unit-cleanout
+Allow: /basement-cleanout
 
 # Block admin and technical pages
 Disallow: /admin

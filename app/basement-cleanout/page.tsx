@@ -1,421 +1,707 @@
 import Link from 'next/link'
-import { Phone, Clock, MapPin, Shield, Truck, Building, CheckCircle, Wrench, DollarSign, Home } from 'lucide-react'
+import { Home, Truck, Clock, MapPin, Phone, Shield, CheckCircle, Star, Wrench, Recycle, AlertTriangle, DollarSign, Users, Droplets } from 'lucide-react'
 import SEOHead from '@/components/SEOHead'
 
 export default function BasementCleanoutPage() {
   return (
     <>
       <SEOHead
-        title="Basement Cleanout Jacksonville | Basement Cleanup | Basement Organization"
-        description="Jacksonville basement cleanout and basement cleanup services. Professional basement organization, basement furniture removal, and basement debris cleanup. Fast, reliable service for homeowners and property managers. Call (904) 456-3851 for immediate service."
-        keywords="basement cleanout Jacksonville, basement cleanup Jacksonville, basement organization Jacksonville, basement furniture removal Jacksonville, basement debris cleanup Jacksonville, basement cleanup Jacksonville, basement Jacksonville, basement services Jacksonville, Jacksonville basement services, basement removal Jacksonville"
-        canonical="https://jacksonvillejunkremovals.com/basement-cleanout"
-        ogType="website"
+        title="Basement Cleanout Jacksonville | Moisture Expertise & Foundation Protection"
+        description="Professional basement cleanout in Jacksonville with moisture expertise and foundation protection. We handle basement cleanup, moisture issues, and foundation concerns with licensed crews and specialized equipment. Get a free quote today!"
+        keywords="basement cleanout Jacksonville, basement cleanup, moisture expertise, foundation protection, basement waterproofing, basement organization Jacksonville"
+        canonical="/basement-cleanout"
       />
-      
-      <div className="min-h-screen bg-gray-50">
-        {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-700 text-white">
-          <div className="absolute inset-0 bg-black bg-opacity-40"></div>
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-            <div className="text-center">
-              <div className="flex justify-center mb-6">
-                <Home className="w-16 h-16 text-gray-400" />
-              </div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-                Basement Cleanout Jacksonville
-              </h1>
-              <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto">
-                Professional basement cleanout and basement cleanup. 
-                Fast, reliable service for homeowners, property managers, and real estate professionals in Jacksonville.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  href="/contact"
-                  className="bg-gray-500 hover:bg-gray-600 text-gray-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 flex items-center justify-center space-x-2"
-                >
-                  <Phone className="w-5 h-5" />
-                  <span>Get Basement Cleanout Quote</span>
-                </Link>
-                <Link
-                  href="/estimation"
-                  className="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 flex items-center justify-center"
-                >
-                  <span>Get Free Estimate</span>
-                </Link>
-              </div>
-            </div>
+
+      {/* Hero Section */}
+      <section className="relative bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
+        <div className="container mx-auto px-4 text-center">
+          <div className="flex justify-center mb-6">
+            <Home className="w-16 h-16 text-blue-600" />
           </div>
-        </section>
-
-        {/* Service Alert */}
-        <section className="bg-gray-600 text-white py-6">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <div className="flex items-center justify-center space-x-3">
-              <Home className="w-6 h-6" />
-              <span className="text-lg font-semibold">
-                🏠 PROFESSIONAL BASEMENT CLEANOUT SERVICES 🏠
-              </span>
-              <Home className="w-6 h-6" />
-            </div>
-            <p className="mt-2 text-sm">
-              Call (904) 456-3851 for professional basement cleanout and basement cleanup
-            </p>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-gray-900">
+            Basement Cleanout Jacksonville
+          </h1>
+          <p className="text-xl md:text-2xl text-gray-700 mb-8 max-w-4xl mx-auto">
+            Professional basement cleanout with moisture expertise and foundation protection. We handle basement cleanup, moisture issues, and foundation concerns efficiently.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link 
+              href="/estimation" 
+              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition duration-300 inline-flex items-center gap-2"
+            >
+              <Phone className="w-5 h-5" />
+              Get Free Quote
+            </Link>
+            <Link 
+              href="/contact" 
+              className="bg-white hover:bg-gray-50 text-blue-600 border-2 border-blue-600 px-8 py-4 rounded-lg font-semibold text-lg transition duration-300 inline-flex items-center gap-2"
+            >
+              <MapPin className="w-5 h-5" />
+              Schedule Service
+            </Link>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Services Grid */}
-        <section className="py-20 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-                Basement Cleanout Services in Jacksonville
-              </h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                Comprehensive basement cleanout and basement cleanup for all types of residential and commercial properties
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {/* Basement Organization */}
-              <div className="bg-gray-50 rounded-lg p-8 border border-gray-200">
-                <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mb-6">
-                  <Home className="w-6 h-6 text-gray-600" />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                  Basement Organization
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  Complete basement organization including sorting, organizing, and removing unwanted items.
-                </p>
-                <ul className="text-sm text-gray-600 space-y-2">
-                  <li>• Item sorting</li>
-                  <li>• Space organization</li>
-                  <li>• Storage solutions</li>
-                  <li>• Cleanup planning</li>
-                </ul>
-              </div>
-
-              {/* Basement Furniture Removal */}
-              <div className="bg-gray-50 rounded-lg p-8 border border-gray-200">
-                <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
-                  <Building className="w-6 h-6 text-green-600" />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                  Basement Furniture Removal
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  Safe removal of all basement furniture including old couches, tables, storage units, and appliances.
-                </p>
-                <ul className="text-sm text-gray-600 space-y-2">
-                  <li>• Old furniture removal</li>
-                  <li>• Storage unit disposal</li>
-                  <li>• Appliance removal</li>
-                  <li>• Heavy item handling</li>
-                </ul>
-              </div>
-
-              {/* Basement Debris Cleanup */}
-              <div className="bg-gray-50 rounded-lg p-8 border border-gray-200">
-                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
-                  <Wrench className="w-6 h-6 text-blue-600" />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                  Basement Debris Cleanup
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  Complete cleanup of basement debris including construction materials, old boxes, and general clutter.
-                </p>
-                <ul className="text-sm text-gray-600 space-y-2">
-                  <li>• Construction debris</li>
-                  <li>• Old box removal</li>
-                  <li>• General clutter</li>
-                  <li>• Complete cleanup</li>
-                </ul>
-              </div>
-
-              {/* Fast Turnaround Service */}
-              <div className="bg-gray-50 rounded-lg p-8 border border-gray-200">
-                <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-6">
-                  <Clock className="w-6 h-6 text-red-600" />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                  Fast Turnaround Service
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  Quick turnaround times to get your basement clean and organized as soon as possible.
-                </p>
-                <ul className="text-sm text-gray-600 space-y-2">
-                  <li>• Same-day service</li>
-                  <li>• Quick turnaround</li>
-                  <li>• Efficient cleanup</li>
-                  <li>• Flexible scheduling</li>
-                </ul>
-              </div>
-
-              {/* Licensed & Insured */}
-              <div className="bg-gray-50 rounded-lg p-8 border border-gray-200">
-                <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
-                  <Shield className="w-6 h-6 text-purple-600" />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                  Licensed & Insured
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  Fully licensed and insured for your protection during basement cleanout operations.
-                </p>
-                <ul className="text-sm text-gray-600 space-y-2">
-                  <li>• Licensed service</li>
-                  <li>• Full insurance coverage</li>
-                  <li>• Liability protection</li>
-                  <li>• Professional standards</li>
-                </ul>
-              </div>
-
-              {/* Cost-Effective Solutions */}
-              <div className="bg-gray-50 rounded-lg p-8 border border-gray-200">
-                <div className="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mb-6">
-                  <DollarSign className="w-6 h-6 text-yellow-600" />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                  Cost-Effective Solutions
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  Competitive pricing for basement cleanout services to maximize your budget efficiency.
-                </p>
-                <ul className="text-sm text-gray-600 space-y-2">
-                  <li>• Competitive pricing</li>
-                  <li>• Volume discounts</li>
-                  <li>• No hidden fees</li>
-                  <li>• Free estimates</li>
-                </ul>
-              </div>
-            </div>
+      {/* Service Alert */}
+      <section className="bg-blue-600 text-white py-6">
+        <div className="container mx-auto px-4 text-center">
+          <div className="flex items-center justify-center gap-3">
+            <Droplets className="w-5 h-5" />
+            <span className="text-lg font-semibold">
+              Moisture Expertise • Foundation Protection • Specialized Equipment • Same-Day Service Available
+            </span>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Why Choose Us for Basement Cleanout */}
-        <section className="py-20 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-                Why Choose Jacksonville Junk Removals for Basement Cleanout?
-              </h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                We're your local Jacksonville neighbors with basement cleanout experience and professional service
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div>
-                <div className="space-y-6">
-                  <div className="flex items-start space-x-4">
-                    <div className="w-8 h-8 bg-gray-600 rounded-full flex items-center justify-center flex-shrink-0">
-                      <CheckCircle className="w-5 h-5 text-white" />
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                        Basement Cleanout Experience
-                      </h3>
-                      <p className="text-gray-600">
-                        We have extensive experience with basement cleanout in Jacksonville and understand basement organization requirements.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start space-x-4">
-                    <div className="w-8 h-8 bg-gray-600 rounded-full flex items-center justify-center flex-shrink-0">
-                      <CheckCircle className="w-5 h-5 text-white" />
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                        Fast Turnaround Times
-                      </h3>
-                      <p className="text-gray-600">
-                        Quick service to get your basement clean and organized as soon as possible.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start space-x-4">
-                    <div className="w-8 h-8 bg-gray-600 rounded-full flex items-center justify-center flex-shrink-0">
-                      <CheckCircle className="w-5 h-5 text-white" />
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                        Licensed & Insured
-                      </h3>
-                      <p className="text-gray-600">
-                        Fully licensed and insured for your protection during basement cleanout operations.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start space-x-4">
-                    <div className="w-8 h-8 bg-gray-600 rounded-full flex items-center justify-center flex-shrink-0">
-                      <CheckCircle className="w-5 h-5 text-white" />
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                        Professional Equipment
-                      </h3>
-                      <p className="text-gray-600">
-                        Heavy-duty equipment and tools to handle any size basement cleanout job efficiently and safely.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-white rounded-lg p-8 shadow-lg">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">
-                  Basement Cleanout Areas We Serve
-                </h3>
-                <div className="space-y-4">
-                  <div className="flex items-center space-x-3">
-                    <MapPin className="w-5 h-5 text-gray-600" />
-                    <span className="text-gray-700">Jacksonville Beach</span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <MapPin className="w-5 h-5 text-gray-600" />
-                    <span className="text-gray-700">Riverside</span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <MapPin className="w-5 h-5 text-gray-600" />
-                    <span className="text-gray-700">Southside</span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <MapPin className="w-5 h-5 text-gray-600" />
-                    <span className="text-gray-700">Mandarin</span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <MapPin className="w-5 h-5 text-gray-600" />
-                    <span className="text-gray-700">Arlington</span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <MapPin className="w-5 h-5 text-gray-600" />
-                    <span className="text-gray-700">Orange Park</span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <MapPin className="w-5 h-5 text-gray-600" />
-                    <span className="text-gray-700">San Marco</span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <MapPin className="w-5 h-5 text-gray-600" />
-                    <span className="text-gray-700">All of Duval County</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Contact Section */}
-        <section className="py-20 bg-gray-900 text-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-6">
-              Need Professional Basement Cleanout?
+      {/* Comprehensive Basement Cleanout Services */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+              Complete Basement Cleanout Services
             </h2>
-            <p className="text-xl mb-8 max-w-3xl mx-auto">
-              Get your basement clean and organized with our professional cleanup services.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="tel:+1-904-456-3851"
-                className="bg-gray-500 hover:bg-gray-600 text-gray-900 px-8 py-4 rounded-lg font-semibold text-xl transition-colors duration-200 flex items-center justify-center space-x-2"
-              >
-                <Phone className="w-6 h-6" />
-                <span>Call (904) 456-3851</span>
-              </a>
-              <Link
-                href="/contact"
-                className="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-4 rounded-lg font-semibold text-xl transition-colors duration-200 flex items-center justify-center"
-              >
-                <span>Get Free Estimate</span>
-              </Link>
-            </div>
-            <p className="mt-6 text-gray-200">
-              Professional basement cleanout services for homeowners, property managers, and real estate professionals
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              From moisture issues to foundation concerns, we handle all types of basement cleanout with moisture expertise and foundation protection.
             </p>
           </div>
-        </section>
 
-        {/* Related Services */}
-        <section className="py-20 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-                Related Services
-              </h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                We also provide these related residential and property cleanup services
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Moisture Assessment */}
+            <div className="bg-gray-50 rounded-lg p-8 border border-gray-200">
+              <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+                <Droplets className="w-6 h-6 text-blue-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                Moisture Assessment
+              </h3>
+              <p className="text-gray-600 mb-4">
+                Professional moisture assessment and water damage evaluation for basement spaces.
+              </p>
+              <ul className="text-sm text-gray-600 space-y-2">
+                <li className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-blue-600" />
+                  Water damage evaluation
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-blue-600" />
+                  Mold detection
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-blue-600" />
+                  Humidity monitoring
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-blue-600" />
+                  Leak identification
+                </li>
+              </ul>
+            </div>
+
+            {/* Foundation Protection */}
+            <div className="bg-gray-50 rounded-lg p-8 border border-gray-200">
+              <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+                <Shield className="w-6 h-6 text-blue-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                Foundation Protection
+              </h3>
+              <p className="text-gray-600 mb-4">
+                Careful handling to protect foundation integrity during basement cleanout operations.
+              </p>
+              <ul className="text-sm text-gray-600 space-y-2">
+                <li className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-blue-600" />
+                  Foundation inspection
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-blue-600" />
+                  Structural assessment
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-blue-600" />
+                  Safe removal methods
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-blue-600" />
+                  Damage prevention
+                </li>
+              </ul>
+            </div>
+
+            {/* Water Damage Cleanup */}
+            <div className="bg-gray-50 rounded-lg p-8 border border-gray-200">
+              <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+                <Wrench className="w-6 h-6 text-blue-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                Water Damage Cleanup
+              </h3>
+              <p className="text-gray-600 mb-4">
+                Professional water damage cleanup and restoration for basement spaces.
+              </p>
+              <ul className="text-sm text-gray-600 space-y-2">
+                <li className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-blue-600" />
+                  Water extraction
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-blue-600" />
+                  Drying services
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-blue-600" />
+                  Mold remediation
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-blue-600" />
+                  Odor removal
+                </li>
+              </ul>
+            </div>
+
+            {/* Specialized Equipment */}
+            <div className="bg-gray-50 rounded-lg p-8 border border-gray-200">
+              <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+                <Truck className="w-6 h-6 text-blue-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                Specialized Equipment
+              </h3>
+              <p className="text-gray-600 mb-4">
+                Professional equipment for basement access and specialized cleanup operations.
+              </p>
+              <ul className="text-sm text-gray-600 space-y-2">
+                <li className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-blue-600" />
+                  Dehumidifiers
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-blue-600" />
+                  Air movers
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-blue-600" />
+                  Moisture meters
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-blue-600" />
+                  Extraction equipment
+                </li>
+              </ul>
+            </div>
+
+            {/* Storage Solutions */}
+            <div className="bg-gray-50 rounded-lg p-8 border border-gray-200">
+              <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+                <Home className="w-6 h-6 text-blue-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                Storage Solutions
+              </h3>
+              <p className="text-gray-600 mb-4">
+                Moisture-resistant storage solutions and organization for basement spaces.
+              </p>
+              <ul className="text-sm text-gray-600 space-y-2">
+                <li className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-blue-600" />
+                  Elevated shelving
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-blue-600" />
+                  Moisture barriers
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-blue-600" />
+                  Climate control
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-blue-600" />
+                  Organization systems
+                </li>
+              </ul>
+            </div>
+
+            {/* Emergency Response */}
+            <div className="bg-gray-50 rounded-lg p-8 border border-gray-200">
+              <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+                <AlertTriangle className="w-6 h-6 text-blue-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                Emergency Response
+              </h3>
+              <p className="text-gray-600 mb-4">
+                Emergency basement cleanup for flooding and water damage situations.
+              </p>
+              <ul className="text-sm text-gray-600 space-y-2">
+                <li className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-blue-600" />
+                  24/7 emergency service
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-blue-600" />
+                  Rapid response
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-blue-600" />
+                  Flood cleanup
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-blue-600" />
+                  Damage mitigation
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Our Basement Cleanout Service */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+              Why Jacksonville Chooses Our Basement Cleanout
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              We're not just another junk removal company - we're your local basement cleanout experts with moisture expertise and foundation protection.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Droplets className="w-8 h-8 text-blue-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Moisture Expertise</h3>
+              <p className="text-gray-600">
+                Professional moisture assessment and water damage evaluation for basement spaces.
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <Link
-                href="/garage-cleanout"
-                className="group bg-gray-50 rounded-lg p-6 text-center hover:bg-gray-50 transition-colors duration-200"
-              >
-                <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mb-4 mx-auto group-hover:bg-gray-200 transition-colors duration-200">
-                  <Building className="w-6 h-6 text-gray-600" />
+            <div className="text-center">
+              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Shield className="w-8 h-8 text-blue-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Foundation Protection</h3>
+              <p className="text-gray-600">
+                Careful handling to protect foundation integrity during basement cleanout operations.
+              </p>
+            </div>
+
+            <div className="text-center">
+              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Wrench className="w-8 h-8 text-blue-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Specialized Equipment</h3>
+              <p className="text-gray-600">
+                Professional equipment for basement access and specialized cleanup operations.
+              </p>
+            </div>
+
+            <div className="text-center">
+              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Clock className="w-8 h-8 text-blue-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Same-Day Service</h3>
+              <p className="text-gray-600">
+                Fast response times with same-day basement cleanout available for urgent needs.
+              </p>
+            </div>
+
+            <div className="text-center">
+              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <MapPin className="w-8 h-8 text-blue-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Local Expertise</h3>
+              <p className="text-gray-600">
+                Deep knowledge of Jacksonville's basement conditions and moisture challenges.
+              </p>
+            </div>
+
+            <div className="text-center">
+              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Star className="w-8 h-8 text-blue-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">5-Star Service</h3>
+              <p className="text-gray-600">
+                Consistently rated 5-stars by Jacksonville residents for our basement cleanout expertise.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Basement Cleanout Process */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+              Our Basement Cleanout Process
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Simple 5-step process for efficient, moisture-aware, and foundation-protected basement cleanout.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                <span className="text-white font-bold text-xl">1</span>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Assessment</h3>
+              <p className="text-gray-600 text-sm">
+                We assess your basement space, moisture issues, and foundation concerns.
+              </p>
+            </div>
+
+            <div className="text-center">
+              <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                <span className="text-white font-bold text-xl">2</span>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Moisture Evaluation</h3>
+              <p className="text-gray-600 text-sm">
+                We evaluate moisture levels and identify potential water damage issues.
+              </p>
+            </div>
+
+            <div className="text-center">
+              <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                <span className="text-white font-bold text-xl">3</span>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Safe Removal</h3>
+              <p className="text-gray-600 text-sm">
+                Professional crew removes items with foundation protection and moisture awareness.
+              </p>
+            </div>
+
+            <div className="text-center">
+              <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                <span className="text-white font-bold text-xl">4</span>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Moisture Treatment</h3>
+              <p className="text-gray-600 text-sm">
+                We address moisture issues and implement protective measures.
+              </p>
+            </div>
+
+            <div className="text-center">
+              <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                <span className="text-white font-bold text-xl">5</span>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Prevention</h3>
+              <p className="text-gray-600 text-sm">
+                We provide moisture prevention tips and storage solutions for the future.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Moisture Protection Benefits */}
+      <section className="py-16 bg-blue-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+              Moisture Protection Benefits
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              How our moisture expertise and foundation protection benefit Jacksonville homeowners.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white rounded-lg p-6 border border-blue-200 shadow-sm">
+              <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                <Shield className="w-6 h-6 text-blue-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Foundation Protection</h3>
+              <p className="text-gray-600 mb-4">
+                Protect your home's foundation from damage during basement cleanout operations.
+              </p>
+              <div className="text-sm text-blue-600 font-semibold">
+                Preserve your investment
+              </div>
+            </div>
+
+            <div className="bg-white rounded-lg p-6 border border-blue-200 shadow-sm">
+              <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                <Droplets className="w-6 h-6 text-blue-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Moisture Control</h3>
+              <p className="text-gray-600 mb-4">
+                Prevent future moisture issues with professional assessment and treatment.
+              </p>
+              <div className="text-sm text-blue-600 font-semibold">
+                Stop water damage
+              </div>
+            </div>
+
+            <div className="bg-white rounded-lg p-6 border border-blue-200 shadow-sm">
+              <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                <DollarSign className="w-6 h-6 text-blue-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Cost Savings</h3>
+              <p className="text-gray-600 mb-4">
+                Avoid expensive foundation repairs and water damage restoration costs.
+              </p>
+              <div className="text-sm text-blue-600 font-semibold">
+                Save money long-term
+              </div>
+            </div>
+
+            <div className="bg-white rounded-lg p-6 border border-blue-200 shadow-sm">
+              <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                <Home className="w-6 h-6 text-blue-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Home Value</h3>
+              <p className="text-gray-600 mb-4">
+                Maintain and increase your home value with proper basement maintenance.
+              </p>
+              <div className="text-sm text-blue-600 font-semibold">
+                Boost property value
+              </div>
+            </div>
+
+            <div className="bg-white rounded-lg p-6 border border-blue-200 shadow-sm">
+              <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                <Users className="w-6 h-6 text-blue-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Health Protection</h3>
+              <p className="text-gray-600 mb-4">
+                Protect your family from mold, mildew, and other moisture-related health issues.
+              </p>
+              <div className="text-sm text-blue-600 font-semibold">
+                Protect your family
+              </div>
+            </div>
+
+            <div className="bg-white rounded-lg p-6 border border-blue-200 shadow-sm">
+              <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                <Star className="w-6 h-6 text-blue-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Peace of Mind</h3>
+              <p className="text-gray-600 mb-4">
+                Professional handling of moisture issues with guaranteed protection measures.
+              </p>
+              <div className="text-sm text-blue-600 font-semibold">
+                Stress-free process
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Service Areas */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+              Basement Cleanout Service Areas
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              We provide comprehensive basement cleanout services throughout Jacksonville and surrounding areas.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-gray-50 rounded-lg p-6 border border-gray-200">
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Jacksonville Beach</h3>
+              <p className="text-gray-600 mb-4">
+                Coastal basement cleanout with special attention to salt air and humidity considerations.
+              </p>
+              <div className="flex items-center gap-2 text-blue-600">
+                <CheckCircle className="w-5 h-5" />
+                <span className="font-semibold">Same-day service available</span>
+              </div>
+            </div>
+
+            <div className="bg-gray-50 rounded-lg p-6 border border-gray-200">
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Mandarin</h3>
+              <p className="text-gray-600 mb-4">
+                Suburban basement cleanout with large property access and upscale home protection.
+              </p>
+              <div className="flex items-center gap-2 text-blue-600">
+                <CheckCircle className="w-5 h-5" />
+                <span className="font-semibold">Large property specialists</span>
+              </div>
+            </div>
+
+            <div className="bg-gray-50 rounded-lg p-6 border border-gray-200">
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Riverside</h3>
+              <p className="text-gray-600 mb-4">
+                Historic district basement cleanout with careful handling of older homes and foundation concerns.
+              </p>
+              <div className="flex items-center gap-2 text-blue-600">
+                <CheckCircle className="w-5 h-5" />
+                <span className="font-semibold">Historic home experts</span>
+              </div>
+            </div>
+
+            <div className="bg-gray-50 rounded-lg p-6 border border-gray-200">
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">San Marco</h3>
+              <p className="text-gray-600 mb-4">
+                Upscale neighborhood basement cleanout with premium service and careful foundation protection.
+              </p>
+              <div className="flex items-center gap-2 text-blue-600">
+                <CheckCircle className="w-5 h-5" />
+                <span className="font-semibold">Premium service available</span>
+              </div>
+            </div>
+
+            <div className="bg-gray-50 rounded-lg p-6 border border-gray-200">
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Southside</h3>
+              <p className="text-gray-600 mb-4">
+                Commercial and residential basement cleanout with bulk cleanup and business project services.
+              </p>
+              <div className="flex items-center gap-2 text-blue-600">
+                <CheckCircle className="w-5 h-5" />
+                <span className="font-semibold">Commercial specialists</span>
+              </div>
+            </div>
+
+            <div className="bg-gray-50 rounded-lg p-6 border border-gray-200">
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Orange Park</h3>
+              <p className="text-gray-600 mb-4">
+                Suburban basement cleanout with large lot access and family home protection.
+              </p>
+              <div className="flex items-center gap-2 text-blue-600">
+                <CheckCircle className="w-5 h-5" />
+                <span className="font-semibold">Family home experts</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section className="py-16 bg-blue-600 text-white">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            Ready for Professional Basement Cleanout?
+          </h2>
+          <p className="text-xl mb-8 max-w-3xl mx-auto">
+            Don't let moisture issues or foundation concerns compromise your basement. Our local experts are ready to help with moisture expertise and foundation protection.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link 
+              href="/estimation" 
+              className="bg-white hover:bg-gray-100 text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg transition duration-300 inline-flex items-center gap-2"
+            >
+              <Phone className="w-5 h-5" />
+              Get Free Quote
+            </Link>
+            <Link 
+              href="/contact" 
+              className="bg-transparent hover:bg-white hover:text-blue-600 border-2 border-white px-8 py-4 rounded-lg font-semibold text-lg transition duration-300 inline-flex items-center gap-2"
+            >
+              <MapPin className="w-5 h-5" />
+              Schedule Service
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Related Services */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+              Related Services
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              We offer comprehensive cleanup services beyond just basement cleanout.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <Link href="/garage-cleanout" className="group">
+              <div className="bg-white rounded-lg p-6 border border-gray-200 hover:border-blue-300 transition duration-300 group-hover:shadow-lg">
+                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-blue-200 transition duration-300">
+                  <Home className="w-6 h-6 text-blue-600" />
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-gray-600 transition-colors duration-200">
+                <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition duration-300">
                   Garage Cleanout
                 </h3>
-                <p className="text-sm text-gray-600">
-                  Complete garage organization and cleanup
+                <p className="text-gray-600">
+                  Professional garage cleanout with organization expertise and space optimization.
                 </p>
-              </Link>
+              </div>
+            </Link>
 
-              <Link
-                href="/apartment-cleanout"
-                className="group bg-gray-50 rounded-lg p-6 text-center hover:bg-gray-50 transition-colors duration-200"
-              >
-                <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4 mx-auto group-hover:bg-green-200 transition-colors duration-200">
-                  <Wrench className="w-6 h-6 text-green-600" />
+            <Link href="/storage-unit-cleanout" className="group">
+              <div className="bg-white rounded-lg p-6 border border-gray-200 hover:border-blue-300 transition duration-300 group-hover:shadow-lg">
+                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-blue-200 transition duration-300">
+                  <Wrench className="w-6 h-6 text-blue-600" />
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-green-600 transition-colors duration-200">
-                  Apartment Cleanout
+                <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition duration-300">
+                  Storage Unit Cleanout
                 </h3>
-                <p className="text-sm text-gray-600">
-                  Tenant move out and property management cleanup
+                <p className="text-gray-600">
+                  Professional storage unit cleanout with specialized access and time management expertise.
                 </p>
-              </Link>
+              </div>
+            </Link>
 
-              <Link
-                href="/furniture-removal"
-                className="group bg-gray-50 rounded-lg p-6 text-center hover:bg-gray-50 transition-colors duration-200"
-              >
-                <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4 mx-auto group-hover:bg-purple-200 transition-colors duration-200">
-                  <Truck className="w-6 h-6 text-purple-600" />
+            <Link href="/same-day-junk-removal" className="group">
+              <div className="bg-white rounded-lg p-6 border border-gray-200 hover:border-blue-300 transition duration-300 group-hover:shadow-lg">
+                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-blue-200 transition duration-300">
+                  <Clock className="w-6 h-6 text-blue-600" />
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-purple-600 transition-colors duration-200">
-                  Furniture Removal
+                <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition duration-300">
+                  Same-Day Junk Removal
                 </h3>
-                <p className="text-sm text-gray-600">
-                  Professional furniture removal services
+                <p className="text-gray-600">
+                  Fast, guaranteed junk removal when you need it most.
                 </p>
-              </Link>
+              </div>
+            </Link>
 
-              <Link
-                href="/estate-cleanout"
-                className="group bg-gray-50 rounded-lg p-6 text-center hover:bg-gray-50 transition-colors duration-200"
-              >
-                <div className="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mb-4 mx-auto group-hover:bg-yellow-200 transition-colors duration-200">
-                  <Home className="w-6 h-6 text-yellow-600" />
+            <Link href="/emergency-cleanup" className="group">
+              <div className="bg-white rounded-lg p-6 border border-gray-200 hover:border-blue-300 transition duration-300 group-hover:shadow-lg">
+                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-blue-200 transition duration-300">
+                  <AlertTriangle className="w-6 h-6 text-blue-600" />
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-yellow-600 transition-colors duration-200">
-                  Estate Cleanout
+                <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition duration-300">
+                  Emergency Cleanup
                 </h3>
-                <p className="text-sm text-gray-600">
-                  Complete estate and probate property cleanup
+                <p className="text-gray-600">
+                  24/7 emergency response for urgent cleanup needs.
                 </p>
-              </Link>
-            </div>
+              </div>
+            </Link>
+
+            <Link href="/hazardous-waste-removal" className="group">
+              <div className="bg-white rounded-lg p-6 border border-gray-200 hover:border-blue-300 transition duration-300 group-hover:shadow-lg">
+                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-blue-200 transition duration-300">
+                  <Shield className="w-6 h-6 text-blue-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition duration-300">
+                  Hazardous Waste
+                </h3>
+                <p className="text-gray-600">
+                  Professional hazardous waste removal with specialized handling and compliance expertise.
+                </p>
+              </div>
+            </Link>
+
+            <Link href="/services" className="group">
+              <div className="bg-white rounded-lg p-6 border border-gray-200 hover:border-blue-300 transition duration-300 group-hover:shadow-lg">
+                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-blue-200 transition duration-300">
+                  <Star className="w-6 h-6 text-blue-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition duration-300">
+                  All Services
+                </h3>
+                <p className="text-gray-600">
+                  View our complete range of junk removal and cleanup services.
+                </p>
+              </div>
+            </Link>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
     </>
   )
 }
