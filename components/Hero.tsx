@@ -23,11 +23,11 @@ const Hero = () => {
               <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
                 Jacksonville Junk Removal
                 <br />
-                <span className="text-blue-600">Same-Day Service</span>
+                <span className="text-blue-600">Fast & Reliable</span>
               </h1>
               
               <p className="text-xl text-gray-600 leading-relaxed max-w-2xl">
-                Jacksonville's trusted junk removal company with same-day service, fair pricing, and local expertise. 
+                Jacksonville's trusted junk removal company with fast service, fair pricing, and local expertise. 
                 We're your neighbors who care about keeping our community clean and clutter-free.
               </p>
             </div>
@@ -62,7 +62,7 @@ const Hero = () => {
                 </div>
                 <div className="flex items-center space-x-2">
                   <CheckCircle className="w-5 h-5 text-blue-600" />
-                  <span className="text-gray-600">Same-Day Jacksonville Service</span>
+                  <span className="text-gray-600">Fast Jacksonville Service</span>
                 </div>
               </div>
             </div>
