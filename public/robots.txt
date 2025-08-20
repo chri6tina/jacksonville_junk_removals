@@ -27,6 +27,22 @@ Allow: /junk-removal-arlington
 Allow: /junk-removal-orange-park
 Allow: /junk-removal-san-marco
 
+# Allow new service pages
+Allow: /storm-cleanup
+Allow: /hurricane-debris-removal
+Allow: /tree-debris-removal
+Allow: /foreclosure-cleanout
+Allow: /medical-office-cleanout
+Allow: /restaurant-cleanout
+Allow: /apartment-cleanout
+Allow: /storage-unit-cleanout
+Allow: /basement-cleanout
+Allow: /office-cleanout
+Allow: /warehouse-cleanout
+Allow: /hotel-cleanout
+Allow: /school-cleanout
+Allow: /church-cleanout
+
 # Block admin and technical pages
 Disallow: /admin
 Disallow: /api
