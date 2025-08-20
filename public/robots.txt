@@ -50,6 +50,7 @@ Allow: /renovation-cleanup
 Allow: /senior-cleanout
 Allow: /yard-waste-removal
 Allow: /appliance-removal
+Allow: /furniture-removal
 
 # Block admin and technical pages
 Disallow: /admin
