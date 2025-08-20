@@ -52,6 +52,7 @@ Allow: /yard-waste-removal
 Allow: /appliance-removal
 Allow: /furniture-removal
 Allow: /construction-debris-removal
+Allow: /commercial-cleanout
 
 # Block admin and technical pages
 Disallow: /admin
