@@ -36,12 +36,23 @@ export default function SEOHead({
   const fullTitle = `${title} | Jacksonville Junk Removal | (904) 456-3851`
   const fullDescription = `${description} Call (904) 456-3851 for immediate service. Serving Jacksonville Beach, Riverside, Southside, Mandarin, Arlington, Orange Park, San Marco.`
   
+  // Enhanced Jacksonville-specific keywords for SEO dominance
+  const jacksonvilleKeywords = [
+    'Jacksonville FL', 'Jacksonville Florida', 'Duval County',
+    'Jacksonville Beach', 'Riverside Jacksonville', 'Southside Jacksonville',
+    'Mandarin Jacksonville', 'Arlington Jacksonville', 'Orange Park FL',
+    'San Marco Jacksonville', 'Atlantic Beach', 'Neptune Beach',
+    'Ponte Vedra Beach', 'Fleming Island', 'Green Cove Springs'
+  ].join(', ')
+  
+  const enhancedKeywords = keywords ? `${keywords}, ${jacksonvilleKeywords}` : jacksonvilleKeywords
+  
   return (
     <Head>
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
       <meta name="description" content={fullDescription} />
-      {keywords && <meta name="keywords" content={keywords} />}
+      <meta name="keywords" content={enhancedKeywords} />
       <meta name="author" content={author} />
       <meta name="robots" content={noindex ? 'noindex' : nofollow ? 'nofollow' : 'index,follow'} />
       

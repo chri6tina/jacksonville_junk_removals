@@ -29,12 +29,32 @@ const Footer = () => {
   ]
 
   const services = [
+    { name: 'Post-Construction Cleanup', href: '/post-construction-cleanup' },
     { name: 'Residential Junk Removal', href: '/services/residential' },
     { name: 'Commercial Junk Removal', href: '/commercial-junk-removal' },
     { name: 'Construction Debris Removal', href: '/construction-debris-removal' },
     { name: 'Appliance Removal', href: '/appliance-removal' },
     { name: 'Mattress Removal', href: '/mattress-removal' },
     { name: 'Estate Cleanouts', href: '/services/estate' },
+  ]
+
+  // Post-Construction Cleanup Services for Jacksonville Dominance
+  const postConstructionServices = [
+    { name: 'Residential Cleanup', href: '/residential-post-construction-cleanup' },
+    { name: 'Medical Facilities', href: '/medical-facility-post-construction-cleanup' },
+    { name: 'Restaurants', href: '/restaurant-post-construction-cleanup' },
+    { name: 'Industrial Sites', href: '/industrial-post-construction-cleanup' },
+    { name: 'Hotels & Hospitality', href: '/hotel-post-construction-cleanup' },
+    { name: 'Office Buildings', href: '/office-building-post-construction-cleanup' },
+  ]
+
+  // Strategic Tools & Resources
+  const strategicTools = [
+    { name: 'Cost Calculator', href: '/post-construction-cleanup-calculator' },
+    { name: 'Best Practices Guide', href: '/post-construction-cleanup-best-practices' },
+    { name: 'Project Portfolio', href: '/post-construction-cleanup-portfolio' },
+    { name: 'Case Studies', href: '/post-construction-cleanup-case-studies' },
+    { name: 'Contractor Partnerships', href: '/post-construction-cleanup-partnerships' },
   ]
 
   const areas = [
@@ -55,7 +75,7 @@ const Footer = () => {
   return (
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-6 lg:gap-8">
           {/* Company Info */}
           <div className="sm:col-span-2">
             <div className="flex items-center space-x-3 mb-4 sm:mb-6">
@@ -131,6 +151,40 @@ const Footer = () => {
                     className="text-gray-300 hover:text-white transition-colors duration-200 text-sm sm:text-base"
                   >
                     {service.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Post-Construction Cleanup Services */}
+          <div>
+            <h4 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4 text-blue-400">Post-Construction</h4>
+            <ul className="space-y-1 sm:space-y-2">
+              {postConstructionServices.map((service) => (
+                <li key={service.name}>
+                  <Link
+                    href={service.href}
+                    className="text-gray-300 hover:text-blue-300 transition-colors duration-200 text-sm sm:text-base"
+                  >
+                    {service.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Strategic Tools & Resources */}
+          <div>
+            <h4 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4 text-green-400">Tools & Resources</h4>
+            <ul className="space-y-1 sm:space-y-2">
+              {strategicTools.map((tool) => (
+                <li key={tool.name}>
+                  <Link
+                    href={tool.href}
+                    className="text-gray-300 hover:text-green-300 transition-colors duration-200 text-sm sm:text-base"
+                  >
+                    {tool.name}
                   </Link>
                 </li>
               ))}

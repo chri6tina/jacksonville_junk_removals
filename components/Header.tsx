@@ -2,11 +2,12 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { Menu, X, Truck, Phone, MapPin, Clock } from 'lucide-react'
+import { Menu, X, Truck, Phone, MapPin, Clock, Building, ChevronDown } from 'lucide-react'
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
+  const [isServicesOpen, setIsServicesOpen] = useState(false)
 
   // Handle scroll effect for header
   useEffect(() => {
@@ -41,10 +42,38 @@ const Header = () => {
 
   const navLinks = [
     { name: 'Estimation Tool', href: '/estimation' },
-    { name: 'Services', href: '/services' },
     { name: 'Locations', href: '/locations' },
     { name: 'Blog', href: '/post' },
     { name: 'Contact', href: '/contact' },
+  ]
+
+  const postConstructionServices = [
+    { name: 'All Services', href: '/post-construction-cleanup', description: 'Complete overview' },
+    { name: 'Residential', href: '/residential-post-construction-cleanup', description: 'Home renovations' },
+    { name: 'Commercial', href: '/commercial-post-construction-cleanup', description: 'Office buildings' },
+    { name: 'Medical', href: '/medical-facility-post-construction-cleanup', description: 'Healthcare facilities' },
+    { name: 'Restaurants', href: '/restaurant-post-construction-cleanup', description: 'Food service' },
+    { name: 'Industrial', href: '/industrial-post-construction-cleanup', description: 'Manufacturing' },
+    { name: 'Hotels', href: '/hotel-post-construction-cleanup', description: 'Hospitality' },
+    { name: 'Educational', href: '/educational-facility-post-construction-cleanup', description: 'Schools & universities' },
+    { name: 'Religious', href: '/religious-facility-post-construction-cleanup', description: 'Churches & worship centers' },
+    { name: 'Retail', href: '/retail-store-post-construction-cleanup', description: 'Stores & shopping centers' },
+  ]
+
+  const areaSpecificServices = [
+    { name: 'Jacksonville Beach', href: '/post-construction-cleanup-jacksonville-beach', description: 'Beach area specialists' },
+    { name: 'Downtown', href: '/post-construction-cleanup-downtown-jacksonville', description: 'Urban core experts' },
+    { name: 'Southside', href: '/post-construction-cleanup-southside-jacksonville', description: 'Suburban specialists' },
+    { name: 'Mandarin', href: '/post-construction-cleanup-mandarin-jacksonville', description: 'Premium waterfront' },
+    { name: 'Orange Park', href: '/post-construction-cleanup-orange-park', description: 'Growing communities' },
+  ]
+
+  const strategicTools = [
+    { name: 'Cost Calculator', href: '/post-construction-cleanup-calculator', description: 'Instant estimates' },
+    { name: 'Best Practices', href: '/post-construction-cleanup-best-practices', description: 'Industry guide' },
+    { name: 'Case Studies', href: '/post-construction-cleanup-case-studies', description: 'Project examples' },
+    { name: 'Portfolio', href: '/post-construction-cleanup-portfolio', description: 'Our work gallery' },
+    { name: 'Partnerships', href: '/post-construction-cleanup-partnerships', description: 'Contractor network' },
   ]
 
   return (
@@ -56,7 +85,7 @@ const Header = () => {
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2 sm:space-x-3 flex-shrink-0">
             <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gray-900 rounded-lg flex items-center justify-center">
-              <Truck className="w-5 h-5 sm:w-7 sm:h-7 text-white" />
+              <Truck className="w-5 h-5 sm:w-7 sm:w-7 text-white" />
             </div>
             <div className="hidden sm:block">
               <h1 className="text-lg sm:text-2xl font-bold text-gray-900 leading-tight">Jacksonville Junk Removals</h1>
@@ -70,6 +99,121 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-6 xl:space-x-8">
+            {/* Post-Construction Cleanup Dropdown */}
+            <div className="relative group">
+              <button
+                className="flex items-center space-x-1 text-gray-700 hover:text-gray-900 transition-colors duration-200 font-medium text-sm xl:text-base relative group"
+                onMouseEnter={() => setIsServicesOpen(true)}
+                onMouseLeave={() => setIsServicesOpen(false)}
+              >
+                <Building className="w-4 h-4" />
+                <span>Post-Construction</span>
+                <ChevronDown className="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" />
+              </button>
+              
+              {/* Mega Menu */}
+              <div 
+                className={`absolute top-full left-0 w-screen max-w-6xl bg-white shadow-2xl border border-gray-200 rounded-lg opacity-0 invisible transition-all duration-300 transform -translate-y-2 ${
+                  isServicesOpen ? 'opacity-100 visible translate-y-0' : ''
+                }`}
+                onMouseEnter={() => setIsServicesOpen(true)}
+                onMouseLeave={() => setIsServicesOpen(false)}
+              >
+                <div className="p-6 grid grid-cols-3 gap-8">
+                  {/* Services Column */}
+                  <div>
+                    <h3 className="text-lg font-bold text-gray-900 mb-4 border-b border-gray-200 pb-2">
+                      Industry Services
+                    </h3>
+                    <div className="grid gap-3">
+                      {postConstructionServices.map((service) => (
+                        <Link
+                          key={service.name}
+                          href={service.href}
+                          className="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-50 transition-colors duration-200 group"
+                        >
+                          <div className="w-2 h-2 bg-blue-500 rounded-full group-hover:bg-blue-600 transition-colors duration-200"></div>
+                          <div>
+                            <div className="font-medium text-gray-900 group-hover:text-blue-600 transition-colors duration-200">
+                              {service.name}
+                            </div>
+                            <div className="text-sm text-gray-500">{service.description}</div>
+                          </div>
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Area-Specific Services Column */}
+                  <div>
+                    <h3 className="text-lg font-bold text-gray-900 mb-4 border-b border-gray-200 pb-2">
+                      Area Specialists
+                    </h3>
+                    <div className="grid gap-3">
+                      {areaSpecificServices.map((service) => (
+                        <Link
+                          key={service.name}
+                          href={service.href}
+                          className="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-50 transition-colors duration-200 group"
+                        >
+                          <div className="w-2 h-2 bg-green-500 rounded-full group-hover:bg-green-600 transition-colors duration-200"></div>
+                          <div>
+                            <div className="font-medium text-gray-900 group-hover:text-green-600 transition-colors duration-200">
+                              {service.name}
+                            </div>
+                            <div className="text-sm text-gray-500">{service.description}</div>
+                          </div>
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                  
+                  {/* Tools & Resources Column */}
+                  <div>
+                    <h3 className="text-lg font-bold text-gray-900 mb-4 border-b border-gray-200 pb-2">
+                      Tools & Resources
+                    </h3>
+                    <div className="grid gap-3">
+                      {strategicTools.map((tool) => (
+                        <Link
+                          key={tool.name}
+                          href={tool.href}
+                          className="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-50 transition-colors duration-200 group"
+                        >
+                          <div className="w-2 h-2 bg-green-500 rounded-full group-hover:bg-green-600 transition-colors duration-200"></div>
+                          <div>
+                            <div className="font-medium text-gray-900 group-hover:text-green-600 transition-colors duration-200">
+                              {tool.name}
+                            </div>
+                            <div className="text-sm text-gray-500">{tool.description}</div>
+                          </div>
+                        </Link>
+                      ))}
+                    </div>
+                    
+                    {/* CTA Section */}
+                    <div className="mt-6 p-4 bg-blue-50 rounded-lg border border-blue-200">
+                      <h4 className="font-semibold text-blue-900 mb-2">Ready to Start?</h4>
+                      <div className="flex space-x-2">
+                        <Link
+                          href="/estimation"
+                          className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded text-sm font-medium transition-colors duration-200"
+                        >
+                          Get Quote
+                        </Link>
+                        <Link
+                          href="/contact"
+                          className="border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-4 py-2 rounded text-sm font-medium transition-colors duration-200"
+                        >
+                          Contact Us
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             {navLinks.map((link) => (
               <Link
                 key={link.name}
@@ -132,6 +276,84 @@ const Header = () => {
 
             {/* Mobile Navigation Links */}
             <div className="px-2 pt-2 pb-3 space-y-1 bg-white rounded-b-lg border-b border-gray-200">
+              {/* Post-Construction Cleanup Section */}
+              <div className="px-4 py-3 border-b border-gray-200 mb-3">
+                <h3 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
+                  <Building className="w-5 h-5 mr-2 text-blue-600" />
+                  Post-Construction Cleanup
+                </h3>
+                <div className="space-y-2">
+                  <Link
+                    href="/post-construction-cleanup"
+                    className="block text-blue-600 hover:text-blue-800 font-medium"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    All Services
+                  </Link>
+                  <div className="grid grid-cols-2 gap-2 text-sm">
+                    <Link
+                      href="/residential-post-construction-cleanup"
+                      className="text-gray-600 hover:text-gray-900"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      Residential
+                    </Link>
+                    <Link
+                      href="/commercial-post-construction-cleanup"
+                      className="text-gray-600 hover:text-gray-900"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      Commercial
+                    </Link>
+                    <Link
+                      href="/medical-facility-post-construction-cleanup"
+                      className="text-gray-600 hover:text-gray-900"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      Medical
+                    </Link>
+                    <Link
+                      href="/restaurant-post-construction-cleanup"
+                      className="text-gray-600 hover:text-gray-900"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      Restaurants
+                    </Link>
+                  </div>
+                </div>
+              </div>
+
+              {/* Tools & Resources Section */}
+              <div className="px-4 py-3 border-b border-gray-200 mb-3">
+                <h3 className="text-lg font-bold text-gray-900 mb-3 flex items-center">
+                  <span className="w-5 h-5 mr-2 text-green-600">🛠️</span>
+                  Tools & Resources
+                </h3>
+                <div className="space-y-2 text-sm">
+                  <Link
+                    href="/post-construction-cleanup-calculator"
+                    className="block text-gray-600 hover:text-gray-900"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    Cost Calculator
+                  </Link>
+                  <Link
+                    href="/post-construction-cleanup-best-practices"
+                    className="block text-gray-600 hover:text-gray-900"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    Best Practices Guide
+                  </Link>
+                  <Link
+                    href="/post-construction-cleanup-portfolio"
+                    className="block text-gray-600 hover:text-gray-900"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    Project Portfolio
+                  </Link>
+                </div>
+              </div>
+
               {navLinks.map((link) => (
                 <Link
                   key={link.name}

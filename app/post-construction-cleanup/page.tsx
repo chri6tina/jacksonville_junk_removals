@@ -1,7 +1,8 @@
 import Link from 'next/link'
-import { Phone, Clock, MapPin, Shield, Truck, CheckCircle, Hammer, DollarSign, Star, Home, Wrench, Users, Award, Leaf, Zap, Target, MessageCircle, Eye, Building, Car, CheckSquare } from 'lucide-react'
+import { Phone, Clock, MapPin, Shield, Truck, CheckCircle, Hammer, DollarSign, Star, Home, Wrench, Users, Award, Leaf, Zap, Target, MessageCircle, Eye, Building, Car, CheckSquare, Stethoscope, Utensils, Factory } from 'lucide-react'
 import SEOHead from '@/components/SEOHead'
 import Image from 'next/image'
+import StrategicInternalLinking from '@/components/StrategicInternalLinking'
 
 export default function PostConstructionCleanupPage() {
   return (
@@ -750,16 +751,72 @@ export default function PostConstructionCleanupPage() {
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <Link href="/renovation-cleanup" className="group">
+              <Link href="/residential-post-construction-cleanup" className="group">
                 <div className="bg-white rounded-lg p-6 border border-gray-200 hover:border-blue-300 transition duration-300 group-hover:shadow-lg">
                   <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-blue-200 transition duration-300">
-                    <Hammer className="w-6 h-6 text-blue-600" />
+                    <Home className="w-6 h-6 text-blue-600" />
                   </div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition duration-300">
-                    Renovation Cleanup
+                    Residential Post-Construction
                   </h3>
                   <p className="text-gray-600">
-                    Complete renovation cleanup services for residential and commercial projects.
+                    Specialized cleanup for new homes and renovation projects.
+                  </p>
+                </div>
+              </Link>
+
+              <Link href="/commercial-post-construction-cleanup" className="group">
+                <div className="bg-white rounded-lg p-6 border border-gray-200 hover:border-blue-300 transition duration-300 group-hover:shadow-lg">
+                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-blue-200 transition duration-300">
+                    <Building className="w-6 h-6 text-blue-600" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition duration-300">
+                    Commercial Post-Construction
+                  </h3>
+                  <p className="text-gray-600">
+                    Professional cleanup for office buildings and commercial facilities.
+                  </p>
+                </div>
+              </Link>
+
+              <Link href="/medical-facility-post-construction-cleanup" className="group">
+                <div className="bg-white rounded-lg p-6 border border-gray-200 hover:border-blue-300 transition duration-300 group-hover:shadow-lg">
+                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-blue-200 transition duration-300">
+                    <Stethoscope className="w-6 h-6 text-blue-600" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition duration-300">
+                    Medical Facility Cleanup
+                  </h3>
+                  <p className="text-gray-600">
+                    Healthcare compliance cleaning with sterilization protocols.
+                  </p>
+                </div>
+              </Link>
+
+              <Link href="/restaurant-post-construction-cleanup" className="group">
+                <div className="bg-white rounded-lg p-6 border border-gray-200 hover:border-blue-300 transition duration-300 group-hover:shadow-lg">
+                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-blue-200 transition duration-300">
+                    <Utensils className="w-6 h-6 text-blue-600" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition duration-300">
+                    Restaurant Cleanup
+                  </h3>
+                  <p className="text-gray-600">
+                    Food safety standards cleaning for restaurants and cafes.
+                  </p>
+                </div>
+              </Link>
+
+              <Link href="/industrial-post-construction-cleanup" className="group">
+                <div className="bg-white rounded-lg p-6 border border-gray-200 hover:border-blue-300 transition duration-300 group-hover:shadow-lg">
+                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-blue-200 transition duration-300">
+                    <Factory className="w-6 h-6 text-blue-600" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition duration-300">
+                    Industrial Cleanup
+                  </h3>
+                  <p className="text-gray-600">
+                    Manufacturing and industrial facility safety compliance.
                   </p>
                 </div>
               </Link>
@@ -774,20 +831,6 @@ export default function PostConstructionCleanupPage() {
                   </h3>
                   <p className="text-gray-600">
                     Professional construction debris removal and disposal services.
-                  </p>
-                </div>
-              </Link>
-
-              <Link href="/commercial-cleanout" className="group">
-                <div className="bg-white rounded-lg p-6 border border-gray-200 hover:border-blue-300 transition duration-300 group-hover:shadow-lg">
-                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-blue-200 transition duration-300">
-                    <Building className="w-6 h-6 text-blue-600" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition duration-300">
-                    Commercial Cleanout
-                  </h3>
-                  <p className="text-gray-600">
-                    Complete commercial space cleanout and preparation services.
                   </p>
                 </div>
               </Link>
@@ -1199,6 +1242,9 @@ export default function PostConstructionCleanupPage() {
             </div>
           </div>
         </section>
+
+        {/* Strategic Internal Linking Component */}
+        <StrategicInternalLinking />
       </div>
     </>
   )
