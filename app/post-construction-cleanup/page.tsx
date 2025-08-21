@@ -3,6 +3,7 @@ import { Phone, Clock, MapPin, Shield, Truck, CheckCircle, Hammer, DollarSign, S
 import SEOHead from '@/components/SEOHead'
 import Image from 'next/image'
 import StrategicInternalLinking from '@/components/StrategicInternalLinking'
+import JacksonvilleReviews from '@/components/JacksonvilleReviews'
 
 export default function PostConstructionCleanupPage() {
   return (
@@ -1245,6 +1246,9 @@ export default function PostConstructionCleanupPage() {
 
         {/* Strategic Internal Linking Component */}
         <StrategicInternalLinking />
+        
+        {/* Jacksonville Customer Reviews */}
+        <JacksonvilleReviews maxReviews={6} />
       </div>
     </>
   )

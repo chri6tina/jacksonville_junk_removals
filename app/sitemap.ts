@@ -29,7 +29,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/religious-facility-post-construction-cleanup',
   ]
 
-  // Area-Specific Post-Construction Cleanup - HIGH PRIORITY
+  // Area-Specific Post-Construction Cleanup - HIGH PRIORITY (NEW)
   const areaSpecificPages = [
     '/post-construction-cleanup-jacksonville-beach',
     '/post-construction-cleanup-downtown-jacksonville',
@@ -37,7 +37,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/post-construction-cleanup-mandarin-jacksonville',
     '/post-construction-cleanup-orange-park',
   ]
-
+  
   // Strategic Enhancement Pages - HIGH PRIORITY
   const strategicPages = [
     '/post-construction-cleanup-calculator',
@@ -46,6 +46,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/post-construction-cleanup-portfolio',
     '/post-construction-cleanup-partnerships',
     '/post-construction-cleanup-comparison',
+    '/jacksonville-construction-partnerships',
+    '/jacksonville-reviews',
   ]
 
   // Service pages
@@ -107,7 +109,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const allPages = [
     ...corePages,
     ...postConstructionPages,
-    ...areaSpecificPages,
+    ...areaSpecificPages, // Included new area-specific pages
     ...strategicPages,
     ...servicePages,
     ...locationPages,
@@ -120,12 +122,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: page === '/post' ? 'daily' : 
                     page === '/services' || page === '/estimation' ? 'weekly' : 
                     // Post-construction pages updated more frequently for SEO dominance
-                    postConstructionPages.includes(page) || strategicPages.includes(page) ? 'weekly' :
+                    postConstructionPages.includes(page) || strategicPages.includes(page) || areaSpecificPages.includes(page) ? 'weekly' : // Updated change frequency for area-specific pages
                     'monthly',
     priority: page === '' ? 1 : 
               // Post-construction cleanup pages get highest priority for Jacksonville dominance
               postConstructionPages.includes(page) ? 0.95 :
-              areaSpecificPages.includes(page) ? 0.95 :
+              areaSpecificPages.includes(page) ? 0.95 : // Set high priority for area-specific pages
               strategicPages.includes(page) ? 0.9 :
               page === '/services' || page === '/estimation' ? 0.9 : 
               page === '/mattress-removal' || page === '/furniture-removal' || page === '/appliance-removal' || page === '/storm-cleanup' || page === '/hurricane-debris-removal' || page === '/tree-debris-removal' || page === '/foreclosure-cleanout' || page === '/medical-office-cleanout' || page === '/restaurant-cleanout' || page === '/apartment-cleanout' || page === '/storage-unit-cleanout' || page === '/basement-cleanout' || page === '/office-cleanout' || page === '/warehouse-cleanout' || page === '/hotel-cleanout' || page === '/school-cleanout' || page === '/church-cleanout' || page === '/same-day-junk-removal' || page === '/emergency-cleanup' || page === '/hoarding-cleanup' || page === '/estate-cleanout' || page === '/renovation-cleanup' || page === '/senior-cleanout' ? 0.85 :
