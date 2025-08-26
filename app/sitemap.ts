@@ -12,6 +12,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/99-junk-removal',
     '/locations',
     '/post',
+    '/privacy',
+    '/terms',
   ]
 
   // Post-Construction Cleanup - HIGH PRIORITY (Jacksonville Dominance)
