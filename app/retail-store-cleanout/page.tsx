@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { ShoppingBag, Truck, Shield, Clock, DollarSign, CheckCircle, Star, Phone, Store, Package, Building2, Users } from 'lucide-react'
+import SEOHead from '@/components/SEOHead'
 
 export const metadata: Metadata = {
   title: 'Retail Store Cleanout Jacksonville - Commercial Store Cleanup Services',
@@ -108,7 +109,15 @@ const disposalMethods = [
 
 export default function RetailStoreCleanoutPage() {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <>
+      <SEOHead
+        title="Retail Store Cleanout Jacksonville - Store Fixture Removal | (904) 456-3851"
+        description="Jacksonville retail store cleanout service. Store fixture removal, inventory disposal, display case removal. Professional, licensed, insured. Call (904) 456-3851 for free estimate."
+        keywords="retail store cleanout Jacksonville, store fixture removal Jacksonville, inventory disposal Jacksonville, display case removal Jacksonville, Jacksonville retail store cleanout"
+        canonical="/retail-store-cleanout"
+        ogType="website"
+      />
+      <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
       <div className="bg-gray-900 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -495,5 +504,6 @@ export default function RetailStoreCleanoutPage() {
         </div>
       </div>
     </div>
+    </>
   )
 }

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { Building2, Truck, Shield, Clock, DollarSign, CheckCircle, Star, Phone, Users, Briefcase, FileText, Package } from 'lucide-react'
+import SEOHead from '@/components/SEOHead'
 
 export const metadata: Metadata = {
   title: 'Office Furniture Removal Jacksonville - Commercial Office Cleanout Services',
@@ -108,7 +109,15 @@ const disposalMethods = [
 
 export default function OfficeFurnitureRemovalPage() {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <>
+      <SEOHead
+        title="Office Furniture Removal Jacksonville - Professional Office Cleanout | (904) 456-3851"
+        description="Jacksonville office furniture removal service. Professional office cleanout, furniture disposal, equipment removal. Licensed, insured, eco-friendly. Call (904) 456-3851 for free estimate."
+        keywords="office furniture removal Jacksonville, office cleanout Jacksonville, furniture disposal Jacksonville, office equipment removal Jacksonville, Jacksonville office furniture removal"
+        canonical="/office-furniture-removal"
+        ogType="website"
+      />
+      <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
       <div className="bg-gray-900 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -495,5 +504,6 @@ export default function OfficeFurnitureRemovalPage() {
         </div>
       </div>
     </div>
+    </>
   )
 }

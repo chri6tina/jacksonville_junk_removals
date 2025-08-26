@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { CheckCircle, Truck, Leaf, Shield, Clock, DollarSign } from 'lucide-react'
+import SEOHead from '@/components/SEOHead'
 
 export const metadata: Metadata = {
   title: '$99 Quarter-Truck Special - Jacksonville Junk Removals',
@@ -10,7 +11,15 @@ export const metadata: Metadata = {
 
 export default function SpecialOfferPage() {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <>
+      <SEOHead
+        title="$99 Junk Removal Special Jacksonville | Limited Time Offer | (904) 456-3851"
+        description="Jacksonville $99 junk removal special offer. Limited time deal on quarter-truck cleanouts. Professional service, no hidden fees. Call (904) 456-3851 to claim your special price."
+        keywords="$99 junk removal Jacksonville, junk removal special Jacksonville, quarter-truck special Jacksonville, limited time offer Jacksonville, Jacksonville junk removal deal"
+        canonical="/99-junk-removal"
+        ogType="website"
+      />
+      <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
       <div className="bg-gray-900 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -323,5 +332,6 @@ export default function SpecialOfferPage() {
         </div>
       </div>
     </div>
+    </>
   )
 }

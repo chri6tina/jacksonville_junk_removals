@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { Calendar, Clock, ArrowRight, Star, CheckCircle, Phone, MapPin, Truck, Shield, Leaf, DollarSign } from 'lucide-react'
+import SEOHead from '@/components/SEOHead'
 
 export const metadata: Metadata = {
   title: 'Top 5 Junk Removal Companies in Jacksonville: How to Choose the Right One',
@@ -10,7 +11,15 @@ export const metadata: Metadata = {
 
 export default function Top5JunkRemovalCompaniesPage() {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <>
+      <SEOHead
+        title="Top 5 Junk Removal Companies Jacksonville | Best Cleanout Services | (904) 456-3851"
+        description="Discover the top 5 junk removal companies in Jacksonville. Compare services, pricing, and customer reviews. Professional cleanout services you can trust. Call (904) 456-3851."
+        keywords="top junk removal companies Jacksonville, best junk removal Jacksonville, Jacksonville junk removal companies, junk removal comparison Jacksonville, professional cleanout Jacksonville"
+        canonical="/blog/top-5-junk-removal-companies-jacksonville"
+        ogType="article"
+      />
+      <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
       <div className="bg-gray-900 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -641,5 +650,6 @@ export default function Top5JunkRemovalCompaniesPage() {
         </div>
       </div>
     </div>
+    </>
   )
 }
