@@ -9,7 +9,7 @@ export default function EstateCleanoutPage() {
         title="Estate Cleanout Jacksonville | Probate Cleanup | Estate Sale Cleanup (904) 456-3851"
         description="Jacksonville estate cleanout service. Professional probate cleanup, estate sale cleanup, complete home cleanout. Licensed, insured, compassionate service. Call (904) 456-3851 for estate cleanout."
         keywords="estate cleanout Jacksonville, probate cleanup Jacksonville, estate sale cleanup Jacksonville, home cleanout Jacksonville, estate cleanup service Jacksonville, Jacksonville estate cleanout, probate Jacksonville"
-        canonical="https://jacksonvillejunkremovals.com/estate-cleanout"
+        canonical="/estate-cleanout"
         ogType="website"
       />
       

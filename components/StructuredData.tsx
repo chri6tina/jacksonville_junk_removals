@@ -8,13 +8,13 @@ export default function StructuredData() {
     "@type": "LocalBusiness",
     "name": "Jacksonville Junk Removals",
     "alternateName": "JJR Junk Removal",
-    "description": "Jacksonville's #1 post-construction cleanup and junk removal company offering same-day service, free estimates, and eco-friendly disposal. Specialized construction site cleanup, debris removal, and professional cleaning across all Jacksonville areas including Jacksonville Beach, Downtown, Southside, Mandarin, and Orange Park.",
+    "description": "Jacksonville's premier junk removal company offering same-day service, free estimates, and eco-friendly disposal. Professional mattress removal, furniture removal, appliance removal, garage cleanout, and construction debris removal services.",
     "url": "https://jacksonvillejunkremovals.com",
     "telephone": "+1-904-456-3851",
     "email": "info@jacksonvillejunkremovals.com",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Jacksonville, FL",
+      "streetAddress": "Jacksonville",
       "addressLocality": "Jacksonville",
       "addressRegion": "FL",
       "postalCode": "32201",
@@ -26,64 +26,23 @@ export default function StructuredData() {
       "longitude": "-81.6557"
     },
     "openingHours": [
-      "Mo-Su 00:00-23:59"
+      "Mo-Su 07:00-19:00"
     ],
     "priceRange": "$$",
-    "paymentAccepted": ["Cash", "Credit Card", "Check", "Invoice"],
+    "paymentAccepted": ["Cash", "Credit Card", "Check"],
     "currenciesAccepted": "USD",
     "areaServed": [
-      {
-        "@type": "City",
-        "name": "Jacksonville"
-      },
-      {
-        "@type": "City", 
-        "name": "Jacksonville Beach"
-      },
-      {
-        "@type": "City",
-        "name": "Atlantic Beach"
-      },
-      {
-        "@type": "City",
-        "name": "Neptune Beach"
-      },
-      {
-        "@type": "City",
-        "name": "Ponte Vedra Beach"
-      },
-      {
-        "@type": "City",
-        "name": "Mandarin"
-      },
-      {
-        "@type": "City",
-        "name": "Orange Park"
-      },
-      {
-        "@type": "City",
-        "name": "Southside"
-      },
-      {
-        "@type": "City",
-        "name": "Arlington"
-      },
-      {
-        "@type": "City",
-        "name": "San Marco"
-      },
-      {
-        "@type": "City",
-        "name": "Riverside"
-      },
-      {
-        "@type": "City",
-        "name": "Clay County"
-      },
-      {
-        "@type": "City",
-        "name": "Duval County"
-      }
+      "Jacksonville",
+      "Jacksonville Beach",
+      "Riverside",
+      "Southside",
+      "Mandarin",
+      "Arlington",
+      "Orange Park",
+      "San Marco",
+      "Orange Park",
+      "Clay County",
+      "Duval County"
     ],
     "serviceArea": {
       "@type": "GeoCircle",
@@ -96,98 +55,8 @@ export default function StructuredData() {
     },
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
-      "name": "Jacksonville Post-Construction Cleanup & Junk Removal Services",
+      "name": "Junk Removal Services",
       "itemListElement": [
-        // Post-Construction Cleanup Services (Priority)
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Post-Construction Cleanup",
-            "description": "Complete construction site cleanup and debris removal for all facility types"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Residential Post-Construction Cleanup",
-            "description": "Home renovation and construction cleanup with family-ready protocols"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Commercial Post-Construction Cleanup",
-            "description": "Business facility construction cleanup and professional environment preparation"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Medical Facility Post-Construction Cleanup",
-            "description": "Healthcare facility construction cleanup with medical-grade standards"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Hotel Post-Construction Cleanup",
-            "description": "Hospitality facility construction cleanup with luxury finish protection"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Industrial Post-Construction Cleanup",
-            "description": "Manufacturing and industrial facility construction cleanup"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Educational Facility Post-Construction Cleanup",
-            "description": "School and university construction cleanup with student safety protocols"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Religious Facility Post-Construction Cleanup",
-            "description": "Church and temple construction cleanup with sacred space respect"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Office Building Post-Construction Cleanup",
-            "description": "Corporate office construction cleanup with business-ready standards"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Restaurant Post-Construction Cleanup",
-            "description": "Food service facility construction cleanup with health code compliance"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Retail Store Post-Construction Cleanup",
-            "description": "Retail facility construction cleanup with customer-ready presentation"
-          }
-        },
-        // Traditional Junk Removal Services
         {
           "@type": "Offer",
           "itemOffered": {
@@ -311,9 +180,9 @@ export default function StructuredData() {
         },
         "author": {
           "@type": "Person",
-          "name": "Sarah Johnson"
+          "name": "Sarah M."
         },
-        "reviewBody": "Jacksonville Junk Removals did an amazing job cleaning up our post-construction site. Professional, thorough, and completed ahead of schedule. Highly recommend for any Jacksonville area project!"
+        "reviewBody": "Amazing service! They were fast, professional, and cleaned up everything perfectly. Highly recommend!"
       },
       {
         "@type": "Review",
@@ -324,9 +193,9 @@ export default function StructuredData() {
         },
         "author": {
           "@type": "Person",
-          "name": "Mike Rodriguez"
+          "name": "Mike R."
         },
-        "reviewBody": "Outstanding service for our downtown Jacksonville office renovation. They understood the urban logistics and delivered pristine results. The team was professional and efficient."
+        "reviewBody": "Best junk removal company in Jacksonville. Fair pricing and excellent customer service."
       },
       {
         "@type": "Review",
@@ -351,45 +220,16 @@ export default function StructuredData() {
     "image": "https://jacksonvillejunkremovals.com/logo.png",
     "logo": "https://jacksonvillejunkremovals.com/logo.png",
     "foundingDate": "2020",
-    "numberOfEmployees": "25-50",
-    "slogan": "Jacksonville's #1 Post-Construction Cleanup & Junk Removal Specialists",
+    "numberOfEmployees": "15",
+    "slogan": "Fast, Reliable, Eco-Friendly Junk Removal in Jacksonville",
     "knowsAbout": [
-      "Post-construction cleanup",
-      "Construction debris removal",
-      "Jacksonville area construction",
-      "Beach area construction protocols",
-      "Urban construction logistics",
-      "Medical facility cleaning",
-      "Educational facility cleaning",
-      "Religious facility cleaning",
-      "Hotel and hospitality cleaning",
-      "Industrial facility cleaning",
       "Junk Removal",
       "Waste Disposal",
       "Recycling",
       "Eco-friendly Disposal",
+      "Jacksonville Area",
       "Commercial Cleanup",
       "Residential Cleanup"
-    ],
-    "makesOffer": [
-      {
-        "@type": "Offer",
-        "description": "Free estimates for post-construction cleanup projects",
-        "price": "0",
-        "priceCurrency": "USD"
-      },
-      {
-        "@type": "Offer",
-        "description": "Same-day service available for urgent cleanup needs",
-        "price": "0",
-        "priceCurrency": "USD"
-      },
-      {
-        "@type": "Offer",
-        "description": "Free junk removal estimates",
-        "price": "0",
-        "priceCurrency": "USD"
-      }
     ]
   }
 

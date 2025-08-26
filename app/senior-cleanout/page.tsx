@@ -9,7 +9,7 @@ export default function SeniorCleanoutPage() {
         title="Senior Cleanout Jacksonville | Elderly Cleanout Services | Compassionate Cleanup (904) 456-3851"
         description="Jacksonville senior cleanout service. Compassionate elderly cleanout, senior move assistance, downsizing help. Professional, understanding, licensed service. Call (904) 456-3851 for senior cleanout."
         keywords="senior cleanout Jacksonville, elderly cleanout Jacksonville, senior move assistance Jacksonville, downsizing help Jacksonville, senior cleanup Jacksonville, Jacksonville senior cleanout, elderly Jacksonville"
-        canonical="https://jacksonvillejunkremovals.com/senior-cleanout"
+        canonical="/senior-cleanout"
         ogType="website"
       />
       

@@ -9,7 +9,7 @@ export default function SameDayJunkRemovalPage() {
         title="Same Day Junk Removal Jacksonville | 24 Hour Service | Fast Cleanup (904) 456-3851"
         description="Jacksonville same day junk removal service. 24 hour emergency cleanup, fast response, guaranteed same-day service. Professional, licensed, insured. Call (904) 456-3851 for immediate service."
         keywords="same day junk removal Jacksonville, 24 hour junk removal Jacksonville, emergency junk removal Jacksonville, fast junk removal Jacksonville, same day cleanup Jacksonville, urgent junk removal Jacksonville, Jacksonville same day service, immediate junk removal Jacksonville"
-        canonical="https://jacksonvillejunkremovals.com/same-day-junk-removal"
+        canonical="/same-day-junk-removal"
         ogType="website"
       />
       

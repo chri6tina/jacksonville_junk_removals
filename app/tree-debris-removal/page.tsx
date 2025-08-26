@@ -9,7 +9,7 @@ export default function TreeDebrisRemovalPage() {
         title="Tree Debris Removal Jacksonville | Fallen Tree Cleanup | Branch Removal"
         description="Jacksonville tree debris removal and fallen tree cleanup services. Professional fallen tree removal, branch cleanup, landscaping debris removal, and stump grinding. Available same-day for emergency tree cleanup. Call (904) 456-3851 for immediate service."
         keywords="tree debris removal Jacksonville, fallen tree removal Jacksonville, branch cleanup Jacksonville, landscaping debris removal Jacksonville, stump grinding Jacksonville, tree cleanup Jacksonville, emergency tree removal Jacksonville, storm tree damage Jacksonville, tree debris disposal Jacksonville, Jacksonville tree services"
-        canonical="https://jacksonvillejunkremovals.com/tree-debris-removal"
+        canonical="/tree-debris-removal"
         ogType="website"
       />
       

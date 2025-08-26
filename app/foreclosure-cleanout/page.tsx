@@ -9,7 +9,7 @@ export default function ForeclosureCleanoutPage() {
         title="Foreclosure Cleanout Jacksonville | Bank Owned Property Cleanup | REO Cleanout"
         description="Jacksonville foreclosure cleanout and bank owned property cleanup services. Professional REO cleanout, abandoned property cleanup, and foreclosure debris removal. Fast, reliable service for banks and property managers. Call (904) 456-3851 for immediate service."
         keywords="foreclosure cleanout Jacksonville, bank owned property cleanup Jacksonville, REO cleanout Jacksonville, abandoned property cleanup Jacksonville, foreclosure debris removal Jacksonville, property management cleanup Jacksonville, bank property cleanup Jacksonville, foreclosure property Jacksonville, REO property Jacksonville, Jacksonville foreclosure services"
-        canonical="https://jacksonvillejunkremovals.com/foreclosure-cleanout"
+        canonical="/foreclosure-cleanout"
         ogType="website"
       />
       

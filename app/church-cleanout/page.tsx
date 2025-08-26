@@ -9,7 +9,7 @@ export default function ChurchCleanoutPage() {
         title="Church Cleanout Jacksonville | Religious Facility Cleanup | Church Equipment Removal"
         description="Jacksonville church cleanout and religious facility cleanup services. Professional church equipment removal, sanctuary cleanup, and religious facility cleanup. Fast, reliable service for churches and religious organizations. Call (904) 456-3851 for immediate service."
         keywords="church cleanout Jacksonville, religious facility cleanup Jacksonville, church equipment removal Jacksonville, sanctuary cleanup Jacksonville, religious facility cleanup Jacksonville, church cleanup Jacksonville, religious Jacksonville, church services Jacksonville, Jacksonville church services, church removal Jacksonville"
-        canonical="https://jacksonvillejunkremovals.com/church-cleanout"
+        canonical="/church-cleanout"
         ogType="website"
       />
       

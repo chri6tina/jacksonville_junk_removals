@@ -9,7 +9,7 @@ export default function HurricaneDebrisRemovalPage() {
         title="Hurricane Debris Removal Jacksonville | Post Hurricane Cleanup | Emergency Service"
         description="Jacksonville hurricane debris removal and post hurricane cleanup services. Emergency structural debris removal, roofing material cleanup, and storm-damaged item removal. Available 24/7 after hurricanes. Call (904) 456-3851 for immediate service."
         keywords="hurricane debris removal Jacksonville, post hurricane cleanup Jacksonville, hurricane damage cleanup Jacksonville, structural debris removal Jacksonville, roofing material cleanup Jacksonville, storm damaged furniture removal Jacksonville, emergency hurricane cleanup Jacksonville, hurricane debris disposal Jacksonville, post storm cleanup Jacksonville, hurricane damage Jacksonville"
-        canonical="https://jacksonvillejunkremovals.com/hurricane-debris-removal"
+        canonical="/hurricane-debris-removal"
         ogType="website"
       />
       

@@ -9,7 +9,7 @@ export default function StormCleanupPage() {
         title="Storm Cleanup Jacksonville | Hurricane Debris Removal | Emergency Service"
         description="Jacksonville storm cleanup and hurricane debris removal services. Emergency storm damage cleanup, fallen tree removal, and storm debris disposal. Available 24/7 during storms. Call (904) 456-3851 for immediate service."
         keywords="storm cleanup Jacksonville, hurricane debris removal Jacksonville, storm damage cleanup Jacksonville, fallen tree removal Jacksonville, emergency storm cleanup Jacksonville, post storm cleanup Jacksonville, storm debris disposal Jacksonville, hurricane cleanup Jacksonville, storm damage Jacksonville, emergency junk removal Jacksonville"
-        canonical="https://jacksonvillejunkremovals.com/storm-cleanup"
+        canonical="/storm-cleanup"
         ogType="website"
       />
       

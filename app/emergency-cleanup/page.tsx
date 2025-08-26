@@ -9,7 +9,7 @@ export default function EmergencyCleanupPage() {
         title="Emergency Cleanup Jacksonville | 24/7 Emergency Response | Disaster Cleanup (904) 456-3851"
         description="Jacksonville emergency cleanup service. 24/7 emergency response, disaster cleanup, urgent cleanup, emergency junk removal. Professional, licensed, insured emergency service. Call (904) 456-3851 for immediate emergency response."
         keywords="emergency cleanup Jacksonville, 24/7 emergency cleanup Jacksonville, disaster cleanup Jacksonville, urgent cleanup Jacksonville, emergency junk removal Jacksonville, emergency response Jacksonville, Jacksonville emergency service, immediate cleanup Jacksonville"
-        canonical="https://jacksonvillejunkremovals.com/emergency-cleanup"
+        canonical="/emergency-cleanup"
         ogType="website"
       />
       

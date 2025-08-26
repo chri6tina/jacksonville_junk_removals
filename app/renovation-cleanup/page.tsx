@@ -9,7 +9,7 @@ export default function RenovationCleanupPage() {
         title="Renovation Cleanup Jacksonville | Post Construction Cleanup | Construction Debris Removal (904) 456-3851"
         description="Jacksonville renovation cleanup service. Post construction cleanup, construction debris removal, renovation waste cleanup. Professional, licensed, insured renovation cleanup. Call (904) 456-3851 for renovation cleanup."
         keywords="renovation cleanup Jacksonville, post construction cleanup Jacksonville, construction debris removal Jacksonville, renovation waste cleanup Jacksonville, construction cleanup Jacksonville, Jacksonville renovation cleanup, post renovation cleanup Jacksonville"
-        canonical="https://jacksonvillejunkremovals.com/renovation-cleanup"
+        canonical="/renovation-cleanup"
         ogType="website"
       />
       

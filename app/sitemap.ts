@@ -48,6 +48,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/post-construction-cleanup-comparison',
     '/jacksonville-construction-partnerships',
     '/jacksonville-reviews',
+    '/jacksonville-construction-industry',
+    '/jacksonville-business-directory',
   ]
 
   // Service pages
@@ -85,26 +87,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/senior-cleanout',
   ]
 
-  // Location pages
+  // Location pages - CORRECTED to match actual page files
   const locationPages = [
     '/junk-removal-downtown-jacksonville',
     '/junk-removal-jacksonville-beach',
     '/junk-removal-riverside',
-    '/junk-removal-southside',
     '/junk-removal-mandarin',
     '/junk-removal-arlington',
     '/junk-removal-orange-park',
-    '/junk-removal-san-marco',
   ]
 
-  // Area-specific mattress removal pages
-  const mattressLocationPages = [
-    '/mattress-removal-riverside-jacksonville',
-    '/mattress-removal-southside-jacksonville',
-    '/mattress-removal-san-marco-jacksonville',
-    '/mattress-removal-mandarin-jacksonville',
-    '/mattress-removal-jacksonville-beach',
-  ]
+  // Area-specific mattress removal pages - REMOVED (pages don't exist)
+  // const mattressLocationPages = [
+  //   '/mattress-removal-riverside-jacksonville',
+  //   '/mattress-removal-southside-jacksonville',
+  //   '/mattress-removal-san-marco-jacksonville',
+  //   '/mattress-removal-mandarin-jacksonville',
+  //   '/mattress-removal-jacksonville-beach',
+  // ]
 
   const allPages = [
     ...corePages,
@@ -112,8 +112,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...areaSpecificPages, // Included new area-specific pages
     ...strategicPages,
     ...servicePages,
-    ...locationPages,
-    ...mattressLocationPages,
+    ...locationPages, // CORRECTED - actual location pages
+    // ...mattressLocationPages, // REMOVED - pages don't exist
   ]
 
   return allPages.map((page) => ({
