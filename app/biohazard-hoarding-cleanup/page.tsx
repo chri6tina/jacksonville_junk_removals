@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Shield, AlertTriangle, Wrench, UserCheck, Phone, MapPin, Clock, Star, CheckCircle, Biohazard, Safety } from 'lucide-react'
+import { Shield, AlertTriangle, Wrench, UserCheck, Phone, MapPin, Clock, Star, CheckCircle, Biohazard, Heart } from 'lucide-react'
 import SEOHead from '@/components/SEOHead'
 
 export default function BiohazardHoardingCleanupPage() {
@@ -176,7 +176,7 @@ export default function BiohazardHoardingCleanupPage() {
               {/* Medical Waste */}
               <div className="bg-gray-50 rounded-lg p-8 border border-gray-200">
                 <div className="w-12 h-12 bg-pink-100 rounded-lg flex items-center justify-center mb-6">
-                  <Safety className="w-6 h-6 text-pink-600" />
+                  <Heart className="w-6 h-6 text-pink-600" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">
                   Medical Waste
