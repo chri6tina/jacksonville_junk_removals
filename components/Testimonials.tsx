@@ -41,6 +41,13 @@ const Testimonials = () => {
       rating: 5,
       text: 'Outstanding service! They handled our construction debris removal project with ease. The team was knowledgeable and made sure everything was disposed of properly.',
       service: 'Construction Debris Removal'
+    },
+    {
+      name: 'Robert Martinez',
+      neighborhood: 'Jacksonville Beach',
+      rating: 5,
+      text: 'Emergency flood cleanup service was incredible! They responded within 2 hours and saved our home from extensive water damage. Professional and compassionate throughout.',
+      service: 'Flood Cleanup'
     }
   ]
 

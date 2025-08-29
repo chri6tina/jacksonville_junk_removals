@@ -32,6 +32,7 @@ const ContactForm = () => {
     'Furniture Removal',
     'Garage Cleanout',
     'Estate Cleanout',
+    'Flood Cleanup',
     'Hot Tub Removal',
     'E-Waste Removal',
     'Other'

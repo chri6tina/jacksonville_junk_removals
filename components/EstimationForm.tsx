@@ -44,6 +44,7 @@ const EstimationForm = () => {
     { id: 'furniture', name: 'Furniture Removal', basePrice: 100 },
     { id: 'garage', name: 'Garage Cleanout', basePrice: 200 },
     { id: 'estate', name: 'Estate Cleanout', basePrice: 300 },
+    { id: 'flood-cleanup', name: 'Flood Cleanup', basePrice: 400 },
     { id: 'hot-tub', name: 'Hot Tub Removal', basePrice: 150 },
     { id: 'e-waste', name: 'E-Waste Removal', basePrice: 100 }
   ]

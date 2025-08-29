@@ -35,7 +35,8 @@ const Footer = () => {
     { name: 'Construction Debris Removal', href: '/construction-debris-removal' },
     { name: 'Appliance Removal', href: '/appliance-removal' },
     { name: 'Mattress Removal', href: '/mattress-removal' },
-    { name: 'Estate Cleanouts', href: '/services/estate' },
+    { name: 'Estate Cleanouts', href: '/estate-cleanout' },
+    { name: 'Flood Cleanup', href: '/flood-cleanup' },
   ]
 
   // Post-Construction Cleanup Services for Jacksonville Dominance

@@ -117,6 +117,14 @@ export default function StructuredData() {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
+            "name": "Flood Cleanup",
+            "description": "Emergency flood cleanup and water damage restoration"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
             "name": "Garage Cleanout",
             "description": "Full garage organization and junk removal"
           }

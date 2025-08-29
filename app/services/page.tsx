@@ -13,7 +13,9 @@ import {
   Package, 
   Warehouse, 
   Briefcase, 
-  Store 
+  Store,
+  Home,
+  Droplets
 } from 'lucide-react'
 import SEOHead from '@/components/SEOHead'
 
@@ -140,6 +142,24 @@ const services = [
     icon: Store,
     features: ['Store types', 'Inventory handling', 'Commercial services'],
     href: '/retail-store-cleanout'
+  },
+  {
+    id: 'estate',
+    name: 'Estate Cleanout',
+    description: 'Complete estate cleanout services for probate, estate sales, and home transitions.',
+    startingPrice: 300,
+    icon: Home,
+    features: ['Probate cleanup', 'Estate sale support', 'Compassionate service'],
+    href: '/estate-cleanout'
+  },
+  {
+    id: 'flood-cleanup',
+    name: 'Flood Cleanup',
+    description: 'Emergency flood cleanup and water damage restoration with 24/7 response.',
+    startingPrice: 400,
+    icon: Droplets,
+    features: ['Emergency response', 'Water damage restoration', 'Mold remediation'],
+    href: '/flood-cleanup'
   }
 ]
 

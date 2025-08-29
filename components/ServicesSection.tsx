@@ -10,7 +10,8 @@ import {
   Heart,
   ArrowRight,
   Star,
-  CheckCircle
+  CheckCircle,
+  Droplets
 } from 'lucide-react'
 
 const services = [
@@ -28,7 +29,7 @@ const services = [
     title: 'Commercial Office Cleanouts',
     description: 'Professional office cleanout services for businesses, retail spaces, and commercial properties.',
     icon: Building2,
-    href: '/services/commercial',
+    href: '/commercial-junk-removal',
     features: ['Office Furniture', 'Equipment Removal', 'Retail Space Clearing', 'Warehouse Cleanouts'],
     popular: true
   },
@@ -37,7 +38,7 @@ const services = [
     title: 'Construction Debris Removal',
     description: 'Remove construction waste, demolition debris, and building materials from job sites.',
     icon: HardHat,
-    href: '/services/construction',
+    href: '/construction-debris-removal',
     features: ['Demolition Debris', 'Building Materials', 'Renovation Waste', 'Site Cleanup'],
     popular: false
   },
@@ -46,7 +47,7 @@ const services = [
     title: 'Appliance & Furniture Pickup',
     description: 'Remove old appliances, furniture, and large items that are difficult to dispose of.',
     icon: Sofa,
-    href: '/services/appliances',
+    href: '/appliance-removal',
     features: ['Old Appliances', 'Furniture Removal', 'Large Item Pickup', 'Electronics Disposal'],
     popular: false
   },
@@ -55,7 +56,7 @@ const services = [
     title: 'Yard Waste Cleanup',
     description: 'Clear yard debris, tree branches, landscaping waste, and outdoor clutter.',
     icon: TreePine,
-    href: '/services/yard-waste',
+    href: '/yard-waste-removal',
     features: ['Tree Branches', 'Landscaping Debris', 'Outdoor Furniture', 'Garden Waste'],
     popular: false
   },
@@ -64,8 +65,17 @@ const services = [
     title: 'Donation & Recycling Services',
     description: 'We donate usable items to local charities and recycle materials whenever possible.',
     icon: Heart,
-    href: '/services/recycling',
+    href: '/services',
     features: ['Charity Donations', 'Material Recycling', 'Eco-Friendly Disposal', 'Sustainability Focus'],
+    popular: false
+  },
+  {
+    id: 7,
+    title: 'Emergency Flood Cleanup',
+    description: '24/7 emergency flood cleanup and water damage restoration with rapid response teams.',
+    icon: Droplets,
+    href: '/flood-cleanup',
+    features: ['Emergency Response', 'Water Damage Restoration', 'Mold Remediation', 'Insurance Support'],
     popular: false
   }
 ]
