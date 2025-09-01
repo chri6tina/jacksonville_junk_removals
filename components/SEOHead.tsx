@@ -57,7 +57,7 @@ export default function SEOHead({
       <meta name="robots" content={noindex ? 'noindex' : nofollow ? 'nofollow' : 'index,follow'} />
       
       {/* Canonical URL */}
-      {canonical && <link rel="canonical" href={canonical} />}
+      {canonical && <link rel="canonical" href={`https://jacksonvillejunkremovals.com${canonical}`} />}
       
       {/* Open Graph */}
       <meta property="og:title" content={fullTitle} />
