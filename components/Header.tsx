@@ -43,7 +43,6 @@ const Header = () => {
   const navLinks = [
     { name: 'Estimation Tool', href: '/estimation' },
     { name: 'Locations', href: '/locations' },
-    { name: 'Blog', href: '/post' },
     { name: 'Contact', href: '/contact' },
   ]
 
@@ -88,14 +87,8 @@ const Header = () => {
           {/* CTA Buttons - Desktop */}
           <div className="hidden lg:flex items-center space-x-4 xl:space-x-5">
             <Link
-              href="/99-junk-removal"
-              className="bg-gray-900 hover:bg-gray-800 text-white px-6 xl:px-8 py-3 xl:py-4 rounded-lg font-semibold transition-all duration-200 transform hover:scale-105 shadow-lg text-base xl:text-lg"
-            >
-              $99 Special
-            </Link>
-            <Link
               href="/contact"
-              className="bg-white border-2 border-gray-900 text-gray-900 hover:bg-gray-900 hover:text-white px-6 xl:px-8 py-3 xl:py-4 rounded-lg font-semibold transition-all duration-200 text-base xl:text-lg"
+              className="bg-gray-900 hover:bg-gray-800 text-white px-6 xl:px-8 py-3 xl:py-4 rounded-lg font-semibold transition-all duration-200 transform hover:scale-105 shadow-lg text-base xl:text-lg"
             >
               Get Quote
             </Link>
@@ -153,15 +146,8 @@ const Header = () => {
               {/* Mobile CTA Buttons */}
               <div className="pt-6 space-y-4">
                 <Link
-                  href="/99-junk-removal"
-                  className="block px-6 py-4 bg-gray-900 text-white rounded-lg font-semibold text-center hover:bg-gray-800 transition-colors duration-200 text-lg"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  $99 Special
-                </Link>
-                <Link
                   href="/contact"
-                  className="block px-6 py-4 border-2 border-gray-900 text-gray-900 rounded-lg font-semibold text-center hover:bg-gray-900 hover:text-white transition-all duration-200 text-lg"
+                  className="block px-6 py-4 bg-gray-900 text-white rounded-lg font-semibold text-center hover:bg-gray-800 transition-colors duration-200 text-lg"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Get Quote
