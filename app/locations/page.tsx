@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 const serviceAreas = [
   {
     name: 'Downtown Jacksonville',
-    slug: 'junk-removal-downtown',
+            slug: 'junk-removal-downtown-jacksonville',
     description: 'Commercial and residential junk removal in the heart of Jacksonville',
     image: '🏙️',
     features: ['Commercial Cleanouts', 'Office Furniture Removal', 'Construction Debris', 'Same-Day Service'],

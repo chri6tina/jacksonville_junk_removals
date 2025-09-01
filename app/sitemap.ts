@@ -50,7 +50,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/post-construction-cleanup-comparison',
     '/jacksonville-construction-partnerships',
     '/jacksonville-reviews',
-    '/jacksonville-construction-industry',
+
     '/jacksonville-business-directory',
   ]
 
@@ -113,7 +113,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/downtown-jacksonville-hoarding-cleanup',
     '/mandarin-hoarding-cleanup',
     '/jacksonville-beach-hoarding-cleanup',
-    '/blog/top-5-junk-removal-companies-jacksonville',
+
     '/renovation-cleanup',
     '/senior-cleanout',
     '/senior-hoarding-cleanup',

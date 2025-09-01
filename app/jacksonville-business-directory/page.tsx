@@ -98,10 +98,10 @@ export default function JacksonvilleBusinessDirectoryPage() {
                   <li>• Development companies</li>
                 </ul>
                 <Link
-                  href="/jacksonville-construction-industry"
+                  href="/jacksonville-construction-partnerships"
                   className="text-orange-600 hover:text-orange-800 font-semibold"
                 >
-                  View Construction Directory →
+                  View Construction Partnerships →
                 </Link>
               </div>
 

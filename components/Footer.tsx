@@ -59,7 +59,7 @@ const Footer = () => {
   ]
 
   const areas = [
-    { name: 'Downtown Jacksonville', href: '/junk-removal-downtown' },
+            { name: 'Downtown Jacksonville', href: '/junk-removal-downtown-jacksonville' },
     { name: 'Jacksonville Beach', href: '/junk-removal-jacksonville-beach' },
     { name: 'Riverside', href: '/junk-removal-riverside' },
     { name: 'San Marco', href: '/junk-removal-san-marco' },
