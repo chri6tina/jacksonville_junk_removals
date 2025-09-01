@@ -128,6 +128,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/junk-removal-mandarin',
     '/junk-removal-arlington',
     '/junk-removal-orange-park',
+    '/junk-removal-southside',
   ]
 
   // Area-specific mattress removal pages - REMOVED (pages don't exist)
