@@ -131,7 +131,7 @@ export default function DowntownJacksonvillePage() {
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-white rounded-lg p-8 shadow-sm border border-gray-100">
+            <Link href="/commercial-office-cleanout" className="block bg-white rounded-lg p-8 shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-200">
               <div className="flex items-start space-x-4 mb-6">
                 <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
                   <Building2 className="w-6 h-6 text-gray-900" />
@@ -171,9 +171,9 @@ export default function DowntownJacksonvillePage() {
                   <span className="text-sm text-gray-600">Professional Service</span>
                 </div>
               </div>
-            </div>
+            </Link>
 
-            <div className="bg-white rounded-lg p-8 shadow-sm border border-gray-100">
+            <Link href="/apartment-cleanout" className="block bg-white rounded-lg p-8 shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-200">
               <div className="flex items-start space-x-4 mb-6">
                 <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
                   <Home className="w-6 h-6 text-gray-900" />
@@ -213,7 +213,7 @@ export default function DowntownJacksonvillePage() {
                   <span className="text-sm text-gray-600">Fast Service</span>
                 </div>
               </div>
-            </div>
+            </Link>
 
             <div className="bg-white rounded-lg p-8 shadow-sm border border-gray-100">
               <div className="flex items-start space-x-4 mb-6">
