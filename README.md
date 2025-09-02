@@ -306,7 +306,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 For support or questions about this website:
 - Email: info@jacksonvillejunkremovals.com
 - Phone: (904) 555-0123
-- Website: [jacksonvillejunkremovals.com](https://jacksonvillejunkremovals.com)
+- Website: [jacksonvillejunkremovals.com](https://www.jacksonvillejunkremovals.com)
 
 ## 🙏 Acknowledgments
 

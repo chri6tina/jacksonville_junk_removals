@@ -5,7 +5,7 @@ export async function GET() {
 Allow: /
 
 # Sitemap
-Sitemap: https://jacksonvillejunkremovals.com/sitemap.xml
+Sitemap: https://www.jacksonvillejunkremovals.com/sitemap.xml
 
 # Disallow admin areas
 Disallow: /admin/

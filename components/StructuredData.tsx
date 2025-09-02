@@ -9,7 +9,7 @@ export default function StructuredData() {
     "name": "Jacksonville Junk Removals",
     "alternateName": "JJR Junk Removal",
     "description": "Jacksonville's premier junk removal company offering same-day service, free estimates, and eco-friendly disposal. Professional mattress removal, furniture removal, appliance removal, garage cleanout, and construction debris removal services.",
-    "url": "https://jacksonvillejunkremovals.com",
+    "url": "https://www.jacksonvillejunkremovals.com",
     "telephone": "+1-904-456-3851",
     "email": "info@jacksonvillejunkremovals.com",
     "address": {
@@ -225,8 +225,8 @@ export default function StructuredData() {
       "https://www.instagram.com/jacksonvillejunkremovals",
       "https://www.yelp.com/biz/jacksonville-junk-removals"
     ],
-    "image": "https://jacksonvillejunkremovals.com/logo.png",
-    "logo": "https://jacksonvillejunkremovals.com/logo.png",
+    "image": "https://www.jacksonvillejunkremovals.com/logo.png",
+    "logo": "https://www.jacksonvillejunkremovals.com/logo.png",
     "foundingDate": "2020",
     "numberOfEmployees": "15",
     "slogan": "Fast, Reliable, Eco-Friendly Junk Removal in Jacksonville",

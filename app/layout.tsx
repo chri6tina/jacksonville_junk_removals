@@ -25,13 +25,13 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Jacksonville Junk Removal | Same-Day Service | Free Estimates | (904) 456-3851',
     description: 'Jacksonville junk removal company offering same-day service, free estimates, and eco-friendly disposal. Mattress removal, furniture removal, appliance removal, garage cleanout, construction debris removal. Serving Jacksonville Beach, Riverside, Southside, Mandarin, Arlington, Orange Park, San Marco.',
-    url: 'https://jacksonvillejunkremovals.com',
+    url: 'https://www.jacksonvillejunkremovals.com',
     siteName: 'Jacksonville Junk Removals',
     locale: 'en_US',
     type: 'website',
     images: [
       {
-        url: 'https://jacksonvillejunkremovals.com/og-image.jpg',
+        url: 'https://www.jacksonvillejunkremovals.com/og-image.jpg',
         width: 1200,
         height: 630,
         alt: 'Jacksonville Junk Removal Services',
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Jacksonville Junk Removal | Same-Day Service | Free Estimates',
     description: 'Jacksonville junk removal company offering same-day service, free estimates, and eco-friendly disposal. Serving all of Jacksonville and surrounding areas.',
-    images: ['https://jacksonvillejunkremovals.com/og-image.jpg'],
+    images: ['https://www.jacksonvillejunkremovals.com/og-image.jpg'],
   },
   robots: {
     index: true,
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
     yahoo: 'your-yahoo-verification-code',
   },
   alternates: {
-    canonical: 'https://jacksonvillejunkremovals.com',
+    canonical: 'https://www.jacksonvillejunkremovals.com',
   },
   other: {
     'mobile-web-app-capable': 'yes',

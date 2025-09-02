@@ -23,7 +23,7 @@ export default function SEOHead({
   description,
   keywords,
   canonical,
-  ogImage = 'https://jacksonvillejunkremovals.com/og-image.jpg',
+  ogImage = 'https://www.jacksonvillejunkremovals.com/og-image.jpg',
   ogType = 'website',
   publishedTime,
   modifiedTime,
