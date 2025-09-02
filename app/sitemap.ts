@@ -76,6 +76,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/business-equipment-disposal',
     '/corporate-cleanout',
     '/business-relocation',
+    '/residential-junk-removal',
+    '/beachside-property-cleanup',
     '/historic-home-cleanout',
     '/beach-house-cleanout',
     '/vacation-rental-cleanup',
