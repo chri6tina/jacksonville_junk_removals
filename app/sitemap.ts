@@ -70,6 +70,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/office-furniture-removal',
     '/retail-store-cleanout',
     '/estate-cleanout',
+    '/family-home-cleanout',
+    '/community-cleanup',
     '/storm-cleanup',
     '/hurricane-debris-removal',
     '/tree-debris-removal',

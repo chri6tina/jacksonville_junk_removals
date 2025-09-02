@@ -130,7 +130,7 @@ export default function MandarinPage() {
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-white rounded-lg p-8 shadow-sm border border-gray-100">
+            <Link href="/family-home-cleanout" className="block bg-white rounded-lg p-8 shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-200">
               <div className="flex items-start space-x-4 mb-6">
                 <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
                   <Home className="w-6 h-6 text-gray-900" />
@@ -170,9 +170,9 @@ export default function MandarinPage() {
                   <span className="text-sm text-gray-600">Family-Friendly Service</span>
                 </div>
               </div>
-            </div>
+            </Link>
 
-            <div className="bg-white rounded-lg p-8 shadow-sm border border-gray-100">
+            <Link href="/garage-cleanout" className="block bg-white rounded-lg p-8 shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-200">
               <div className="flex items-start space-x-4 mb-6">
                 <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
                   <Car className="w-6 h-6 text-gray-900" />
@@ -212,9 +212,9 @@ export default function MandarinPage() {
                   <span className="text-sm text-gray-600">Space Maximization</span>
                 </div>
               </div>
-            </div>
+            </Link>
 
-            <div className="bg-white rounded-lg p-8 shadow-sm border border-gray-100">
+            <Link href="/estate-cleanout" className="block bg-white rounded-lg p-8 shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-200">
               <div className="flex items-start space-x-4 mb-6">
                 <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
                   <Truck className="w-6 h-6 text-gray-900" />
@@ -254,9 +254,9 @@ export default function MandarinPage() {
                   <span className="text-sm text-gray-600">Professional Service</span>
                 </div>
               </div>
-            </div>
+            </Link>
 
-            <div className="bg-white rounded-lg p-8 shadow-sm border border-gray-100">
+            <Link href="/community-cleanup" className="block bg-white rounded-lg p-8 shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-200">
               <div className="flex items-start space-x-4 mb-6">
                 <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
                   <Users className="w-6 h-6 text-gray-900" />
@@ -296,7 +296,7 @@ export default function MandarinPage() {
                   <span className="text-sm text-gray-600">Community Focus</span>
                 </div>
               </div>
-            </div>
+            </Link>
           </div>
         </div>
       </div>
