@@ -1,182 +1,714 @@
 import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://www.jacksonvillejunkremovals.com'
-  
-  // Core pages
-  const corePages = [
-    '',
-    '/estimation',
-    '/services',
-    '/contact',
-    '/99-junk-removal',
-    '/locations',
-    '/post',
-    '/privacy',
-    '/terms',
+  return [
+    {
+      url: 'https://www.jacksonvillejunkremovals.com',
+      lastModified: '2025-09-02T16:17:51.749Z',
+      changeFrequency: 'weekly',
+      priority: 1
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/99-junk-removal',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'monthly',
+      priority: 0.85
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/admin',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'monthly',
+      priority: 0.7
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/admin/blog',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'monthly',
+      priority: 0.7
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/apartment-cleanout',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'monthly',
+      priority: 0.85
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/appliance-removal',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'monthly',
+      priority: 0.85
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/basement-cleanout',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'monthly',
+      priority: 0.85
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/beach-house-cleanout',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'monthly',
+      priority: 0.85
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/beachside-property-cleanup',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'monthly',
+      priority: 0.7
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/biohazard-hoarding-cleanup',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'monthly',
+      priority: 0.7
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/business-equipment-disposal',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'monthly',
+      priority: 0.7
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/business-relocation',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'monthly',
+      priority: 0.7
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/church-cleanout',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'monthly',
+      priority: 0.85
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/commercial-cleanout',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'monthly',
+      priority: 0.85
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/commercial-hoarding-cleanup',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'monthly',
+      priority: 0.7
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/commercial-junk-removal',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'monthly',
+      priority: 0.85
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/commercial-office-cleanout',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'monthly',
+      priority: 0.85
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/commercial-post-construction-cleanup',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'monthly',
+      priority: 0.7
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/community-cleanup',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'monthly',
+      priority: 0.7
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/construction-debris-removal',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'monthly',
+      priority: 0.85
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/contact',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'weekly',
+      priority: 0.9
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/corporate-cleanout',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'monthly',
+      priority: 0.85
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/downtown-jacksonville-hoarding-cleanup',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'monthly',
+      priority: 0.7
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/e-waste-junk-removal',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'monthly',
+      priority: 0.85
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/educational-facility-post-construction-cleanup',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'monthly',
+      priority: 0.7
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/emergency-cleanup',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'monthly',
+      priority: 0.7
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/emergency-hoarding-cleanup',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'monthly',
+      priority: 0.7
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/estate-cleanout',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'monthly',
+      priority: 0.85
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/estimation',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'weekly',
+      priority: 0.9
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/family-hoarding-support',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'monthly',
+      priority: 0.7
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/family-home-cleanout',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'monthly',
+      priority: 0.85
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/flood-cleanup',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'monthly',
+      priority: 0.7
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/foreclosure-cleanout',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'monthly',
+      priority: 0.85
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/furniture-removal',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'monthly',
+      priority: 0.85
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/garage-cleanout',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'monthly',
+      priority: 0.85
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/hazardous-waste-removal',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'monthly',
+      priority: 0.85
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/historic-home-cleanout',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'monthly',
+      priority: 0.85
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/hoarding-aftercare',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'monthly',
+      priority: 0.7
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/hoarding-assessment',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'monthly',
+      priority: 0.7
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/hoarding-case-management',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'monthly',
+      priority: 0.7
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/hoarding-cleanup',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'monthly',
+      priority: 0.7
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/hoarding-community-outreach',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'monthly',
+      priority: 0.7
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/hoarding-crisis-intervention',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'monthly',
+      priority: 0.7
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/hoarding-education',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'monthly',
+      priority: 0.7
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/hoarding-employment-support',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'monthly',
+      priority: 0.7
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/hoarding-financial-support',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'monthly',
+      priority: 0.7
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/hoarding-housing-support',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'monthly',
+      priority: 0.7
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/hoarding-intervention',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'monthly',
+      priority: 0.7
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/hoarding-legal-support',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'monthly',
+      priority: 0.7
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/hoarding-medical-support',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'monthly',
+      priority: 0.7
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/hoarding-prevention',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'monthly',
+      priority: 0.7
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/hoarding-recovery',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'monthly',
+      priority: 0.7
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/hoarding-resources',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'monthly',
+      priority: 0.7
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/hoarding-social-services',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'monthly',
+      priority: 0.7
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/hoarding-support-groups',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'monthly',
+      priority: 0.7
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/hoarding-therapy',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'monthly',
+      priority: 0.7
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/hoarding-transportation-support',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'monthly',
+      priority: 0.7
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/hot-tub-removal',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'monthly',
+      priority: 0.85
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/hotel-cleanout',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'monthly',
+      priority: 0.85
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/hotel-post-construction-cleanup',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'monthly',
+      priority: 0.7
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/hurricane-debris-removal',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'monthly',
+      priority: 0.85
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/industrial-post-construction-cleanup',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'monthly',
+      priority: 0.7
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/jacksonville-beach-hoarding-cleanup',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'monthly',
+      priority: 0.7
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/jacksonville-business-directory',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'monthly',
+      priority: 0.7
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/jacksonville-construction-partnerships',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'monthly',
+      priority: 0.7
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/jacksonville-reviews',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'monthly',
+      priority: 0.7
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/junk-removal-arlington',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'monthly',
+      priority: 0.85
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/junk-removal-downtown-jacksonville',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'monthly',
+      priority: 0.85
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/junk-removal-jacksonville-beach',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'monthly',
+      priority: 0.85
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/junk-removal-mandarin',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'monthly',
+      priority: 0.85
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/junk-removal-orange-park',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'monthly',
+      priority: 0.85
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/junk-removal-riverside',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'monthly',
+      priority: 0.85
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/junk-removal-san-marco',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'monthly',
+      priority: 0.85
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/junk-removal-southside',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'monthly',
+      priority: 0.85
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/locations',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'monthly',
+      priority: 0.7
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/mandarin-hoarding-cleanup',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'monthly',
+      priority: 0.7
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/mattress-removal',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'monthly',
+      priority: 0.85
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/medical-facility-post-construction-cleanup',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'monthly',
+      priority: 0.7
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/medical-office-cleanout',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'monthly',
+      priority: 0.85
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/office-building-post-construction-cleanup',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'monthly',
+      priority: 0.7
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/office-cleanout',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'monthly',
+      priority: 0.85
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/office-furniture-removal',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'monthly',
+      priority: 0.85
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/post',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'daily',
+      priority: 0.7
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/post-construction-cleanup',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'weekly',
+      priority: 0.95
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/post-construction-cleanup-best-practices',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'weekly',
+      priority: 0.95
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/post-construction-cleanup-calculator',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'weekly',
+      priority: 0.95
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/post-construction-cleanup-case-studies',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'weekly',
+      priority: 0.95
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/post-construction-cleanup-comparison',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'weekly',
+      priority: 0.95
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/post-construction-cleanup-downtown-jacksonville',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'weekly',
+      priority: 0.95
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/post-construction-cleanup-jacksonville-beach',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'weekly',
+      priority: 0.95
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/post-construction-cleanup-mandarin-jacksonville',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'weekly',
+      priority: 0.95
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/post-construction-cleanup-orange-park',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'weekly',
+      priority: 0.95
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/post-construction-cleanup-partnerships',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'weekly',
+      priority: 0.95
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/post-construction-cleanup-portfolio',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'weekly',
+      priority: 0.95
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/post-construction-cleanup-southside-jacksonville',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'weekly',
+      priority: 0.95
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/post/[slug]',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'monthly',
+      priority: 0.7
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/privacy',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'monthly',
+      priority: 0.7
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/religious-facility-post-construction-cleanup',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'monthly',
+      priority: 0.7
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/renovation-cleanup',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'monthly',
+      priority: 0.7
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/residential-junk-removal',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'monthly',
+      priority: 0.85
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/residential-post-construction-cleanup',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'monthly',
+      priority: 0.7
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/restaurant-cleanout',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'monthly',
+      priority: 0.85
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/restaurant-post-construction-cleanup',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'monthly',
+      priority: 0.7
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/retail-store-cleanout',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'monthly',
+      priority: 0.85
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/retail-store-post-construction-cleanup',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'monthly',
+      priority: 0.7
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/same-day-junk-removal',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'monthly',
+      priority: 0.85
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/school-cleanout',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'monthly',
+      priority: 0.85
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/senior-cleanout',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'monthly',
+      priority: 0.85
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/senior-hoarding-cleanup',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'monthly',
+      priority: 0.7
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/services',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'weekly',
+      priority: 0.9
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/services/residential',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'monthly',
+      priority: 0.7
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/storage-unit-cleanout',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'monthly',
+      priority: 0.85
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/storm-cleanup',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'monthly',
+      priority: 0.7
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/terms',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'monthly',
+      priority: 0.7
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/tree-debris-removal',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'monthly',
+      priority: 0.85
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/vacation-rental-cleanup',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'monthly',
+      priority: 0.7
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/warehouse-cleanout',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'monthly',
+      priority: 0.85
+    },
+    {
+      url: 'https://www.jacksonvillejunkremovals.com/yard-waste-removal',
+      lastModified: '2025-09-02T16:17:51.750Z',
+      changeFrequency: 'monthly',
+      priority: 0.85
+    }
   ]
-
-  // Post-Construction Cleanup - HIGH PRIORITY (Jacksonville Dominance)
-  const postConstructionPages = [
-    '/post-construction-cleanup',
-    '/residential-post-construction-cleanup',
-    '/commercial-post-construction-cleanup',
-    '/medical-facility-post-construction-cleanup',
-    '/restaurant-post-construction-cleanup',
-    '/industrial-post-construction-cleanup',
-    '/hotel-post-construction-cleanup',
-    '/office-building-post-construction-cleanup',
-    '/retail-store-post-construction-cleanup',
-    '/educational-facility-post-construction-cleanup',
-    '/religious-facility-post-construction-cleanup',
-  ]
-
-  // Area-Specific Post-Construction Cleanup - HIGH PRIORITY (NEW)
-  const areaSpecificPages = [
-    '/post-construction-cleanup-jacksonville-beach',
-    '/post-construction-cleanup-downtown-jacksonville',
-    '/post-construction-cleanup-southside-jacksonville',
-    '/post-construction-cleanup-mandarin-jacksonville',
-    '/post-construction-cleanup-orange-park',
-  ]
-  
-  // Strategic Enhancement Pages - HIGH PRIORITY
-  const strategicPages = [
-    '/post-construction-cleanup-calculator',
-    '/post-construction-cleanup-best-practices',
-    '/post-construction-cleanup-case-studies',
-    '/post-construction-cleanup-portfolio',
-    '/post-construction-cleanup-partnerships',
-    '/post-construction-cleanup-comparison',
-    '/jacksonville-construction-partnerships',
-    '/jacksonville-reviews',
-
-    '/jacksonville-business-directory',
-  ]
-
-  // Service pages
-  const servicePages = [
-    '/mattress-removal',
-    '/commercial-junk-removal',
-    '/commercial-cleanout',
-    '/commercial-hoarding-cleanup',
-    '/hazardous-waste-removal',
-    '/construction-debris-removal',
-    '/appliance-removal',
-    '/yard-waste-removal',
-    '/hot-tub-removal',
-    '/furniture-removal',
-    '/garage-cleanout',
-    '/office-furniture-removal',
-    '/retail-store-cleanout',
-    '/estate-cleanout',
-    '/family-home-cleanout',
-    '/community-cleanup',
-    '/commercial-office-cleanout',
-    '/business-equipment-disposal',
-    '/corporate-cleanout',
-    '/business-relocation',
-    '/residential-junk-removal',
-    '/beachside-property-cleanup',
-    '/historic-home-cleanout',
-    '/beach-house-cleanout',
-    '/vacation-rental-cleanup',
-    '/storm-cleanup',
-    '/hurricane-debris-removal',
-    '/tree-debris-removal',
-    '/foreclosure-cleanout',
-    '/medical-office-cleanout',
-    '/restaurant-cleanout',
-    '/apartment-cleanout',
-    '/storage-unit-cleanout',
-    '/basement-cleanout',
-    '/office-cleanout',
-    '/warehouse-cleanout',
-    '/hotel-cleanout',
-    '/school-cleanout',
-    '/church-cleanout',
-    '/same-day-junk-removal',
-    '/emergency-cleanup',
-    '/flood-cleanup',
-    '/hoarding-cleanup',
-    '/hoarding-employment-support',
-    '/hoarding-aftercare',
-    '/hoarding-resources',
-    '/hoarding-education',
-    '/hoarding-social-services',
-    '/hoarding-crisis-intervention',
-    '/hoarding-prevention',
-    '/hoarding-financial-support',
-    '/hoarding-legal-support',
-    '/hoarding-medical-support',
-    '/hoarding-intervention',
-    '/hoarding-support-groups',
-    '/hoarding-assessment',
-    '/hoarding-transportation-support',
-    '/hoarding-housing-support',
-    '/hoarding-recovery',
-    '/hoarding-therapy',
-    '/hoarding-community-outreach',
-    '/hoarding-case-management',
-    '/biohazard-hoarding-cleanup',
-    '/family-hoarding-support',
-    '/emergency-hoarding-cleanup',
-    '/downtown-jacksonville-hoarding-cleanup',
-    '/mandarin-hoarding-cleanup',
-    '/jacksonville-beach-hoarding-cleanup',
-
-    '/renovation-cleanup',
-    '/senior-cleanout',
-    '/senior-hoarding-cleanup',
-  ]
-
-  // Location pages - CORRECTED to match actual page files
-  const locationPages = [
-    '/junk-removal-downtown-jacksonville',
-    '/junk-removal-jacksonville-beach',
-    '/junk-removal-riverside',
-    '/junk-removal-san-marco',
-    '/junk-removal-mandarin',
-    '/junk-removal-arlington',
-    '/junk-removal-orange-park',
-    '/junk-removal-southside',
-  ]
-
-  // Area-specific mattress removal pages - REMOVED (pages don't exist)
-  // const mattressLocationPages = [
-  //   '/mattress-removal-riverside-jacksonville',
-  //   '/mattress-removal-southside-jacksonville',
-  //   '/mattress-removal-san-marco-jacksonville',
-  //   '/mattress-removal-mandarin-jacksonville',
-  //   '/mattress-removal-jacksonville-beach',
-  // ]
-
-  const allPages = [
-    ...corePages,
-    ...postConstructionPages,
-    ...areaSpecificPages, // Included new area-specific pages
-    ...strategicPages,
-    ...servicePages,
-    ...locationPages, // CORRECTED - actual location pages
-    // ...mattressLocationPages, // REMOVED - pages don't exist
-  ]
-
-  return allPages.map((page) => ({
-    url: `${baseUrl}${page}`,
-    lastModified: new Date(),
-    changeFrequency: page === '/post' ? 'daily' : 
-                    page === '/services' || page === '/estimation' ? 'weekly' : 
-                    // Post-construction pages updated more frequently for SEO dominance
-                    postConstructionPages.includes(page) || strategicPages.includes(page) || areaSpecificPages.includes(page) ? 'weekly' : // Updated change frequency for area-specific pages
-                    'monthly',
-    priority: page === '' ? 1 : 
-              // Post-construction cleanup pages get highest priority for Jacksonville dominance
-              postConstructionPages.includes(page) ? 0.95 :
-              areaSpecificPages.includes(page) ? 0.95 : // Set high priority for area-specific pages
-              strategicPages.includes(page) ? 0.9 :
-              page === '/services' || page === '/estimation' ? 0.9 : 
-              page === '/mattress-removal' || page === '/furniture-removal' || page === '/appliance-removal' || page === '/storm-cleanup' || page === '/hurricane-debris-removal' || page === '/tree-debris-removal' || page === '/foreclosure-cleanout' || page === '/medical-office-cleanout' || page === '/restaurant-cleanout' || page === '/apartment-cleanout' || page === '/storage-unit-cleanout' || page === '/basement-cleanout' || page === '/office-cleanout' || page === '/warehouse-cleanout' || page === '/hotel-cleanout' || page === '/school-cleanout' || page === '/church-cleanout' || page === '/same-day-junk-removal' || page === '/emergency-cleanup' || page === '/hoarding-cleanup' || page === '/estate-cleanout' || page === '/renovation-cleanup' || page === '/senior-cleanout' ? 0.85 :
-              page === '/garage-cleanout' || page === '/construction-debris-removal' ? 0.8 :
-              page.includes('junk-removal-') ? 0.75 : 0.7,
-  }))
 }

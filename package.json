@@ -6,7 +6,8 @@
     "dev": "npx next dev",
     "build": "npx next build",
     "start": "npx next start",
-    "lint": "npx next lint"
+    "lint": "npx next lint",
+    "generate-sitemap": "node scripts/generate-sitemap.js"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.1",
