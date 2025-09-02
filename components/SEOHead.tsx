@@ -57,13 +57,13 @@ export default function SEOHead({
       <meta name="robots" content={noindex ? 'noindex' : nofollow ? 'nofollow' : 'index,follow'} />
       
       {/* Canonical URL */}
-      {canonical && <link rel="canonical" href={`https://jacksonvillejunkremovals.com${canonical}`} />}
+      {canonical && <link rel="canonical" href={`https://www.jacksonvillejunkremovals.com${canonical}`} />}
       
       {/* Open Graph */}
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={fullDescription} />
       <meta property="og:type" content={ogType} />
-      <meta property="og:url" content={canonical ? `https://jacksonvillejunkremovals.com${canonical}` : 'https://jacksonvillejunkremovals.com'} />
+      <meta property="og:url" content={canonical ? `https://www.jacksonvillejunkremovals.com${canonical}` : 'https://www.jacksonvillejunkremovals.com'} />
       <meta property="og:image" content={ogImage} />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
@@ -119,7 +119,7 @@ export default function SEOHead({
             "@type": "LocalBusiness",
             "name": "Jacksonville Junk Removals",
             "description": fullDescription,
-            "url": canonical ? `https://jacksonvillejunkremovals.com${canonical}` : "https://jacksonvillejunkremovals.com",
+            "url": canonical ? `https://www.jacksonvillejunkremovals.com${canonical}` : "https://www.jacksonvillejunkremovals.com",
             "telephone": "+1-904-456-3851",
             "address": {
               "@type": "PostalAddress",

@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://jacksonvillejunkremovals.com'
+  const baseUrl = 'https://www.jacksonvillejunkremovals.com'
   
   // Core pages
   const corePages = [
