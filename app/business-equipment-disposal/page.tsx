@@ -1,22 +1,22 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { Building2, Users, CheckCircle, Phone, Clock, Truck, Star, MapPin, Briefcase, FileText } from 'lucide-react'
+import { Monitor, CheckCircle, Phone, Clock, Truck, Star, MapPin, Shield, HardDrive, Printer } from 'lucide-react'
 import SEOHead from '@/components/SEOHead'
 
 export const metadata: Metadata = {
-  title: 'Commercial Office Cleanout Services - Jacksonville Junk Removal',
-  description: 'Professional commercial office cleanout services in Jacksonville. Office furniture removal, business equipment disposal, and corporate space cleanup. Call (904) 742-3531.',
-  keywords: 'commercial office cleanout, office furniture removal, business equipment disposal, corporate cleanup, Jacksonville office cleanout',
+  title: 'Business Equipment Disposal Services - Jacksonville Junk Removal',
+  description: 'Professional business equipment disposal services in Jacksonville. Computer equipment removal, office electronics disposal, and data-safe equipment removal. Call (904) 742-3531.',
+  keywords: 'business equipment disposal, computer equipment removal, office electronics disposal, data-safe disposal, Jacksonville business equipment',
 }
 
-export default function CommercialOfficeCleanoutPage() {
+export default function BusinessEquipmentDisposalPage() {
   return (
     <>
       <SEOHead
-        title="Commercial Office Cleanout Services | Professional Business Cleanup | (904) 456-3851"
-        description="Professional commercial office cleanout services in Jacksonville. Office furniture removal, business equipment disposal, and corporate space cleanup. Licensed, insured, eco-friendly disposal. Call (904) 456-3851."
-        keywords="commercial office cleanout Jacksonville, office furniture removal Jacksonville, business equipment disposal Jacksonville, corporate cleanup Jacksonville, Jacksonville office cleanout, business relocation Jacksonville"
-        canonical="/commercial-office-cleanout"
+        title="Business Equipment Disposal Services | Professional Office Electronics Removal | (904) 456-3851"
+        description="Professional business equipment disposal services in Jacksonville. Computer equipment removal, office electronics disposal, and data-safe equipment removal. Licensed, insured, eco-friendly disposal. Call (904) 456-3851."
+        keywords="business equipment disposal Jacksonville, computer equipment removal Jacksonville, office electronics disposal Jacksonville, data-safe disposal Jacksonville, Jacksonville business equipment removal, office equipment disposal Jacksonville"
+        canonical="/business-equipment-disposal"
         ogType="website"
       />
       <div className="min-h-screen bg-gray-50">
@@ -24,19 +24,19 @@ export default function CommercialOfficeCleanoutPage() {
         <div className="bg-gray-900 text-white py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div className="inline-flex items-center space-x-2 bg-yellow-400 text-gray-900 px-4 py-2 rounded-md mb-6">
-              <Building2 className="w-5 h-5" />
-              <span className="text-sm font-bold">COMMERCIAL OFFICE CLEANOUT</span>
+              <Monitor className="w-5 h-5" />
+              <span className="text-sm font-bold">BUSINESS EQUIPMENT DISPOSAL</span>
             </div>
             
             <h1 className="text-4xl lg:text-6xl font-bold mb-6">
-              Commercial Office
+              Business Equipment
               <br />
-              <span className="text-yellow-400">Cleanout Services</span>
+              <span className="text-yellow-400">Disposal Services</span>
             </h1>
             
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Professional commercial office cleanout services for Jacksonville businesses. 
-              Office furniture removal, business equipment disposal, and corporate space cleanup that minimizes business disruption.
+              Professional business equipment disposal services for Jacksonville companies. 
+              Computer equipment removal, office electronics disposal, and data-safe equipment removal that protects your business.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -63,51 +63,51 @@ export default function CommercialOfficeCleanoutPage() {
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               <div>
                 <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
-                  Professional Office Cleanout
+                  Secure Business Equipment Disposal
                 </h2>
                 <p className="text-lg text-gray-600 mb-6">
-                  We understand that business operations cannot be disrupted. Our commercial office cleanout services 
-                  are designed to work around your business schedule and minimize downtime.
+                  We understand the importance of secure business equipment disposal. Our services ensure that your 
+                  sensitive data is protected while your old equipment is properly disposed of in an environmentally responsible way.
                 </p>
                 <p className="text-lg text-gray-600 mb-8">
-                  From office furniture removal to business equipment disposal, we provide comprehensive cleanup services 
-                  that help Jacksonville businesses maintain professional environments and comply with disposal regulations.
+                  From computer equipment to office electronics, we provide comprehensive disposal services that 
+                  meet business security requirements and environmental regulations.
                 </p>
                 
                 {/* Quick Stats */}
                 <div className="grid grid-cols-2 gap-6">
                   <div className="text-center p-4 bg-gray-50 rounded-lg">
-                    <div className="text-2xl font-bold text-gray-900">Business-Focused</div>
-                    <div className="text-sm text-gray-600">Approach</div>
+                    <div className="text-2xl font-bold text-gray-900">Data</div>
+                    <div className="text-sm text-gray-600">Secure</div>
                   </div>
                   <div className="text-center p-4 bg-gray-50 rounded-lg">
-                    <div className="text-2xl font-bold text-gray-900">Minimal</div>
-                    <div className="text-sm text-gray-600">Disruption</div>
+                    <div className="text-2xl font-bold text-gray-900">Eco-Friendly</div>
+                    <div className="text-sm text-gray-600">Disposal</div>
                   </div>
                 </div>
               </div>
               
               <div className="bg-gray-100 rounded-lg p-8">
                 <div className="text-center">
-                  <div className="text-6xl mb-4">🏢</div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">Commercial Office Cleanout</h3>
+                  <div className="text-6xl mb-4">💻</div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">Business Equipment Disposal</h3>
                   <p className="text-gray-600 mb-6">
-                    Professional cleanup services designed specifically for business environments, 
-                    respecting your schedule and operational needs.
+                    Professional disposal services for business equipment, ensuring data security 
+                    and environmental responsibility.
                   </p>
                   
                   <div className="space-y-3 text-sm text-gray-600">
                     <div className="flex items-center justify-between">
                       <span>Service Type:</span>
-                      <span className="font-medium">Business-Focused</span>
+                      <span className="font-medium">Data-Secure</span>
                     </div>
                     <div className="flex items-center justify-between">
                       <span>Approach:</span>
-                      <span className="font-medium">Minimal Disruption</span>
+                      <span className="font-medium">Eco-Friendly</span>
                     </div>
                     <div className="flex items-center justify-between">
                       <span>Starting Price:</span>
-                      <span className="font-medium">$200</span>
+                      <span className="font-medium">$150</span>
                     </div>
                   </div>
                 </div>
@@ -121,25 +121,25 @@ export default function CommercialOfficeCleanoutPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-                Commercial Office Cleanout Services
+                Business Equipment Disposal Services
               </h2>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                Comprehensive cleanup services designed for Jacksonville businesses
+                Comprehensive disposal services for Jacksonville business equipment
               </p>
             </div>
 
             <div className="grid md:grid-cols-2 gap-8">
-              <Link href="/office-furniture-removal" className="block bg-white rounded-lg p-8 shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-200">
+              <div className="bg-white rounded-lg p-8 shadow-sm border border-gray-100">
                 <div className="flex items-start space-x-4 mb-6">
                   <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Briefcase className="w-6 h-6 text-gray-900" />
+                    <Monitor className="w-6 h-6 text-gray-900" />
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                      Office Furniture Removal
+                      Computer Equipment Removal
                     </h3>
                     <p className="text-gray-600 text-sm">
-                      Professional removal of office furniture, desks, chairs, and filing systems
+                      Secure removal and disposal of computers, laptops, and workstations
                     </p>
                   </div>
                 </div>
@@ -147,69 +147,34 @@ export default function CommercialOfficeCleanoutPage() {
                 <div className="space-y-2">
                   <div className="flex items-center space-x-2">
                     <CheckCircle className="w-4 h-4 text-green-500" />
-                    <span className="text-sm text-gray-600">Desk & Chair Removal</span>
+                    <span className="text-sm text-gray-600">Desktop Computers</span>
                   </div>
                   <div className="flex items-center space-x-2">
                     <CheckCircle className="w-4 h-4 text-green-500" />
-                    <span className="text-sm text-gray-600">Filing System Disposal</span>
+                    <span className="text-sm text-gray-600">Laptops & Notebooks</span>
                   </div>
                   <div className="flex items-center space-x-2">
                     <CheckCircle className="w-4 h-4 text-green-500" />
-                    <span className="text-sm text-gray-600">Conference Room Furniture</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <CheckCircle className="w-4 h-4 text-green-500" />
-                    <span className="text-sm text-gray-600">Reception Area Cleanup</span>
-                  </div>
-                </div>
-              </Link>
-
-              <Link href="/business-equipment-disposal" className="block bg-white rounded-lg p-8 shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-200">
-                <div className="flex items-start space-x-4 mb-6">
-                  <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Truck className="w-6 h-6 text-gray-900" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                      Business Equipment Disposal
-                    </h3>
-                    <p className="text-gray-600 text-sm">
-                      Safe disposal of business equipment, electronics, and office technology
-                    </p>
-                  </div>
-                </div>
-                
-                <div className="space-y-2">
-                  <div className="flex items-center space-x-2">
-                    <CheckCircle className="w-4 h-4 text-green-500" />
-                    <span className="text-sm text-gray-600">Computer Equipment</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <CheckCircle className="w-4 h-4 text-green-500" />
-                    <span className="text-sm text-gray-600">Office Electronics</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <CheckCircle className="w-4 h-4 text-green-500" />
-                    <span className="text-sm text-gray-600">Printers & Copiers</span>
+                    <span className="text-sm text-gray-600">Workstations</span>
                   </div>
                   <div className="flex items-center space-x-2">
                     <CheckCircle className="w-4 h-4 text-green-500" />
                     <span className="text-sm text-gray-600">Data-Safe Disposal</span>
                   </div>
                 </div>
-              </Link>
+              </div>
 
-              <Link href="/corporate-cleanout" className="block bg-white rounded-lg p-8 shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-200">
+              <div className="bg-white rounded-lg p-8 shadow-sm border border-gray-100">
                 <div className="flex items-start space-x-4 mb-6">
                   <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Building2 className="w-6 h-6 text-gray-900" />
+                    <Printer className="w-6 h-6 text-gray-900" />
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                      Corporate Cleanouts
+                      Office Electronics Disposal
                     </h3>
                     <p className="text-gray-600 text-sm">
-                      Complete office space cleanouts for relocations and renovations
+                      Professional disposal of office electronics and peripherals
                     </p>
                   </div>
                 </div>
@@ -217,34 +182,34 @@ export default function CommercialOfficeCleanoutPage() {
                 <div className="space-y-2">
                   <div className="flex items-center space-x-2">
                     <CheckCircle className="w-4 h-4 text-green-500" />
-                    <span className="text-sm text-gray-600">Office Relocations</span>
+                    <span className="text-sm text-gray-600">Printers & Copiers</span>
                   </div>
                   <div className="flex items-center space-x-2">
                     <CheckCircle className="w-4 h-4 text-green-500" />
-                    <span className="text-sm text-gray-600">Renovation Preparation</span>
+                    <span className="text-sm text-gray-600">Scanners & Fax Machines</span>
                   </div>
                   <div className="flex items-center space-x-2">
                     <CheckCircle className="w-4 h-4 text-green-500" />
-                    <span className="text-sm text-gray-600">Space Optimization</span>
+                    <span className="text-sm text-gray-600">Monitors & Displays</span>
                   </div>
                   <div className="flex items-center space-x-2">
                     <CheckCircle className="w-4 h-4 text-green-500" />
-                    <span className="text-sm text-gray-600">Professional Service</span>
+                    <span className="text-sm text-gray-600">Network Equipment</span>
                   </div>
                 </div>
-              </Link>
+              </div>
 
-              <Link href="/business-relocation" className="block bg-white rounded-lg p-8 shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-200">
+              <div className="bg-white rounded-lg p-8 shadow-sm border border-gray-100">
                 <div className="flex items-start space-x-4 mb-6">
                   <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <FileText className="w-6 h-6 text-gray-900" />
+                    <HardDrive className="w-6 h-6 text-gray-900" />
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                      Business Relocations
+                      Data-Safe Disposal
                     </h3>
                     <p className="text-gray-600 text-sm">
-                      Comprehensive support for business moves and office transitions
+                      Secure data destruction and equipment disposal
                     </p>
                   </div>
                 </div>
@@ -252,22 +217,57 @@ export default function CommercialOfficeCleanoutPage() {
                 <div className="space-y-2">
                   <div className="flex items-center space-x-2">
                     <CheckCircle className="w-4 h-4 text-green-500" />
-                    <span className="text-sm text-gray-600">Move Planning</span>
+                    <span className="text-sm text-gray-600">Data Destruction</span>
                   </div>
                   <div className="flex items-center space-x-2">
                     <CheckCircle className="w-4 h-4 text-green-500" />
-                    <span className="text-sm text-gray-600">Inventory Management</span>
+                    <span className="text-sm text-gray-600">Secure Wiping</span>
                   </div>
                   <div className="flex items-center space-x-2">
                     <CheckCircle className="w-4 h-4 text-green-500" />
-                    <span className="text-sm text-gray-600">Timeline Coordination</span>
+                    <span className="text-sm text-gray-600">Certification</span>
                   </div>
                   <div className="flex items-center space-x-2">
                     <CheckCircle className="w-4 h-4 text-green-500" />
-                    <span className="text-sm text-gray-600">Post-Move Cleanup</span>
+                    <span className="text-sm text-gray-600">Compliance</span>
                   </div>
                 </div>
-              </Link>
+              </div>
+
+              <div className="bg-white rounded-lg p-8 shadow-sm border border-gray-100">
+                <div className="flex items-start space-x-4 mb-6">
+                  <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Shield className="w-6 h-6 text-gray-900" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                      Business Equipment Recycling
+                    </h3>
+                    <p className="text-gray-600 text-sm">
+                      Environmentally responsible recycling of business equipment
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="space-y-2">
+                  <div className="flex items-center space-x-2">
+                    <CheckCircle className="w-4 h-4 text-green-500" />
+                    <span className="text-sm text-gray-600">E-Waste Recycling</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <CheckCircle className="w-4 h-4 text-green-500" />
+                    <span className="text-sm text-gray-600">Material Recovery</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <CheckCircle className="w-4 h-4 text-green-500" />
+                    <span className="text-sm text-gray-600">Environmental Compliance</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <CheckCircle className="w-4 h-4 text-green-500" />
+                    <span className="text-sm text-gray-600">Documentation</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -277,10 +277,10 @@ export default function CommercialOfficeCleanoutPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-                Why Choose Us for Commercial Office Cleanout?
+                Why Choose Us for Business Equipment Disposal?
               </h2>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                Business-focused approach with professional service and minimal disruption
+                Data-secure approach with professional service and environmental responsibility
               </p>
             </div>
 
@@ -290,21 +290,21 @@ export default function CommercialOfficeCleanoutPage() {
                   <Star className="w-8 h-8 text-gray-900" />
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">
-                  Business-Focused Approach
+                  Data Security Expertise
                 </h3>
                 <p className="text-gray-600">
-                  We understand business operations and work around your schedule to minimize disruption.
+                  We understand business data security requirements and provide certified data destruction.
                 </p>
               </div>
               <div className="text-center">
                 <div className="w-16 h-16 bg-gray-100 rounded-lg flex items-center justify-center mx-auto mb-6">
-                  <Clock className="w-8 h-8 text-gray-900" />
+                  <Shield className="w-8 h-8 text-gray-900" />
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">
-                  Flexible Scheduling
+                  Secure Disposal Process
                 </h3>
                 <p className="text-gray-600">
-                  We work around your business hours, including evenings and weekends when needed.
+                  Our disposal process ensures complete data destruction and equipment security.
                 </p>
               </div>
               <div className="text-center">
@@ -312,10 +312,10 @@ export default function CommercialOfficeCleanoutPage() {
                   <MapPin className="w-8 h-8 text-gray-900" />
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">
-                  Local Jacksonville Expertise
+                  Local Jacksonville Service
                 </h3>
                 <p className="text-gray-600">
-                  We understand Jacksonville business districts and local disposal requirements.
+                  We understand Jacksonville business requirements and local disposal regulations.
                 </p>
               </div>
               <div className="text-center">
@@ -326,18 +326,18 @@ export default function CommercialOfficeCleanoutPage() {
                   Professional Equipment
                 </h3>
                 <p className="text-gray-600">
-                  We bring the right tools and equipment for efficient, safe office cleanout.
+                  We bring the right tools and equipment for secure, efficient business equipment disposal.
                 </p>
               </div>
               <div className="text-center">
                 <div className="w-16 h-16 bg-gray-100 rounded-lg flex items-center justify-center mx-auto mb-6">
-                  <Users className="w-8 h-8 text-gray-900" />
+                  <Clock className="w-8 h-8 text-gray-900" />
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">
-                  Professional Team
+                  Flexible Scheduling
                 </h3>
                 <p className="text-gray-600">
-                  Our team is trained in business environments and respects your workspace.
+                  We work around your business schedule to minimize disruption to operations.
                 </p>
               </div>
               <div className="text-center">
@@ -348,7 +348,7 @@ export default function CommercialOfficeCleanoutPage() {
                   Licensed & Insured
                 </h3>
                 <p className="text-gray-600">
-                  Fully licensed, bonded, and insured for business protection and peace of mind.
+                  Fully licensed, bonded, and insured for business equipment protection and peace of mind.
                 </p>
               </div>
             </div>
@@ -359,11 +359,11 @@ export default function CommercialOfficeCleanoutPage() {
         <div className="bg-gray-900 text-white py-16">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl font-bold mb-6">
-              Ready for Commercial Office Cleanout?
+              Ready for Business Equipment Disposal?
             </h2>
             <p className="text-lg text-gray-300 mb-8">
-              Get your free quote today and experience professional commercial office cleanout service 
-              that respects your business operations and minimizes disruption.
+              Get your free quote today and experience professional business equipment disposal service 
+              that protects your data and the environment.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a

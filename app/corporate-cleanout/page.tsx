@@ -1,22 +1,22 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { Building2, Users, CheckCircle, Phone, Clock, Truck, Star, MapPin, Briefcase, FileText } from 'lucide-react'
+import { Building2, CheckCircle, Phone, Clock, Truck, Star, MapPin, Users, FileText, Briefcase } from 'lucide-react'
 import SEOHead from '@/components/SEOHead'
 
 export const metadata: Metadata = {
-  title: 'Commercial Office Cleanout Services - Jacksonville Junk Removal',
-  description: 'Professional commercial office cleanout services in Jacksonville. Office furniture removal, business equipment disposal, and corporate space cleanup. Call (904) 742-3531.',
-  keywords: 'commercial office cleanout, office furniture removal, business equipment disposal, corporate cleanup, Jacksonville office cleanout',
+  title: 'Corporate Cleanout Services - Jacksonville Junk Removal',
+  description: 'Professional corporate cleanout services in Jacksonville. Office relocations, renovation preparation, and complete corporate space cleanup. Call (904) 742-3531.',
+  keywords: 'corporate cleanout, office relocation, corporate space cleanup, renovation preparation, Jacksonville corporate cleanout',
 }
 
-export default function CommercialOfficeCleanoutPage() {
+export default function CorporateCleanoutPage() {
   return (
     <>
       <SEOHead
-        title="Commercial Office Cleanout Services | Professional Business Cleanup | (904) 456-3851"
-        description="Professional commercial office cleanout services in Jacksonville. Office furniture removal, business equipment disposal, and corporate space cleanup. Licensed, insured, eco-friendly disposal. Call (904) 456-3851."
-        keywords="commercial office cleanout Jacksonville, office furniture removal Jacksonville, business equipment disposal Jacksonville, corporate cleanup Jacksonville, Jacksonville office cleanout, business relocation Jacksonville"
-        canonical="/commercial-office-cleanout"
+        title="Corporate Cleanout Services | Professional Office Relocation & Space Cleanup | (904) 456-3851"
+        description="Professional corporate cleanout services in Jacksonville. Office relocations, renovation preparation, and complete corporate space cleanup. Licensed, insured, eco-friendly disposal. Call (904) 456-3851."
+        keywords="corporate cleanout Jacksonville, office relocation Jacksonville, corporate space cleanup Jacksonville, renovation preparation Jacksonville, Jacksonville corporate cleanout, office cleanout Jacksonville"
+        canonical="/corporate-cleanout"
         ogType="website"
       />
       <div className="min-h-screen bg-gray-50">
@@ -25,18 +25,18 @@ export default function CommercialOfficeCleanoutPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div className="inline-flex items-center space-x-2 bg-yellow-400 text-gray-900 px-4 py-2 rounded-md mb-6">
               <Building2 className="w-5 h-5" />
-              <span className="text-sm font-bold">COMMERCIAL OFFICE CLEANOUT</span>
+              <span className="text-sm font-bold">CORPORATE CLEANOUT</span>
             </div>
             
             <h1 className="text-4xl lg:text-6xl font-bold mb-6">
-              Commercial Office
+              Corporate
               <br />
               <span className="text-yellow-400">Cleanout Services</span>
             </h1>
             
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Professional commercial office cleanout services for Jacksonville businesses. 
-              Office furniture removal, business equipment disposal, and corporate space cleanup that minimizes business disruption.
+              Professional corporate cleanout services for Jacksonville businesses. 
+              Office relocations, renovation preparation, and complete corporate space cleanup that minimizes business disruption.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -63,22 +63,22 @@ export default function CommercialOfficeCleanoutPage() {
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               <div>
                 <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
-                  Professional Office Cleanout
+                  Complete Corporate Cleanout
                 </h2>
                 <p className="text-lg text-gray-600 mb-6">
-                  We understand that business operations cannot be disrupted. Our commercial office cleanout services 
-                  are designed to work around your business schedule and minimize downtime.
+                  We understand the complexities of corporate cleanouts in Jacksonville. Our services are designed 
+                  to handle large-scale office cleanouts, relocations, and space preparation with minimal business disruption.
                 </p>
                 <p className="text-lg text-gray-600 mb-8">
-                  From office furniture removal to business equipment disposal, we provide comprehensive cleanup services 
-                  that help Jacksonville businesses maintain professional environments and comply with disposal regulations.
+                  From office relocations to renovation preparation, we provide comprehensive corporate cleanout services 
+                  that help businesses maintain operations while transitioning their spaces.
                 </p>
                 
                 {/* Quick Stats */}
                 <div className="grid grid-cols-2 gap-6">
                   <div className="text-center p-4 bg-gray-50 rounded-lg">
-                    <div className="text-2xl font-bold text-gray-900">Business-Focused</div>
-                    <div className="text-sm text-gray-600">Approach</div>
+                    <div className="text-2xl font-bold text-gray-900">Large-Scale</div>
+                    <div className="text-sm text-gray-600">Operations</div>
                   </div>
                   <div className="text-center p-4 bg-gray-50 rounded-lg">
                     <div className="text-2xl font-bold text-gray-900">Minimal</div>
@@ -90,16 +90,16 @@ export default function CommercialOfficeCleanoutPage() {
               <div className="bg-gray-100 rounded-lg p-8">
                 <div className="text-center">
                   <div className="text-6xl mb-4">🏢</div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">Commercial Office Cleanout</h3>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">Corporate Cleanout</h3>
                   <p className="text-gray-600 mb-6">
-                    Professional cleanup services designed specifically for business environments, 
-                    respecting your schedule and operational needs.
+                    Professional cleanout services for corporate environments, handling large-scale 
+                    operations with minimal business disruption.
                   </p>
                   
                   <div className="space-y-3 text-sm text-gray-600">
                     <div className="flex items-center justify-between">
                       <span>Service Type:</span>
-                      <span className="font-medium">Business-Focused</span>
+                      <span className="font-medium">Large-Scale</span>
                     </div>
                     <div className="flex items-center justify-between">
                       <span>Approach:</span>
@@ -107,7 +107,7 @@ export default function CommercialOfficeCleanoutPage() {
                     </div>
                     <div className="flex items-center justify-between">
                       <span>Starting Price:</span>
-                      <span className="font-medium">$200</span>
+                      <span className="font-medium">$300</span>
                     </div>
                   </div>
                 </div>
@@ -121,95 +121,25 @@ export default function CommercialOfficeCleanoutPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-                Commercial Office Cleanout Services
+                Corporate Cleanout Services
               </h2>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                Comprehensive cleanup services designed for Jacksonville businesses
+                Comprehensive cleanout services for Jacksonville corporate environments
               </p>
             </div>
 
             <div className="grid md:grid-cols-2 gap-8">
-              <Link href="/office-furniture-removal" className="block bg-white rounded-lg p-8 shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-200">
-                <div className="flex items-start space-x-4 mb-6">
-                  <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Briefcase className="w-6 h-6 text-gray-900" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                      Office Furniture Removal
-                    </h3>
-                    <p className="text-gray-600 text-sm">
-                      Professional removal of office furniture, desks, chairs, and filing systems
-                    </p>
-                  </div>
-                </div>
-                
-                <div className="space-y-2">
-                  <div className="flex items-center space-x-2">
-                    <CheckCircle className="w-4 h-4 text-green-500" />
-                    <span className="text-sm text-gray-600">Desk & Chair Removal</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <CheckCircle className="w-4 h-4 text-green-500" />
-                    <span className="text-sm text-gray-600">Filing System Disposal</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <CheckCircle className="w-4 h-4 text-green-500" />
-                    <span className="text-sm text-gray-600">Conference Room Furniture</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <CheckCircle className="w-4 h-4 text-green-500" />
-                    <span className="text-sm text-gray-600">Reception Area Cleanup</span>
-                  </div>
-                </div>
-              </Link>
-
-              <Link href="/business-equipment-disposal" className="block bg-white rounded-lg p-8 shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-200">
-                <div className="flex items-start space-x-4 mb-6">
-                  <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Truck className="w-6 h-6 text-gray-900" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                      Business Equipment Disposal
-                    </h3>
-                    <p className="text-gray-600 text-sm">
-                      Safe disposal of business equipment, electronics, and office technology
-                    </p>
-                  </div>
-                </div>
-                
-                <div className="space-y-2">
-                  <div className="flex items-center space-x-2">
-                    <CheckCircle className="w-4 h-4 text-green-500" />
-                    <span className="text-sm text-gray-600">Computer Equipment</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <CheckCircle className="w-4 h-4 text-green-500" />
-                    <span className="text-sm text-gray-600">Office Electronics</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <CheckCircle className="w-4 h-4 text-green-500" />
-                    <span className="text-sm text-gray-600">Printers & Copiers</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <CheckCircle className="w-4 h-4 text-green-500" />
-                    <span className="text-sm text-gray-600">Data-Safe Disposal</span>
-                  </div>
-                </div>
-              </Link>
-
-              <Link href="/corporate-cleanout" className="block bg-white rounded-lg p-8 shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-200">
+              <div className="bg-white rounded-lg p-8 shadow-sm border border-gray-100">
                 <div className="flex items-start space-x-4 mb-6">
                   <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
                     <Building2 className="w-6 h-6 text-gray-900" />
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                      Corporate Cleanouts
+                      Office Relocations
                     </h3>
                     <p className="text-gray-600 text-sm">
-                      Complete office space cleanouts for relocations and renovations
+                      Complete office relocation cleanout and preparation services
                     </p>
                   </div>
                 </div>
@@ -217,42 +147,7 @@ export default function CommercialOfficeCleanoutPage() {
                 <div className="space-y-2">
                   <div className="flex items-center space-x-2">
                     <CheckCircle className="w-4 h-4 text-green-500" />
-                    <span className="text-sm text-gray-600">Office Relocations</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <CheckCircle className="w-4 h-4 text-green-500" />
-                    <span className="text-sm text-gray-600">Renovation Preparation</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <CheckCircle className="w-4 h-4 text-green-500" />
-                    <span className="text-sm text-gray-600">Space Optimization</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <CheckCircle className="w-4 h-4 text-green-500" />
-                    <span className="text-sm text-gray-600">Professional Service</span>
-                  </div>
-                </div>
-              </Link>
-
-              <Link href="/business-relocation" className="block bg-white rounded-lg p-8 shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-200">
-                <div className="flex items-start space-x-4 mb-6">
-                  <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <FileText className="w-6 h-6 text-gray-900" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                      Business Relocations
-                    </h3>
-                    <p className="text-gray-600 text-sm">
-                      Comprehensive support for business moves and office transitions
-                    </p>
-                  </div>
-                </div>
-                
-                <div className="space-y-2">
-                  <div className="flex items-center space-x-2">
-                    <CheckCircle className="w-4 h-4 text-green-500" />
-                    <span className="text-sm text-gray-600">Move Planning</span>
+                    <span className="text-sm text-gray-600">Pre-Move Cleanout</span>
                   </div>
                   <div className="flex items-center space-x-2">
                     <CheckCircle className="w-4 h-4 text-green-500" />
@@ -267,7 +162,112 @@ export default function CommercialOfficeCleanoutPage() {
                     <span className="text-sm text-gray-600">Post-Move Cleanup</span>
                   </div>
                 </div>
-              </Link>
+              </div>
+
+              <div className="bg-white rounded-lg p-8 shadow-sm border border-gray-100">
+                <div className="flex items-start space-x-4 mb-6">
+                  <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <FileText className="w-6 h-6 text-gray-900" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                      Renovation Preparation
+                    </h3>
+                    <p className="text-gray-600 text-sm">
+                      Professional preparation for office renovations and remodels
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="space-y-2">
+                  <div className="flex items-center space-x-2">
+                    <CheckCircle className="w-4 h-4 text-green-500" />
+                    <span className="text-sm text-gray-600">Pre-Renovation Cleanout</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <CheckCircle className="w-4 h-4 text-green-500" />
+                    <span className="text-sm text-gray-600">Material Protection</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <CheckCircle className="w-4 h-4 text-green-500" />
+                    <span className="text-sm text-gray-600">Contractor Coordination</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <CheckCircle className="w-4 h-4 text-green-500" />
+                    <span className="text-sm text-gray-600">Space Optimization</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-lg p-8 shadow-sm border border-gray-100">
+                <div className="flex items-start space-x-4 mb-6">
+                  <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Briefcase className="w-6 h-6 text-gray-900" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                      Complete Corporate Space Cleanup
+                    </h3>
+                    <p className="text-gray-600 text-sm">
+                      Comprehensive cleanup of entire corporate facilities
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="space-y-2">
+                  <div className="flex items-center space-x-2">
+                    <CheckCircle className="w-4 h-4 text-green-500" />
+                    <span className="text-sm text-gray-600">Multi-Floor Cleanup</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <CheckCircle className="w-4 h-4 text-green-500" />
+                    <span className="text-sm text-gray-600">Department Coordination</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <CheckCircle className="w-4 h-4 text-green-500" />
+                    <span className="text-sm text-gray-600">Asset Management</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <CheckCircle className="w-4 h-4 text-green-500" />
+                    <span className="text-sm text-gray-600">Professional Service</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-lg p-8 shadow-sm border border-gray-100">
+                <div className="flex items-start space-x-4 mb-6">
+                  <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Users className="w-6 h-6 text-gray-900" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                      Business Continuity Support
+                    </h3>
+                    <p className="text-gray-600 text-sm">
+                      Services that support ongoing business operations during cleanout
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="space-y-2">
+                  <div className="flex items-center space-x-2">
+                    <CheckCircle className="w-4 h-4 text-green-500" />
+                    <span className="text-sm text-gray-600">Flexible Scheduling</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <CheckCircle className="w-4 h-4 text-green-500" />
+                    <span className="text-sm text-gray-600">Minimal Disruption</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <CheckCircle className="w-4 h-4 text-green-500" />
+                    <span className="text-sm text-gray-600">Staff Coordination</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <CheckCircle className="w-4 h-4 text-green-500" />
+                    <span className="text-sm text-gray-600">Business Support</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -277,10 +277,10 @@ export default function CommercialOfficeCleanoutPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-                Why Choose Us for Commercial Office Cleanout?
+                Why Choose Us for Corporate Cleanout?
               </h2>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                Business-focused approach with professional service and minimal disruption
+                Large-scale approach with professional service and minimal business disruption
               </p>
             </div>
 
@@ -290,10 +290,10 @@ export default function CommercialOfficeCleanoutPage() {
                   <Star className="w-8 h-8 text-gray-900" />
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">
-                  Business-Focused Approach
+                  Corporate Expertise
                 </h3>
                 <p className="text-gray-600">
-                  We understand business operations and work around your schedule to minimize disruption.
+                  We understand corporate environments and the importance of maintaining business operations.
                 </p>
               </div>
               <div className="text-center">
@@ -304,7 +304,7 @@ export default function CommercialOfficeCleanoutPage() {
                   Flexible Scheduling
                 </h3>
                 <p className="text-gray-600">
-                  We work around your business hours, including evenings and weekends when needed.
+                  We work around your business schedule, including evenings and weekends when needed.
                 </p>
               </div>
               <div className="text-center">
@@ -312,10 +312,10 @@ export default function CommercialOfficeCleanoutPage() {
                   <MapPin className="w-8 h-8 text-gray-900" />
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">
-                  Local Jacksonville Expertise
+                  Local Jacksonville Knowledge
                 </h3>
                 <p className="text-gray-600">
-                  We understand Jacksonville business districts and local disposal requirements.
+                  We understand Jacksonville business districts and corporate requirements.
                 </p>
               </div>
               <div className="text-center">
@@ -326,7 +326,7 @@ export default function CommercialOfficeCleanoutPage() {
                   Professional Equipment
                 </h3>
                 <p className="text-gray-600">
-                  We bring the right tools and equipment for efficient, safe office cleanout.
+                  We bring the right tools and equipment for efficient corporate cleanout operations.
                 </p>
               </div>
               <div className="text-center">
@@ -334,10 +334,10 @@ export default function CommercialOfficeCleanoutPage() {
                   <Users className="w-8 h-8 text-gray-900" />
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">
-                  Professional Team
+                  Experienced Team
                 </h3>
                 <p className="text-gray-600">
-                  Our team is trained in business environments and respects your workspace.
+                  Our team is trained in corporate environments and respects your business operations.
                 </p>
               </div>
               <div className="text-center">
@@ -348,7 +348,7 @@ export default function CommercialOfficeCleanoutPage() {
                   Licensed & Insured
                 </h3>
                 <p className="text-gray-600">
-                  Fully licensed, bonded, and insured for business protection and peace of mind.
+                  Fully licensed, bonded, and insured for corporate property protection and peace of mind.
                 </p>
               </div>
             </div>
@@ -359,11 +359,11 @@ export default function CommercialOfficeCleanoutPage() {
         <div className="bg-gray-900 text-white py-16">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl font-bold mb-6">
-              Ready for Commercial Office Cleanout?
+              Ready for Corporate Cleanout?
             </h2>
             <p className="text-lg text-gray-300 mb-8">
-              Get your free quote today and experience professional commercial office cleanout service 
-              that respects your business operations and minimizes disruption.
+              Get your free quote today and experience professional corporate cleanout service 
+              that minimizes business disruption and maintains operational continuity.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
