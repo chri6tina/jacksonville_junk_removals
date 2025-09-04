@@ -16,8 +16,13 @@ function getPageDirectories(dir, basePath = '') {
     const stat = fs.statSync(fullPath);
     
     if (stat.isDirectory()) {
-      // Skip special directories
-      if (['node_modules', '.next', '.git', 'scripts', 'components', 'lib', 'data', 'public'].includes(item)) {
+      // Skip special directories and admin pages
+      if (['node_modules', '.next', '.git', 'scripts', 'components', 'lib', 'data', 'public', 'admin'].includes(item)) {
+        continue;
+      }
+      
+      // Skip dynamic routes with brackets (they'll be handled separately)
+      if (item.includes('[') && item.includes(']')) {
         continue;
       }
       
@@ -37,8 +42,27 @@ function getPageDirectories(dir, basePath = '') {
   return pages;
 }
 
+// Function to get blog post slugs from Contentful
+async function getBlogPostSlugs() {
+  try {
+    // Import the contentful client
+    const { contentfulClient } = require('../lib/contentful');
+    
+    const response = await contentfulClient.getEntries({
+      content_type: 'jjrBlogPost',
+      select: 'fields.slug',
+      limit: 1000, // Get all blog posts
+    });
+
+    return response.items.map(item => item.fields.slug).filter(slug => slug);
+  } catch (error) {
+    console.warn('⚠️  Could not fetch blog post slugs from Contentful:', error.message);
+    return [];
+  }
+}
+
 // Function to generate sitemap
-function generateSitemap() {
+async function generateSitemap() {
   console.log('🔍 Scanning for pages...');
   
   // Get all page directories
@@ -48,10 +72,18 @@ function generateSitemap() {
   // Add root page
   pages.unshift('');
   
+  // Get blog post slugs for dynamic routes
+  console.log('📝 Fetching blog post slugs...');
+  const blogSlugs = await getBlogPostSlugs();
+  
+  // Add blog post pages
+  const blogPages = blogSlugs.map(slug => `/post/${slug}`);
+  pages.push(...blogPages);
+  
   // Remove duplicates and sort
   const uniquePages = [...new Set(pages)].sort();
   
-  console.log(`📄 Found ${uniquePages.length} pages`);
+  console.log(`📄 Found ${uniquePages.length} pages (${blogSlugs.length} blog posts)`);
   
   // Generate sitemap entries
   const sitemapEntries = uniquePages.map(page => {
@@ -75,6 +107,10 @@ function generateSitemap() {
       changeFrequency = 'monthly';
     } else if (page === '/post') {
       changeFrequency = 'daily';
+    } else if (page.startsWith('/post/')) {
+      // Individual blog posts
+      priority = 0.8;
+      changeFrequency = 'monthly';
     }
     
     return {
@@ -118,13 +154,15 @@ ${sitemapEntries.map(entry => `    {
 
 // Run the script
 if (require.main === module) {
-  try {
-    const pageCount = generateSitemap();
-    console.log(`\n🎉 Successfully generated sitemap with ${pageCount} canonical pages!`);
-  } catch (error) {
-    console.error('❌ Error generating sitemap:', error);
-    process.exit(1);
-  }
+  (async () => {
+    try {
+      const pageCount = await generateSitemap();
+      console.log(`\n🎉 Successfully generated sitemap with ${pageCount} canonical pages!`);
+    } catch (error) {
+      console.error('❌ Error generating sitemap:', error);
+      process.exit(1);
+    }
+  })();
 }
 
 module.exports = { generateSitemap };

@@ -15,7 +15,7 @@ export default function Home() {
         title="Jacksonville Junk Removal | Professional Cleanout Services | (904) 456-3851"
         description="Jacksonville junk removal service. Professional cleanout, hoarding cleanup, construction debris removal. Licensed, insured, eco-friendly disposal. Call (904) 456-3851 for free estimate."
         keywords="Jacksonville junk removal, Jacksonville cleanout service, hoarding cleanup Jacksonville, construction debris removal Jacksonville, junk removal Jacksonville FL, professional cleanout Jacksonville, eco-friendly disposal Jacksonville, licensed junk removal Jacksonville"
-        canonical="/"
+        canonical=""
         ogType="website"
       />
       <Hero />

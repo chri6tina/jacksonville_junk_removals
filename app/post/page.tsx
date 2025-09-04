@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { ArrowRight, Calendar, Clock, User } from 'lucide-react'
 import { getBlogPosts, BlogPost } from '@/lib/contentful'
+import SEOHead from '@/components/SEOHead'
 
 export default async function BlogPage() {
   let posts: BlogPost[] = []
@@ -15,9 +16,16 @@ export default async function BlogPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      {/* Top Spacing to avoid navbar overlap */}
-      <div className="pt-20"></div>
+    <>
+      <SEOHead
+        title="Blog | Jacksonville Junk Removal Insights & Tips"
+        description="Read the latest insights, tips, and news from Jacksonville Junk Removal. Expert advice on junk removal, cleanout services, and property management."
+        keywords="Jacksonville junk removal blog, junk removal tips, cleanout advice, property management, Jacksonville news"
+        canonical="/post"
+      />
+      <div className="min-h-screen bg-gray-50">
+        {/* Top Spacing to avoid navbar overlap */}
+        <div className="pt-20"></div>
       
       {/* Page Title */}
       <div className="bg-white border-b border-gray-200">
@@ -165,6 +173,7 @@ export default async function BlogPage() {
           </div>
         </div>
       )}
-    </div>
+      </div>
+    </>
   )
 }
