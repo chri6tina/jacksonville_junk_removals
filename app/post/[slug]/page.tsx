@@ -34,7 +34,9 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
       title: (fields.metaTitle as string) || (fields.title as string) || 'Blog Post',
       description: (fields.metaDescription as string) || (fields.excerpt as string) || 'Blog post from Jacksonville Junk Removals',
       keywords: (fields.keywords as string) || 'junk removal, Jacksonville, blog',
-      canonical: `/post/${slug}`,
+      alternates: {
+        canonical: `/post/${slug}`,
+      },
       openGraph: {
         title: (fields.metaTitle as string) || (fields.title as string),
         description: (fields.metaDescription as string) || (fields.excerpt as string),
@@ -47,7 +49,6 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
     return {
       title: 'Blog Post',
       description: 'Blog post from Jacksonville Junk Removals',
-      canonical: `/post/${slug}`,
     }
   }
 }
