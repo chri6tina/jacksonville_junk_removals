@@ -1,16 +1,20 @@
 import Link from 'next/link'
+import type { Metadata } from 'next'
 import { MapPin, Users, CheckCircle, Star, Clock, Phone, Calendar, FileText, Award, Home, Building, UserCheck, Target, TrendingUp, Eye, Brain, Users2, MessageCircle, Lightbulb, Globe, Heart, AlertTriangle, School, Building2, BookOpen, Video, Headphones, Download, Share2, Mail, PhoneCall, Briefcase, Factory, ShoppingBag, Truck, Zap, Lock, EyeOff, CheckSquare, AlertCircle, ArrowRight, DollarSign, CalendarDays, Wrench, Search, BarChart3, ClipboardCheck, UserPlus, Settings, PieChart, Activity, Navigation, Car, Bus, Train, Plane, Anchor, Ship, Compass, Map, Flag } from 'lucide-react'
-import SEOHead from '@/components/SEOHead'
+
+export const metadata: Metadata = {
+  title: 'Mandarin Hoarding Cleanup Jacksonville | Local Expertise & Suburban Community Support',
+  description: 'Professional hoarding cleanup services in Mandarin, Jacksonville with local expertise, suburban community understanding, and compassionate intervention. Serving Mandarin area with specialized hoarding cleanup.',
+  keywords: 'Mandarin hoarding cleanup Jacksonville, Mandarin hoarding cleanup Florida, Mandarin hoarding intervention, Mandarin hoarding assessment, Mandarin hoarding support, Mandarin hoarding cleanup services',
+  alternates: {
+    canonical: '/mandarin-hoarding-cleanup',
+  },
+}
 
 export default function MandarinHoardingCleanupPage() {
   return (
     <>
-      <SEOHead
-        title="Mandarin Hoarding Cleanup Jacksonville | Local Expertise & Suburban Community Support"
-        description="Professional hoarding cleanup services in Mandarin, Jacksonville with local expertise, suburban community understanding, and compassionate intervention. Serving Mandarin area with specialized hoarding cleanup."
-        keywords="Mandarin hoarding cleanup Jacksonville, Mandarin hoarding cleanup Florida, Mandarin hoarding intervention, Mandarin hoarding assessment, Mandarin hoarding support, Mandarin hoarding cleanup services"
-        canonical="/mandarin-hoarding-cleanup"
-      />
+      
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-orange-50 to-amber-100 py-20">

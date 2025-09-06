@@ -1,19 +1,19 @@
 import Link from 'next/link'
+import type { Metadata } from 'next'
 import { Phone, Clock, MapPin, Shield, Truck, CheckCircle, AlertTriangle, Zap, DollarSign, Star, AlertCircle } from 'lucide-react'
-import SEOHead from '@/components/SEOHead'
+
+export const metadata: Metadata = {
+  title: 'Emergency Cleanup Jacksonville | 24/7 Emergency Response | Disaster Cleanup (904) 456-3851',
+  description: 'Jacksonville emergency cleanup service. 24/7 emergency response, disaster cleanup, urgent cleanup, emergency junk removal. Professional, licensed, insured emergency service. Call (904) 456-3851 for immediate emergency response.',
+  keywords: 'emergency cleanup Jacksonville, 24/7 emergency cleanup Jacksonville, disaster cleanup Jacksonville, urgent cleanup Jacksonville, emergency junk removal Jacksonville, emergency response Jacksonville, Jacksonville emergency service, immediate cleanup Jacksonville',
+  alternates: {
+    canonical: '/emergency-cleanup',
+  },
+}
 
 export default function EmergencyCleanupPage() {
   return (
-    <>
-      <SEOHead
-        title="Emergency Cleanup Jacksonville | 24/7 Emergency Response | Disaster Cleanup (904) 456-3851"
-        description="Jacksonville emergency cleanup service. 24/7 emergency response, disaster cleanup, urgent cleanup, emergency junk removal. Professional, licensed, insured emergency service. Call (904) 456-3851 for immediate emergency response."
-        keywords="emergency cleanup Jacksonville, 24/7 emergency cleanup Jacksonville, disaster cleanup Jacksonville, urgent cleanup Jacksonville, emergency junk removal Jacksonville, emergency response Jacksonville, Jacksonville emergency service, immediate cleanup Jacksonville"
-        canonical="/emergency-cleanup"
-        ogType="website"
-      />
-      
-      <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-orange-900 via-orange-800 to-orange-700 text-white">
           <div className="absolute inset-0 bg-black bg-opacity-40"></div>
@@ -696,6 +696,5 @@ export default function EmergencyCleanupPage() {
           </div>
         </section>
       </div>
-    </>
   )
 }

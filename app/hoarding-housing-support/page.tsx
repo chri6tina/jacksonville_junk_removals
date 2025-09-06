@@ -1,16 +1,20 @@
 import Link from 'next/link'
+import type { Metadata } from 'next'
 import { Home, Phone, Shield, CheckCircle, Star, Clock, MapPin, Calendar, FileText, Award, Building, UserCheck, BookOpen, Target, MessageCircle, Eye, Users, Key } from 'lucide-react'
-import SEOHead from '@/components/SEOHead'
+
+export const metadata: Metadata = {
+  title: 'Hoarding Housing Support Jacksonville | Housing Assistance & Accommodation Services',
+  description: 'Comprehensive hoarding housing support services in Jacksonville including housing assistance, accommodation services, housing coordination, and housing advocacy. Our housing specialists help ensure stable housing for individuals affected by hoarding.',
+  keywords: 'hoarding housing support Jacksonville, housing assistance, accommodation services, housing coordination, housing advocacy Florida',
+  alternates: {
+    canonical: '/hoarding-housing-support',
+  },
+}
 
 export default function HoardingHousingSupportPage() {
   return (
     <>
-      <SEOHead
-        title="Hoarding Housing Support Jacksonville | Housing Assistance & Accommodation Services"
-        description="Comprehensive hoarding housing support services in Jacksonville including housing assistance, accommodation services, housing coordination, and housing advocacy. Our housing specialists help ensure stable housing for individuals affected by hoarding."
-        keywords="hoarding housing support Jacksonville, housing assistance, accommodation services, housing coordination, housing advocacy Florida"
-        canonical="/hoarding-housing-support"
-      />
+      
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-purple-50 to-indigo-100 py-20">

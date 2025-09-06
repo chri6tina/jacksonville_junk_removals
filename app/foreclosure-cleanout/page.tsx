@@ -1,19 +1,19 @@
 import Link from 'next/link'
+import type { Metadata } from 'next'
 import { Phone, Clock, MapPin, Shield, Truck, Home, Building, CheckCircle, Wrench, DollarSign } from 'lucide-react'
-import SEOHead from '@/components/SEOHead'
+
+export const metadata: Metadata = {
+  title: 'Foreclosure Cleanout Jacksonville | Bank Owned Property Cleanup | REO Cleanout',
+  description: 'Jacksonville foreclosure cleanout and bank owned property cleanup services. Professional REO cleanout, abandoned property cleanup, and foreclosure debris removal. Fast, reliable service for banks and property managers. Call (904) 456-3851 for immediate service.',
+  keywords: 'foreclosure cleanout Jacksonville, bank owned property cleanup Jacksonville, REO cleanout Jacksonville, abandoned property cleanup Jacksonville, foreclosure debris removal Jacksonville, property management cleanup Jacksonville, bank property cleanup Jacksonville, foreclosure property Jacksonville, REO property Jacksonville, Jacksonville foreclosure services',
+  alternates: {
+    canonical: '/foreclosure-cleanout',
+  },
+}
 
 export default function ForeclosureCleanoutPage() {
   return (
-    <>
-      <SEOHead
-        title="Foreclosure Cleanout Jacksonville | Bank Owned Property Cleanup | REO Cleanout"
-        description="Jacksonville foreclosure cleanout and bank owned property cleanup services. Professional REO cleanout, abandoned property cleanup, and foreclosure debris removal. Fast, reliable service for banks and property managers. Call (904) 456-3851 for immediate service."
-        keywords="foreclosure cleanout Jacksonville, bank owned property cleanup Jacksonville, REO cleanout Jacksonville, abandoned property cleanup Jacksonville, foreclosure debris removal Jacksonville, property management cleanup Jacksonville, bank property cleanup Jacksonville, foreclosure property Jacksonville, REO property Jacksonville, Jacksonville foreclosure services"
-        canonical="/foreclosure-cleanout"
-        ogType="website"
-      />
-      
-      <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-purple-900 via-purple-800 to-purple-700 text-white">
           <div className="absolute inset-0 bg-black bg-opacity-40"></div>
@@ -416,6 +416,5 @@ export default function ForeclosureCleanoutPage() {
           </div>
         </section>
       </div>
-    </>
   )
 }

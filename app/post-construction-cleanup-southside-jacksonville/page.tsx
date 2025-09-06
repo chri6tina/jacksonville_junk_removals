@@ -1,20 +1,20 @@
 import Link from 'next/link'
+import type { Metadata } from 'next'
 import { Phone, MapPin, Clock, Shield, Truck, CheckCircle, Hammer, DollarSign, Star, Building, Home, Car, ShoppingBag, GraduationCap, Hospital, Factory, TreePine } from 'lucide-react'
-import SEOHead from '@/components/SEOHead'
 import StrategicInternalLinking from '@/components/StrategicInternalLinking'
+
+export const metadata: Metadata = {
+  title: 'Post-Construction Cleanup Southside Jacksonville | Suburban Construction Site Cleanup (904) 456-3851',
+  description: 'Southside Jacksonville post-construction cleanup specialists. Serving suburban areas, shopping centers, and residential communities. Southside construction cleanup, renovation cleaning, debris removal. Call (904) 456-3851',
+  keywords: 'post-construction cleanup Southside Jacksonville, suburban construction cleanup Jacksonville, shopping center renovation cleaning, Southside debris removal Jacksonville FL, suburban area cleanup',
+  alternates: {
+    canonical: '/post-construction-cleanup-southside-jacksonville',
+  },
+}
 
 export default function SouthsideJacksonvillePostConstructionCleanupPage() {
   return (
-    <>
-      <SEOHead
-        title="Post-Construction Cleanup Southside Jacksonville | Suburban Construction Site Cleanup (904) 456-3851"
-        description="Southside Jacksonville post-construction cleanup specialists. Serving suburban areas, shopping centers, and residential communities. Southside construction cleanup, renovation cleaning, debris removal. Call (904) 456-3851"
-        keywords="post-construction cleanup Southside Jacksonville, suburban construction cleanup Jacksonville, shopping center renovation cleaning, Southside debris removal Jacksonville FL, suburban area cleanup"
-        canonical="/post-construction-cleanup-southside-jacksonville"
-        ogType="website"
-      />
-      
-      <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-green-900 via-green-800 to-green-700 text-white overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/70 to-black/85"></div>
@@ -369,6 +369,5 @@ export default function SouthsideJacksonvillePostConstructionCleanupPage() {
           </div>
         </section>
       </div>
-    </>
   )
 }

@@ -1,16 +1,20 @@
 import Link from 'next/link'
+import type { Metadata } from 'next'
 import { Truck, Phone, Shield, CheckCircle, Star, Clock, MapPin, Calendar, FileText, Award, Home, Building, UserCheck, BookOpen, Target, MessageCircle, Eye, Users, Car } from 'lucide-react'
-import SEOHead from '@/components/SEOHead'
+
+export const metadata: Metadata = {
+  title: 'Hoarding Transportation Support Jacksonville | Transport Services & Mobility Assistance',
+  description: 'Comprehensive hoarding transportation support services in Jacksonville including transport services, mobility assistance, vehicle access, and transportation coordination. Our transportation specialists help ensure access to hoarding services.',
+  keywords: 'hoarding transportation support Jacksonville, transport services, mobility assistance, vehicle access, transportation coordination Florida',
+  alternates: {
+    canonical: '/hoarding-transportation-support',
+  },
+}
 
 export default function HoardingTransportationSupportPage() {
   return (
     <>
-      <SEOHead
-        title="Hoarding Transportation Support Jacksonville | Transport Services & Mobility Assistance"
-        description="Comprehensive hoarding transportation support services in Jacksonville including transport services, mobility assistance, vehicle access, and transportation coordination. Our transportation specialists help ensure access to hoarding services."
-        keywords="hoarding transportation support Jacksonville, transport services, mobility assistance, vehicle access, transportation coordination Florida"
-        canonical="/hoarding-transportation-support"
-      />
+      
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-orange-50 to-red-100 py-20">

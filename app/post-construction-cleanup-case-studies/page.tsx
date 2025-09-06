@@ -1,20 +1,20 @@
 import Link from 'next/link'
+import type { Metadata } from 'next'
 import { Phone, MapPin, Clock, Shield, Truck, CheckCircle, Hammer, DollarSign, Star, Building, Home, Car, ShoppingBag, GraduationCap, Hospital, Factory, TreePine, Leaf, Waves, Building2 } from 'lucide-react'
-import SEOHead from '@/components/SEOHead'
 import StrategicInternalLinking from '@/components/StrategicInternalLinking'
+
+export const metadata: Metadata = {
+  title: 'Post-Construction Cleanup Case Studies Jacksonville | Real Project Results (904) 456-3851',
+  description: 'Jacksonville post-construction cleanup case studies. Real project results from beach areas, downtown, Southside, Mandarin, and Orange Park. See actual cleanup projects and outcomes. Call (904) 456-3851',
+  keywords: 'post-construction cleanup case studies Jacksonville, construction cleanup project results Jacksonville, cleanup success stories Florida, Jacksonville area cleanup examples',
+  alternates: {
+    canonical: '/post-construction-cleanup-case-studies',
+  },
+}
 
 export default function PostConstructionCleanupCaseStudiesPage() {
   return (
-    <>
-      <SEOHead
-        title="Post-Construction Cleanup Case Studies Jacksonville | Real Project Results (904) 456-3851"
-        description="Jacksonville post-construction cleanup case studies. Real project results from beach areas, downtown, Southside, Mandarin, and Orange Park. See actual cleanup projects and outcomes. Call (904) 456-3851"
-        keywords="post-construction cleanup case studies Jacksonville, construction cleanup project results Jacksonville, cleanup success stories Florida, Jacksonville area cleanup examples"
-        canonical="/post-construction-cleanup-case-studies"
-        ogType="website"
-      />
-      
-      <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/70 to-black/85"></div>
@@ -597,6 +597,5 @@ export default function PostConstructionCleanupCaseStudiesPage() {
           showPartnerships={true}
         />
       </div>
-    </>
   )
 }

@@ -1,20 +1,20 @@
 import Link from 'next/link'
+import type { Metadata } from 'next'
 import { Phone, MapPin, Clock, Shield, Truck, CheckCircle, Hammer, DollarSign, Star, Building, Home, Car, ShoppingBag, GraduationCap, Hospital, Factory, TreePine, Leaf, Waves, Building2, Users, Handshake, Award, Target, Zap } from 'lucide-react'
-import SEOHead from '@/components/SEOHead'
 import StrategicInternalLinking from '@/components/StrategicInternalLinking'
+
+export const metadata: Metadata = {
+  title: 'Post-Construction Cleanup Partnerships Jacksonville | Local Business Directory (904) 456-3851',
+  description: 'Jacksonville post-construction cleanup partnerships and local business directory. Connect with trusted contractors, builders, and service providers across all Jacksonville areas. Call (904) 456-3851',
+  keywords: 'post-construction cleanup partnerships Jacksonville, construction cleanup business directory, Jacksonville area contractors, cleanup service partnerships Florida',
+  alternates: {
+    canonical: '/post-construction-cleanup-partnerships',
+  },
+}
 
 export default function PostConstructionCleanupPartnershipsPage() {
   return (
-    <>
-      <SEOHead
-        title="Post-Construction Cleanup Partnerships Jacksonville | Local Business Directory (904) 456-3851"
-        description="Jacksonville post-construction cleanup partnerships and local business directory. Connect with trusted contractors, builders, and service providers across all Jacksonville areas. Call (904) 456-3851"
-        keywords="post-construction cleanup partnerships Jacksonville, construction cleanup business directory, Jacksonville area contractors, cleanup service partnerships Florida"
-        canonical="/post-construction-cleanup-partnerships"
-        ogType="website"
-      />
-      
-      <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-purple-900 via-purple-800 to-purple-700 text-white overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/70 to-black/85"></div>
@@ -432,6 +432,5 @@ export default function PostConstructionCleanupPartnershipsPage() {
           showPartnerships={false}
         />
       </div>
-    </>
   )
 }

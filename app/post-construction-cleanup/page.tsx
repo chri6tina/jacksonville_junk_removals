@@ -1,21 +1,21 @@
 import Link from 'next/link'
+import type { Metadata } from 'next'
 import { Phone, Clock, MapPin, Shield, Truck, CheckCircle, Hammer, DollarSign, Star, Home, Wrench, Users, Award, Leaf, Zap, Target, MessageCircle, Eye, Building, Car, CheckSquare, Stethoscope, Utensils, Factory } from 'lucide-react'
-import SEOHead from '@/components/SEOHead'
 import StrategicInternalLinking from '@/components/StrategicInternalLinking'
 import JacksonvilleReviews from '@/components/JacksonvilleReviews'
 
+export const metadata: Metadata = {
+  title: 'Post-Construction Cleanup Jacksonville | #1 Construction Site Cleanup & Debris Removal (904) 456-3851',
+  description: 'Jacksonville\'s #1 post-construction cleanup service. Full-service construction site cleanup + debris removal. 3-phase cleaning process, eco-friendly, OSHA certified. Free estimates, instant online booking. Call (904) 456-3851',
+  keywords: 'post-construction cleanup Jacksonville, construction site cleanup Jacksonville, renovation cleaning Jacksonville, construction debris removal Jacksonville, post construction cleaning Florida, Jacksonville construction cleanup',
+  alternates: {
+    canonical: '/post-construction-cleanup',
+  },
+}
+
 export default function PostConstructionCleanupPage() {
   return (
-    <>
-      <SEOHead
-        title="Post-Construction Cleanup Jacksonville | #1 Construction Site Cleanup & Debris Removal (904) 456-3851"
-        description="Jacksonville's #1 post-construction cleanup service. Full-service construction site cleanup + debris removal. 3-phase cleaning process, eco-friendly, OSHA certified. Free estimates, instant online booking. Call (904) 456-3851"
-        keywords="post-construction cleanup Jacksonville, construction site cleanup Jacksonville, renovation cleaning Jacksonville, construction debris removal Jacksonville, post construction cleaning Florida, Jacksonville construction cleanup"
-        canonical="/post-construction-cleanup"
-        ogType="website"
-      />
-      
-      <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white overflow-hidden">
           {/* Background with texture overlay */}
@@ -1236,6 +1236,5 @@ export default function PostConstructionCleanupPage() {
         {/* Jacksonville Customer Reviews */}
         <JacksonvilleReviews maxReviews={6} />
       </div>
-    </>
   )
 }

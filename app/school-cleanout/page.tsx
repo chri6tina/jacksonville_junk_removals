@@ -1,16 +1,19 @@
 import Link from 'next/link'
 import { GraduationCap, Truck, Clock, MapPin, Phone, Shield, CheckCircle, Star, Wrench, Recycle, AlertTriangle, DollarSign, Users, BookOpen } from 'lucide-react'
-import SEOHead from '@/components/SEOHead'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'School Cleanout Jacksonville | Educational Facility & Student Safety Expertise',
+  description: 'Professional school cleanout in Jacksonville with educational facility expertise and student safety focus. We handle school cleanup, educational facility cleanout, and academic environment management with licensed crews and specialized expertise. Get a free quote today!',
+  keywords: 'school cleanout Jacksonville, school cleanup, educational facility, student safety, academic environment, educational cleanout Jacksonville',
+  alternates: {
+    canonical: '/school-cleanout',
+  },
+}
 
 export default function SchoolCleanoutPage() {
   return (
     <>
-      <SEOHead
-        title="School Cleanout Jacksonville | Educational Facility & Student Safety Expertise"
-        description="Professional school cleanout in Jacksonville with educational facility expertise and student safety focus. We handle school cleanup, educational facility cleanout, and academic environment management with licensed crews and specialized expertise. Get a free quote today!"
-        keywords="school cleanout Jacksonville, school cleanup, educational facility, student safety, academic environment, educational cleanout Jacksonville"
-        canonical="/school-cleanout"
-      />
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-green-50 to-emerald-100 py-20">

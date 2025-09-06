@@ -1,20 +1,20 @@
 import Link from 'next/link'
+import type { Metadata } from 'next'
 import { Phone, MapPin, Clock, Shield, Truck, CheckCircle, Hammer, DollarSign, Star, Building, Home, Waves, Sun, Anchor, Fish, TreePine } from 'lucide-react'
-import SEOHead from '@/components/SEOHead'
 import StrategicInternalLinking from '@/components/StrategicInternalLinking'
+
+export const metadata: Metadata = {
+  title: 'Post-Construction Cleanup Jacksonville Beach | Beach Area Construction Site Cleanup (904) 456-3851',
+  description: 'Jacksonville Beach post-construction cleanup specialists. Serving Atlantic Beach, Neptune Beach, Ponte Vedra Beach. Beach area construction cleanup, renovation cleaning, debris removal. Call (904) 456-3851',
+  keywords: 'post-construction cleanup Jacksonville Beach, construction cleanup Atlantic Beach, renovation cleaning Neptune Beach, Ponte Vedra Beach construction cleanup, beach area debris removal Jacksonville Beach FL',
+  alternates: {
+    canonical: '/post-construction-cleanup-jacksonville-beach',
+  },
+}
 
 export default function JacksonvilleBeachPostConstructionCleanupPage() {
   return (
-    <>
-      <SEOHead
-        title="Post-Construction Cleanup Jacksonville Beach | Beach Area Construction Site Cleanup (904) 456-3851"
-        description="Jacksonville Beach post-construction cleanup specialists. Serving Atlantic Beach, Neptune Beach, Ponte Vedra Beach. Beach area construction cleanup, renovation cleaning, debris removal. Call (904) 456-3851"
-        keywords="post-construction cleanup Jacksonville Beach, construction cleanup Atlantic Beach, renovation cleaning Neptune Beach, Ponte Vedra Beach construction cleanup, beach area debris removal Jacksonville Beach FL"
-        canonical="/post-construction-cleanup-jacksonville-beach"
-        ogType="website"
-      />
-      
-      <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/70 to-black/85"></div>
@@ -369,6 +369,5 @@ export default function JacksonvilleBeachPostConstructionCleanupPage() {
           </div>
         </section>
       </div>
-    </>
   )
 }

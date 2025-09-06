@@ -1,19 +1,19 @@
 import Link from 'next/link'
+import type { Metadata } from 'next'
 import { FileText, CheckCircle, AlertTriangle, Shield, Phone, Mail, Clock } from 'lucide-react'
-import SEOHead from '@/components/SEOHead'
+
+export const metadata: Metadata = {
+  title: 'Terms of Service | Jacksonville Junk Removals | Service Agreement & Policies (904) 456-3851',
+  description: 'Jacksonville Junk Removals terms of service. Read our service agreement, policies, and terms for junk removal services. Call (904) 456-3851 for questions about our terms.',
+  keywords: 'terms of service Jacksonville junk removal, service agreement Jacksonville, junk removal policies Jacksonville, service terms Jacksonville, Jacksonville junk removal agreement',
+  alternates: {
+    canonical: '/terms',
+  },
+}
 
 export default function TermsPage() {
   return (
-    <>
-      <SEOHead
-        title="Terms of Service | Jacksonville Junk Removals | Service Agreement & Policies (904) 456-3851"
-        description="Jacksonville Junk Removals terms of service. Read our service agreement, policies, and terms for junk removal services. Call (904) 456-3851 for questions about our terms."
-        keywords="terms of service Jacksonville junk removal, service agreement Jacksonville, junk removal policies Jacksonville, service terms Jacksonville, Jacksonville junk removal agreement"
-        canonical="/terms"
-        ogType="website"
-      />
-      
-      <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-green-900 via-green-800 to-green-700 text-white">
           <div className="absolute inset-0 bg-black bg-opacity-40"></div>
@@ -323,6 +323,5 @@ export default function TermsPage() {
           </div>
         </section>
       </div>
-    </>
   )
 }

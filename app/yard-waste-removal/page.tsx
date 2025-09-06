@@ -1,16 +1,20 @@
 import Link from 'next/link'
+import type { Metadata } from 'next'
 import { Leaf, TreePine, Scissors, Truck, Clock, MapPin, Phone, Shield, CheckCircle, Star, Recycle, Sprout, AlertTriangle, AlertCircle } from 'lucide-react'
-import SEOHead from '@/components/SEOHead'
+
+export const metadata: Metadata = {
+  title: 'Yard Waste Removal Jacksonville | Tree Trimmings & Landscaping Debris',
+  description: 'Professional yard waste removal in Jacksonville. We handle tree trimmings, landscaping debris, palm fronds, and yard cleanup year-round. Fast, eco-friendly disposal. Get a free quote today!',
+  keywords: 'yard waste removal Jacksonville, tree trimmings removal, landscaping debris cleanup, palm fronds removal, yard cleanup Jacksonville, eco-friendly yard waste disposal, tree branch removal, leaf removal service',
+  alternates: {
+    canonical: '/yard-waste-removal',
+  },
+}
 
 export default function YardWasteRemovalPage() {
   return (
     <>
-      <SEOHead
-        title="Yard Waste Removal Jacksonville | Tree Trimmings & Landscaping Debris"
-        description="Professional yard waste removal in Jacksonville. We handle tree trimmings, landscaping debris, palm fronds, and yard cleanup year-round. Fast, eco-friendly disposal. Get a free quote today!"
-        keywords="yard waste removal Jacksonville, tree trimmings removal, landscaping debris cleanup, palm fronds removal, yard cleanup Jacksonville, eco-friendly yard waste disposal, tree branch removal, leaf removal service"
-        canonical="/yard-waste-removal"
-      />
+      
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-green-50 to-emerald-100 py-20">

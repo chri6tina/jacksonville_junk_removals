@@ -1,16 +1,20 @@
 import Link from 'next/link'
+import type { Metadata } from 'next'
 import { Clipboard, Users, Shield, CheckCircle, Star, Clock, MapPin, Phone, Calendar, FileText, Award, Home, Building, UserCheck, Target, TrendingUp, Eye, Brain, Users2, MessageCircle, Lightbulb, Globe, Heart, AlertTriangle, School, Building2, BookOpen, Video, Headphones, Download, Share2, Mail, PhoneCall, Briefcase, Factory, ShoppingBag, Truck, Zap, Lock, EyeOff, CheckSquare, AlertCircle, ArrowRight, DollarSign, CalendarDays, Wrench, Search, BarChart3, ClipboardCheck, UserPlus, Settings, PieChart, Activity } from 'lucide-react'
-import SEOHead from '@/components/SEOHead'
+
+export const metadata: Metadata = {
+  title: 'Hoarding Assessment Jacksonville | Professional Evaluation & Intervention Planning',
+  description: 'Professional hoarding assessment in Jacksonville with comprehensive evaluation, risk analysis, and intervention planning. Our expert team provides thorough analysis and strategic planning for hoarding situations. Schedule assessment today!',
+  keywords: 'hoarding assessment Jacksonville, hoarding evaluation, hoarding risk analysis, hoarding intervention planning, professional hoarding assessment Florida',
+  alternates: {
+    canonical: '/hoarding-assessment',
+  },
+}
 
 export default function HoardingAssessmentPage() {
   return (
     <>
-      <SEOHead
-        title="Hoarding Assessment Jacksonville | Professional Evaluation & Intervention Planning"
-        description="Professional hoarding assessment in Jacksonville with comprehensive evaluation, risk analysis, and intervention planning. Our expert team provides thorough analysis and strategic planning for hoarding situations. Schedule assessment today!"
-        keywords="hoarding assessment Jacksonville, hoarding evaluation, hoarding risk analysis, hoarding intervention planning, professional hoarding assessment Florida"
-        canonical="/hoarding-assessment"
-      />
+      
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-teal-50 to-cyan-100 py-20">

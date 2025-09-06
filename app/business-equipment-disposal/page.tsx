@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { Monitor, CheckCircle, Phone, Clock, Truck, Star, MapPin, Shield, HardDrive, Printer } from 'lucide-react'
-import SEOHead from '@/components/SEOHead'
 
 export const metadata: Metadata = {
   title: 'Business Equipment Disposal Services - Jacksonville Junk Removal',
@@ -11,15 +10,7 @@ export const metadata: Metadata = {
 
 export default function BusinessEquipmentDisposalPage() {
   return (
-    <>
-      <SEOHead
-        title="Business Equipment Disposal Services | Professional Office Electronics Removal | (904) 456-3851"
-        description="Professional business equipment disposal services in Jacksonville. Computer equipment removal, office electronics disposal, and data-safe equipment removal. Licensed, insured, eco-friendly disposal. Call (904) 456-3851."
-        keywords="business equipment disposal Jacksonville, computer equipment removal Jacksonville, office electronics disposal Jacksonville, data-safe disposal Jacksonville, Jacksonville business equipment removal, office equipment disposal Jacksonville"
-        canonical="/business-equipment-disposal"
-        ogType="website"
-      />
-      <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <div className="bg-gray-900 text-white py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -382,6 +373,5 @@ export default function BusinessEquipmentDisposalPage() {
           </div>
         </div>
       </div>
-    </>
   )
 }

@@ -1,20 +1,20 @@
 import Link from 'next/link'
+import type { Metadata } from 'next'
 import { Phone, MapPin, Clock, Shield, Truck, CheckCircle, Hammer, DollarSign, Star, Building, Home, Car, ShoppingBag, GraduationCap, Hospital, Factory, TreePine, Leaf, Waves, Building2, Users, Award, Target, Zap, BookOpen, Microscope, Computer, Paintbrush, HardHat, Wrench, FileText, Calendar, CheckSquare, Handshake, Search, Filter, Store, Church, Hotel } from 'lucide-react'
-import SEOHead from '@/components/SEOHead'
 import StrategicInternalLinking from '@/components/StrategicInternalLinking'
+
+export const metadata: Metadata = {
+  title: 'Jacksonville Business Directory | Local Companies & Services (904) 456-3851',
+  description: 'Comprehensive Jacksonville business directory featuring local companies, contractors, and services. Find trusted Jacksonville businesses for all your needs. Call (904) 456-3851',
+  keywords: 'Jacksonville business directory, Jacksonville companies, Jacksonville contractors, Jacksonville services, local businesses Jacksonville FL, Jacksonville business listings',
+  alternates: {
+    canonical: '/jacksonville-business-directory',
+  },
+}
 
 export default function JacksonvilleBusinessDirectoryPage() {
   return (
-    <>
-      <SEOHead
-        title="Jacksonville Business Directory | Local Companies & Services (904) 456-3851"
-        description="Comprehensive Jacksonville business directory featuring local companies, contractors, and services. Find trusted Jacksonville businesses for all your needs. Call (904) 456-3851"
-        keywords="Jacksonville business directory, Jacksonville companies, Jacksonville contractors, Jacksonville services, local businesses Jacksonville FL, Jacksonville business listings"
-        canonical="/jacksonville-business-directory"
-        ogType="website"
-      />
-      
-      <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/70 to-black/85"></div>
@@ -424,7 +424,6 @@ export default function JacksonvilleBusinessDirectoryPage() {
           </div>
         </section>
       </div>
-    </>
   )
 }
 

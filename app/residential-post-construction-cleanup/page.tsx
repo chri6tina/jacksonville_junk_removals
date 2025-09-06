@@ -1,19 +1,19 @@
 import Link from 'next/link'
+import type { Metadata } from 'next'
 import { Phone, Clock, MapPin, Shield, Truck, CheckCircle, Hammer, DollarSign, Star, Home, Wrench, Users, Award, Leaf, Zap, Target, MessageCircle, Eye, Building, Car, CheckSquare, Heart, Sparkles } from 'lucide-react'
-import SEOHead from '@/components/SEOHead'
+
+export const metadata: Metadata = {
+  title: 'Residential Post-Construction Cleanup Jacksonville | New Home & Renovation Cleaning (904) 456-3851',
+  description: 'Jacksonville residential post-construction cleanup for new homes, renovations, and remodeling projects. Specialized cleaning for homeowners and builders. Free estimates, instant quotes. Call (904) 456-3851',
+  keywords: 'residential post-construction cleanup Jacksonville, new home cleaning Jacksonville, renovation cleaning Jacksonville, home remodeling cleanup Florida, residential construction cleanup Jacksonville',
+  alternates: {
+    canonical: '/residential-post-construction-cleanup',
+  },
+}
 
 export default function ResidentialPostConstructionCleanupPage() {
   return (
-    <>
-      <SEOHead
-        title="Residential Post-Construction Cleanup Jacksonville | New Home & Renovation Cleaning (904) 456-3851"
-        description="Jacksonville residential post-construction cleanup for new homes, renovations, and remodeling projects. Specialized cleaning for homeowners and builders. Free estimates, instant quotes. Call (904) 456-3851"
-        keywords="residential post-construction cleanup Jacksonville, new home cleaning Jacksonville, renovation cleaning Jacksonville, home remodeling cleanup Florida, residential construction cleanup Jacksonville"
-        canonical="/residential-post-construction-cleanup"
-        ogType="website"
-      />
-      
-      <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-green-900 via-green-800 to-green-700 text-white">
           <div className="absolute inset-0 bg-black bg-opacity-40"></div>
@@ -645,6 +645,5 @@ export default function ResidentialPostConstructionCleanupPage() {
           </div>
         </section>
       </div>
-    </>
   )
 }

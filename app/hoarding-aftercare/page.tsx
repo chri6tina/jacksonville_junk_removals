@@ -1,16 +1,20 @@
 import Link from 'next/link'
+import type { Metadata } from 'next'
 import { Heart, Phone, Shield, CheckCircle, Star, Clock, MapPin, Calendar, FileText, Award, Home, Building, UserCheck, BookOpen, Target, MessageCircle, Eye, Users, RefreshCw } from 'lucide-react'
-import SEOHead from '@/components/SEOHead'
+
+export const metadata: Metadata = {
+  title: 'Hoarding Aftercare Jacksonville | Post-Cleanup Support & Maintenance',
+  description: 'Comprehensive hoarding aftercare services in Jacksonville including post-cleanup support, maintenance programs, relapse prevention, and ongoing assistance. Our aftercare specialists help maintain progress and prevent relapse.',
+  keywords: 'hoarding aftercare Jacksonville, post-cleanup support, maintenance programs, relapse prevention, ongoing assistance Florida',
+  alternates: {
+    canonical: '/hoarding-aftercare',
+  },
+}
 
 export default function HoardingAftercarePage() {
   return (
     <>
-      <SEOHead
-        title="Hoarding Aftercare Jacksonville | Post-Cleanup Support & Maintenance"
-        description="Comprehensive hoarding aftercare services in Jacksonville including post-cleanup support, maintenance programs, relapse prevention, and ongoing assistance. Our aftercare specialists help maintain progress and prevent relapse."
-        keywords="hoarding aftercare Jacksonville, post-cleanup support, maintenance programs, relapse prevention, ongoing assistance Florida"
-        canonical="/hoarding-aftercare"
-      />
+      
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-teal-50 to-emerald-100 py-20">

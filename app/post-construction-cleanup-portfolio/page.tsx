@@ -1,19 +1,19 @@
 import Link from 'next/link'
+import type { Metadata } from 'next'
 import { Phone, Image, Building, Home, Stethoscope, Utensils, Factory, Hotel, GraduationCap, Church, ShoppingBag, Star, Clock, Shield, Award, Users, DollarSign, Calendar, MapPin, CheckCircle, Eye, ArrowRight, ArrowLeft, Calculator } from 'lucide-react'
-import SEOHead from '@/components/SEOHead'
+
+export const metadata: Metadata = {
+  title: 'Post-Construction Cleanup Portfolio Jacksonville | Before & After Gallery (904) 456-3851',
+  description: 'View our post-construction cleanup portfolio in Jacksonville. See before and after photos, project details, and results across all industries. Call (904) 456-3851',
+  keywords: 'post-construction cleanup portfolio Jacksonville, construction cleanup before after Jacksonville, cleanup project gallery Jacksonville, facility cleanup examples Florida',
+  alternates: {
+    canonical: '/post-construction-cleanup-portfolio',
+  },
+}
 
 export default function PostConstructionCleanupPortfolioPage() {
   return (
-    <>
-      <SEOHead
-        title="Post-Construction Cleanup Portfolio Jacksonville | Before & After Gallery (904) 456-3851"
-        description="View our post-construction cleanup portfolio in Jacksonville. See before and after photos, project details, and results across all industries. Call (904) 456-3851"
-        keywords="post-construction cleanup portfolio Jacksonville, construction cleanup before after Jacksonville, cleanup project gallery Jacksonville, facility cleanup examples Florida"
-        canonical="/post-construction-cleanup-portfolio"
-        ogType="website"
-      />
-      
-      <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-rose-900 via-rose-800 to-rose-700 text-white overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/70 to-black/85"></div>
@@ -460,6 +460,5 @@ export default function PostConstructionCleanupPortfolioPage() {
           </div>
         </section>
       </div>
-    </>
   )
 }

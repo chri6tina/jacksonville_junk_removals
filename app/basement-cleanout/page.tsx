@@ -1,16 +1,20 @@
 import Link from 'next/link'
+import type { Metadata } from 'next'
 import { Home, Truck, Clock, MapPin, Phone, Shield, CheckCircle, Star, Wrench, Recycle, AlertTriangle, DollarSign, Users, Droplets } from 'lucide-react'
-import SEOHead from '@/components/SEOHead'
+
+export const metadata: Metadata = {
+  title: 'Basement Cleanout Jacksonville | Moisture Expertise & Foundation Protection',
+  description: 'Professional basement cleanout in Jacksonville with moisture expertise and foundation protection. We handle basement cleanup, moisture issues, and foundation concerns with licensed crews and specialized equipment. Get a free quote today!',
+  keywords: 'basement cleanout Jacksonville, basement cleanup, moisture expertise, foundation protection, basement waterproofing, basement organization Jacksonville',
+  alternates: {
+    canonical: '/basement-cleanout',
+  },
+}
 
 export default function BasementCleanoutPage() {
   return (
     <>
-      <SEOHead
-        title="Basement Cleanout Jacksonville | Moisture Expertise & Foundation Protection"
-        description="Professional basement cleanout in Jacksonville with moisture expertise and foundation protection. We handle basement cleanup, moisture issues, and foundation concerns with licensed crews and specialized equipment. Get a free quote today!"
-        keywords="basement cleanout Jacksonville, basement cleanup, moisture expertise, foundation protection, basement waterproofing, basement organization Jacksonville"
-        canonical="/basement-cleanout"
-      />
+      
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-blue-50 to-indigo-100 py-20">

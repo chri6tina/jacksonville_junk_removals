@@ -1,16 +1,20 @@
 import Link from 'next/link'
+import type { Metadata } from 'next'
 import { Building, Users, Shield, CheckCircle, Star, Clock, MapPin, Phone, Calendar, FileText, Award, Home, UserCheck, Target, TrendingUp, Eye, Brain, Users2, MessageCircle, Lightbulb, Globe, Heart, AlertTriangle, School, Building2, BookOpen, Video, Headphones, Download, Share2, Mail, PhoneCall, Briefcase, Factory, ShoppingBag, Truck, Zap, Lock, EyeOff, CheckSquare, AlertCircle, ArrowRight, DollarSign, CalendarDays, Clipboard, Wrench } from 'lucide-react'
-import SEOHead from '@/components/SEOHead'
+
+export const metadata: Metadata = {
+  title: 'Commercial Hoarding Cleanup Jacksonville | Business & Workplace Hoarding Services',
+  description: 'Professional commercial hoarding cleanup in Jacksonville for businesses, offices, warehouses, and retail stores. We handle workplace hoarding situations with discretion, efficiency, and minimal business disruption. Get commercial cleanup today!',
+  keywords: 'commercial hoarding cleanup Jacksonville, business hoarding cleanup, workplace hoarding, office hoarding cleanup, warehouse hoarding, retail store hoarding Florida',
+  alternates: {
+    canonical: '/commercial-hoarding-cleanup',
+  },
+}
 
 export default function CommercialHoardingCleanupPage() {
   return (
     <>
-      <SEOHead
-        title="Commercial Hoarding Cleanup Jacksonville | Business & Workplace Hoarding Services"
-        description="Professional commercial hoarding cleanup in Jacksonville for businesses, offices, warehouses, and retail stores. We handle workplace hoarding situations with discretion, efficiency, and minimal business disruption. Get commercial cleanup today!"
-        keywords="commercial hoarding cleanup Jacksonville, business hoarding cleanup, workplace hoarding, office hoarding cleanup, warehouse hoarding, retail store hoarding Florida"
-        canonical="/commercial-hoarding-cleanup"
-      />
+      
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-amber-50 to-orange-100 py-20">

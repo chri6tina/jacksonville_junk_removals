@@ -1,19 +1,19 @@
 import Link from 'next/link'
+import type { Metadata } from 'next'
 import { Phone, Clock, MapPin, Shield, Truck, CheckCircle, Zap, DollarSign, Star, AlertTriangle } from 'lucide-react'
-import SEOHead from '@/components/SEOHead'
+
+export const metadata: Metadata = {
+  title: 'Same Day Junk Removal Jacksonville | 24 Hour Service | Fast Cleanup (904) 456-3851',
+  description: 'Jacksonville same day junk removal service. 24 hour emergency cleanup, fast response, guaranteed same-day service. Professional, licensed, insured. Call (904) 456-3851 for immediate service.',
+  keywords: 'same day junk removal Jacksonville, 24 hour junk removal Jacksonville, emergency junk removal Jacksonville, fast junk removal Jacksonville, same day cleanup Jacksonville, urgent junk removal Jacksonville, Jacksonville same day service, immediate junk removal Jacksonville',
+  alternates: {
+    canonical: '/same-day-junk-removal',
+  },
+}
 
 export default function SameDayJunkRemovalPage() {
   return (
-    <>
-      <SEOHead
-        title="Same Day Junk Removal Jacksonville | 24 Hour Service | Fast Cleanup (904) 456-3851"
-        description="Jacksonville same day junk removal service. 24 hour emergency cleanup, fast response, guaranteed same-day service. Professional, licensed, insured. Call (904) 456-3851 for immediate service."
-        keywords="same day junk removal Jacksonville, 24 hour junk removal Jacksonville, emergency junk removal Jacksonville, fast junk removal Jacksonville, same day cleanup Jacksonville, urgent junk removal Jacksonville, Jacksonville same day service, immediate junk removal Jacksonville"
-        canonical="/same-day-junk-removal"
-        ogType="website"
-      />
-      
-      <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-red-900 via-red-800 to-red-700 text-white">
           <div className="absolute inset-0 bg-black bg-opacity-40"></div>
@@ -568,6 +568,5 @@ export default function SameDayJunkRemovalPage() {
           </div>
         </section>
       </div>
-    </>
   )
 }

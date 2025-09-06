@@ -1,16 +1,20 @@
 import Link from 'next/link'
+import type { Metadata } from 'next'
 import { Bed, Truck, Clock, MapPin, Phone, Shield, CheckCircle, Star, Leaf, Recycle, AlertTriangle, Package, Wrench, DollarSign } from 'lucide-react'
-import SEOHead from '@/components/SEOHead'
+
+export const metadata: Metadata = {
+  title: 'Mattress Removal Jacksonville | Eco-Friendly Disposal & Recycling',
+  description: 'Professional mattress removal in Jacksonville with eco-friendly disposal and recycling partnerships. We handle all mattress types, box springs, and bed frames with licensed crews and responsible disposal. Get a free quote today!',
+  keywords: 'mattress removal Jacksonville, mattress disposal, box spring removal, bed frame removal, eco-friendly mattress disposal, mattress recycling Jacksonville, mattress pickup',
+  alternates: {
+    canonical: '/mattress-removal',
+  },
+}
 
 export default function MattressRemovalPage() {
   return (
     <>
-      <SEOHead
-        title="Mattress Removal Jacksonville | Eco-Friendly Disposal & Recycling"
-        description="Professional mattress removal in Jacksonville with eco-friendly disposal and recycling partnerships. We handle all mattress types, box springs, and bed frames with licensed crews and responsible disposal. Get a free quote today!"
-        keywords="mattress removal Jacksonville, mattress disposal, box spring removal, bed frame removal, eco-friendly mattress disposal, mattress recycling Jacksonville, mattress pickup"
-        canonical="/mattress-removal"
-      />
+      
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-green-50 to-emerald-100 py-20">

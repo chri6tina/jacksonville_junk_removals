@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import ContactForm from '@/components/ContactForm'
 import ContactBar from '@/components/ContactBar'
-import SEOHead from '@/components/SEOHead'
 
 export const metadata: Metadata = {
   title: 'Contact Us - Jacksonville Junk Removals',
@@ -11,15 +10,7 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <>
-      <SEOHead
-        title="Contact Jacksonville Junk Removal | Get Free Quote | (904) 456-3851"
-        description="Contact Jacksonville Junk Removal for professional cleanout services. Get free quote, schedule service, emergency cleanup. Call (904) 456-3851 or fill out our contact form."
-        keywords="contact Jacksonville junk removal, Jacksonville junk removal quote, schedule junk removal Jacksonville, emergency cleanup Jacksonville, free estimate Jacksonville, junk removal contact Jacksonville"
-        canonical="/contact"
-        ogType="website"
-      />
-      <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
       <div className="bg-gray-900 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -238,6 +229,5 @@ export default function ContactPage() {
         </div>
       </div>
     </div>
-    </>
   )
 }

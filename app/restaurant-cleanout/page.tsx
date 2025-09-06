@@ -1,16 +1,20 @@
 import Link from 'next/link'
+import type { Metadata } from 'next'
 import { Utensils, Truck, Clock, MapPin, Phone, Shield, CheckCircle, Star, Wrench, Recycle, AlertTriangle, DollarSign, Users, ChefHat } from 'lucide-react'
-import SEOHead from '@/components/SEOHead'
+
+export const metadata: Metadata = {
+  title: 'Restaurant Cleanout Jacksonville | Commercial Kitchen & Food Safety Expertise',
+  description: 'Professional restaurant cleanout in Jacksonville with commercial kitchen expertise and food safety compliance. We handle restaurant cleanup, kitchen equipment removal, and hospitality industry cleanout with licensed crews and specialized expertise. Get a free quote today!',
+  keywords: 'restaurant cleanout Jacksonville, restaurant cleanup, commercial kitchen, food safety compliance, hospitality industry, kitchen equipment removal Jacksonville',
+  alternates: {
+    canonical: '/restaurant-cleanout',
+  },
+}
 
 export default function RestaurantCleanoutPage() {
   return (
     <>
-      <SEOHead
-        title="Restaurant Cleanout Jacksonville | Commercial Kitchen & Food Safety Expertise"
-        description="Professional restaurant cleanout in Jacksonville with commercial kitchen expertise and food safety compliance. We handle restaurant cleanup, kitchen equipment removal, and hospitality industry cleanout with licensed crews and specialized expertise. Get a free quote today!"
-        keywords="restaurant cleanout Jacksonville, restaurant cleanup, commercial kitchen, food safety compliance, hospitality industry, kitchen equipment removal Jacksonville"
-        canonical="/restaurant-cleanout"
-      />
+      
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-red-50 to-orange-100 py-20">

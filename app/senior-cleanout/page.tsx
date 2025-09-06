@@ -1,19 +1,19 @@
 import Link from 'next/link'
+import type { Metadata } from 'next'
 import { Phone, Clock, MapPin, Shield, Truck, CheckCircle, Heart, DollarSign, Star, Users, Home, UserCheck } from 'lucide-react'
-import SEOHead from '@/components/SEOHead'
+
+export const metadata: Metadata = {
+  title: 'Senior Cleanout Jacksonville | Elderly Cleanout Services | Compassionate Cleanup (904) 456-3851',
+  description: 'Jacksonville senior cleanout service. Compassionate elderly cleanout, senior move assistance, downsizing help. Professional, understanding, licensed service. Call (904) 456-3851 for senior cleanout.',
+  keywords: 'senior cleanout Jacksonville, elderly cleanout Jacksonville, senior move assistance Jacksonville, downsizing help Jacksonville, senior cleanup Jacksonville, Jacksonville senior cleanout, elderly Jacksonville',
+  alternates: {
+    canonical: '/senior-cleanout',
+  },
+}
 
 export default function SeniorCleanoutPage() {
   return (
-    <>
-      <SEOHead
-        title="Senior Cleanout Jacksonville | Elderly Cleanout Services | Compassionate Cleanup (904) 456-3851"
-        description="Jacksonville senior cleanout service. Compassionate elderly cleanout, senior move assistance, downsizing help. Professional, understanding, licensed service. Call (904) 456-3851 for senior cleanout."
-        keywords="senior cleanout Jacksonville, elderly cleanout Jacksonville, senior move assistance Jacksonville, downsizing help Jacksonville, senior cleanup Jacksonville, Jacksonville senior cleanout, elderly Jacksonville"
-        canonical="/senior-cleanout"
-        ogType="website"
-      />
-      
-      <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-pink-900 via-pink-800 to-pink-700 text-white">
           <div className="absolute inset-0 bg-black bg-opacity-40"></div>
@@ -598,6 +598,5 @@ export default function SeniorCleanoutPage() {
           </div>
         </section>
       </div>
-    </>
   )
 }

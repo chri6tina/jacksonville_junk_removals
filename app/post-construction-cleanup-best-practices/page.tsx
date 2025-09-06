@@ -1,19 +1,19 @@
 import Link from 'next/link'
+import type { Metadata } from 'next'
 import { Phone, BookOpen, Building, Home, Stethoscope, Utensils, Factory, Hotel, GraduationCap, Church, ShoppingBag, Star, Clock, Shield, Award, Users, DollarSign, Calendar, MapPin, CheckCircle, Info, AlertTriangle, Lightbulb, Image as ImageIcon } from 'lucide-react'
-import SEOHead from '@/components/SEOHead'
+
+export const metadata: Metadata = {
+  title: 'Post-Construction Cleanup Best Practices Jacksonville | Industry Guide (904) 456-3851',
+  description: 'Post-construction cleanup best practices and industry guidelines for Jacksonville. Learn compliance standards, maintenance tips, and professional advice. Call (904) 456-3851',
+  keywords: 'post-construction cleanup best practices Jacksonville, construction cleanup guidelines Jacksonville, cleanup compliance standards Jacksonville, facility maintenance tips Florida',
+  alternates: {
+    canonical: '/post-construction-cleanup-best-practices',
+  },
+}
 
 export default function PostConstructionCleanupBestPracticesPage() {
   return (
-    <>
-      <SEOHead
-        title="Post-Construction Cleanup Best Practices Jacksonville | Industry Guide (904) 456-3851"
-        description="Post-construction cleanup best practices and industry guidelines for Jacksonville. Learn compliance standards, maintenance tips, and professional advice. Call (904) 456-3851"
-        keywords="post-construction cleanup best practices Jacksonville, construction cleanup guidelines Jacksonville, cleanup compliance standards Jacksonville, facility maintenance tips Florida"
-        canonical="/post-construction-cleanup-best-practices"
-        ogType="website"
-      />
-      
-      <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-amber-900 via-amber-800 to-amber-700 text-white overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/70 to-black/85"></div>
@@ -516,6 +516,5 @@ export default function PostConstructionCleanupBestPracticesPage() {
           </div>
         </section>
       </div>
-    </>
   )
 }

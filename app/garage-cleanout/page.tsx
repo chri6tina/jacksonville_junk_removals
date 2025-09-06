@@ -1,16 +1,20 @@
 import Link from 'next/link'
+import type { Metadata } from 'next'
 import { Home, Truck, Clock, MapPin, Phone, Shield, CheckCircle, Star, Wrench, Recycle, Package, AlertTriangle, DollarSign, Users } from 'lucide-react'
-import SEOHead from '@/components/SEOHead'
+
+export const metadata: Metadata = {
+  title: 'Garage Cleanout Jacksonville | Organization Expertise & Space Optimization',
+  description: 'Professional garage cleanout in Jacksonville with organization expertise and space optimization. We handle seasonal cleanup, storage solutions, and garage organization with licensed crews and organizational skills. Get a free quote today!',
+  keywords: 'garage cleanout Jacksonville, garage organization, seasonal cleanup, storage solutions, garage space optimization, garage cleanup Jacksonville',
+  alternates: {
+    canonical: '/garage-cleanout',
+  },
+}
 
 export default function GarageCleanoutPage() {
   return (
     <>
-      <SEOHead
-        title="Garage Cleanout Jacksonville | Organization Expertise & Space Optimization"
-        description="Professional garage cleanout in Jacksonville with organization expertise and space optimization. We handle seasonal cleanup, storage solutions, and garage organization with licensed crews and organizational skills. Get a free quote today!"
-        keywords="garage cleanout Jacksonville, garage organization, seasonal cleanup, storage solutions, garage space optimization, garage cleanup Jacksonville"
-        canonical="/garage-cleanout"
-      />
+      
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-purple-50 to-indigo-100 py-20">

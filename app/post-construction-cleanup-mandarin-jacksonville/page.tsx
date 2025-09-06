@@ -1,20 +1,20 @@
 import Link from 'next/link'
+import type { Metadata } from 'next'
 import { Phone, MapPin, Clock, Shield, Truck, CheckCircle, Hammer, DollarSign, Star, Building, Home, Car, ShoppingBag, GraduationCap, Hospital, TreePine, Leaf } from 'lucide-react'
-import SEOHead from '@/components/SEOHead'
 import StrategicInternalLinking from '@/components/StrategicInternalLinking'
+
+export const metadata: Metadata = {
+  title: 'Post-Construction Cleanup Mandarin Jacksonville | Premium Construction Site Cleanup (904) 456-3851',
+  description: 'Mandarin Jacksonville post-construction cleanup specialists. Serving upscale residential areas, waterfront properties, and premium communities. Mandarin construction cleanup, renovation cleaning, debris removal. Call (904) 456-3851',
+  keywords: 'post-construction cleanup Mandarin Jacksonville, premium construction cleanup Jacksonville, waterfront renovation cleaning, Mandarin debris removal Jacksonville FL, upscale area cleanup',
+  alternates: {
+    canonical: '/post-construction-cleanup-mandarin-jacksonville',
+  },
+}
 
 export default function MandarinJacksonvillePostConstructionCleanupPage() {
   return (
-    <>
-      <SEOHead
-        title="Post-Construction Cleanup Mandarin Jacksonville | Premium Construction Site Cleanup (904) 456-3851"
-        description="Mandarin Jacksonville post-construction cleanup specialists. Serving upscale residential areas, waterfront properties, and premium communities. Mandarin construction cleanup, renovation cleaning, debris removal. Call (904) 456-3851"
-        keywords="post-construction cleanup Mandarin Jacksonville, premium construction cleanup Jacksonville, waterfront renovation cleaning, Mandarin debris removal Jacksonville FL, upscale area cleanup"
-        canonical="/post-construction-cleanup-mandarin-jacksonville"
-        ogType="website"
-      />
-      
-      <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-emerald-900 via-emerald-800 to-emerald-700 text-white overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/70 to-black/85"></div>
@@ -369,6 +369,5 @@ export default function MandarinJacksonvillePostConstructionCleanupPage() {
           </div>
         </section>
       </div>
-    </>
   )
 }

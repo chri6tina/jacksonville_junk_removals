@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { Building2, Users, CheckCircle, Phone, Clock, Truck, Star, MapPin, Briefcase, FileText } from 'lucide-react'
-import SEOHead from '@/components/SEOHead'
 
 export const metadata: Metadata = {
   title: 'Commercial Office Cleanout Services - Jacksonville Junk Removal',
@@ -11,15 +10,7 @@ export const metadata: Metadata = {
 
 export default function CommercialOfficeCleanoutPage() {
   return (
-    <>
-      <SEOHead
-        title="Commercial Office Cleanout Services | Professional Business Cleanup | (904) 456-3851"
-        description="Professional commercial office cleanout services in Jacksonville. Office furniture removal, business equipment disposal, and corporate space cleanup. Licensed, insured, eco-friendly disposal. Call (904) 456-3851."
-        keywords="commercial office cleanout Jacksonville, office furniture removal Jacksonville, business equipment disposal Jacksonville, corporate cleanup Jacksonville, Jacksonville office cleanout, business relocation Jacksonville"
-        canonical="/commercial-office-cleanout"
-        ogType="website"
-      />
-      <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <div className="bg-gray-900 text-white py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -382,6 +373,5 @@ export default function CommercialOfficeCleanoutPage() {
           </div>
         </div>
       </div>
-    </>
   )
 }

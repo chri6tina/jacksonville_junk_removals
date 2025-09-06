@@ -1,19 +1,19 @@
 import Link from 'next/link'
+import type { Metadata } from 'next'
 import { Phone, Clock, MapPin, Shield, Truck, CheckCircle, Home, DollarSign, Star, Users, FileText, Droplets, AlertTriangle, Wrench, Zap, Heart, Award } from 'lucide-react'
-import SEOHead from '@/components/SEOHead'
+
+export const metadata: Metadata = {
+  title: 'Flood Cleanup Jacksonville | Water Damage Restoration | Emergency Flood Response (904) 456-3851',
+  description: 'Professional flood cleanup services in Jacksonville, Florida. Emergency water damage restoration, flood debris removal, mold remediation, and insurance claim support. 24/7 emergency response. Call (904) 456-3851',
+  keywords: 'flood cleanup Jacksonville, water damage restoration Jacksonville, flood damage cleanup Jacksonville, emergency flood response Jacksonville, mold remediation Jacksonville, flood debris removal Florida',
+  alternates: {
+    canonical: '/flood-cleanup',
+  },
+}
 
 export default function FloodCleanupPage() {
   return (
-    <>
-      <SEOHead
-        title="Flood Cleanup Jacksonville | Water Damage Restoration | Emergency Flood Response (904) 456-3851"
-        description="Professional flood cleanup services in Jacksonville, Florida. Emergency water damage restoration, flood debris removal, mold remediation, and insurance claim support. 24/7 emergency response. Call (904) 456-3851"
-        keywords="flood cleanup Jacksonville, water damage restoration Jacksonville, flood damage cleanup Jacksonville, emergency flood response Jacksonville, mold remediation Jacksonville, flood debris removal Florida"
-        canonical="/flood-cleanup"
-        ogType="website"
-      />
-      
-      <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white">
           <div className="absolute inset-0 bg-black bg-opacity-40"></div>
@@ -429,6 +429,5 @@ export default function FloodCleanupPage() {
           </div>
         </section>
       </div>
-    </>
   )
 }

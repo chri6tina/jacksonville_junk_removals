@@ -1,19 +1,19 @@
 import Link from 'next/link'
+import type { Metadata } from 'next'
 import { Phone, Clock, MapPin, Shield, Truck, CheckCircle, Factory, DollarSign, Star, Home, Wrench, Users, Award, Leaf, Zap, Target, MessageCircle, Eye, Building, Car, CheckSquare, AlertTriangle, Cog, HardHat, Gauge, Settings, Stethoscope } from 'lucide-react'
-import SEOHead from '@/components/SEOHead'
+
+export const metadata: Metadata = {
+  title: 'Industrial Post-Construction Cleanup Jacksonville | Manufacturing & Industrial Facility Cleaning (904) 456-3851',
+  description: 'Professional industrial post-construction cleanup in Jacksonville. Manufacturing facilities, warehouses, industrial plants, OSHA compliance, safety standards. Free estimates, certified technicians. Call (904) 456-3851',
+  keywords: 'industrial post-construction cleanup Jacksonville, manufacturing facility construction cleanup Jacksonville, industrial plant construction cleaning Jacksonville, warehouse construction cleanup Jacksonville, industrial safety compliance Florida',
+  alternates: {
+    canonical: '/industrial-post-construction-cleanup',
+  },
+}
 
 export default function IndustrialPostConstructionCleanupPage() {
   return (
-    <>
-      <SEOHead
-        title="Industrial Post-Construction Cleanup Jacksonville | Manufacturing & Industrial Facility Cleaning (904) 456-3851"
-        description="Professional industrial post-construction cleanup in Jacksonville. Manufacturing facilities, warehouses, industrial plants, OSHA compliance, safety standards. Free estimates, certified technicians. Call (904) 456-3851"
-        keywords="industrial post-construction cleanup Jacksonville, manufacturing facility construction cleanup Jacksonville, industrial plant construction cleaning Jacksonville, warehouse construction cleanup Jacksonville, industrial safety compliance Florida"
-        canonical="/industrial-post-construction-cleanup"
-        ogType="website"
-      />
-      
-      <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-700 text-white overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/70 to-black/85"></div>
@@ -476,6 +476,5 @@ export default function IndustrialPostConstructionCleanupPage() {
           </div>
         </section>
       </div>
-    </>
   )
 }

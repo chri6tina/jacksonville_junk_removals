@@ -1,10 +1,10 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import { Plus, Edit, Trash2, Eye, Calendar, User, Clock } from 'lucide-react'
 import AdminNav from '@/components/AdminNav'
-import SEOHead from '@/components/SEOHead'
 
 interface BlogPost {
   id: string
@@ -17,6 +17,8 @@ interface BlogPost {
   publishDate: string
   imageUrl?: string
 }
+
+// Admin pages are client components and cannot export metadata
 
 export default function AdminBlogPage() {
   const [posts, setPosts] = useState<BlogPost[]>([])
@@ -92,15 +94,7 @@ export default function AdminBlogPage() {
   }
 
   return (
-    <>
-      <SEOHead
-        title="Blog Management - Jacksonville Junk Removal Admin"
-        description="Manage blog posts and content for Jacksonville Junk Removal website."
-        keywords="blog management, Jacksonville junk removal admin, content management"
-        canonical="/admin/blog"
-        ogType="website"
-      />
-      <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50">
       {/* Header */}
       <div className="bg-white border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
@@ -273,6 +267,5 @@ export default function AdminBlogPage() {
         </div>
       </div>
     </div>
-    </>
   )
 }

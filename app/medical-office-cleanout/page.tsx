@@ -1,16 +1,20 @@
 import Link from 'next/link'
+import type { Metadata } from 'next'
 import { Stethoscope, Truck, Clock, MapPin, Phone, Shield, CheckCircle, Star, Wrench, Recycle, AlertTriangle, DollarSign, Users, Heart } from 'lucide-react'
-import SEOHead from '@/components/SEOHead'
+
+export const metadata: Metadata = {
+  title: 'Medical Office Cleanout Jacksonville | HIPAA Compliance & Medical Equipment Expertise',
+  description: 'Professional medical office cleanout in Jacksonville with HIPAA compliance and medical equipment expertise. We handle medical office cleanup, HIPAA-compliant disposal, and healthcare industry cleanout with licensed crews and specialized expertise. Get a free quote today!',
+  keywords: 'medical office cleanout Jacksonville, medical office cleanup, HIPAA compliance, medical equipment, healthcare industry, medical disposal Jacksonville',
+  alternates: {
+    canonical: '/medical-office-cleanout',
+  },
+}
 
 export default function MedicalOfficeCleanoutPage() {
   return (
     <>
-      <SEOHead
-        title="Medical Office Cleanout Jacksonville | HIPAA Compliance & Medical Equipment Expertise"
-        description="Professional medical office cleanout in Jacksonville with HIPAA compliance and medical equipment expertise. We handle medical office cleanup, HIPAA-compliant disposal, and healthcare industry cleanout with licensed crews and specialized expertise. Get a free quote today!"
-        keywords="medical office cleanout Jacksonville, medical office cleanup, HIPAA compliance, medical equipment, healthcare industry, medical disposal Jacksonville"
-        canonical="/medical-office-cleanout"
-      />
+      
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-blue-50 to-indigo-100 py-20">

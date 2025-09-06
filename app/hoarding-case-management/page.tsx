@@ -1,16 +1,20 @@
 import Link from 'next/link'
+import type { Metadata } from 'next'
 import { Clipboard, Phone, Shield, CheckCircle, Star, Clock, MapPin, Calendar, FileText, Award, Home, Building, UserCheck, BookOpen, Target, MessageCircle, Eye, Users, Settings } from 'lucide-react'
-import SEOHead from '@/components/SEOHead'
+
+export const metadata: Metadata = {
+  title: 'Hoarding Case Management Jacksonville | Comprehensive Case Coordination & Support',
+  description: 'Comprehensive hoarding case management services in Jacksonville including case coordination, service planning, resource management, and care oversight. Our case managers provide integrated support for individuals and families affected by hoarding.',
+  keywords: 'hoarding case management Jacksonville, case coordination, service planning, resource management, care oversight Florida',
+  alternates: {
+    canonical: '/hoarding-case-management',
+  },
+}
 
 export default function HoardingCaseManagementPage() {
   return (
     <>
-      <SEOHead
-        title="Hoarding Case Management Jacksonville | Comprehensive Case Coordination & Support"
-        description="Comprehensive hoarding case management services in Jacksonville including case coordination, service planning, resource management, and care oversight. Our case managers provide integrated support for individuals and families affected by hoarding."
-        keywords="hoarding case management Jacksonville, case coordination, service planning, resource management, care oversight Florida"
-        canonical="/hoarding-case-management"
-      />
+      
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-emerald-50 to-teal-100 py-20">

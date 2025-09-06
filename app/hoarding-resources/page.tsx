@@ -1,16 +1,20 @@
 import Link from 'next/link'
+import type { Metadata } from 'next'
 import { BookOpen, FileText, Users, Shield, CheckCircle, Star, Clock, MapPin, Phone, Calendar, Award, Home, Building, UserCheck, Target, MessageCircle, Eye, Heart, Download } from 'lucide-react'
-import SEOHead from '@/components/SEOHead'
+
+export const metadata: Metadata = {
+  title: 'Hoarding Resources Jacksonville | Educational Materials & Support Resources',
+  description: 'Comprehensive hoarding resources in Jacksonville including educational materials, support resources, helpful links, and downloadable guides. Access valuable information to understand and address hoarding situations.',
+  keywords: 'hoarding resources Jacksonville, hoarding education, support materials, helpful links, downloadable guides, hoarding information Florida',
+  alternates: {
+    canonical: '/hoarding-resources',
+  },
+}
 
 export default function HoardingResourcesPage() {
   return (
     <>
-      <SEOHead
-        title="Hoarding Resources Jacksonville | Educational Materials & Support Resources"
-        description="Comprehensive hoarding resources in Jacksonville including educational materials, support resources, helpful links, and downloadable guides. Access valuable information to understand and address hoarding situations."
-        keywords="hoarding resources Jacksonville, hoarding education, support materials, helpful links, downloadable guides, hoarding information Florida"
-        canonical="/hoarding-resources"
-      />
+      
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-indigo-50 to-purple-100 py-20">

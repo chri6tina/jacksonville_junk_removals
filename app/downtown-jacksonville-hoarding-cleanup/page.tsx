@@ -1,16 +1,20 @@
 import Link from 'next/link'
+import type { Metadata } from 'next'
 import { MapPin, Users, Shield, CheckCircle, Star, Clock, Phone, Calendar, FileText, Award, Home, Building, UserCheck, Target, TrendingUp, Eye, Brain, Users2, MessageCircle, Lightbulb, Globe, Heart, AlertTriangle, School, Building2, BookOpen, Video, Headphones, Download, Share2, Mail, PhoneCall, Briefcase, Factory, ShoppingBag, Truck, Zap, Lock, EyeOff, CheckSquare, AlertCircle, ArrowRight, DollarSign, CalendarDays, Wrench, Search, BarChart3, ClipboardCheck, UserPlus, Settings, PieChart, Activity, Navigation, Car, Bus, Train, Plane, Anchor, Ship, Compass, Map, Flag } from 'lucide-react'
-import SEOHead from '@/components/SEOHead'
+
+export const metadata: Metadata = {
+  title: 'Downtown Jacksonville Hoarding Cleanup | Local Hoarding Services Downtown JAX',
+  description: 'Professional hoarding cleanup services in Downtown Jacksonville, FL. We serve the downtown area with local expertise, quick response times, and community-focused hoarding intervention. Get downtown hoarding cleanup today!',
+  keywords: 'downtown Jacksonville hoarding cleanup, Jacksonville FL hoarding cleanup, downtown JAX hoarding services, Jacksonville hoarding removal, Florida hoarding cleanup, downtown Jacksonville junk removal',
+  alternates: {
+    canonical: '/downtown-jacksonville-hoarding-cleanup',
+  },
+}
 
 export default function DowntownJacksonvilleHoardingCleanupPage() {
   return (
     <>
-      <SEOHead
-        title="Downtown Jacksonville Hoarding Cleanup | Local Hoarding Services Downtown JAX"
-        description="Professional hoarding cleanup services in Downtown Jacksonville, FL. We serve the downtown area with local expertise, quick response times, and community-focused hoarding intervention. Get downtown hoarding cleanup today!"
-        keywords="downtown Jacksonville hoarding cleanup, Jacksonville FL hoarding cleanup, downtown JAX hoarding services, Jacksonville hoarding removal, Florida hoarding cleanup, downtown Jacksonville junk removal"
-        canonical="/downtown-jacksonville-hoarding-cleanup"
-      />
+      
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-emerald-50 to-green-100 py-20">

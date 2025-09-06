@@ -1,19 +1,19 @@
 import Link from 'next/link'
+import type { Metadata } from 'next'
 import { Shield, AlertTriangle, Wrench, UserCheck, Phone, MapPin, Clock, Star, CheckCircle, Biohazard, Heart } from 'lucide-react'
-import SEOHead from '@/components/SEOHead'
+
+export const metadata: Metadata = {
+  title: 'Biohazard Hoarding Cleanup Jacksonville | Contamination Cleanup | Safety Protocols (904) 456-3851',
+  description: 'Jacksonville biohazard hoarding cleanup service. Professional contamination cleanup, safety protocols, biohazard assessment. Licensed, insured, certified biohazard cleanup. Call (904) 456-3851 for immediate service.',
+  keywords: 'biohazard hoarding cleanup Jacksonville, contamination hoarding cleanup Jacksonville, biohazard cleanup Jacksonville, hoarding contamination cleanup Jacksonville, biohazard assessment Jacksonville, safety protocols Jacksonville, contamination protocols Jacksonville, biohazard safety Jacksonville, hoarding health hazards Jacksonville, contamination removal Jacksonville',
+  alternates: {
+    canonical: '/biohazard-hoarding-cleanup',
+  },
+}
 
 export default function BiohazardHoardingCleanupPage() {
   return (
-    <>
-      <SEOHead
-        title="Biohazard Hoarding Cleanup Jacksonville | Contamination Cleanup | Safety Protocols (904) 456-3851"
-        description="Jacksonville biohazard hoarding cleanup service. Professional contamination cleanup, safety protocols, biohazard assessment. Licensed, insured, certified biohazard cleanup. Call (904) 456-3851 for immediate service."
-        keywords="biohazard hoarding cleanup Jacksonville, contamination hoarding cleanup Jacksonville, biohazard cleanup Jacksonville, hoarding contamination cleanup Jacksonville, biohazard assessment Jacksonville, safety protocols Jacksonville, contamination protocols Jacksonville, biohazard safety Jacksonville, hoarding health hazards Jacksonville, contamination removal Jacksonville"
-        canonical="/biohazard-hoarding-cleanup"
-        ogType="website"
-      />
-      
-      <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-red-900 via-red-800 to-red-700 text-white">
           <div className="absolute inset-0 bg-black bg-opacity-40"></div>
@@ -354,6 +354,5 @@ export default function BiohazardHoardingCleanupPage() {
           </div>
         </section>
       </div>
-    </>
   )
 }

@@ -1,16 +1,20 @@
 import Link from 'next/link'
+import type { Metadata } from 'next'
 import { Sofa, Truck, Clock, MapPin, Phone, Shield, CheckCircle, Star, Heart, Home, Building, Users, Gift, Package } from 'lucide-react'
-import SEOHead from '@/components/SEOHead'
+
+export const metadata: Metadata = {
+  title: 'Furniture Removal Jacksonville | Donation Partnerships & Careful Handling',
+  description: 'Professional furniture removal in Jacksonville with donation partnerships and careful handling. We handle sofas, beds, tables, chairs, and more with eco-friendly disposal and charity donations. Get a free quote today!',
+  keywords: 'furniture removal Jacksonville, sofa removal, bed removal, table removal, furniture donation Jacksonville, eco-friendly furniture disposal, furniture pickup service, old furniture removal',
+  alternates: {
+    canonical: '/furniture-removal',
+  },
+}
 
 export default function FurnitureRemovalPage() {
   return (
     <>
-      <SEOHead
-        title="Furniture Removal Jacksonville | Donation Partnerships & Careful Handling"
-        description="Professional furniture removal in Jacksonville with donation partnerships and careful handling. We handle sofas, beds, tables, chairs, and more with eco-friendly disposal and charity donations. Get a free quote today!"
-        keywords="furniture removal Jacksonville, sofa removal, bed removal, table removal, furniture donation Jacksonville, eco-friendly furniture disposal, furniture pickup service, old furniture removal"
-        canonical="/furniture-removal"
-      />
+      
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-purple-50 to-pink-100 py-20">

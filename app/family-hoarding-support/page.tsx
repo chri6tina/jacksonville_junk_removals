@@ -1,16 +1,20 @@
 import Link from 'next/link'
+import type { Metadata } from 'next'
 import { Heart, Users, Shield, CheckCircle, Star, Clock, MapPin, Phone, Calendar, FileText, Award, Home, Building, UserCheck, BookOpen, Target, TrendingUp, Eye, Brain, Users2, GraduationCap, MessageCircle } from 'lucide-react'
-import SEOHead from '@/components/SEOHead'
+
+export const metadata: Metadata = {
+  title: 'Family Hoarding Support Jacksonville | Family Intervention & Support Services',
+  description: 'Comprehensive family hoarding support in Jacksonville with intervention strategies, family consultation, support groups, and ongoing assistance. We help families navigate hoarding situations with compassion and expertise. Get family support today!',
+  keywords: 'family hoarding support Jacksonville, family hoarding intervention, hoarding family help, family support groups, hoarding family consultation, family hoarding education Florida',
+  alternates: {
+    canonical: '/family-hoarding-support',
+  },
+}
 
 export default function FamilyHoardingSupportPage() {
   return (
     <>
-      <SEOHead
-        title="Family Hoarding Support Jacksonville | Family Intervention & Support Services"
-        description="Comprehensive family hoarding support in Jacksonville with intervention strategies, family consultation, support groups, and ongoing assistance. We help families navigate hoarding situations with compassion and expertise. Get family support today!"
-        keywords="family hoarding support Jacksonville, family hoarding intervention, hoarding family help, family support groups, hoarding family consultation, family hoarding education Florida"
-        canonical="/family-hoarding-support"
-      />
+      
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-pink-50 to-rose-100 py-20">

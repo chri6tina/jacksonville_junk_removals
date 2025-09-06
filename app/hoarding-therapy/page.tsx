@@ -1,16 +1,20 @@
 import Link from 'next/link'
+import type { Metadata } from 'next'
 import { Brain, Heart, Shield, CheckCircle, Star, Clock, MapPin, Phone, Calendar, FileText, Award, Home, Building, UserCheck, BookOpen, Target, MessageCircle, Eye, Users } from 'lucide-react'
-import SEOHead from '@/components/SEOHead'
+
+export const metadata: Metadata = {
+  title: 'Hoarding Therapy Jacksonville | Professional Counseling & Mental Health Support',
+  description: 'Professional hoarding therapy and counseling services in Jacksonville. Our licensed therapists specialize in hoarding disorder treatment, cognitive behavioral therapy, and mental health support.',
+  keywords: 'hoarding therapy Jacksonville, hoarding counseling, hoarding mental health, cognitive behavioral therapy, hoarding treatment, licensed therapists Florida',
+  alternates: {
+    canonical: '/hoarding-therapy',
+  },
+}
 
 export default function HoardingTherapyPage() {
   return (
     <>
-      <SEOHead
-        title="Hoarding Therapy Jacksonville | Professional Counseling & Mental Health Support"
-        description="Professional hoarding therapy and counseling services in Jacksonville. Our licensed therapists specialize in hoarding disorder treatment, cognitive behavioral therapy, and mental health support."
-        keywords="hoarding therapy Jacksonville, hoarding counseling, hoarding mental health, cognitive behavioral therapy, hoarding treatment, licensed therapists Florida"
-        canonical="/hoarding-therapy"
-      />
+      
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-teal-50 to-cyan-100 py-20">

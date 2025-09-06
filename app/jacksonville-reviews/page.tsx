@@ -1,21 +1,21 @@
 import Link from 'next/link'
+import type { Metadata } from 'next'
 import { Phone, MapPin, Clock, Shield, Truck, CheckCircle, Hammer, DollarSign, Star, Building, Home, Car, ShoppingBag, GraduationCap, Hospital, Factory, TreePine, Leaf, Waves, Building2, Users, Award, Target, Zap, BookOpen, Microscope, Computer, Paintbrush, Quote, ThumbsUp, Calendar } from 'lucide-react'
-import SEOHead from '@/components/SEOHead'
 import JacksonvilleReviews from '@/components/JacksonvilleReviews'
 import StrategicInternalLinking from '@/components/StrategicInternalLinking'
 
+export const metadata: Metadata = {
+  title: 'Jacksonville Customer Reviews & Testimonials | Post-Construction Cleanup (904) 456-3851',
+  description: 'Read real customer reviews and testimonials from Jacksonville residents and businesses. Verified 5-star reviews for post-construction cleanup services across all Jacksonville areas. Call (904) 456-3851',
+  keywords: 'Jacksonville customer reviews, Jacksonville testimonials, post-construction cleanup reviews, Jacksonville Beach reviews, downtown Jacksonville reviews, verified customer reviews Jacksonville',
+  alternates: {
+    canonical: '/jacksonville-reviews',
+  },
+}
+
 export default function JacksonvilleReviewsPage() {
   return (
-    <>
-      <SEOHead
-        title="Jacksonville Customer Reviews & Testimonials | Post-Construction Cleanup (904) 456-3851"
-        description="Read real customer reviews and testimonials from Jacksonville residents and businesses. Verified 5-star reviews for post-construction cleanup services across all Jacksonville areas. Call (904) 456-3851"
-        keywords="Jacksonville customer reviews, Jacksonville testimonials, post-construction cleanup reviews, Jacksonville Beach reviews, downtown Jacksonville reviews, verified customer reviews Jacksonville"
-        canonical="/jacksonville-reviews"
-        ogType="website"
-      />
-      
-      <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/70 to-black/85"></div>
@@ -343,7 +343,6 @@ export default function JacksonvilleReviewsPage() {
           </div>
         </section>
       </div>
-    </>
   )
 }
 

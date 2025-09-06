@@ -1,19 +1,19 @@
 import Link from 'next/link'
+import type { Metadata } from 'next'
 import { Phone, Clock, MapPin, Shield, Truck, CheckCircle, Hammer, DollarSign, Star, Home, Wrench } from 'lucide-react'
-import SEOHead from '@/components/SEOHead'
+
+export const metadata: Metadata = {
+  title: 'Renovation Cleanup Jacksonville | Post Construction Cleanup | Construction Debris Removal (904) 456-3851',
+  description: 'Jacksonville renovation cleanup service. Post construction cleanup, construction debris removal, renovation waste cleanup. Professional, licensed, insured renovation cleanup. Call (904) 456-3851 for renovation cleanup.',
+  keywords: 'renovation cleanup Jacksonville, post construction cleanup Jacksonville, construction debris removal Jacksonville, renovation waste cleanup Jacksonville, construction cleanup Jacksonville, Jacksonville renovation cleanup, post renovation cleanup Jacksonville',
+  alternates: {
+    canonical: '/renovation-cleanup',
+  },
+}
 
 export default function RenovationCleanupPage() {
   return (
-    <>
-      <SEOHead
-        title="Renovation Cleanup Jacksonville | Post Construction Cleanup | Construction Debris Removal (904) 456-3851"
-        description="Jacksonville renovation cleanup service. Post construction cleanup, construction debris removal, renovation waste cleanup. Professional, licensed, insured renovation cleanup. Call (904) 456-3851 for renovation cleanup."
-        keywords="renovation cleanup Jacksonville, post construction cleanup Jacksonville, construction debris removal Jacksonville, renovation waste cleanup Jacksonville, construction cleanup Jacksonville, Jacksonville renovation cleanup, post renovation cleanup Jacksonville"
-        canonical="/renovation-cleanup"
-        ogType="website"
-      />
-      
-      <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-cyan-900 via-cyan-800 to-cyan-700 text-white">
           <div className="absolute inset-0 bg-black bg-opacity-40"></div>
@@ -694,6 +694,5 @@ export default function RenovationCleanupPage() {
           </div>
         </section>
       </div>
-    </>
   )
 }

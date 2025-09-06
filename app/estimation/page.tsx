@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import EstimationForm from '@/components/EstimationForm'
-import SEOHead from '@/components/SEOHead'
 
 export const metadata: Metadata = {
   title: 'Free Junk Removal Quote - Jacksonville Junk Removals',
@@ -10,15 +9,7 @@ export const metadata: Metadata = {
 
 export default function EstimationPage() {
   return (
-    <>
-      <SEOHead
-        title="Jacksonville Junk Removal Estimate | Free Quote | (904) 456-3851"
-        description="Get your free Jacksonville junk removal estimate. Professional assessment, transparent pricing, no hidden fees. Schedule your cleanout today. Call (904) 456-3851 for immediate quote."
-        keywords="Jacksonville junk removal estimate, free quote Jacksonville, junk removal pricing Jacksonville, cleanout estimate Jacksonville, professional assessment Jacksonville, transparent pricing Jacksonville"
-        canonical="/estimation"
-        ogType="website"
-      />
-      <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <div className="bg-gray-900 text-white py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -66,6 +57,5 @@ export default function EstimationPage() {
           </div>
         </div>
       </div>
-    </>
   )
 }

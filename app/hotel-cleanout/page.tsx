@@ -1,16 +1,20 @@
 import Link from 'next/link'
+import type { Metadata } from 'next'
 import { Hotel, Truck, Clock, MapPin, Phone, Shield, CheckCircle, Star, Wrench, Recycle, AlertTriangle, DollarSign, Users, Bed } from 'lucide-react'
-import SEOHead from '@/components/SEOHead'
+
+export const metadata: Metadata = {
+  title: 'Hotel Cleanout Jacksonville | Hospitality Industry & Guest Experience Expertise',
+  description: 'Professional hotel cleanout in Jacksonville with hospitality industry expertise and guest experience focus. We handle hotel cleanup, hospitality industry cleanout, and hotel operations with licensed crews and specialized expertise. Get a free quote today!',
+  keywords: 'hotel cleanout Jacksonville, hotel cleanup, hospitality industry, guest experience, hotel operations, hospitality cleanout Jacksonville',
+  alternates: {
+    canonical: '/hotel-cleanout',
+  },
+}
 
 export default function HotelCleanoutPage() {
   return (
     <>
-      <SEOHead
-        title="Hotel Cleanout Jacksonville | Hospitality Industry & Guest Experience Expertise"
-        description="Professional hotel cleanout in Jacksonville with hospitality industry expertise and guest experience focus. We handle hotel cleanup, hospitality industry cleanout, and hotel operations with licensed crews and specialized expertise. Get a free quote today!"
-        keywords="hotel cleanout Jacksonville, hotel cleanup, hospitality industry, guest experience, hotel operations, hospitality cleanout Jacksonville"
-        canonical="/hotel-cleanout"
-      />
+      
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-purple-50 to-indigo-100 py-20">

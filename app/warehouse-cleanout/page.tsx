@@ -1,16 +1,20 @@
 import Link from 'next/link'
+import type { Metadata } from 'next'
 import { Warehouse, Truck, Clock, MapPin, Phone, Shield, CheckCircle, Star, Wrench, Recycle, AlertTriangle, DollarSign, Users, Forklift } from 'lucide-react'
-import SEOHead from '@/components/SEOHead'
+
+export const metadata: Metadata = {
+  title: 'Warehouse Cleanout Jacksonville | Industrial Organization & Heavy Equipment Expertise',
+  description: 'Professional warehouse cleanout in Jacksonville with industrial organization and heavy equipment expertise. We handle warehouse cleanup, industrial organization, and bulk project management with licensed crews and specialized equipment. Get a free quote today!',
+  keywords: 'warehouse cleanout Jacksonville, warehouse cleanup, industrial organization, heavy equipment, bulk project management, warehouse organization Jacksonville',
+  alternates: {
+    canonical: '/warehouse-cleanout',
+  },
+}
 
 export default function WarehouseCleanoutPage() {
   return (
     <>
-      <SEOHead
-        title="Warehouse Cleanout Jacksonville | Industrial Organization & Heavy Equipment Expertise"
-        description="Professional warehouse cleanout in Jacksonville with industrial organization and heavy equipment expertise. We handle warehouse cleanup, industrial organization, and bulk project management with licensed crews and specialized equipment. Get a free quote today!"
-        keywords="warehouse cleanout Jacksonville, warehouse cleanup, industrial organization, heavy equipment, bulk project management, warehouse organization Jacksonville"
-        canonical="/warehouse-cleanout"
-      />
+      
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-orange-50 to-red-100 py-20">

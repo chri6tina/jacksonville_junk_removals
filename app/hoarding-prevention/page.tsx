@@ -1,16 +1,20 @@
 import Link from 'next/link'
+import type { Metadata } from 'next'
 import { Shield, Users, CheckCircle, Star, Clock, MapPin, Phone, Calendar, FileText, Award, Home, Building, UserCheck, Target, TrendingUp, Eye, Brain, Users2, MessageCircle, Lightbulb, Globe, Heart, AlertTriangle, School, Building2, BookOpen, Video, Headphones, Download, Share2, Mail, PhoneCall, Briefcase, Factory, ShoppingBag, Truck, Zap, Lock, EyeOff, CheckSquare, AlertCircle, ArrowRight, DollarSign, CalendarDays, Wrench, Search, BarChart3, ClipboardCheck, UserPlus, Settings, PieChart, Activity, Navigation, Car, Bus, Train, Plane, Anchor, Ship, Compass, Map, Flag } from 'lucide-react'
-import SEOHead from '@/components/SEOHead'
+
+export const metadata: Metadata = {
+  title: 'Hoarding Prevention Jacksonville | Proactive Strategies & Maintenance Programs',
+  description: 'Comprehensive hoarding prevention in Jacksonville with proactive strategies, maintenance programs, and ongoing support to prevent hoarding behaviors from developing or recurring. Get prevention help today!',
+  keywords: 'hoarding prevention Jacksonville, hoarding prevention strategies, hoarding maintenance programs, prevent hoarding relapse, hoarding prevention Florida, ongoing hoarding support',
+  alternates: {
+    canonical: '/hoarding-prevention',
+  },
+}
 
 export default function HoardingPreventionPage() {
   return (
     <>
-      <SEOHead
-        title="Hoarding Prevention Jacksonville | Proactive Strategies & Maintenance Programs"
-        description="Comprehensive hoarding prevention in Jacksonville with proactive strategies, maintenance programs, and ongoing support to prevent hoarding behaviors from developing or recurring. Get prevention help today!"
-        keywords="hoarding prevention Jacksonville, hoarding prevention strategies, hoarding maintenance programs, prevent hoarding relapse, hoarding prevention Florida, ongoing hoarding support"
-        canonical="/hoarding-prevention"
-      />
+      
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-green-50 to-emerald-100 py-20">

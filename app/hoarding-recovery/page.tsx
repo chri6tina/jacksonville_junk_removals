@@ -1,16 +1,20 @@
 import Link from 'next/link'
+import type { Metadata } from 'next'
 import { Heart, Users, Shield, CheckCircle, Star, Clock, MapPin, Phone, Calendar, FileText, Award, Home, Building, UserCheck, BookOpen, Target, TrendingUp, Eye, Brain, AlertTriangle } from 'lucide-react'
-import SEOHead from '@/components/SEOHead'
+
+export const metadata: Metadata = {
+  title: 'Hoarding Recovery Jacksonville | Long-term Recovery & Relapse Prevention',
+  description: 'Comprehensive hoarding recovery services in Jacksonville with long-term support, relapse prevention, and ongoing maintenance. Our recovery specialists help maintain progress and build sustainable habits.',
+  keywords: 'hoarding recovery Jacksonville, relapse prevention, long-term hoarding support, hoarding maintenance, recovery specialists, sustainable habits Florida',
+  alternates: {
+    canonical: '/hoarding-recovery',
+  },
+}
 
 export default function HoardingRecoveryPage() {
   return (
     <>
-      <SEOHead
-        title="Hoarding Recovery Jacksonville | Long-term Recovery & Relapse Prevention"
-        description="Comprehensive hoarding recovery services in Jacksonville with long-term support, relapse prevention, and ongoing maintenance. Our recovery specialists help maintain progress and build sustainable habits."
-        keywords="hoarding recovery Jacksonville, relapse prevention, long-term hoarding support, hoarding maintenance, recovery specialists, sustainable habits Florida"
-        canonical="/hoarding-recovery"
-      />
+      
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-green-50 to-emerald-100 py-20">

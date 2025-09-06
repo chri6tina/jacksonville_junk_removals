@@ -1,16 +1,20 @@
 import Link from 'next/link'
+import type { Metadata } from 'next'
 import { Users, Phone, Shield, CheckCircle, Star, Clock, MapPin, Calendar, FileText, Award, Home, Building, UserCheck, BookOpen, Target, MessageCircle, Eye, Heart, HandHeart } from 'lucide-react'
-import SEOHead from '@/components/SEOHead'
+
+export const metadata: Metadata = {
+  title: 'Hoarding Social Services Jacksonville | Social Worker Coordination & Support Services',
+  description: 'Comprehensive hoarding social services in Jacksonville including social worker coordination, support services, community resources, and social care planning. Our social service specialists provide holistic support for individuals and families affected by hoarding.',
+  keywords: 'hoarding social services Jacksonville, social worker coordination, support services, community resources, social care planning Florida',
+  alternates: {
+    canonical: '/hoarding-social-services',
+  },
+}
 
 export default function HoardingSocialServicesPage() {
   return (
     <>
-      <SEOHead
-        title="Hoarding Social Services Jacksonville | Social Worker Coordination & Support Services"
-        description="Comprehensive hoarding social services in Jacksonville including social worker coordination, support services, community resources, and social care planning. Our social service specialists provide holistic support for individuals and families affected by hoarding."
-        keywords="hoarding social services Jacksonville, social worker coordination, support services, community resources, social care planning Florida"
-        canonical="/hoarding-social-services"
-      />
+      
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-pink-50 to-rose-100 py-20">

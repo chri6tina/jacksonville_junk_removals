@@ -1,16 +1,20 @@
 import Link from 'next/link'
+import type { Metadata } from 'next'
 import { Stethoscope, Phone, Shield, CheckCircle, Star, Clock, MapPin, Calendar, FileText, Award, Home, Building, UserCheck, BookOpen, Target, MessageCircle, Eye, Users, Heart } from 'lucide-react'
-import SEOHead from '@/components/SEOHead'
+
+export const metadata: Metadata = {
+  title: 'Hoarding Medical Support Jacksonville | Healthcare Coordination & Medical Assistance',
+  description: 'Comprehensive hoarding medical support services in Jacksonville including healthcare coordination, medical assistance, health monitoring, and coordination with healthcare providers. Our medical specialists help ensure proper healthcare access.',
+  keywords: 'hoarding medical support Jacksonville, healthcare coordination, medical assistance, health monitoring, healthcare providers Florida',
+  alternates: {
+    canonical: '/hoarding-medical-support',
+  },
+}
 
 export default function HoardingMedicalSupportPage() {
   return (
     <>
-      <SEOHead
-        title="Hoarding Medical Support Jacksonville | Healthcare Coordination & Medical Assistance"
-        description="Comprehensive hoarding medical support services in Jacksonville including healthcare coordination, medical assistance, health monitoring, and coordination with healthcare providers. Our medical specialists help ensure proper healthcare access."
-        keywords="hoarding medical support Jacksonville, healthcare coordination, medical assistance, health monitoring, healthcare providers Florida"
-        canonical="/hoarding-medical-support"
-      />
+      
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-green-50 to-emerald-100 py-20">

@@ -1,16 +1,20 @@
 import Link from 'next/link'
+import type { Metadata } from 'next'
 import { Building2, Truck, Clock, MapPin, Phone, Shield, CheckCircle, Star, Wrench, Recycle, AlertTriangle, DollarSign, Users, Briefcase } from 'lucide-react'
-import SEOHead from '@/components/SEOHead'
+
+export const metadata: Metadata = {
+  title: 'Office Cleanout Jacksonville | Business Continuity & Minimal Disruption',
+  description: 'Professional office cleanout in Jacksonville with business continuity focus and minimal disruption. We handle office cleanup, business transitions, and workspace organization with licensed crews and project management expertise. Get a free quote today!',
+  keywords: 'office cleanout Jacksonville, office cleanup, business continuity, minimal disruption, workspace organization, office furniture removal Jacksonville',
+  alternates: {
+    canonical: '/office-cleanout',
+  },
+}
 
 export default function OfficeCleanoutPage() {
   return (
     <>
-      <SEOHead
-        title="Office Cleanout Jacksonville | Business Continuity & Minimal Disruption"
-        description="Professional office cleanout in Jacksonville with business continuity focus and minimal disruption. We handle office cleanup, business transitions, and workspace organization with licensed crews and project management expertise. Get a free quote today!"
-        keywords="office cleanout Jacksonville, office cleanup, business continuity, minimal disruption, workspace organization, office furniture removal Jacksonville"
-        canonical="/office-cleanout"
-      />
+      
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-emerald-50 to-green-100 py-20">

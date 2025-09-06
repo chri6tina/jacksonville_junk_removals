@@ -1,16 +1,20 @@
 import Link from 'next/link'
+import type { Metadata } from 'next'
 import { DollarSign, Phone, Shield, CheckCircle, Star, Clock, MapPin, Calendar, FileText, Award, Home, Building, UserCheck, BookOpen, Target, MessageCircle, Eye, Users, Calculator } from 'lucide-react'
-import SEOHead from '@/components/SEOHead'
+
+export const metadata: Metadata = {
+  title: 'Hoarding Financial Support Jacksonville | Financial Assistance & Budget Planning',
+  description: 'Comprehensive hoarding financial support services in Jacksonville including financial assistance, budget planning, cost management, and funding resources. Our financial specialists help make hoarding services affordable.',
+  keywords: 'hoarding financial support Jacksonville, financial assistance, budget planning, cost management, funding resources Florida',
+  alternates: {
+    canonical: '/hoarding-financial-support',
+  },
+}
 
 export default function HoardingFinancialSupportPage() {
   return (
     <>
-      <SEOHead
-        title="Hoarding Financial Support Jacksonville | Financial Assistance & Budget Planning"
-        description="Comprehensive hoarding financial support services in Jacksonville including financial assistance, budget planning, cost management, and funding resources. Our financial specialists help make hoarding services affordable."
-        keywords="hoarding financial support Jacksonville, financial assistance, budget planning, cost management, funding resources Florida"
-        canonical="/hoarding-financial-support"
-      />
+      
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-yellow-50 to-amber-100 py-20">

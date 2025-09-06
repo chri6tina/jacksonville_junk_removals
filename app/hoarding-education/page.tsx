@@ -1,16 +1,20 @@
 import Link from 'next/link'
+import type { Metadata } from 'next'
 import { BookOpen, GraduationCap, Users, Shield, CheckCircle, Star, Clock, MapPin, Phone, Calendar, FileText, Award, Home, Building, UserCheck, Target, TrendingUp, Eye, Brain, Users2, MessageCircle, Lightbulb, Globe, Heart, AlertTriangle, School, Building2, BookMarked, Video, Headphones, Download, Share2, Mail, PhoneCall } from 'lucide-react'
-import SEOHead from '@/components/SEOHead'
+
+export const metadata: Metadata = {
+  title: 'Hoarding Education Jacksonville | Prevention Strategies & Educational Programs',
+  description: 'Comprehensive hoarding education in Jacksonville with prevention strategies, educational programs, community outreach, and early intervention resources. Learn about hoarding behaviors and prevention techniques. Get educated today!',
+  keywords: 'hoarding education Jacksonville, hoarding prevention strategies, hoarding educational programs, hoarding community outreach, hoarding early intervention, hoarding awareness Florida',
+  alternates: {
+    canonical: '/hoarding-education',
+  },
+}
 
 export default function HoardingEducationPage() {
   return (
     <>
-      <SEOHead
-        title="Hoarding Education Jacksonville | Prevention Strategies & Educational Programs"
-        description="Comprehensive hoarding education in Jacksonville with prevention strategies, educational programs, community outreach, and early intervention resources. Learn about hoarding behaviors and prevention techniques. Get educated today!"
-        keywords="hoarding education Jacksonville, hoarding prevention strategies, hoarding educational programs, hoarding community outreach, hoarding early intervention, hoarding awareness Florida"
-        canonical="/hoarding-education"
-      />
+      
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-indigo-50 to-purple-100 py-20">

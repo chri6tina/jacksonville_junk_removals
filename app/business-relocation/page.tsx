@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { Truck, CheckCircle, Phone, Clock, MapPin, Star, Users, FileText, Building2, Calendar } from 'lucide-react'
-import SEOHead from '@/components/SEOHead'
 
 export const metadata: Metadata = {
   title: 'Business Relocation Services - Jacksonville Junk Removal',
@@ -11,15 +10,7 @@ export const metadata: Metadata = {
 
 export default function BusinessRelocationPage() {
   return (
-    <>
-      <SEOHead
-        title="Business Relocation Services | Professional Office Moves & Business Transitions | (904) 456-3851"
-        description="Professional business relocation services in Jacksonville. Office moves, business transitions, and complete relocation support. Licensed, insured, eco-friendly disposal. Call (904) 456-3851."
-        keywords="business relocation Jacksonville, office moves Jacksonville, business transitions Jacksonville, relocation support Jacksonville, Jacksonville business relocation, office relocation Jacksonville"
-        canonical="/business-relocation"
-        ogType="website"
-      />
-      <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <div className="bg-gray-900 text-white py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -382,6 +373,5 @@ export default function BusinessRelocationPage() {
           </div>
         </div>
       </div>
-    </>
   )
 }

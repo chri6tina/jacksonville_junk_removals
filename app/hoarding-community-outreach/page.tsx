@@ -1,16 +1,20 @@
 import Link from 'next/link'
+import type { Metadata } from 'next'
 import { Users, Phone, Shield, CheckCircle, Star, Clock, MapPin, Calendar, FileText, Award, Home, Building, UserCheck, BookOpen, Target, MessageCircle, Eye, Heart, Megaphone } from 'lucide-react'
-import SEOHead from '@/components/SEOHead'
+
+export const metadata: Metadata = {
+  title: 'Hoarding Community Outreach Jacksonville | Community Programs & Awareness Campaigns',
+  description: 'Comprehensive hoarding community outreach services in Jacksonville including community programs, awareness campaigns, education initiatives, and public outreach. Our outreach specialists work to reduce stigma and increase understanding of hoarding disorder.',
+  keywords: 'hoarding community outreach Jacksonville, community programs, awareness campaigns, education initiatives, public outreach Florida',
+  alternates: {
+    canonical: '/hoarding-community-outreach',
+  },
+}
 
 export default function HoardingCommunityOutreachPage() {
   return (
     <>
-      <SEOHead
-        title="Hoarding Community Outreach Jacksonville | Community Programs & Awareness Campaigns"
-        description="Comprehensive hoarding community outreach services in Jacksonville including community programs, awareness campaigns, education initiatives, and public outreach. Our outreach specialists work to reduce stigma and increase understanding of hoarding disorder."
-        keywords="hoarding community outreach Jacksonville, community programs, awareness campaigns, education initiatives, public outreach Florida"
-        canonical="/hoarding-community-outreach"
-      />
+      
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-violet-50 to-purple-100 py-20">

@@ -1,19 +1,19 @@
 import Link from 'next/link'
+import type { Metadata } from 'next'
 import { Phone, Clock, MapPin, Shield, Truck, CheckCircle, Stethoscope, DollarSign, Star, Home, Wrench, Users, Award, Leaf, Zap, Target, MessageCircle, Eye, Building, Car, CheckSquare, AlertTriangle, Microscope, Heart, Syringe } from 'lucide-react'
-import SEOHead from '@/components/SEOHead'
+
+export const metadata: Metadata = {
+  title: 'Medical Facility Post-Construction Cleanup Jacksonville | Healthcare Compliance Cleaning (904) 456-3851',
+  description: 'Professional medical facility post-construction cleanup in Jacksonville. Healthcare compliance cleaning, sterilization protocols, OSHA standards. Free estimates, certified technicians. Call (904) 456-3851',
+  keywords: 'medical facility post-construction cleanup Jacksonville, healthcare construction cleanup Jacksonville, hospital construction cleanup Jacksonville, medical office construction cleaning Jacksonville, healthcare compliance cleaning Florida',
+  alternates: {
+    canonical: '/medical-facility-post-construction-cleanup',
+  },
+}
 
 export default function MedicalFacilityPostConstructionCleanupPage() {
   return (
-    <>
-      <SEOHead
-        title="Medical Facility Post-Construction Cleanup Jacksonville | Healthcare Compliance Cleaning (904) 456-3851"
-        description="Professional medical facility post-construction cleanup in Jacksonville. Healthcare compliance cleaning, sterilization protocols, OSHA standards. Free estimates, certified technicians. Call (904) 456-3851"
-        keywords="medical facility post-construction cleanup Jacksonville, healthcare construction cleanup Jacksonville, hospital construction cleanup Jacksonville, medical office construction cleaning Jacksonville, healthcare compliance cleaning Florida"
-        canonical="/medical-facility-post-construction-cleanup"
-        ogType="website"
-      />
-      
-      <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/70 to-black/85"></div>
@@ -476,6 +476,5 @@ export default function MedicalFacilityPostConstructionCleanupPage() {
           </div>
         </section>
       </div>
-    </>
   )
 }

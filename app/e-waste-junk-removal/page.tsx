@@ -1,19 +1,19 @@
 import Link from 'next/link'
+import type { Metadata } from 'next'
 import { Phone, Clock, MapPin, Shield, Truck, CheckCircle, Home, DollarSign, Star, Users, FileText, Monitor, Zap, Smartphone, Laptop } from 'lucide-react'
-import SEOHead from '@/components/SEOHead'
+
+export const metadata: Metadata = {
+  title: 'E-Waste Junk Removal Jacksonville | Computer & Electronics Disposal (904) 456-3851',
+  description: 'Professional e-waste junk removal services in Jacksonville, Florida. Safe disposal of computers, TVs, electronics with data security and recycling focus. Licensed, insured, eco-friendly. Call (904) 456-3851',
+  keywords: 'e-waste junk removal Jacksonville, computer disposal Jacksonville, electronics disposal Jacksonville, TV disposal Jacksonville, data security Jacksonville, electronics recycling Florida',
+  alternates: {
+    canonical: '/e-waste-junk-removal',
+  },
+}
 
 export default function EwasteJunkRemovalPage() {
   return (
-    <>
-      <SEOHead
-        title="E-Waste Junk Removal Jacksonville | Computer & Electronics Disposal (904) 456-3851"
-        description="Professional e-waste junk removal services in Jacksonville, Florida. Safe disposal of computers, TVs, electronics with data security and recycling focus. Licensed, insured, eco-friendly. Call (904) 456-3851"
-        keywords="e-waste junk removal Jacksonville, computer disposal Jacksonville, electronics disposal Jacksonville, TV disposal Jacksonville, data security Jacksonville, electronics recycling Florida"
-        canonical="/e-waste-junk-removal"
-        ogType="website"
-      />
-      
-      <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-purple-900 via-purple-800 to-purple-700 text-white">
           <div className="absolute inset-0 bg-black bg-opacity-40"></div>
@@ -262,6 +262,5 @@ export default function EwasteJunkRemovalPage() {
           </div>
         </section>
       </div>
-    </>
   )
 }

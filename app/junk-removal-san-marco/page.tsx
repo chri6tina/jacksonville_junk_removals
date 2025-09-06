@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { MapPin, Phone, Clock, Truck, Home, Star, CheckCircle, Building2, TreePine, Car } from 'lucide-react'
-import SEOHead from '@/components/SEOHead'
 
 export const metadata: Metadata = {
   title: 'Junk Removal San Marco Jacksonville - Historic District Cleanup Services',
@@ -11,15 +10,7 @@ export const metadata: Metadata = {
 
 export default function SanMarcoPage() {
   return (
-    <>
-      <SEOHead
-        title="San Marco Jacksonville Junk Removal | Professional Cleanout Service | (904) 456-3851"
-        description="San Marco Jacksonville junk removal service. Professional cleanout, hoarding cleanup, construction debris removal. Licensed, insured, eco-friendly disposal. Call (904) 456-3851."
-        keywords="San Marco Jacksonville junk removal, San Marco Jacksonville cleanout, San Marco Jacksonville hoarding cleanup, San Marco Jacksonville construction debris removal, Jacksonville San Marco junk removal"
-        canonical="/junk-removal-san-marco"
-        ogType="website"
-      />
-      <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
       <div className="bg-gray-900 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -458,6 +449,5 @@ export default function SanMarcoPage() {
         </div>
       </div>
     </div>
-    </>
   )
 }

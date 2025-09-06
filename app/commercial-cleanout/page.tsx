@@ -1,16 +1,20 @@
 import Link from 'next/link'
+import type { Metadata } from 'next'
 import { Building, Truck, Clock, MapPin, Phone, Shield, CheckCircle, Star, Users, Briefcase, AlertTriangle, Package, Wrench, DollarSign } from 'lucide-react'
-import SEOHead from '@/components/SEOHead'
+
+export const metadata: Metadata = {
+  title: 'Commercial Cleanout Jacksonville | Business Expertise & Project Management',
+  description: 'Professional commercial cleanout in Jacksonville with business expertise and project management. We handle office cleanouts, retail store cleanups, restaurant equipment removal, and commercial property cleanouts. Licensed, insured, and business-focused. Get a free quote today!',
+  keywords: 'commercial cleanout Jacksonville, office cleanout, retail store cleanup, restaurant equipment removal, commercial property cleanup, business cleanout services, commercial junk removal Jacksonville',
+  alternates: {
+    canonical: '/commercial-cleanout',
+  },
+}
 
 export default function CommercialCleanoutPage() {
   return (
     <>
-      <SEOHead
-        title="Commercial Cleanout Jacksonville | Business Expertise & Project Management"
-        description="Professional commercial cleanout in Jacksonville with business expertise and project management. We handle office cleanouts, retail store cleanups, restaurant equipment removal, and commercial property cleanouts. Licensed, insured, and business-focused. Get a free quote today!"
-        keywords="commercial cleanout Jacksonville, office cleanout, retail store cleanup, restaurant equipment removal, commercial property cleanup, business cleanout services, commercial junk removal Jacksonville"
-        canonical="/commercial-cleanout"
-      />
+      
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-indigo-50 to-blue-100 py-20">

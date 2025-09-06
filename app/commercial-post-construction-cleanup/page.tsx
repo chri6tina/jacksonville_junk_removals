@@ -1,19 +1,19 @@
 import Link from 'next/link'
+import type { Metadata } from 'next'
 import { Phone, Clock, MapPin, Shield, Truck, CheckCircle, Hammer, DollarSign, Star, Home, Wrench, Users, Award, Leaf, Zap, Target, MessageCircle, Eye, Building, Car, CheckSquare, Heart, Sparkles, Briefcase } from 'lucide-react'
-import SEOHead from '@/components/SEOHead'
+
+export const metadata: Metadata = {
+  title: 'Commercial Post-Construction Cleanup Jacksonville | Office, Retail & Warehouse Cleaning (904) 456-3851',
+  description: 'Jacksonville commercial post-construction cleanup for office buildings, retail stores, warehouses, and commercial facilities. Professional cleaning for businesses and property managers. Free estimates, instant quotes. Call (904) 456-3851',
+  keywords: 'commercial post-construction cleanup Jacksonville, office building cleaning Jacksonville, retail construction cleanup Jacksonville, warehouse post-construction cleaning Florida, commercial facility cleanup Jacksonville',
+  alternates: {
+    canonical: '/commercial-post-construction-cleanup',
+  },
+}
 
 export default function CommercialPostConstructionCleanupPage() {
   return (
-    <>
-      <SEOHead
-        title="Commercial Post-Construction Cleanup Jacksonville | Office, Retail & Warehouse Cleaning (904) 456-3851"
-        description="Jacksonville commercial post-construction cleanup for office buildings, retail stores, warehouses, and commercial facilities. Professional cleaning for businesses and property managers. Free estimates, instant quotes. Call (904) 456-3851"
-        keywords="commercial post-construction cleanup Jacksonville, office building cleaning Jacksonville, retail construction cleanup Jacksonville, warehouse post-construction cleaning Florida, commercial facility cleanup Jacksonville"
-        canonical="/commercial-post-construction-cleanup"
-        ogType="website"
-      />
-      
-      <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-indigo-900 via-indigo-800 to-indigo-700 text-white">
           <div className="absolute inset-0 bg-black bg-opacity-40"></div>
@@ -645,6 +645,5 @@ export default function CommercialPostConstructionCleanupPage() {
           </div>
         </section>
       </div>
-    </>
   )
 }

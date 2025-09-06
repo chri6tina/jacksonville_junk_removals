@@ -1,19 +1,19 @@
 import Link from 'next/link'
+import type { Metadata } from 'next'
 import { Phone, CheckCircle, Building, Home, Stethoscope, Utensils, Factory, Hotel, GraduationCap, Church, ShoppingBag, Calculator, Star, Clock, Shield, Award } from 'lucide-react'
-import SEOHead from '@/components/SEOHead'
+
+export const metadata: Metadata = {
+  title: 'Post-Construction Cleanup Service Comparison Jacksonville | Choose Your Industry (904) 456-3851',
+  description: 'Compare post-construction cleanup services by industry in Jacksonville. Find the right service for your facility type, budget, and timeline. Free consultations. Call (904) 456-3851',
+  keywords: 'post-construction cleanup comparison Jacksonville, construction cleanup services Jacksonville, industry-specific cleanup Jacksonville, facility cleanup comparison Florida',
+  alternates: {
+    canonical: '/post-construction-cleanup-comparison',
+  },
+}
 
 export default function PostConstructionCleanupComparisonPage() {
   return (
-    <>
-      <SEOHead
-        title="Post-Construction Cleanup Service Comparison Jacksonville | Choose Your Industry (904) 456-3851"
-        description="Compare post-construction cleanup services by industry in Jacksonville. Find the right service for your facility type, budget, and timeline. Free consultations. Call (904) 456-3851"
-        keywords="post-construction cleanup comparison Jacksonville, construction cleanup services Jacksonville, industry-specific cleanup Jacksonville, facility cleanup comparison Florida"
-        canonical="/post-construction-cleanup-comparison"
-        ogType="website"
-      />
-      
-      <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-indigo-900 via-indigo-800 to-indigo-700 text-white overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/70 to-black/85"></div>
@@ -403,6 +403,5 @@ export default function PostConstructionCleanupComparisonPage() {
           </div>
         </section>
       </div>
-    </>
   )
 }

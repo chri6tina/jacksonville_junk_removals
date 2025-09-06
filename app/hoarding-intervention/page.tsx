@@ -1,16 +1,20 @@
 import Link from 'next/link'
+import type { Metadata } from 'next'
 import { UserCheck, Clipboard, Users, Heart, Shield, CheckCircle, Star, Clock, MapPin, Phone, Calendar, FileText, Award, Home, Building, GraduationCap, BookOpen, Target, TrendingUp, Eye, Brain } from 'lucide-react'
-import SEOHead from '@/components/SEOHead'
+
+export const metadata: Metadata = {
+  title: 'Hoarding Intervention Jacksonville | Professional Assessment & Intervention Planning',
+  description: 'Professional hoarding intervention in Jacksonville with comprehensive assessment, family consultation, and intervention planning. Our specialized team provides compassionate intervention services with mental health awareness. Get professional help today!',
+  keywords: 'hoarding intervention Jacksonville, hoarding assessment Florida, professional hoarding intervention, hoarding consultation, family hoarding support, hoarding intervention planning',
+  alternates: {
+    canonical: '/hoarding-intervention',
+  },
+}
 
 export default function HoardingInterventionPage() {
   return (
     <>
-      <SEOHead
-        title="Hoarding Intervention Jacksonville | Professional Assessment & Intervention Planning"
-        description="Professional hoarding intervention in Jacksonville with comprehensive assessment, family consultation, and intervention planning. Our specialized team provides compassionate intervention services with mental health awareness. Get professional help today!"
-        keywords="hoarding intervention Jacksonville, hoarding assessment Florida, professional hoarding intervention, hoarding consultation, family hoarding support, hoarding intervention planning"
-        canonical="/hoarding-intervention"
-      />
+      
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-green-50 to-teal-100 py-20">

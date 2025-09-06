@@ -1,16 +1,20 @@
 import Link from 'next/link'
+import type { Metadata } from 'next'
 import { Package, Truck, Clock, MapPin, Phone, Shield, CheckCircle, Star, Wrench, Recycle, AlertTriangle, DollarSign, Users, Lock } from 'lucide-react'
-import SEOHead from '@/components/SEOHead'
+
+export const metadata: Metadata = {
+  title: 'Storage Unit Cleanout Jacksonville | Specialized Access & Time Management',
+  description: 'Professional storage unit cleanout in Jacksonville with specialized access and time management expertise. We handle unit cleanouts, access challenges, and time-sensitive projects with licensed crews and specialized tools. Get a free quote today!',
+  keywords: 'storage unit cleanout Jacksonville, storage unit cleanup, specialized access, time management, unit organization, storage facility cleanup Jacksonville',
+  alternates: {
+    canonical: '/storage-unit-cleanout',
+  },
+}
 
 export default function StorageUnitCleanoutPage() {
   return (
     <>
-      <SEOHead
-        title="Storage Unit Cleanout Jacksonville | Specialized Access & Time Management"
-        description="Professional storage unit cleanout in Jacksonville with specialized access and time management expertise. We handle unit cleanouts, access challenges, and time-sensitive projects with licensed crews and specialized tools. Get a free quote today!"
-        keywords="storage unit cleanout Jacksonville, storage unit cleanup, specialized access, time management, unit organization, storage facility cleanup Jacksonville"
-        canonical="/storage-unit-cleanout"
-      />
+      
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-teal-50 to-cyan-100 py-20">

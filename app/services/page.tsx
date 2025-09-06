@@ -17,7 +17,6 @@ import {
   Home,
   Droplets
 } from 'lucide-react'
-import SEOHead from '@/components/SEOHead'
 
 export const metadata: Metadata = {
   title: 'Junk Removal Services - Jacksonville Junk Removals',
@@ -165,15 +164,7 @@ const services = [
 
 export default function ServicesPage() {
   return (
-    <>
-      <SEOHead
-        title="Jacksonville Junk Removal Services | Professional Cleanout & Cleanup | (904) 456-3851"
-        description="Complete Jacksonville junk removal services. Residential cleanouts, hoarding cleanup, construction debris removal, commercial cleanout. Licensed, insured, eco-friendly. Call (904) 456-3851."
-        keywords="Jacksonville junk removal services, residential cleanout Jacksonville, hoarding cleanup Jacksonville, construction debris removal Jacksonville, commercial cleanout Jacksonville, eco-friendly disposal Jacksonville, licensed junk removal Jacksonville"
-        canonical="/services"
-        ogType="website"
-      />
-      <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
       <div className="bg-gray-900 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -323,6 +314,5 @@ export default function ServicesPage() {
         </div>
       </div>
     </div>
-    </>
   )
 }

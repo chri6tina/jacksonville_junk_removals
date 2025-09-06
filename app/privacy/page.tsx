@@ -1,19 +1,19 @@
 import Link from 'next/link'
+import type { Metadata } from 'next'
 import { Shield, Lock, Eye, CheckCircle, Phone, Mail } from 'lucide-react'
-import SEOHead from '@/components/SEOHead'
+
+export const metadata: Metadata = {
+  title: 'Privacy Policy | Jacksonville Junk Removals | Data Protection & Privacy (904) 456-3851',
+  description: 'Jacksonville Junk Removals privacy policy. Learn how we protect your personal information, data collection practices, and your privacy rights. Call (904) 456-3851 for questions.',
+  keywords: 'privacy policy Jacksonville junk removal, data protection Jacksonville, personal information Jacksonville, privacy rights Jacksonville, data collection Jacksonville, Jacksonville junk removal privacy',
+  alternates: {
+    canonical: '/privacy',
+  },
+}
 
 export default function PrivacyPage() {
   return (
-    <>
-      <SEOHead
-        title="Privacy Policy | Jacksonville Junk Removals | Data Protection & Privacy (904) 456-3851"
-        description="Jacksonville Junk Removals privacy policy. Learn how we protect your personal information, data collection practices, and your privacy rights. Call (904) 456-3851 for questions."
-        keywords="privacy policy Jacksonville junk removal, data protection Jacksonville, personal information Jacksonville, privacy rights Jacksonville, data collection Jacksonville, Jacksonville junk removal privacy"
-        canonical="/privacy"
-        ogType="website"
-      />
-      
-      <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white">
           <div className="absolute inset-0 bg-black bg-opacity-40"></div>
@@ -256,6 +256,5 @@ export default function PrivacyPage() {
           </div>
         </section>
       </div>
-    </>
   )
 }

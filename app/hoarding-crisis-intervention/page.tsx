@@ -1,16 +1,20 @@
 import Link from 'next/link'
+import type { Metadata } from 'next'
 import { AlertTriangle, Phone, Shield, CheckCircle, Star, Clock, MapPin, Calendar, FileText, Award, Home, Building, UserCheck, BookOpen, Target, MessageCircle, Eye, Users, Heart } from 'lucide-react'
-import SEOHead from '@/components/SEOHead'
+
+export const metadata: Metadata = {
+  title: 'Hoarding Crisis Intervention Jacksonville | 24/7 Emergency Response & Safety',
+  description: '24/7 hoarding crisis intervention services in Jacksonville for emergency situations, safety threats, and immediate intervention needs. Our crisis team provides rapid response and professional crisis management.',
+  keywords: 'hoarding crisis intervention Jacksonville, emergency hoarding response, 24/7 crisis support, safety intervention, emergency cleanup, crisis management Florida',
+  alternates: {
+    canonical: '/hoarding-crisis-intervention',
+  },
+}
 
 export default function HoardingCrisisInterventionPage() {
   return (
     <>
-      <SEOHead
-        title="Hoarding Crisis Intervention Jacksonville | 24/7 Emergency Response & Safety"
-        description="24/7 hoarding crisis intervention services in Jacksonville for emergency situations, safety threats, and immediate intervention needs. Our crisis team provides rapid response and professional crisis management."
-        keywords="hoarding crisis intervention Jacksonville, emergency hoarding response, 24/7 crisis support, safety intervention, emergency cleanup, crisis management Florida"
-        canonical="/hoarding-crisis-intervention"
-      />
+      
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-red-50 to-orange-100 py-20">

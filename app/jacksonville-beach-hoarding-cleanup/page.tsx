@@ -1,16 +1,20 @@
 import Link from 'next/link'
+import type { Metadata } from 'next'
 import { MapPin, Users, Shield, CheckCircle, Star, Clock, Phone, Calendar, FileText, Award, Home, Building, UserCheck, Target, TrendingUp, Eye, Brain, Users2, MessageCircle, Lightbulb, Globe, Heart, AlertTriangle, School, Building2, BookOpen, Video, Headphones, Download, Share2, Mail, PhoneCall, Briefcase, Factory, ShoppingBag, Truck, Zap, Lock, EyeOff, CheckSquare, AlertCircle, ArrowRight, DollarSign, CalendarDays, Wrench, Search, BarChart3, ClipboardCheck, UserPlus, Settings, PieChart, Activity, Navigation, Car, Bus, Train, Plane, Anchor, Ship, Compass, Map, Flag, Waves, Umbrella, Sun, Fish } from 'lucide-react'
-import SEOHead from '@/components/SEOHead'
+
+export const metadata: Metadata = {
+  title: 'Jacksonville Beach Hoarding Cleanup | Beach Area Hoarding Services JAX Beach',
+  description: 'Professional hoarding cleanup services in Jacksonville Beach, FL. We serve the beach area with coastal expertise, quick response times, and community-focused hoarding intervention. Get beach area hoarding cleanup today!',
+  keywords: 'Jacksonville Beach hoarding cleanup, JAX Beach hoarding services, beach area hoarding cleanup, coastal hoarding removal, Florida beach hoarding cleanup, Jacksonville Beach junk removal',
+  alternates: {
+    canonical: '/jacksonville-beach-hoarding-cleanup',
+  },
+}
 
 export default function JacksonvilleBeachHoardingCleanupPage() {
   return (
     <>
-      <SEOHead
-        title="Jacksonville Beach Hoarding Cleanup | Beach Area Hoarding Services JAX Beach"
-        description="Professional hoarding cleanup services in Jacksonville Beach, FL. We serve the beach area with coastal expertise, quick response times, and community-focused hoarding intervention. Get beach area hoarding cleanup today!"
-        keywords="Jacksonville Beach hoarding cleanup, JAX Beach hoarding services, beach area hoarding cleanup, coastal hoarding removal, Florida beach hoarding cleanup, Jacksonville Beach junk removal"
-        canonical="/jacksonville-beach-hoarding-cleanup"
-      />
+      
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-blue-50 to-cyan-100 py-20">

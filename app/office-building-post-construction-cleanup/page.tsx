@@ -1,19 +1,19 @@
 import Link from 'next/link'
+import type { Metadata } from 'next'
 import { Phone, Clock, MapPin, Shield, Truck, CheckCircle, Building2, DollarSign, Star, Home, Wrench, Users, Award, Leaf, Zap, Target, MessageCircle, Eye, Building, Car, CheckSquare, AlertTriangle, Briefcase, Computer, Wifi, Monitor, FileText, Archive } from 'lucide-react'
-import SEOHead from '@/components/SEOHead'
+
+export const metadata: Metadata = {
+  title: 'Office Building Post-Construction Cleanup Jacksonville | Corporate Environment Cleaning (904) 456-3851',
+  description: 'Professional office building post-construction cleanup in Jacksonville. Corporate environment cleaning, business-ready results, LEED compliance, workspace preparation. Free estimates, certified technicians. Call (904) 456-3851',
+  keywords: 'office building post-construction cleanup Jacksonville, corporate construction cleanup Jacksonville, office construction cleaning Jacksonville, commercial office cleanup Jacksonville, corporate environment cleaning Florida',
+  alternates: {
+    canonical: '/office-building-post-construction-cleanup',
+  },
+}
 
 export default function OfficeBuildingPostConstructionCleanupPage() {
   return (
-    <>
-      <SEOHead
-        title="Office Building Post-Construction Cleanup Jacksonville | Corporate Environment Cleaning (904) 456-3851"
-        description="Professional office building post-construction cleanup in Jacksonville. Corporate environment cleaning, business-ready results, LEED compliance, workspace preparation. Free estimates, certified technicians. Call (904) 456-3851"
-        keywords="office building post-construction cleanup Jacksonville, corporate construction cleanup Jacksonville, office construction cleaning Jacksonville, commercial office cleanup Jacksonville, corporate environment cleaning Florida"
-        canonical="/office-building-post-construction-cleanup"
-        ogType="website"
-      />
-      
-      <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-700 text-white overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/70 to-black/85"></div>
@@ -476,6 +476,5 @@ export default function OfficeBuildingPostConstructionCleanupPage() {
           </div>
         </section>
       </div>
-    </>
   )
 }

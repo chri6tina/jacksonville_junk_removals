@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { MapPin, Phone, Clock, Truck, Leaf, Star } from 'lucide-react'
-import SEOHead from '@/components/SEOHead'
 
 export const metadata: Metadata = {
   title: 'Junk Removal Service Areas - Jacksonville & Surrounding Areas',
@@ -113,15 +112,7 @@ const servicesByArea = [
 
 export default function LocationsPage() {
   return (
-    <>
-      <SEOHead
-        title="Jacksonville Junk Removal Locations | Service Areas | (904) 456-3851"
-        description="Jacksonville junk removal service areas. Downtown, Riverside, Mandarin, Arlington, Orange Park, Jacksonville Beach. Professional cleanout services throughout Jacksonville. Call (904) 456-3851."
-        keywords="Jacksonville junk removal locations, Jacksonville service areas, Downtown Jacksonville junk removal, Riverside junk removal, Mandarin junk removal, Arlington junk removal, Orange Park junk removal, Jacksonville Beach junk removal"
-        canonical="/locations"
-        ogType="website"
-      />
-      <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
       <div className="bg-gray-900 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -366,6 +357,5 @@ export default function LocationsPage() {
         </div>
       </div>
     </div>
-    </>
   )
 }

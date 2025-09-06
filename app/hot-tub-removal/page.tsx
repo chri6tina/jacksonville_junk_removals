@@ -1,16 +1,20 @@
 import Link from 'next/link'
+import type { Metadata } from 'next'
 import { Zap, Truck, Clock, MapPin, Phone, Shield, CheckCircle, Star, Wrench, Recycle, Package, AlertTriangle, DollarSign, Users } from 'lucide-react'
-import SEOHead from '@/components/SEOHead'
+
+export const metadata: Metadata = {
+  title: 'Hot Tub Removal Jacksonville | Specialized Equipment & Access Expertise',
+  description: 'Professional hot tub removal in Jacksonville with specialized equipment and access expertise. We handle all hot tub types, spa removal, and disposal with licensed crews and specialized tools. Get a free quote today!',
+  keywords: 'hot tub removal Jacksonville, spa removal, hot tub disposal, specialized equipment, access expertise, hot tub pickup Jacksonville',
+  alternates: {
+    canonical: '/hot-tub-removal',
+  },
+}
 
 export default function HotTubRemovalPage() {
   return (
     <>
-      <SEOHead
-        title="Hot Tub Removal Jacksonville | Specialized Equipment & Access Expertise"
-        description="Professional hot tub removal in Jacksonville with specialized equipment and access expertise. We handle all hot tub types, spa removal, and disposal with licensed crews and specialized tools. Get a free quote today!"
-        keywords="hot tub removal Jacksonville, spa removal, hot tub disposal, specialized equipment, access expertise, hot tub pickup Jacksonville"
-        canonical="/hot-tub-removal"
-      />
+      
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-blue-50 to-cyan-100 py-20">

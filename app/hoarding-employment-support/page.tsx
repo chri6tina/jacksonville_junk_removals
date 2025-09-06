@@ -1,16 +1,20 @@
 import Link from 'next/link'
+import type { Metadata } from 'next'
 import { Briefcase, Phone, Shield, CheckCircle, Star, Clock, MapPin, Calendar, FileText, Award, Home, Building, UserCheck, BookOpen, Target, MessageCircle, Eye, Users, GraduationCap } from 'lucide-react'
-import SEOHead from '@/components/SEOHead'
+
+export const metadata: Metadata = {
+  title: 'Hoarding Employment Support Jacksonville | Job Assistance & Vocational Services',
+  description: 'Comprehensive hoarding employment support services in Jacksonville including job assistance, vocational training, career counseling, and employment coordination. Our employment specialists help individuals affected by hoarding find and maintain employment.',
+  keywords: 'hoarding employment support Jacksonville, job assistance, vocational training, career counseling, employment coordination Florida',
+  alternates: {
+    canonical: '/hoarding-employment-support',
+  },
+}
 
 export default function HoardingEmploymentSupportPage() {
   return (
     <>
-      <SEOHead
-        title="Hoarding Employment Support Jacksonville | Job Assistance & Vocational Services"
-        description="Comprehensive hoarding employment support services in Jacksonville including job assistance, vocational training, career counseling, and employment coordination. Our employment specialists help individuals affected by hoarding find and maintain employment."
-        keywords="hoarding employment support Jacksonville, job assistance, vocational training, career counseling, employment coordination Florida"
-        canonical="/hoarding-employment-support"
-      />
+      
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-blue-50 to-cyan-100 py-20">

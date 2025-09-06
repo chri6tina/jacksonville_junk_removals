@@ -1,19 +1,19 @@
 import Link from 'next/link'
+import type { Metadata } from 'next'
 import { Phone, Clock, MapPin, Shield, Truck, CheckCircle, Utensils, DollarSign, Star, Home, Wrench, Users, Award, Leaf, Zap, Target, MessageCircle, Eye, Building, Car, CheckSquare, AlertTriangle, ChefHat, Coffee, Pizza, Wine, Stethoscope } from 'lucide-react'
-import SEOHead from '@/components/SEOHead'
+
+export const metadata: Metadata = {
+  title: 'Restaurant Post-Construction Cleanup Jacksonville | Food Safety Standards Cleaning (904) 456-3851',
+  description: 'Professional restaurant post-construction cleanup in Jacksonville. Food safety compliance, health department standards, commercial kitchen cleaning. Free estimates, certified technicians. Call (904) 456-3851',
+  keywords: 'restaurant post-construction cleanup Jacksonville, food service construction cleanup Jacksonville, commercial kitchen construction cleaning Jacksonville, restaurant health inspection cleaning Jacksonville, food safety compliance Florida',
+  alternates: {
+    canonical: '/restaurant-post-construction-cleanup',
+  },
+}
 
 export default function RestaurantPostConstructionCleanupPage() {
   return (
-    <>
-      <SEOHead
-        title="Restaurant Post-Construction Cleanup Jacksonville | Food Safety Standards Cleaning (904) 456-3851"
-        description="Professional restaurant post-construction cleanup in Jacksonville. Food safety compliance, health department standards, commercial kitchen cleaning. Free estimates, certified technicians. Call (904) 456-3851"
-        keywords="restaurant post-construction cleanup Jacksonville, food service construction cleanup Jacksonville, commercial kitchen construction cleaning Jacksonville, restaurant health inspection cleaning Jacksonville, food safety compliance Florida"
-        canonical="/restaurant-post-construction-cleanup"
-        ogType="website"
-      />
-      
-      <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-orange-900 via-orange-800 to-orange-700 text-white overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/70 to-black/85"></div>
@@ -476,6 +476,5 @@ export default function RestaurantPostConstructionCleanupPage() {
           </div>
         </section>
       </div>
-    </>
   )
 }

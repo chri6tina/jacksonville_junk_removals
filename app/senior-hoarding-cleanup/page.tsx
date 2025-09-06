@@ -1,16 +1,20 @@
 import Link from 'next/link'
+import type { Metadata } from 'next'
 import { GraduationCap, Heart, Users, Shield, CheckCircle, Star, Clock, MapPin, Phone, Calendar, FileText, Award, Home, Building, UserCheck, BookOpen, Target, TrendingUp, Eye, Brain } from 'lucide-react'
-import SEOHead from '@/components/SEOHead'
+
+export const metadata: Metadata = {
+  title: 'Senior Hoarding Cleanup Jacksonville | Elderly Hoarding Services with Healthcare Coordination',
+  description: 'Specialized senior hoarding cleanup in Jacksonville with healthcare coordination, family support, and age-appropriate intervention. Our compassionate team understands the unique needs of elderly hoarders. Get specialized help today!',
+  keywords: 'senior hoarding cleanup Jacksonville, elderly hoarding services, senior hoarding intervention, healthcare coordination, family hoarding support, elderly cleanup Florida',
+  alternates: {
+    canonical: '/senior-hoarding-cleanup',
+  },
+}
 
 export default function SeniorHoardingCleanupPage() {
   return (
     <>
-      <SEOHead
-        title="Senior Hoarding Cleanup Jacksonville | Elderly Hoarding Services with Healthcare Coordination"
-        description="Specialized senior hoarding cleanup in Jacksonville with healthcare coordination, family support, and age-appropriate intervention. Our compassionate team understands the unique needs of elderly hoarders. Get specialized help today!"
-        keywords="senior hoarding cleanup Jacksonville, elderly hoarding services, senior hoarding intervention, healthcare coordination, family hoarding support, elderly cleanup Florida"
-        canonical="/senior-hoarding-cleanup"
-      />
+      
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-purple-50 to-indigo-100 py-20">

@@ -1,20 +1,20 @@
 import Link from 'next/link'
+import type { Metadata } from 'next'
 import { Phone, MapPin, Clock, Shield, Truck, CheckCircle, Hammer, DollarSign, Star, Building, Home, Car, ShoppingBag, GraduationCap, Hospital, Factory, TreePine } from 'lucide-react'
-import SEOHead from '@/components/SEOHead'
 import StrategicInternalLinking from '@/components/StrategicInternalLinking'
+
+export const metadata: Metadata = {
+  title: 'Post-Construction Cleanup Orange Park FL | Growing Community Construction Site Cleanup (904) 456-3851',
+  description: 'Orange Park FL post-construction cleanup specialists. Serving growing communities, family neighborhoods, and new developments. Orange Park construction cleanup, renovation cleaning, debris removal. Call (904) 456-3851',
+  keywords: 'post-construction cleanup Orange Park FL, growing community construction cleanup, family neighborhood renovation cleaning, Orange Park debris removal Florida, new development cleanup',
+  alternates: {
+    canonical: '/post-construction-cleanup-orange-park',
+  },
+}
 
 export default function OrangeParkPostConstructionCleanupPage() {
   return (
-    <>
-      <SEOHead
-        title="Post-Construction Cleanup Orange Park FL | Growing Community Construction Site Cleanup (904) 456-3851"
-        description="Orange Park FL post-construction cleanup specialists. Serving growing communities, family neighborhoods, and new developments. Orange Park construction cleanup, renovation cleaning, debris removal. Call (904) 456-3851"
-        keywords="post-construction cleanup Orange Park FL, growing community construction cleanup, family neighborhood renovation cleaning, Orange Park debris removal Florida, new development cleanup"
-        canonical="/post-construction-cleanup-orange-park"
-        ogType="website"
-      />
-      
-      <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-orange-900 via-orange-800 to-orange-700 text-white overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/70 to-black/85"></div>
@@ -369,6 +369,5 @@ export default function OrangeParkPostConstructionCleanupPage() {
           </div>
         </section>
       </div>
-    </>
   )
 }

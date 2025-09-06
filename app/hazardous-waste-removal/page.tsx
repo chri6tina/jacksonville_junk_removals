@@ -1,19 +1,19 @@
 import Link from 'next/link'
+import type { Metadata } from 'next'
 import { Phone, Clock, MapPin, Shield, Truck, CheckCircle, Home, DollarSign, Star, Users, FileText, AlertTriangle, TestTube, Biohazard, Zap } from 'lucide-react'
-import SEOHead from '@/components/SEOHead'
+
+export const metadata: Metadata = {
+  title: 'Hazardous Waste Removal Jacksonville | Safe Chemical & Biohazard Disposal (904) 456-3851',
+  description: 'Professional hazardous waste removal services in Jacksonville, Florida. Safe handling of chemicals, biohazards, and dangerous materials. Licensed, insured, EPA compliant. Call (904) 456-3851',
+  keywords: 'hazardous waste removal Jacksonville, chemical disposal Jacksonville, biohazard cleanup Jacksonville, dangerous materials Jacksonville, EPA compliant disposal Florida',
+  alternates: {
+    canonical: '/hazardous-waste-removal',
+  },
+}
 
 export default function HazardousWasteRemovalPage() {
   return (
-    <>
-      <SEOHead
-        title="Hazardous Waste Removal Jacksonville | Safe Chemical & Biohazard Disposal (904) 456-3851"
-        description="Professional hazardous waste removal services in Jacksonville, Florida. Safe handling of chemicals, biohazards, and dangerous materials. Licensed, insured, EPA compliant. Call (904) 456-3851"
-        keywords="hazardous waste removal Jacksonville, chemical disposal Jacksonville, biohazard cleanup Jacksonville, dangerous materials Jacksonville, EPA compliant disposal Florida"
-        canonical="/hazardous-waste-removal"
-        ogType="website"
-      />
-      
-      <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-red-900 via-red-800 to-red-700 text-white">
           <div className="absolute inset-0 bg-black bg-opacity-40"></div>
@@ -205,6 +205,5 @@ export default function HazardousWasteRemovalPage() {
           </div>
         </section>
       </div>
-    </>
   )
 }

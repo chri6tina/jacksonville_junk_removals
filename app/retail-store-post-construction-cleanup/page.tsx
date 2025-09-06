@@ -1,19 +1,19 @@
 import Link from 'next/link'
+import type { Metadata } from 'next'
 import { Phone, Clock, MapPin, Shield, Truck, CheckCircle, ShoppingBag, DollarSign, Star, Home, Wrench, Users, Award, Leaf, Zap, Target, MessageCircle, Eye, Building, Car, CheckSquare, AlertTriangle, Store, ShoppingCart, Tag, Shirt, Package, Camera } from 'lucide-react'
-import SEOHead from '@/components/SEOHead'
+
+export const metadata: Metadata = {
+  title: 'Retail Store Post-Construction Cleanup Jacksonville | Commercial Retail Standards Cleaning (904) 456-3851',
+  description: 'Professional retail store post-construction cleanup in Jacksonville. Commercial retail standards, customer-ready results, visual merchandising preparation, shopping environment. Free estimates, certified technicians. Call (904) 456-3851',
+  keywords: 'retail store post-construction cleanup Jacksonville, retail construction cleanup Jacksonville, store construction cleaning Jacksonville, shopping center cleanup Jacksonville, retail environment cleaning Florida',
+  alternates: {
+    canonical: '/retail-store-post-construction-cleanup',
+  },
+}
 
 export default function RetailStorePostConstructionCleanupPage() {
   return (
-    <>
-      <SEOHead
-        title="Retail Store Post-Construction Cleanup Jacksonville | Commercial Retail Standards Cleaning (904) 456-3851"
-        description="Professional retail store post-construction cleanup in Jacksonville. Commercial retail standards, customer-ready results, visual merchandising preparation, shopping environment. Free estimates, certified technicians. Call (904) 456-3851"
-        keywords="retail store post-construction cleanup Jacksonville, retail construction cleanup Jacksonville, store construction cleaning Jacksonville, shopping center cleanup Jacksonville, retail environment cleaning Florida"
-        canonical="/retail-store-post-construction-cleanup"
-        ogType="website"
-      />
-      
-      <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-emerald-900 via-emerald-800 to-emerald-700 text-white overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/70 to-black/85"></div>
@@ -476,6 +476,5 @@ export default function RetailStorePostConstructionCleanupPage() {
           </div>
         </section>
       </div>
-    </>
   )
 }

@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { Home, Clock, CheckCircle, Phone, Star, MapPin, Building, Shield, Heart, TreePine } from 'lucide-react'
-import SEOHead from '@/components/SEOHead'
 
 export const metadata: Metadata = {
   title: 'Historic Home Cleanout Services - Jacksonville Junk Removal',
@@ -11,15 +10,7 @@ export const metadata: Metadata = {
 
 export default function HistoricHomeCleanoutPage() {
   return (
-    <>
-      <SEOHead
-        title="Historic Home Cleanout Services | Professional Historic Property Cleanup | (904) 456-3851"
-        description="Professional historic home cleanout services in Jacksonville. Historic property cleanup, renovation preparation, and architectural preservation. Licensed, insured, eco-friendly disposal. Call (904) 456-3851."
-        keywords="historic home cleanout Jacksonville, historic property cleanup Jacksonville, renovation preparation Jacksonville, architectural preservation Jacksonville, Jacksonville historic homes, historic property maintenance Jacksonville"
-        canonical="/historic-home-cleanout"
-        ogType="website"
-      />
-      <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <div className="bg-gray-900 text-white py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -382,6 +373,5 @@ export default function HistoricHomeCleanoutPage() {
           </div>
         </div>
       </div>
-    </>
   )
 }

@@ -1,19 +1,19 @@
 import Link from 'next/link'
+import type { Metadata } from 'next'
 import { Phone, Clock, MapPin, Shield, Truck, Leaf, Trees, Scissors, CheckCircle, Home } from 'lucide-react'
-import SEOHead from '@/components/SEOHead'
+
+export const metadata: Metadata = {
+  title: 'Tree Debris Removal Jacksonville | Fallen Tree Cleanup | Branch Removal',
+  description: 'Jacksonville tree debris removal and fallen tree cleanup services. Professional fallen tree removal, branch cleanup, landscaping debris removal, and stump grinding. Available same-day for emergency tree cleanup. Call (904) 456-3851 for immediate service.',
+  keywords: 'tree debris removal Jacksonville, fallen tree removal Jacksonville, branch cleanup Jacksonville, landscaping debris removal Jacksonville, stump grinding Jacksonville, tree cleanup Jacksonville, emergency tree removal Jacksonville, storm tree damage Jacksonville, tree debris disposal Jacksonville, Jacksonville tree services',
+  alternates: {
+    canonical: '/tree-debris-removal',
+  },
+}
 
 export default function TreeDebrisRemovalPage() {
   return (
-    <>
-      <SEOHead
-        title="Tree Debris Removal Jacksonville | Fallen Tree Cleanup | Branch Removal"
-        description="Jacksonville tree debris removal and fallen tree cleanup services. Professional fallen tree removal, branch cleanup, landscaping debris removal, and stump grinding. Available same-day for emergency tree cleanup. Call (904) 456-3851 for immediate service."
-        keywords="tree debris removal Jacksonville, fallen tree removal Jacksonville, branch cleanup Jacksonville, landscaping debris removal Jacksonville, stump grinding Jacksonville, tree cleanup Jacksonville, emergency tree removal Jacksonville, storm tree damage Jacksonville, tree debris disposal Jacksonville, Jacksonville tree services"
-        canonical="/tree-debris-removal"
-        ogType="website"
-      />
-      
-      <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-green-900 via-green-800 to-green-700 text-white">
           <div className="absolute inset-0 bg-black bg-opacity-40"></div>
@@ -416,6 +416,5 @@ export default function TreeDebrisRemovalPage() {
           </div>
         </section>
       </div>
-    </>
   )
 }

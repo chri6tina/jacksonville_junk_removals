@@ -1,16 +1,20 @@
 import Link from 'next/link'
+import type { Metadata } from 'next'
 import { Wrench, Truck, Clock, MapPin, Phone, Shield, CheckCircle, Star, HardHat, Building, Hammer, Ruler, AlertTriangle, Package } from 'lucide-react'
-import SEOHead from '@/components/SEOHead'
+
+export const metadata: Metadata = {
+  title: 'Construction Debris Removal Jacksonville | Project Management & Specialized Equipment',
+  description: 'Professional construction debris removal in Jacksonville with project management and specialized equipment. We handle demolition waste, renovation debris, and construction cleanup with licensed crews. Get a free quote today!',
+  keywords: 'construction debris removal Jacksonville, demolition waste removal, renovation debris cleanup, construction cleanup Jacksonville, project management, specialized equipment, construction waste disposal',
+  alternates: {
+    canonical: '/construction-debris-removal',
+  },
+}
 
 export default function ConstructionDebrisRemovalPage() {
   return (
     <>
-      <SEOHead
-        title="Construction Debris Removal Jacksonville | Project Management & Specialized Equipment"
-        description="Professional construction debris removal in Jacksonville with project management and specialized equipment. We handle demolition waste, renovation debris, and construction cleanup with licensed crews. Get a free quote today!"
-        keywords="construction debris removal Jacksonville, demolition waste removal, renovation debris cleanup, construction cleanup Jacksonville, project management, specialized equipment, construction waste disposal"
-        canonical="/construction-debris-removal"
-      />
+      
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-orange-50 to-amber-100 py-20">

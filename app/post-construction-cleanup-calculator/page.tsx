@@ -1,19 +1,19 @@
 import Link from 'next/link'
+import type { Metadata } from 'next'
 import { Phone, Calculator, Building, Home, Stethoscope, Utensils, Factory, Hotel, GraduationCap, Church, ShoppingBag, Star, Clock, Shield, Award, DollarSign, MapPin, Info } from 'lucide-react'
-import SEOHead from '@/components/SEOHead'
+
+export const metadata: Metadata = {
+  title: 'Post-Construction Cleanup Cost Calculator Jacksonville | Free Estimate Tool (904) 456-3851',
+  description: 'Free post-construction cleanup cost calculator for Jacksonville. Get instant estimates for your facility type, size, and requirements. Accurate pricing tool. Call (904) 456-3851',
+  keywords: 'post-construction cleanup calculator Jacksonville, construction cleanup cost estimator Jacksonville, cleanup pricing tool Jacksonville, facility cleanup calculator Florida',
+  alternates: {
+    canonical: '/post-construction-cleanup-calculator',
+  },
+}
 
 export default function PostConstructionCleanupCalculatorPage() {
   return (
-    <>
-      <SEOHead
-        title="Post-Construction Cleanup Cost Calculator Jacksonville | Free Estimate Tool (904) 456-3851"
-        description="Free post-construction cleanup cost calculator for Jacksonville. Get instant estimates for your facility type, size, and requirements. Accurate pricing tool. Call (904) 456-3851"
-        keywords="post-construction cleanup calculator Jacksonville, construction cleanup cost estimator Jacksonville, cleanup pricing tool Jacksonville, facility cleanup calculator Florida"
-        canonical="/post-construction-cleanup-calculator"
-        ogType="website"
-      />
-      
-      <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-teal-900 via-teal-800 to-teal-700 text-white overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/70 to-black/85"></div>
@@ -409,6 +409,5 @@ export default function PostConstructionCleanupCalculatorPage() {
           </div>
         </section>
       </div>
-    </>
   )
 }

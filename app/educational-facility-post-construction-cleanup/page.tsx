@@ -1,20 +1,20 @@
 import Link from 'next/link'
+import type { Metadata } from 'next'
 import { Phone, MapPin, Clock, Shield, Truck, CheckCircle, Hammer, DollarSign, Star, Building, Home, Car, ShoppingBag, GraduationCap, Hospital, Factory, TreePine, Leaf, Waves, Building2, Users, Award, Target, Zap, BookOpen, Microscope, Computer, Paintbrush } from 'lucide-react'
-import SEOHead from '@/components/SEOHead'
 import StrategicInternalLinking from '@/components/StrategicInternalLinking'
+
+export const metadata: Metadata = {
+  title: 'Educational Facility Post-Construction Cleanup Jacksonville | School & University Cleanup (904) 456-3851',
+  description: 'Jacksonville educational facility post-construction cleanup specialists. Serving schools, universities, training centers, and educational institutions across all Jacksonville areas. Call (904) 456-3851',
+  keywords: 'educational facility post-construction cleanup Jacksonville, school construction cleanup Jacksonville, university renovation cleaning Florida, educational institution cleanup Jacksonville FL',
+  alternates: {
+    canonical: '/educational-facility-post-construction-cleanup',
+  },
+}
 
 export default function EducationalFacilityPostConstructionCleanupPage() {
   return (
-    <>
-      <SEOHead
-        title="Educational Facility Post-Construction Cleanup Jacksonville | School & University Cleanup (904) 456-3851"
-        description="Jacksonville educational facility post-construction cleanup specialists. Serving schools, universities, training centers, and educational institutions across all Jacksonville areas. Call (904) 456-3851"
-        keywords="educational facility post-construction cleanup Jacksonville, school construction cleanup Jacksonville, university renovation cleaning Florida, educational institution cleanup Jacksonville FL"
-        canonical="/educational-facility-post-construction-cleanup"
-        ogType="website"
-      />
-      
-      <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/70 to-black/85"></div>
@@ -428,6 +428,5 @@ export default function EducationalFacilityPostConstructionCleanupPage() {
           </div>
         </section>
       </div>
-    </>
   )
 }

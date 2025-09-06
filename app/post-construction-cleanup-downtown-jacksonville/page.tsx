@@ -1,20 +1,20 @@
 import Link from 'next/link'
+import type { Metadata } from 'next'
 import { Phone, MapPin, Clock, Shield, Truck, CheckCircle, Hammer, DollarSign, Star, Building, Home, Building2, Car, Train, Bus, Landmark, ShoppingBag, Coffee, Briefcase } from 'lucide-react'
-import SEOHead from '@/components/SEOHead'
 import StrategicInternalLinking from '@/components/StrategicInternalLinking'
+
+export const metadata: Metadata = {
+  title: 'Post-Construction Cleanup Downtown Jacksonville | Urban Construction Site Cleanup (904) 456-3851',
+  description: 'Downtown Jacksonville post-construction cleanup specialists. Serving urban core, business district, and city center. Downtown construction cleanup, renovation cleaning, debris removal. Call (904) 456-3851',
+  keywords: 'post-construction cleanup downtown Jacksonville, urban construction cleanup Jacksonville, city center renovation cleaning, downtown debris removal Jacksonville FL, business district cleanup',
+  alternates: {
+    canonical: '/post-construction-cleanup-downtown-jacksonville',
+  },
+}
 
 export default function DowntownJacksonvillePostConstructionCleanupPage() {
   return (
-    <>
-      <SEOHead
-        title="Post-Construction Cleanup Downtown Jacksonville | Urban Construction Site Cleanup (904) 456-3851"
-        description="Downtown Jacksonville post-construction cleanup specialists. Serving urban core, business district, and city center. Downtown construction cleanup, renovation cleaning, debris removal. Call (904) 456-3851"
-        keywords="post-construction cleanup downtown Jacksonville, urban construction cleanup Jacksonville, city center renovation cleaning, downtown debris removal Jacksonville FL, business district cleanup"
-        canonical="/post-construction-cleanup-downtown-jacksonville"
-        ogType="website"
-      />
-      
-      <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-700 text-white overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/70 to-black/85"></div>
@@ -369,6 +369,5 @@ export default function DowntownJacksonvillePostConstructionCleanupPage() {
           </div>
         </section>
       </div>
-    </>
   )
 }

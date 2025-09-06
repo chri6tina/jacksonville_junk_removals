@@ -1,16 +1,20 @@
 import Link from 'next/link'
+import type { Metadata } from 'next'
 import { Users, Heart, Shield, CheckCircle, Star, Clock, MapPin, Phone, Calendar, FileText, Award, Home, Building, UserCheck, BookOpen, Target, MessageCircle, Eye, Brain } from 'lucide-react'
-import SEOHead from '@/components/SEOHead'
+
+export const metadata: Metadata = {
+  title: 'Hoarding Support Groups Jacksonville | Peer Support & Group Therapy',
+  description: 'Join hoarding support groups in Jacksonville for peer support, group therapy, and shared recovery experiences. Connect with others who understand your journey and build lasting support networks.',
+  keywords: 'hoarding support groups Jacksonville, peer support, hoarding group therapy, support networks, shared recovery, hoarding community Florida',
+  alternates: {
+    canonical: '/hoarding-support-groups',
+  },
+}
 
 export default function HoardingSupportGroupsPage() {
   return (
     <>
-      <SEOHead
-        title="Hoarding Support Groups Jacksonville | Peer Support & Group Therapy"
-        description="Join hoarding support groups in Jacksonville for peer support, group therapy, and shared recovery experiences. Connect with others who understand your journey and build lasting support networks."
-        keywords="hoarding support groups Jacksonville, peer support, hoarding group therapy, support networks, shared recovery, hoarding community Florida"
-        canonical="/hoarding-support-groups"
-      />
+      
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-blue-50 to-indigo-100 py-20">

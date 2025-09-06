@@ -1,20 +1,20 @@
 import Link from 'next/link'
+import type { Metadata } from 'next'
 import { Phone, MapPin, Clock, Shield, Truck, CheckCircle, Hammer, DollarSign, Star, Building, Home, Car, ShoppingBag, GraduationCap, Hospital, Factory, TreePine, Leaf, Waves, Building2, Users, Award, Target, Zap, BookOpen, Microscope, Computer, Paintbrush, Heart, Church, Cross, Star as StarIcon } from 'lucide-react'
-import SEOHead from '@/components/SEOHead'
 import StrategicInternalLinking from '@/components/StrategicInternalLinking'
+
+export const metadata: Metadata = {
+  title: 'Religious Facility Post-Construction Cleanup Jacksonville | Church & Temple Cleanup (904) 456-3851',
+  description: 'Jacksonville religious facility post-construction cleanup specialists. Serving churches, temples, mosques, and worship centers across all Jacksonville areas. Call (904) 456-3851',
+  keywords: 'religious facility post-construction cleanup Jacksonville, church construction cleanup Jacksonville, temple renovation cleaning Florida, worship center cleanup Jacksonville FL',
+  alternates: {
+    canonical: '/religious-facility-post-construction-cleanup',
+  },
+}
 
 export default function ReligiousFacilityPostConstructionCleanupPage() {
   return (
-    <>
-      <SEOHead
-        title="Religious Facility Post-Construction Cleanup Jacksonville | Church & Temple Cleanup (904) 456-3851"
-        description="Jacksonville religious facility post-construction cleanup specialists. Serving churches, temples, mosques, and worship centers across all Jacksonville areas. Call (904) 456-3851"
-        keywords="religious facility post-construction cleanup Jacksonville, church construction cleanup Jacksonville, temple renovation cleaning Florida, worship center cleanup Jacksonville FL"
-        canonical="/religious-facility-post-construction-cleanup"
-        ogType="website"
-      />
-      
-      <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-purple-900 via-purple-800 to-purple-700 text-white overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/70 to-black/85"></div>
@@ -428,6 +428,5 @@ export default function ReligiousFacilityPostConstructionCleanupPage() {
           </div>
         </section>
       </div>
-    </>
   )
 }

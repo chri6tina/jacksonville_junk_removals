@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { Home, Users, Heart, CheckCircle, Phone, Clock, Truck, Star, MapPin } from 'lucide-react'
-import SEOHead from '@/components/SEOHead'
 
 export const metadata: Metadata = {
   title: 'Family Home Cleanout Services - Jacksonville Junk Removal',
@@ -11,15 +10,7 @@ export const metadata: Metadata = {
 
 export default function FamilyHomeCleanoutPage() {
   return (
-    <>
-      <SEOHead
-        title="Family Home Cleanout Services | Professional Residential Cleanup | (904) 456-3851"
-        description="Professional family home cleanout services in Jacksonville. Moving preparation, residential waste removal, and family-friendly cleanup. Licensed, insured, eco-friendly disposal. Call (904) 456-3851."
-        keywords="family home cleanout Jacksonville, residential cleanup Jacksonville, moving preparation Jacksonville, family-friendly junk removal Jacksonville, Jacksonville home cleanout, residential waste removal Jacksonville"
-        canonical="/family-home-cleanout"
-        ogType="website"
-      />
-      <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <div className="bg-gray-900 text-white py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -382,6 +373,5 @@ export default function FamilyHomeCleanoutPage() {
           </div>
         </div>
       </div>
-    </>
   )
 }

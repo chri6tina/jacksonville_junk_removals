@@ -1,16 +1,20 @@
 import Link from 'next/link'
+import type { Metadata } from 'next'
 import { Scale, Phone, Shield, CheckCircle, Star, Clock, MapPin, Calendar, FileText, Award, Home, Building, UserCheck, BookOpen, Target, MessageCircle, Eye, Users, Gavel } from 'lucide-react'
-import SEOHead from '@/components/SEOHead'
+
+export const metadata: Metadata = {
+  title: 'Hoarding Legal Support Jacksonville | Legal Assistance & Advocacy Services',
+  description: 'Comprehensive hoarding legal support services in Jacksonville including legal assistance, advocacy, tenant rights, eviction defense, and housing law support. Our legal specialists help protect your rights.',
+  keywords: 'hoarding legal support Jacksonville, legal assistance, advocacy services, tenant rights, eviction defense, housing law Florida',
+  alternates: {
+    canonical: '/hoarding-legal-support',
+  },
+}
 
 export default function HoardingLegalSupportPage() {
   return (
     <>
-      <SEOHead
-        title="Hoarding Legal Support Jacksonville | Legal Assistance & Advocacy Services"
-        description="Comprehensive hoarding legal support services in Jacksonville including legal assistance, advocacy, tenant rights, eviction defense, and housing law support. Our legal specialists help protect your rights."
-        keywords="hoarding legal support Jacksonville, legal assistance, advocacy services, tenant rights, eviction defense, housing law Florida"
-        canonical="/hoarding-legal-support"
-      />
+      
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-blue-50 to-indigo-100 py-20">

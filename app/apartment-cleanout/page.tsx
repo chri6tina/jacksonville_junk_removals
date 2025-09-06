@@ -1,16 +1,20 @@
 import Link from 'next/link'
+import type { Metadata } from 'next'
 import { Home, Truck, Clock, MapPin, Phone, Shield, CheckCircle, Star, Wrench, Recycle, AlertTriangle, DollarSign, Users, Building } from 'lucide-react'
-import SEOHead from '@/components/SEOHead'
+
+export const metadata: Metadata = {
+  title: 'Apartment Cleanout Jacksonville | Tenant Transition & Move-Out Coordination',
+  description: 'Professional apartment cleanout in Jacksonville with tenant transition expertise and move-out coordination. We handle apartment cleanup, tenant transitions, and property management partnerships with licensed crews and specialized expertise. Get a free quote today!',
+  keywords: 'apartment cleanout Jacksonville, apartment cleanup, tenant transition, move-out coordination, property management, apartment organization Jacksonville',
+  alternates: {
+    canonical: '/apartment-cleanout',
+  },
+}
 
 export default function ApartmentCleanoutPage() {
   return (
     <>
-      <SEOHead
-        title="Apartment Cleanout Jacksonville | Tenant Transition & Move-Out Coordination"
-        description="Professional apartment cleanout in Jacksonville with tenant transition expertise and move-out coordination. We handle apartment cleanup, tenant transitions, and property management partnerships with licensed crews and specialized expertise. Get a free quote today!"
-        keywords="apartment cleanout Jacksonville, apartment cleanup, tenant transition, move-out coordination, property management, apartment organization Jacksonville"
-        canonical="/apartment-cleanout"
-      />
+      
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-blue-50 to-indigo-100 py-20">

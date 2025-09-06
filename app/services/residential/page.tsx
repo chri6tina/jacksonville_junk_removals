@@ -1,19 +1,19 @@
 import Link from 'next/link'
+import type { Metadata } from 'next'
 import { Phone, Clock, MapPin, Shield, Truck, CheckCircle, Home, DollarSign, Star, Users, FileText, Sofa, Package, Warehouse, Leaf, Bath, Refrigerator } from 'lucide-react'
-import SEOHead from '@/components/SEOHead'
+
+export const metadata: Metadata = {
+  title: 'Residential Junk Removal Jacksonville | Home Cleanout & Cleanup Services (904) 456-3851',
+  description: 'Professional residential junk removal services in Jacksonville, Florida. Home cleanouts, garage organization, moving cleanup, and residential property maintenance. Licensed, insured, eco-friendly. Call (904) 456-3851',
+  keywords: 'residential junk removal Jacksonville, home cleanout Jacksonville, garage cleanup Jacksonville, moving cleanup Jacksonville, residential cleanup Jacksonville, home junk removal Florida',
+  alternates: {
+    canonical: '/services/residential',
+  },
+}
 
 export default function ResidentialJunkRemovalPage() {
   return (
-    <>
-      <SEOHead
-        title="Residential Junk Removal Jacksonville | Home Cleanout & Cleanup Services (904) 456-3851"
-        description="Professional residential junk removal services in Jacksonville, Florida. Home cleanouts, garage organization, moving cleanup, and residential property maintenance. Licensed, insured, eco-friendly. Call (904) 456-3851"
-        keywords="residential junk removal Jacksonville, home cleanout Jacksonville, garage cleanup Jacksonville, moving cleanup Jacksonville, residential cleanup Jacksonville, home junk removal Florida"
-        canonical="/services/residential"
-        ogType="website"
-      />
-      
-      <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white">
           <div className="absolute inset-0 bg-black bg-opacity-40"></div>
@@ -317,6 +317,5 @@ export default function ResidentialJunkRemovalPage() {
           </div>
         </section>
       </div>
-    </>
   )
 }

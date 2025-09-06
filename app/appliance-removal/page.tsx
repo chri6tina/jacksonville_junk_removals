@@ -1,16 +1,20 @@
 import Link from 'next/link'
+import type { Metadata } from 'next'
 import { Wrench, Truck, Clock, MapPin, Phone, Shield, CheckCircle, Star, Recycle, Zap, Home, Building, AlertTriangle, DollarSign } from 'lucide-react'
-import SEOHead from '@/components/SEOHead'
+
+export const metadata: Metadata = {
+  title: 'Appliance Removal Jacksonville | Eco-Friendly Disposal & Recycling',
+  description: 'Professional appliance removal in Jacksonville with eco-friendly disposal and recycling. We handle refrigerators, washers, dryers, dishwashers, and more. Licensed, insured, and environmentally responsible. Get a free quote today!',
+  keywords: 'appliance removal Jacksonville, refrigerator removal, washer dryer removal, dishwasher removal, eco-friendly appliance disposal, appliance recycling Jacksonville, appliance pickup service, old appliance removal',
+  alternates: {
+    canonical: '/appliance-removal',
+  },
+}
 
 export default function ApplianceRemovalPage() {
   return (
     <>
-      <SEOHead
-        title="Appliance Removal Jacksonville | Eco-Friendly Disposal & Recycling"
-        description="Professional appliance removal in Jacksonville with eco-friendly disposal and recycling. We handle refrigerators, washers, dryers, dishwashers, and more. Licensed, insured, and environmentally responsible. Get a free quote today!"
-        keywords="appliance removal Jacksonville, refrigerator removal, washer dryer removal, dishwasher removal, eco-friendly appliance disposal, appliance recycling Jacksonville, appliance pickup service, old appliance removal"
-        canonical="/appliance-removal"
-      />
+      
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-blue-50 to-indigo-100 py-20">

@@ -1,24 +1,10 @@
-import type { Metadata } from 'next'
 import Link from 'next/link'
 import { FileText, Settings, Users, BarChart3, Home, Plus, Edit, Trash2 } from 'lucide-react'
-import SEOHead from '@/components/SEOHead'
 import AdminNav from '@/components/AdminNav'
-
-export const metadata: Metadata = {
-  title: 'Admin Dashboard - Jacksonville Junk Removals',
-  description: 'Admin dashboard for managing Jacksonville Junk Removals website content',
-}
 
 export default function AdminDashboardPage() {
   return (
     <>
-      <SEOHead
-        title="Admin Dashboard - Jacksonville Junk Removal Management"
-        description="Admin dashboard for Jacksonville Junk Removal. Manage bookings, customers, and business operations."
-        keywords="admin dashboard, Jacksonville junk removal admin, business management"
-        canonical="/admin"
-        ogType="website"
-      />
       <div className="min-h-screen bg-gray-100">
         <AdminNav />
         

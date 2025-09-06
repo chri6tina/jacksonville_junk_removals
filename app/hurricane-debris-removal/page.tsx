@@ -1,19 +1,19 @@
 import Link from 'next/link'
+import type { Metadata } from 'next'
 import { Phone, Clock, MapPin, Shield, Truck, AlertTriangle, CheckCircle, Home, Building, Wrench } from 'lucide-react'
-import SEOHead from '@/components/SEOHead'
+
+export const metadata: Metadata = {
+  title: 'Hurricane Debris Removal Jacksonville | Post Hurricane Cleanup | Emergency Service',
+  description: 'Jacksonville hurricane debris removal and post hurricane cleanup services. Emergency structural debris removal, roofing material cleanup, and storm-damaged item removal. Available 24/7 after hurricanes. Call (904) 456-3851 for immediate service.',
+  keywords: 'hurricane debris removal Jacksonville, post hurricane cleanup Jacksonville, hurricane damage cleanup Jacksonville, structural debris removal Jacksonville, roofing material cleanup Jacksonville, storm damaged furniture removal Jacksonville, emergency hurricane cleanup Jacksonville, hurricane debris disposal Jacksonville, post storm cleanup Jacksonville, hurricane damage Jacksonville',
+  alternates: {
+    canonical: '/hurricane-debris-removal',
+  },
+}
 
 export default function HurricaneDebrisRemovalPage() {
   return (
-    <>
-      <SEOHead
-        title="Hurricane Debris Removal Jacksonville | Post Hurricane Cleanup | Emergency Service"
-        description="Jacksonville hurricane debris removal and post hurricane cleanup services. Emergency structural debris removal, roofing material cleanup, and storm-damaged item removal. Available 24/7 after hurricanes. Call (904) 456-3851 for immediate service."
-        keywords="hurricane debris removal Jacksonville, post hurricane cleanup Jacksonville, hurricane damage cleanup Jacksonville, structural debris removal Jacksonville, roofing material cleanup Jacksonville, storm damaged furniture removal Jacksonville, emergency hurricane cleanup Jacksonville, hurricane debris disposal Jacksonville, post storm cleanup Jacksonville, hurricane damage Jacksonville"
-        canonical="/hurricane-debris-removal"
-        ogType="website"
-      />
-      
-      <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-red-900 via-red-800 to-red-700 text-white">
           <div className="absolute inset-0 bg-black bg-opacity-40"></div>
@@ -416,6 +416,5 @@ export default function HurricaneDebrisRemovalPage() {
           </div>
         </section>
       </div>
-    </>
   )
 }

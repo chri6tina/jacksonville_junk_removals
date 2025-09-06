@@ -1,20 +1,20 @@
 import Link from 'next/link'
+import type { Metadata } from 'next'
 import { Phone, MapPin, Clock, Shield, Truck, CheckCircle, Hammer, DollarSign, Star, Building, Home, Car, ShoppingBag, GraduationCap, Hospital, Factory, TreePine, Leaf, Waves, Building2, Users, Award, Target, Zap, Handshake, Wrench, HardHat, FileText, Calendar, CheckSquare } from 'lucide-react'
-import SEOHead from '@/components/SEOHead'
 import StrategicInternalLinking from '@/components/StrategicInternalLinking'
+
+export const metadata: Metadata = {
+  title: 'Jacksonville Construction Partnerships | Post-Construction Cleanup for Builders (904) 456-3851',
+  description: 'Strategic partnerships with Jacksonville construction companies. Post-construction cleanup services for builders, contractors, and construction firms across all Jacksonville areas. Call (904) 456-3851',
+  keywords: 'Jacksonville construction partnerships, construction company partnerships Jacksonville, builder partnerships Florida, contractor cleanup services Jacksonville, construction site cleanup partnerships',
+  alternates: {
+    canonical: '/jacksonville-construction-partnerships',
+  },
+}
 
 export default function JacksonvilleConstructionPartnershipsPage() {
   return (
-    <>
-      <SEOHead
-        title="Jacksonville Construction Partnerships | Post-Construction Cleanup for Builders (904) 456-3851"
-        description="Strategic partnerships with Jacksonville construction companies. Post-construction cleanup services for builders, contractors, and construction firms across all Jacksonville areas. Call (904) 456-3851"
-        keywords="Jacksonville construction partnerships, construction company partnerships Jacksonville, builder partnerships Florida, contractor cleanup services Jacksonville, construction site cleanup partnerships"
-        canonical="/jacksonville-construction-partnerships"
-        ogType="website"
-      />
-      
-      <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-orange-900 via-orange-800 to-orange-700 text-white overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/70 to-black/85"></div>
@@ -402,7 +402,6 @@ export default function JacksonvilleConstructionPartnershipsPage() {
           </div>
         </section>
       </div>
-    </>
   )
 }
 

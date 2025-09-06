@@ -1,19 +1,19 @@
 import Link from 'next/link'
+import type { Metadata } from 'next'
 import { Phone, Clock, MapPin, Shield, Truck, CheckCircle, Home, DollarSign, Star, Users, FileText } from 'lucide-react'
-import SEOHead from '@/components/SEOHead'
+
+export const metadata: Metadata = {
+  title: 'Estate Cleanout Jacksonville | Probate Cleanup | Estate Sale Cleanup (904) 456-3851',
+  description: 'Jacksonville estate cleanout service. Professional probate cleanup, estate sale cleanup, complete home cleanout. Licensed, insured, compassionate service. Call (904) 456-3851 for estate cleanout.',
+  keywords: 'estate cleanout Jacksonville, probate cleanup Jacksonville, estate sale cleanup Jacksonville, home cleanout Jacksonville, estate cleanup service Jacksonville, Jacksonville estate cleanout, probate Jacksonville',
+  alternates: {
+    canonical: '/estate-cleanout',
+  },
+}
 
 export default function EstateCleanoutPage() {
   return (
-    <>
-      <SEOHead
-        title="Estate Cleanout Jacksonville | Probate Cleanup | Estate Sale Cleanup (904) 456-3851"
-        description="Jacksonville estate cleanout service. Professional probate cleanup, estate sale cleanup, complete home cleanout. Licensed, insured, compassionate service. Call (904) 456-3851 for estate cleanout."
-        keywords="estate cleanout Jacksonville, probate cleanup Jacksonville, estate sale cleanup Jacksonville, home cleanout Jacksonville, estate cleanup service Jacksonville, Jacksonville estate cleanout, probate Jacksonville"
-        canonical="/estate-cleanout"
-        ogType="website"
-      />
-      
-      <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-teal-900 via-teal-800 to-teal-700 text-white">
           <div className="absolute inset-0 bg-black bg-opacity-40"></div>
@@ -694,6 +694,5 @@ export default function EstateCleanoutPage() {
           </div>
         </section>
       </div>
-    </>
   )
 }

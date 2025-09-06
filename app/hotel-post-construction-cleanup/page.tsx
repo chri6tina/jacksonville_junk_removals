@@ -1,19 +1,19 @@
 import Link from 'next/link'
+import type { Metadata } from 'next'
 import { Phone, Clock, MapPin, Shield, Truck, CheckCircle, Hotel, DollarSign, Star, Home, Wrench, Users, Award, Leaf, Zap, Target, MessageCircle, Eye, Building, Car, CheckSquare, AlertTriangle, Bed, Utensils, Wine, Bath, Wifi, Camera } from 'lucide-react'
-import SEOHead from '@/components/SEOHead'
+
+export const metadata: Metadata = {
+  title: 'Hotel Post-Construction Cleanup Jacksonville | Hospitality Industry Standards Cleaning (904) 456-3851',
+  description: 'Professional hotel post-construction cleanup in Jacksonville. Hospitality industry standards, guest-ready results, luxury finishes, ADA compliance. Free estimates, certified technicians. Call (904) 456-3851',
+  keywords: 'hotel post-construction cleanup Jacksonville, hospitality construction cleanup Jacksonville, hotel construction cleaning Jacksonville, resort construction cleanup Jacksonville, hospitality industry standards Florida',
+  alternates: {
+    canonical: '/hotel-post-construction-cleanup',
+  },
+}
 
 export default function HotelPostConstructionCleanupPage() {
   return (
-    <>
-      <SEOHead
-        title="Hotel Post-Construction Cleanup Jacksonville | Hospitality Industry Standards Cleaning (904) 456-3851"
-        description="Professional hotel post-construction cleanup in Jacksonville. Hospitality industry standards, guest-ready results, luxury finishes, ADA compliance. Free estimates, certified technicians. Call (904) 456-3851"
-        keywords="hotel post-construction cleanup Jacksonville, hospitality construction cleanup Jacksonville, hotel construction cleaning Jacksonville, resort construction cleanup Jacksonville, hospitality industry standards Florida"
-        canonical="/hotel-post-construction-cleanup"
-        ogType="website"
-      />
-      
-      <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-purple-900 via-purple-800 to-purple-700 text-white overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/70 to-black/85"></div>
@@ -476,6 +476,5 @@ export default function HotelPostConstructionCleanupPage() {
           </div>
         </section>
       </div>
-    </>
   )
 }

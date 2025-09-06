@@ -1,19 +1,19 @@
 import Link from 'next/link'
+import type { Metadata } from 'next'
 import { Phone, Clock, MapPin, Shield, Truck, Building, CheckCircle, Wrench, DollarSign, Church } from 'lucide-react'
-import SEOHead from '@/components/SEOHead'
+
+export const metadata: Metadata = {
+  title: 'Church Cleanout Jacksonville | Religious Facility Cleanup | Church Equipment Removal',
+  description: 'Jacksonville church cleanout and religious facility cleanup services. Professional church equipment removal, sanctuary cleanup, and religious facility cleanup. Fast, reliable service for churches and religious organizations. Call (904) 456-3851 for immediate service.',
+  keywords: 'church cleanout Jacksonville, religious facility cleanup Jacksonville, church equipment removal Jacksonville, sanctuary cleanup Jacksonville, religious facility cleanup Jacksonville, church cleanup Jacksonville, religious Jacksonville, church services Jacksonville, Jacksonville church services, church removal Jacksonville',
+  alternates: {
+    canonical: '/church-cleanout',
+  },
+}
 
 export default function ChurchCleanoutPage() {
   return (
-    <>
-      <SEOHead
-        title="Church Cleanout Jacksonville | Religious Facility Cleanup | Church Equipment Removal"
-        description="Jacksonville church cleanout and religious facility cleanup services. Professional church equipment removal, sanctuary cleanup, and religious facility cleanup. Fast, reliable service for churches and religious organizations. Call (904) 456-3851 for immediate service."
-        keywords="church cleanout Jacksonville, religious facility cleanup Jacksonville, church equipment removal Jacksonville, sanctuary cleanup Jacksonville, religious facility cleanup Jacksonville, church cleanup Jacksonville, religious Jacksonville, church services Jacksonville, Jacksonville church services, church removal Jacksonville"
-        canonical="/church-cleanout"
-        ogType="website"
-      />
-      
-      <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-violet-900 via-violet-800 to-violet-700 text-white">
           <div className="absolute inset-0 bg-black bg-opacity-40"></div>
@@ -416,6 +416,5 @@ export default function ChurchCleanoutPage() {
           </div>
         </section>
       </div>
-    </>
   )
 }
