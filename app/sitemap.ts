@@ -255,6 +255,62 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.85,
     },
     
+    // Cheap junk removal by location (high priority for SEO)
+    {
+      url: `${baseUrl}/cheap-junk-removal-jacksonville`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.95,
+    },
+    {
+      url: `${baseUrl}/cheap-junk-removal-downtown-jacksonville`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/cheap-junk-removal-riverside`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/cheap-junk-removal-san-marco`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/cheap-junk-removal-mandarin`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/cheap-junk-removal-arlington`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/cheap-junk-removal-orange-park`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/cheap-junk-removal-southside`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/cheap-junk-removal-jacksonville-beach`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    
     // Cleanout services
     {
       url: `${baseUrl}/apartment-cleanout`,
