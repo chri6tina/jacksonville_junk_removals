@@ -34,6 +34,8 @@ const EstimationForm = () => {
 
   const [estimatedPrice, setEstimatedPrice] = useState<number | null>(null)
   const [showResults, setShowResults] = useState(false)
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [isSubmitted, setIsSubmitted] = useState(false)
 
   const serviceTypes = [
     { id: 'residential', name: 'Residential Junk Removal', basePrice: 150 },
@@ -104,9 +106,68 @@ const EstimationForm = () => {
     setEstimatedPrice(Math.round(basePrice))
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    setShowResults(true)
+    setIsSubmitting(true)
+    
+    try {
+      // Calculate price first
+      calculatePrice(formData)
+      setShowResults(true)
+      
+      // Submit to Formspree
+      const response = await fetch('https://formspree.io/f/mwpnavgo', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.contactName,
+          email: formData.contactEmail,
+          phone: formData.contactPhone,
+          serviceType: formData.serviceType,
+          estimatedWeight: formData.estimatedWeight,
+          zipCode: formData.zipCode,
+          truckSize: formData.truckSize,
+          additionalServices: formData.additionalServices.join(', '),
+          preferredDate: formData.preferredDate,
+          preferredTime: formData.preferredTime,
+          projectDescription: formData.projectDescription,
+          estimatedPrice: estimatedPrice,
+          _subject: `Estimation Request from ${formData.contactName}`,
+        }),
+      })
+
+      if (response.ok) {
+        setIsSubmitted(true)
+        // Reset form after showing success message
+        setTimeout(() => {
+          setIsSubmitted(false)
+          setShowResults(false)
+          setFormData({
+            serviceType: '',
+            estimatedWeight: '',
+            zipCode: '',
+            truckSize: '',
+            additionalServices: [],
+            preferredDate: '',
+            preferredTime: '',
+            contactName: '',
+            contactPhone: '',
+            contactEmail: '',
+            projectDescription: ''
+          })
+          setEstimatedPrice(null)
+        }, 10000)
+      } else {
+        throw new Error('Form submission failed')
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error)
+      alert('There was an error sending your estimation request. Please try again or call us directly.')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -337,16 +398,60 @@ const EstimationForm = () => {
         <div className="text-center">
           <button
             type="submit"
-            className="bg-gray-900 hover:bg-gray-800 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 flex items-center justify-center space-x-2 mx-auto"
+            disabled={isSubmitting}
+            className="bg-gray-900 hover:bg-gray-800 disabled:bg-gray-400 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 flex items-center justify-center space-x-2 mx-auto disabled:cursor-not-allowed"
           >
-            <Truck className="w-5 h-5" />
-            <span>Get Free Quote</span>
+            {isSubmitting ? (
+              <>
+                <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                <span>Submitting...</span>
+              </>
+            ) : (
+              <>
+                <Truck className="w-5 h-5" />
+                <span>Get Free Quote</span>
+              </>
+            )}
           </button>
         </div>
       </form>
 
+      {/* Success Message */}
+      {isSubmitted && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
+          <div className="bg-white rounded-lg p-8 max-w-md w-full text-center">
+            <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <span className="text-2xl">✅</span>
+            </div>
+            <h3 className="text-xl font-bold text-gray-900 mb-4">
+              Quote Request Submitted!
+            </h3>
+            <p className="text-gray-600 mb-6">
+              Thank you for your interest! Our team will review your request and contact you within 2 hours with a detailed quote and scheduling options.
+            </p>
+            <div className="space-y-3">
+              <a
+                href="tel:+19047423531"
+                className="block bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-200"
+              >
+                Call Now: (904) 742-3531
+              </a>
+              <button
+                onClick={() => {
+                  setIsSubmitted(false)
+                  setShowResults(false)
+                }}
+                className="block w-full bg-gray-200 hover:bg-gray-300 text-gray-800 px-6 py-3 rounded-lg font-semibold transition-colors duration-200"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
       {/* Results Modal */}
-      {showResults && (
+      {showResults && !isSubmitted && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
           <div className="bg-white rounded-lg p-8 max-w-md w-full text-center">
             <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">

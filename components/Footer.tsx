@@ -14,6 +14,7 @@ import {
   Truck,
   Send
 } from 'lucide-react'
+import Image from 'next/image'
 
 const Footer = () => {
   const currentYear = new Date().getFullYear()
@@ -80,8 +81,13 @@ const Footer = () => {
           {/* Company Info */}
           <div className="sm:col-span-2">
             <div className="flex items-center space-x-3 mb-4 sm:mb-6">
-              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gray-700 rounded-lg flex items-center justify-center flex-shrink-0">
-                <span className="text-white font-bold text-base sm:text-lg">JJR</span>
+              <div className="w-18 h-18 sm:w-20 sm:h-20 relative flex-shrink-0">
+                <Image
+                  src="/logojjr.png"
+                  alt="Jacksonville Junk Removals Logo"
+                  fill
+                  className="object-contain"
+                />
               </div>
               <h3 className="text-xl sm:text-2xl font-bold">Jacksonville Junk Removals</h3>
             </div>

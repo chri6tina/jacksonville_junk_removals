@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: 'Business Relocation Services - Jacksonville Junk Removal',
   description: 'Professional business relocation services in Jacksonville. Office moves, business transitions, and complete relocation support. Call (904) 742-3531.',
   keywords: 'business relocation, office moves, business transitions, relocation support, Jacksonville business relocation',
+  alternates: {
+    canonical: '/business-relocation',
+  },
 }
 
 export default function BusinessRelocationPage() {

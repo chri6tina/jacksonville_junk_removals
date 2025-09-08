@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: 'Junk Removal Arlington - Suburban Cleanup & Residential Services',
   description: 'Professional junk removal services in Arlington, Jacksonville, Florida. Suburban cleanup, residential junk removal, and eco-friendly disposal. Call (904) 742-3531.',
   keywords: 'junk removal Arlington, Arlington Jacksonville cleanup, suburban junk removal, residential cleanup Arlington',
+  alternates: {
+    canonical: '/junk-removal-arlington',
+  },
 }
 
 export default function ArlingtonPage() {

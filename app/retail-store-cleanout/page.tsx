@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: 'Retail Store Cleanout Jacksonville - Commercial Store Cleanup Services',
   description: 'Professional retail store cleanout services in Jacksonville, Florida. Store cleanup, inventory removal, and commercial space restoration. Call (904) 742-3531.',
   keywords: 'retail store cleanout Jacksonville, store cleanup, inventory removal, Jacksonville retail services, commercial cleanup',
+  alternates: {
+    canonical: '/retail-store-cleanout',
+  },
 }
 
 const retailCleanoutServices = [

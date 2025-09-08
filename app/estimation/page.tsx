@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   title: 'Free Junk Removal Quote - Jacksonville Junk Removals',
   description: 'Get your free, no-obligation junk removal quote in Jacksonville, Florida. Use our online estimation tool for instant pricing on all services.',
   keywords: 'junk removal quote Jacksonville, free estimate, online pricing calculator, junk removal cost',
+  alternates: {
+    canonical: '/estimation',
+  },
 }
 
 export default function EstimationPage() {

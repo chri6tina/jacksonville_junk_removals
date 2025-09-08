@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: 'Office Furniture Removal Jacksonville - Commercial Office Cleanout Services',
   description: 'Professional office furniture removal services in Jacksonville, Florida. Commercial office cleanouts, cubicle removal, and eco-friendly disposal. Call (904) 742-3531.',
   keywords: 'office furniture removal Jacksonville, commercial office cleanout, cubicle removal, Jacksonville office services, professional removal',
+  alternates: {
+    canonical: '/office-furniture-removal',
+  },
 }
 
 const officeFurnitureServices = [

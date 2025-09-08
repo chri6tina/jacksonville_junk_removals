@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: 'Junk Removal Mandarin - Suburban Cleanup & Residential Services',
   description: 'Professional junk removal services in Mandarin, Jacksonville, Florida. Suburban cleanup, residential junk removal, and eco-friendly disposal. Call (904) 742-3531.',
   keywords: 'junk removal Mandarin, Mandarin Jacksonville cleanup, suburban junk removal, residential cleanup Mandarin',
+  alternates: {
+    canonical: '/junk-removal-mandarin',
+  },
 }
 
 export default function MandarinPage() {

@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: 'Junk Removal San Marco Jacksonville - Historic District Cleanup Services',
   description: 'Professional junk removal services in San Marco, Jacksonville, Florida. Historic home cleanup, estate services, and eco-friendly disposal. Call (904) 742-3531.',
   keywords: 'junk removal San Marco Jacksonville, San Marco junk removal, Jacksonville San Marco, historic district cleanup, estate services',
+  alternates: {
+    canonical: '/junk-removal-san-marco',
+  },
 }
 
 export default function SanMarcoPage() {

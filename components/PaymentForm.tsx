@@ -117,15 +117,46 @@ export default function PaymentForm({ amount, serviceType, onSuccess, onCancel }
     
     setIsProcessing(true)
     
-    // Simulate payment processing
-    await new Promise(resolve => setTimeout(resolve, 3000))
-    
-    setIsProcessing(false)
-    setStep('success')
-    
-    // Generate mock payment ID
-    const paymentId = 'PAY-' + Date.now().toString().slice(-8)
-    onSuccess(paymentId)
+    try {
+      // Submit to Formspree
+      const formspreeResponse = await fetch('https://formspree.io/f/mwpnavgo', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.cardholderName,
+          email: formData.email,
+          phone: formData.phone,
+          address: formData.address,
+          city: formData.city,
+          zipCode: formData.zipCode,
+          serviceType: serviceType,
+          amount: amount,
+          cardNumber: formData.cardNumber.replace(/\s/g, '').slice(-4), // Only last 4 digits for security
+          expiryDate: formData.expiryDate,
+          _subject: `Payment Form Submission from ${formData.cardholderName}`,
+        }),
+      })
+
+      if (!formspreeResponse.ok) {
+        throw new Error('Formspree submission failed')
+      }
+
+      // Simulate payment processing
+      await new Promise(resolve => setTimeout(resolve, 3000))
+      
+      setStep('success')
+      
+      // Generate mock payment ID
+      const paymentId = 'PAY-' + Date.now().toString().slice(-8)
+      onSuccess(paymentId)
+    } catch (error) {
+      console.error('Error submitting payment form:', error)
+      alert('There was an error processing your payment. Please try again or call us directly.')
+    } finally {
+      setIsProcessing(false)
+    }
   }
 
   const getCardType = (cardNumber: string) => {

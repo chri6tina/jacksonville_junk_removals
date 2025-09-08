@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: 'Beach House & Condo Cleanout Services - Jacksonville Junk Removal',
   description: 'Professional beach house and condo cleanout services in Jacksonville Beach. Beach property cleanup, vacation rental preparation, and coastal home cleanup. Call (904) 742-3531.',
   keywords: 'beach house cleanout, condo cleanout, beach property cleanup, vacation rental preparation, coastal home cleanup, Jacksonville Beach',
+  alternates: {
+    canonical: '/beach-house-cleanout',
+  },
 }
 
 export default function BeachHouseCleanoutPage() {

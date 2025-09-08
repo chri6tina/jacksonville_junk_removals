@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: 'Junk Removal Downtown Jacksonville - Commercial & Residential Cleanup Services',
   description: 'Professional junk removal services in Downtown Jacksonville, Florida. Commercial cleanouts, residential cleanup, and eco-friendly disposal. Call (904) 742-3531.',
   keywords: 'junk removal Downtown Jacksonville, Downtown Jacksonville cleanup, commercial junk removal Jacksonville, residential cleanup Downtown',
+  alternates: {
+    canonical: '/junk-removal-downtown-jacksonville',
+  },
 }
 
 export default function DowntownJacksonvillePage() {

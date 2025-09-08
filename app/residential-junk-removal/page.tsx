@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: 'Residential Junk Removal Services - Jacksonville Junk Removal',
   description: 'Professional residential junk removal services in Jacksonville. Home cleanouts, furniture removal, and residential waste disposal. Call (904) 742-3531.',
   keywords: 'residential junk removal, home cleanout, furniture removal, residential waste disposal, Jacksonville residential cleanup',
+  alternates: {
+    canonical: '/residential-junk-removal',
+  },
 }
 
 export default function ResidentialJunkRemovalPage() {

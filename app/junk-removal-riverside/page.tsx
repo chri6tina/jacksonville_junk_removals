@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: 'Junk Removal Riverside - Historic District Cleanup & Residential Services',
   description: 'Professional junk removal services in Riverside, Jacksonville, Florida. Historic district cleanup, residential junk removal, and eco-friendly disposal. Call (904) 742-3531.',
   keywords: 'junk removal Riverside, Riverside Jacksonville cleanup, historic district junk removal, residential cleanup Riverside',
+  alternates: {
+    canonical: '/junk-removal-riverside',
+  },
 }
 
 export default function RiversidePage() {

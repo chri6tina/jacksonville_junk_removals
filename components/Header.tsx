@@ -2,7 +2,8 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { Menu, X, Truck, Phone, MapPin, Clock } from 'lucide-react'
+import { Menu, X, Phone, MapPin, Clock } from 'lucide-react'
+import Image from 'next/image'
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -56,8 +57,14 @@ const Header = () => {
         <div className="flex justify-between items-center h-20 sm:h-24">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-3 sm:space-x-4 flex-shrink-0">
-            <div className="w-12 h-12 sm:w-14 sm:h-14 bg-gray-900 rounded-lg flex items-center justify-center">
-              <Truck className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
+            <div className="w-20 h-20 sm:w-24 sm:h-24 relative">
+              <Image
+                src="/logojjr.png"
+                alt="Jacksonville Junk Removals Logo"
+                fill
+                className="object-contain"
+                priority
+              />
             </div>
             <div className="hidden sm:block">
               <h1 className="text-xl sm:text-2xl font-bold text-gray-900 leading-tight">Jacksonville Junk Removals</h1>

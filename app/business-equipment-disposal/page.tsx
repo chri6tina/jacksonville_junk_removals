@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: 'Business Equipment Disposal Services - Jacksonville Junk Removal',
   description: 'Professional business equipment disposal services in Jacksonville. Computer equipment removal, office electronics disposal, and data-safe equipment removal. Call (904) 742-3531.',
   keywords: 'business equipment disposal, computer equipment removal, office electronics disposal, data-safe disposal, Jacksonville business equipment',
+  alternates: {
+    canonical: '/business-equipment-disposal',
+  },
 }
 
 export default function BusinessEquipmentDisposalPage() {

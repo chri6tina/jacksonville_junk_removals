@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: 'Commercial Office Cleanout Services - Jacksonville Junk Removal',
   description: 'Professional commercial office cleanout services in Jacksonville. Office furniture removal, business equipment disposal, and corporate space cleanup. Call (904) 742-3531.',
   keywords: 'commercial office cleanout, office furniture removal, business equipment disposal, corporate cleanup, Jacksonville office cleanout',
+  alternates: {
+    canonical: '/commercial-office-cleanout',
+  },
 }
 
 export default function CommercialOfficeCleanoutPage() {

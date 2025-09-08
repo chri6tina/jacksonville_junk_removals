@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: 'Junk Removal Jacksonville Beach - Beachside Cleanup & Residential Services',
   description: 'Professional junk removal services in Jacksonville Beach, Florida. Beachside cleanup, residential junk removal, and eco-friendly disposal. Call (904) 742-3531.',
   keywords: 'junk removal Jacksonville Beach, Jacksonville Beach cleanup, beachside junk removal, residential cleanup Jacksonville Beach',
+  alternates: {
+    canonical: '/junk-removal-jacksonville-beach',
+  },
 }
 
 export default function JacksonvilleBeachPage() {

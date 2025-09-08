@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: 'Contact Us - Jacksonville Junk Removals',
   description: 'Contact Jacksonville Junk Removals for professional junk removal services. Get in touch for free quotes, scheduling, or questions about our services.',
   keywords: 'contact Jacksonville junk removal, phone number, address, free quote, scheduling',
+  alternates: {
+    canonical: '/contact',
+  },
 }
 
 export default function ContactPage() {

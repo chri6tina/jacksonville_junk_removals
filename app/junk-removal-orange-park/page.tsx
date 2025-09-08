@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: 'Junk Removal Orange Park - Clay County Cleanup & Residential Services',
   description: 'Professional junk removal services in Orange Park, Clay County, Florida. Suburban cleanup, residential junk removal, and eco-friendly disposal. Call (904) 742-3531.',
   keywords: 'junk removal Orange Park, Orange Park Clay County cleanup, suburban junk removal, residential cleanup Orange Park',
+  alternates: {
+    canonical: '/junk-removal-orange-park',
+  },
 }
 
 export default function OrangeParkPage() {

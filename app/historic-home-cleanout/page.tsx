@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: 'Historic Home Cleanout Services - Jacksonville Junk Removal',
   description: 'Professional historic home cleanout services in Jacksonville. Historic property cleanup, renovation preparation, and architectural preservation. Call (904) 742-3531.',
   keywords: 'historic home cleanout, historic property cleanup, renovation preparation, architectural preservation, Jacksonville historic homes',
+  alternates: {
+    canonical: '/historic-home-cleanout',
+  },
 }
 
 export default function HistoricHomeCleanoutPage() {

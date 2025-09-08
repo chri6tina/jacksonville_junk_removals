@@ -22,6 +22,9 @@ export const metadata: Metadata = {
   title: 'Junk Removal Services - Jacksonville Junk Removals',
   description: 'Professional junk removal services in Jacksonville, Florida. From residential cleanouts to commercial demolition, we handle all types of junk removal with transparent pricing.',
   keywords: 'junk removal services Jacksonville, residential junk removal, commercial junk removal, construction debris, appliance removal',
+  alternates: {
+    canonical: '/services',
+  },
 }
 
 const services = [

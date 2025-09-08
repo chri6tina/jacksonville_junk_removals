@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: 'Junk Removal Southside Jacksonville - Growing Area Cleanup Services',
   description: 'Professional junk removal services in Southside, Jacksonville, Florida. Residential cleanup, commercial services, construction debris, and eco-friendly disposal. Call (904) 742-3531.',
   keywords: 'junk removal Southside Jacksonville, Southside junk removal, Jacksonville Southside, residential cleanup, commercial services',
+  alternates: {
+    canonical: '/junk-removal-southside',
+  },
 }
 
 export default function SouthsidePage() {

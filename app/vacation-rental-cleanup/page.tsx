@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: 'Vacation Rental Cleanup Services - Jacksonville Junk Removal',
   description: 'Professional vacation rental cleanup services in Jacksonville. Rental turnover cleanup, guest preparation, and vacation property maintenance. Call (904) 742-3531.',
   keywords: 'vacation rental cleanup, rental turnover cleanup, guest preparation, vacation property maintenance, Jacksonville vacation rentals',
+  alternates: {
+    canonical: '/vacation-rental-cleanup',
+  },
 }
 
 export default function VacationRentalCleanupPage() {

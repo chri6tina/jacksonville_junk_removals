@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: 'Family Home Cleanout Services - Jacksonville Junk Removal',
   description: 'Professional family home cleanout services in Jacksonville. Moving preparation, residential waste removal, and family-friendly cleanup. Call (904) 742-3531.',
   keywords: 'family home cleanout, residential cleanup, moving preparation, family-friendly junk removal, Jacksonville home cleanout',
+  alternates: {
+    canonical: '/family-home-cleanout',
+  },
 }
 
 export default function FamilyHomeCleanoutPage() {

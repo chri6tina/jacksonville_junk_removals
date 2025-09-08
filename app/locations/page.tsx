@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: 'Junk Removal Service Areas - Jacksonville & Surrounding Areas',
   description: 'Professional junk removal services in Jacksonville, Florida and surrounding areas. Serving Downtown, Riverside, San Marco, Mandarin, Arlington, Orange Park, Southside, and Jacksonville Beach.',
   keywords: 'junk removal Jacksonville, service areas, Downtown Jacksonville, Riverside, San Marco, Mandarin, Arlington, Orange Park, Southside, Jacksonville Beach',
+  alternates: {
+    canonical: '/locations',
+  },
 }
 
 const serviceAreas = [
@@ -163,7 +166,7 @@ export default function LocationsPage() {
                 className="group"
               >
                 <Link href={`/${area.slug}`}>
-                  <div className="bg-white border border-gray-200 rounded-lg p-6 h-full hover:border-gray-900 transition-all duration-200 hover:shadow-md">
+                  <div className="relative bg-white border border-gray-200 rounded-lg p-6 h-full hover:border-gray-900 transition-all duration-200 hover:shadow-md">
                     {/* Popular Badge */}
                     {area.popular && (
                       <div className="absolute -top-2 left-4">

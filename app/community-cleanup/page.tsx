@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: 'Community Cleanup Services - Jacksonville Junk Removal',
   description: 'Professional community cleanup services in Jacksonville. Neighborhood cleanup, community events, and local area maintenance. Call (904) 742-3531.',
   keywords: 'community cleanup, neighborhood cleanup, community events, local area maintenance, Jacksonville community services',
+  alternates: {
+    canonical: '/community-cleanup',
+  },
 }
 
 export default function CommunityCleanupPage() {

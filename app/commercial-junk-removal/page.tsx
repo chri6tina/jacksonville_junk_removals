@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: 'Commercial Junk Removal Jacksonville - Office & Business Cleanout Services',
   description: 'Professional commercial junk removal services in Jacksonville, Florida. Office cleanouts, retail space cleanup, warehouse clearouts, and business equipment removal. Fast response, licensed crews. Call (904) 742-3531.',
   keywords: 'commercial junk removal Jacksonville, office cleanout, retail store cleanup, warehouse cleanout, business junk removal, Jacksonville commercial junk removal',
+  alternates: {
+    canonical: '/commercial-junk-removal',
+  },
 }
 
 const commercialServices = [

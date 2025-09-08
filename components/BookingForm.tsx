@@ -99,27 +99,56 @@ export default function BookingForm({ serviceType, onClose, onSuccess }: Booking
       setLoading(true)
       setError('')
 
-      const response = await fetch('/api/calendar/book', {
+      // Submit to Formspree
+      const formspreeResponse = await fetch('https://formspree.io/f/mwpnavgo', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          ...formData,
-          serviceType
-        })
+          name: formData.customerName,
+          email: formData.customerEmail,
+          phone: formData.customerPhone,
+          address: formData.address,
+          serviceType: serviceType,
+          preferredDate: formData.preferredDate,
+          preferredTime: formData.preferredTime,
+          description: formData.description,
+          urgent: formData.urgent,
+          _subject: `Booking Request from ${formData.customerName}`,
+        }),
       })
 
-      const data = await response.json()
-
-      if (data.success) {
-        onSuccess(data.booking)
-        onClose()
-      } else {
-        setError(data.error || 'Failed to book appointment')
+      if (!formspreeResponse.ok) {
+        throw new Error('Formspree submission failed')
       }
+
+      // Also try to submit to the existing API (if it exists)
+      try {
+        const response = await fetch('/api/calendar/book', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            ...formData,
+            serviceType
+          })
+        })
+
+        const data = await response.json()
+
+        if (data.success) {
+          onSuccess(data.booking)
+        }
+      } catch (apiError) {
+        // If API fails, just continue with Formspree success
+        console.log('API booking failed, but Formspree succeeded')
+      }
+
+      onClose()
     } catch (error) {
-      setError('Failed to book appointment')
+      setError('Failed to book appointment. Please try again or call us directly.')
     } finally {
       setLoading(false)
     }

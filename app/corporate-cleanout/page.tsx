@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: 'Corporate Cleanout Services - Jacksonville Junk Removal',
   description: 'Professional corporate cleanout services in Jacksonville. Office relocations, renovation preparation, and complete corporate space cleanup. Call (904) 742-3531.',
   keywords: 'corporate cleanout, office relocation, corporate space cleanup, renovation preparation, Jacksonville corporate cleanout',
+  alternates: {
+    canonical: '/corporate-cleanout',
+  },
 }
 
 export default function CorporateCleanoutPage() {

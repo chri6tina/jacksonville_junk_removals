@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: 'Beachside Property Cleanup Services - Jacksonville Junk Removal',
   description: 'Professional beachside property cleanup services in Jacksonville Beach. Coastal property maintenance, beach cleanup, and seaside property care. Call (904) 742-3531.',
   keywords: 'beachside property cleanup, coastal property maintenance, beach cleanup, seaside property care, Jacksonville Beach cleanup',
+  alternates: {
+    canonical: '/beachside-property-cleanup',
+  },
 }
 
 export default function BeachsidePropertyCleanupPage() {

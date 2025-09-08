@@ -46,23 +46,44 @@ const ContactForm = () => {
     e.preventDefault()
     setIsSubmitting(true)
     
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000))
-    
-    setIsSubmitting(false)
-    setIsSubmitted(true)
-    
-    // Reset form after showing success message
-    setTimeout(() => {
-      setIsSubmitted(false)
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        serviceType: '',
-        message: ''
+    try {
+      const response = await fetch('https://formspree.io/f/mwpnavgo', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          serviceType: formData.serviceType,
+          message: formData.message,
+          _subject: `Contact Form Submission from ${formData.name}`,
+        }),
       })
-    }, 5000)
+
+      if (response.ok) {
+        setIsSubmitted(true)
+        // Reset form after showing success message
+        setTimeout(() => {
+          setIsSubmitted(false)
+          setFormData({
+            name: '',
+            email: '',
+            phone: '',
+            serviceType: '',
+            message: ''
+          })
+        }, 5000)
+      } else {
+        throw new Error('Form submission failed')
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error)
+      alert('There was an error sending your message. Please try again or call us directly.')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   if (isSubmitted) {
