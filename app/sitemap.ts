@@ -255,6 +255,56 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.85,
     },
     
+    // Commercial junk removal by location (high priority for B2B SEO)
+    {
+      url: `${baseUrl}/commercial-junk-removal-arlington`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/commercial-junk-removal-downtown-jacksonville`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/commercial-junk-removal-jacksonville-beach`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/commercial-junk-removal-mandarin`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/commercial-junk-removal-orange-park`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/commercial-junk-removal-riverside`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/commercial-junk-removal-san-marco`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/commercial-junk-removal-southside`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    
     // Cheap junk removal by location (high priority for SEO)
     {
       url: `${baseUrl}/cheap-junk-removal-jacksonville`,
