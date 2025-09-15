@@ -46,12 +46,19 @@ const SpecialOffer = () => {
             </div>
 
             {/* CTA */}
-            <div>
+            <div className="flex flex-col sm:flex-row gap-4">
               <Link
                 href="/99-junk-removal"
                 className="inline-flex items-center space-x-3 bg-yellow-400 hover:bg-yellow-500 text-gray-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200"
               >
                 <span>Claim Your $99 Special</span>
+                <ArrowRight className="w-5 h-5" />
+              </Link>
+              <Link
+                href="/cheap-junk-removal-jacksonville"
+                className="inline-flex items-center space-x-3 bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200"
+              >
+                <span>View All Cheap Prices</span>
                 <ArrowRight className="w-5 h-5" />
               </Link>
             </div>

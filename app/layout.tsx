@@ -87,6 +87,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <StructuredData />
+        <script src="https://analytics.ahrefs.com/analytics.js" data-key="KZiKe6VCVZ095mBfx8AAvA" async></script>
       </head>
       <body className={inter.className}>
         <PerformanceMonitor />

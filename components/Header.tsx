@@ -2,12 +2,13 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { Menu, X, Phone, MapPin, Clock } from 'lucide-react'
+import { Menu, X, Phone, MapPin, Clock, ChevronDown } from 'lucide-react'
 import Image from 'next/image'
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
+  const [isServicesOpen, setIsServicesOpen] = useState(false)
 
 
   // Handle scroll effect for header
@@ -44,7 +45,18 @@ const Header = () => {
   const navLinks = [
     { name: 'Estimation Tool', href: '/estimation' },
     { name: 'Locations', href: '/locations' },
-    { name: 'Contact', href: '/contact' },
+  ]
+
+  const services = [
+    { name: 'Residential Junk Removal', href: '/residential-junk-removal' },
+    { name: 'Commercial Junk Removal', href: '/commercial-junk-removal' },
+    { name: 'Mattress Removal', href: '/mattress-removal' },
+    { name: 'Appliance Removal', href: '/appliance-removal' },
+    { name: 'Construction Debris', href: '/construction-debris-removal' },
+    { name: 'E-Waste Removal', href: '/e-waste-junk-removal' },
+    { name: 'Estate Cleanout', href: '/estate-cleanout' },
+    { name: 'Same-Day Service', href: '/same-day-junk-removal' },
+    { name: 'All Services', href: '/services' },
   ]
 
 
@@ -78,6 +90,36 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8 xl:space-x-10">
+            {/* Services Dropdown */}
+            <div className="relative group">
+              <button
+                className="text-gray-700 hover:text-gray-900 transition-colors duration-200 font-medium text-base xl:text-lg flex items-center space-x-1 px-4 py-2 rounded-lg hover:bg-gray-50"
+                onMouseEnter={() => setIsServicesOpen(true)}
+                onMouseLeave={() => setIsServicesOpen(false)}
+              >
+                <span>Services</span>
+                <ChevronDown className="w-4 h-4" />
+              </button>
+              
+              {/* Services Dropdown Menu */}
+              {isServicesOpen && (
+                <div 
+                  className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50"
+                  onMouseEnter={() => setIsServicesOpen(true)}
+                  onMouseLeave={() => setIsServicesOpen(false)}
+                >
+                  {services.map((service) => (
+                    <Link
+                      key={service.name}
+                      href={service.href}
+                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors duration-200"
+                    >
+                      {service.name}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
 
             {navLinks.map((link) => (
               <Link
@@ -135,10 +177,26 @@ const Header = () => {
 
             {/* Mobile Navigation Links */}
             <div className="px-4 pt-4 pb-6 space-y-2 bg-white rounded-b-lg border-b border-gray-200">
+              {/* Services Section */}
+              <div className="mb-4">
+                <div className="px-4 py-2 text-gray-900 font-semibold text-base border-b border-gray-200 mb-2">
+                  Services
+                </div>
+                <div className="space-y-1">
+                  {services.map((service) => (
+                    <Link
+                      key={service.name}
+                      href={service.href}
+                      className="block px-6 py-2 text-gray-600 hover:text-gray-900 hover:bg-gray-50 transition-all duration-200 text-sm"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      {service.name}
+                    </Link>
+                  ))}
+                </div>
+              </div>
 
-
-
-
+              {/* Other Navigation Links */}
               {navLinks.map((link) => (
                 <Link
                   key={link.name}

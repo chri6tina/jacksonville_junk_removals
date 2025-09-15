@@ -174,10 +174,25 @@ export default function ServicesPage() {
           <h1 className="text-4xl lg:text-5xl font-bold mb-6">
             Professional Junk Removal Services
           </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
             From residential cleanouts to commercial demolition, we provide comprehensive junk removal 
             services throughout Jacksonville with transparent pricing and eco-friendly disposal.
           </p>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/cheap-junk-removal-jacksonville"
+              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200"
+            >
+              View Our Cheap Prices
+            </Link>
+            <Link
+              href="/estimation"
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-gray-900 transition-colors duration-200"
+            >
+              Get Free Quote
+            </Link>
+          </div>
         </div>
       </div>
 
