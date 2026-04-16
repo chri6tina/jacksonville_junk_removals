@@ -127,7 +127,37 @@ export default function CommercialJunkRemovalOrangeParkPage() {
 
       {/* Orange Park Service Alert */}
       <section className="bg-primary text-white py-6">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Commercial Junk Removal Orange Park Jacksonville - Business Cleanout Services (904) 456-3851",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Jacksonville Junk Removals"
+  },
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Jacksonville"
+    },
+    {
+      "@type": "City",
+      "name": "Jacksonville Beach"
+    },
+    {
+      "@type": "City",
+      "name": "Orange Park"
+    }
+  ],
+  "description": "Professional commercial junk removal services in Orange Park Jacksonville. Business cleanouts, office cleanup, retail clearouts, and commercial equipment removal. Fast response, licensed crews. Call (904) 456-3851."
+})
+        }}
+      />
+<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="flex items-center justify-center space-x-3">
             <Building2 className="w-6 h-6" />
             <span className="text-lg font-semibold">

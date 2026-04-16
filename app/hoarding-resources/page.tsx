@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import type { Metadata } from 'next'
 import { BookOpen, FileText, Users, Shield, CheckCircle, Star, Clock, MapPin, Phone, Calendar, Award, Home, Building, UserCheck, Target, MessageCircle, Eye, Heart, Download } from 'lucide-react'
@@ -16,12 +17,44 @@ export default function HoardingResourcesPage() {
     <>
       
 
-      {/* Hero Section */}
+      
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Hoarding Resources Jacksonville",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Jacksonville Junk Removals"
+  },
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Jacksonville"
+    },
+    {
+      "@type": "City",
+      "name": "Jacksonville Beach"
+    },
+    {
+      "@type": "City",
+      "name": "Orange Park"
+    }
+  ],
+  "description": "Comprehensive hoarding resources in Jacksonville including educational materials, support resources, helpful links, and downloadable guides. Access valuable information to understand and address hoarding situations."
+})
+        }}
+      />
+{/* Hero Section */}
       <section className="relative min-h-[70vh] flex items-center justify-center bg-primary overflow-hidden py-20 border-b-4 border-secondary">
         <div className="absolute inset-0 z-0">
-          <img
+          <Image
             src="/hero_junk_truck.png"
             alt="Jacksonville Junk Removal Services"
+            fill
+            priority
             className="w-full h-full object-cover object-center"
           />
           <div className="absolute inset-0 bg-black/50 md:bg-transparent md:bg-gradient-to-r md:from-primary/95 md:via-primary/80 md:to-transparent"></div>

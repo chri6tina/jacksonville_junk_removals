@@ -14,7 +14,37 @@ export const metadata: Metadata = {
 export default function SpecialOfferPage() {
   return (
     <>
-      <div className="min-h-screen bg-gray-50">
+      
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "$99 Junk Removal Special Jacksonville",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Jacksonville Junk Removals"
+  },
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Jacksonville"
+    },
+    {
+      "@type": "City",
+      "name": "Jacksonville Beach"
+    },
+    {
+      "@type": "City",
+      "name": "Orange Park"
+    }
+  ],
+  "description": "Jacksonville $99 junk removal special offer. Limited time deal on quarter-truck cleanouts. Professional service, no hidden fees. Call (904) 456-3851 to claim your special price."
+})
+        }}
+      />
+<div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
       <div className="bg-gray-900 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

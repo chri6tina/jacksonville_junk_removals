@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import type { Metadata } from 'next'
 import { Shield, Lock, Eye, CheckCircle, Phone, Mail, Star } from 'lucide-react'
@@ -16,10 +17,42 @@ export default function PrivacyPage() {
     <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
       <section className="relative min-h-[70vh] flex items-center justify-center bg-primary overflow-hidden py-20 border-b-4 border-secondary">
-        <div className="absolute inset-0 z-0">
-          <img
+        
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Privacy Policy",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Jacksonville Junk Removals"
+  },
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Jacksonville"
+    },
+    {
+      "@type": "City",
+      "name": "Jacksonville Beach"
+    },
+    {
+      "@type": "City",
+      "name": "Orange Park"
+    }
+  ],
+  "description": "Jacksonville Junk Removals privacy policy. Learn how we protect your personal information, data collection practices, and your privacy rights. Call (904) 456-3851 for questions."
+})
+        }}
+      />
+<div className="absolute inset-0 z-0">
+          <Image
             src="/hero_junk_truck.png"
             alt="Jacksonville Junk Removal Services"
+            fill
+            priority
             className="w-full h-full object-cover object-center"
           />
           <div className="absolute inset-0 bg-black/50 md:bg-transparent md:bg-gradient-to-r md:from-primary/95 md:via-primary/80 md:to-transparent"></div>

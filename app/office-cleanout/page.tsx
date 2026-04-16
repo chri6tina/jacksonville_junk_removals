@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import type { Metadata } from 'next'
 import { Building2, Truck, Clock, MapPin, Phone, Shield, CheckCircle, Star, Wrench, Recycle, AlertTriangle, DollarSign, Users, Briefcase } from 'lucide-react'
@@ -16,12 +17,44 @@ export default function OfficeCleanoutPage() {
     <>
       
 
-      {/* Hero Section */}
+      
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Office Cleanout Jacksonville",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Jacksonville Junk Removals"
+  },
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Jacksonville"
+    },
+    {
+      "@type": "City",
+      "name": "Jacksonville Beach"
+    },
+    {
+      "@type": "City",
+      "name": "Orange Park"
+    }
+  ],
+  "description": "Professional office cleanout in Jacksonville with business continuity focus and minimal disruption. We handle office cleanup, business transitions, and workspace organization with licensed crews and project management expertise. Get a free quote today!"
+})
+        }}
+      />
+{/* Hero Section */}
       <section className="relative min-h-[70vh] flex items-center justify-center bg-primary overflow-hidden py-20 border-b-4 border-secondary">
         <div className="absolute inset-0 z-0">
-          <img
+          <Image
             src="/hero_junk_truck.png"
             alt="Jacksonville Junk Removal Services"
+            fill
+            priority
             className="w-full h-full object-cover object-center"
           />
           <div className="absolute inset-0 bg-black/50 md:bg-transparent md:bg-gradient-to-r md:from-primary/95 md:via-primary/80 md:to-transparent"></div>

@@ -124,14 +124,19 @@ export async function POST(request: NextRequest) {
   }
 }
 
-// PUT /api/appointments/:id - Update specific appointment
-export async function PUT(
-  request: NextRequest,
-  { params }: { params: Promise<{ id: string }> }
-) {
+// PUT /api/appointments - Update specific appointment based on id param
+export async function PUT(request: NextRequest) {
   try {
     const body = await request.json()
-    const { id } = await params
+    const url = new URL(request.url)
+    const id = url.searchParams.get('id')
+
+    if (!id) {
+      return NextResponse.json(
+        { error: 'Appointment ID is required' },
+        { status: 400 }
+      )
+    }
 
     const updated = await updateAppointment(id, body)
     if (!updated) {

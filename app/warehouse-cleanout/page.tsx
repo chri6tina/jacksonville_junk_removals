@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import type { Metadata } from 'next'
 import { Warehouse, Truck, Clock, MapPin, Phone, Shield, CheckCircle, Star, Wrench, Recycle, AlertTriangle, DollarSign, Users, Forklift } from 'lucide-react'
@@ -16,12 +17,44 @@ export default function WarehouseCleanoutPage() {
     <>
       
 
-      {/* Hero Section */}
+      
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Warehouse Cleanout Jacksonville",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Jacksonville Junk Removals"
+  },
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Jacksonville"
+    },
+    {
+      "@type": "City",
+      "name": "Jacksonville Beach"
+    },
+    {
+      "@type": "City",
+      "name": "Orange Park"
+    }
+  ],
+  "description": "Professional warehouse cleanout in Jacksonville with industrial organization and heavy equipment expertise. We handle warehouse cleanup, industrial organization, and bulk project management with licensed crews and specialized equipment. Get a free quote today!"
+})
+        }}
+      />
+{/* Hero Section */}
       <section className="relative min-h-[70vh] flex items-center justify-center bg-primary overflow-hidden py-20 border-b-4 border-secondary">
         <div className="absolute inset-0 z-0">
-          <img
+          <Image
             src="/hero_junk_truck.png"
             alt="Jacksonville Junk Removal Services"
+            fill
+            priority
             className="w-full h-full object-cover object-center"
           />
           <div className="absolute inset-0 bg-black/50 md:bg-transparent md:bg-gradient-to-r md:from-primary/95 md:via-primary/80 md:to-transparent"></div>

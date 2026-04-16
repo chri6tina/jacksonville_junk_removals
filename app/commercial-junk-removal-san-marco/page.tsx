@@ -127,7 +127,37 @@ export default function CommercialJunkRemovalSanMarcoPage() {
 
       {/* San Marco Service Alert */}
       <section className="bg-primary text-white py-6">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Commercial Junk Removal San Marco Jacksonville - Luxury Business Cleanout (904) 456-3851",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Jacksonville Junk Removals"
+  },
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Jacksonville"
+    },
+    {
+      "@type": "City",
+      "name": "Jacksonville Beach"
+    },
+    {
+      "@type": "City",
+      "name": "Orange Park"
+    }
+  ],
+  "description": "Professional commercial junk removal services in San Marco Jacksonville. Luxury business cleanouts, historic office cleanup, retail clearouts, and commercial equipment removal. Fast response, licensed crews. Call (904) 456-3851."
+})
+        }}
+      />
+<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="flex items-center justify-center space-x-3">
             <Building2 className="w-6 h-6" />
             <span className="text-lg font-semibold">
