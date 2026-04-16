@@ -1,0 +1,142 @@
+﻿On branch main
+Your branch and 'origin/main' have diverged,
+and have 24 and 98 different commits each, respectively.
+  (use "git pull" if you want to integrate the remote branch with yours)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   ../cape_coral_vending/src/app/icon.svg
+	modified:   ../cape_coral_vending/src/app/layout.tsx
+	modified:   ../cape_coral_vending/src/app/neighborhoods/[neighborhood]/page.tsx
+	modified:   ../cape_coral_vending/src/app/sitemap.ts
+	modified:   ../cape_coral_vending/src/components/LeadForm.tsx
+	modified:   ../../../package-lock.json
+	modified:   ../../../package.json
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	../../../-1.14-windows.xml
+	../../../.android/
+	../../../.antigravity/
+	../../../.cache/
+	../../../.config/
+	../../../.cursor/
+	../../../.docker/
+	../../../.gemini/
+	../../../.gitconfig
+	../../../.lesshst
+	../../../.matplotlib/
+	../../../.ollama/
+	../../../.ssh/
+	../../../.uiautomator2/
+	../../../.viminfo
+	../../../AppData/
+	../../../Contacts/
+	../../../CrossDevice/
+	../../../Documents/
+	../../../Downloads/
+	../../../Favorites/
+	../../../Games/
+	../../../Links/
+	../../../Music/
+	../../../NTUSER.DAT
+	../../../NTUSER.DAT{e4a86be4-1d9a-11f0-b8ce-c73946a06235}.TM.blf
+	../../../NTUSER.DAT{e4a86be4-1d9a-11f0-b8ce-c73946a06235}.TMContainer00000000000000000001.regtrans-ms
+	../../../NTUSER.DAT{e4a86be4-1d9a-11f0-b8ce-c73946a06235}.TMContainer00000000000000000002.regtrans-ms
+	../../.849C9593-D756-4E56-8D6E-42412F2A707B
+	../Anno 1800.url
+	../Antigravity.lnk
+	../CapCut.lnk
+	../Card Batches/
+	../Cleaning_Job/
+	../Codex.lnk
+	../Cold Lead List/
+	../Discord.lnk
+	../Docker Desktop.lnk
+	../DuckDuckGo.lnk
+	../Fast Food Simulator.url
+	../Firefox.exe
+	../Godot_v4.6.1-stable_win64.exe
+	../Godot_v4.6.1-stable_win64_console.exe
+	../JEA COI 2026.pdf
+	../Jacksonville_Vending_Solutions/
+	../MIcroMart Freezer/
+	../Manor Lords.url
+	../Microsoft Edge.lnk
+	../Notion.lnk
+	../Phasmophobia.url
+	../Planet Coaster 2.url
+	../Postman.lnk
+	../R.E.P.O..url
+	../RV There Yet.url
+	../Raft.url
+	../Random files/
+	../Retro Rewind - Video Store Simulator Demo.url
+	../Retro Rewind - Video Store Simulator.url
+	../Richard state farm 9049827691.txt
+	../Roadside Research.url
+	../Roblox Player.lnk
+	../Roblox Studio.lnk
+	../Schedule I.url
+	../Sid Meier's Civilization VI.url
+	../Telegram.lnk
+	../U Move We haul/
+	../Ubisoft Connect.lnk
+	../VendSmart Proposal for The Loft at Baymeadows.docx
+	../VendSmart Proposal for The Loft at Baymeadows.pdf
+	../Vending Profit Calculator/
+	../atlanta_vending/
+	../cape_coral_vending/src/app/locations/
+	../cape_coral_vending/src/app/neighborhoods/[neighborhood]/neighborhood.module.css
+	../cape_coral_vending/src/data/
+	../chandler_arizona_vending/
+	../clear_path_estates-main/
+	../clear_path_estates/
+	../denver_colorado_vending/
+	../desktop.ini
+	../find_your_next_church/
+	../florida_vending_services/
+	../full_onimator_1.6.2 (1)/
+	../hail mary desktop background.webp
+	../inmate/
+	../jacksonville_constructions/
+	../jacksonville_house_cleaning_service/
+	./
+	../jacksonville_tea/
+	../jax_moving_service/
+	../lazy_girl_tax/
+	../monster_lead_gen-main/
+	../my_first_game/
+	../new_vend_project/
+	../new_york_city_vending/
+	../order6204817.txt
+	../rewelcometothevendinglocatorletsgetstarted.zip
+	../the_vending_locator/
+	../vape_vending_jacksonville/
+	../vend_ai_agent/
+	../vendflow/
+	../vendsmart-website-main.zip
+	../vendsmart-website-main/
+	../~$imator_Bot_Setup_Guide.docx (1).pdf
+	../../Documents/
+	../../Pictures/
+	../../desktop.ini
+	../../../PycharmProjects/
+	../../../Saved Games/
+	../../../Searches/
+	../../../Sti_Trace.log
+	../../../Videos/
+	../../../how 1c0e2939efa5951b55b1f7cb6a10d08bf12f8c66 --oneline
+	../../../java_error_in_pycharm.hprof
+	../../../lgotimeconverter.py
+	../../../mortality_estimates_2024.mp4
+	../../../ntuser.dat.LOG1
+	../../../ntuser.dat.LOG2
+	../../../ntuser.ini
+	../../../october bill for clear path.pdf
+	../../../sandbox_browser.js
+	../../../server.js
+	"../../../ting terminal\357\200\242"
+
+no changes added to commit (use "git add" and/or "git commit -a")

@@ -1,0 +1,91 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.jacksonvillejunkremovals.com/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
+
+# Allow all important pages
+Allow: /services
+Allow: /mattress-removal
+Allow: /furniture-removal
+Allow: /appliance-removal
+Allow: /garage-cleanout
+Allow: /construction-debris-removal
+Allow: /contact
+Allow: /estimation
+Allow: /locations
+
+# Allow location-specific pages
+Allow: /junk-removal-jacksonville-beach
+Allow: /junk-removal-riverside
+Allow: /junk-removal-southside
+Allow: /junk-removal-mandarin
+Allow: /junk-removal-arlington
+Allow: /junk-removal-orange-park
+Allow: /junk-removal-san-marco
+
+# Allow new service pages
+Allow: /storm-cleanup
+Allow: /hurricane-debris-removal
+Allow: /tree-debris-removal
+Allow: /foreclosure-cleanout
+Allow: /medical-office-cleanout
+Allow: /restaurant-cleanout
+Allow: /apartment-cleanout
+Allow: /storage-unit-cleanout
+Allow: /basement-cleanout
+Allow: /office-cleanout
+Allow: /warehouse-cleanout
+Allow: /hotel-cleanout
+Allow: /school-cleanout
+Allow: /church-cleanout
+Allow: /same-day-junk-removal
+Allow: /emergency-cleanup
+Allow: /hoarding-cleanup
+Allow: /estate-cleanout
+Allow: /renovation-cleanup
+Allow: /senior-cleanout
+Allow: /yard-waste-removal
+Allow: /appliance-removal
+Allow: /furniture-removal
+Allow: /construction-debris-removal
+Allow: /commercial-cleanout
+Allow: /mattress-removal
+Allow: /hazardous-waste-removal
+Allow: /hot-tub-removal
+Allow: /garage-cleanout
+Allow: /storage-unit-cleanout
+Allow: /basement-cleanout
+Allow: /office-cleanout
+Allow: /warehouse-cleanout
+Allow: /apartment-cleanout
+Allow: /restaurant-cleanout
+Allow: /medical-office-cleanout
+Allow: /hotel-cleanout
+Allow: /school-cleanout
+
+# Block admin and technical pages
+Disallow: /admin
+Disallow: /api
+Disallow: /_next
+Disallow: /static
+
+# Block search and filter pages that could create duplicate content
+Disallow: /*?*
+Disallow: /*&*
+
+# Allow Google and Bing bots with different settings
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0.5
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 0.5
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 1

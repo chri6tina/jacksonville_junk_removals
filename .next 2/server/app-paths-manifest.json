@@ -1,0 +1,5 @@
+{
+  "/post-construction-cleanup/page": "app/post-construction-cleanup/page.js",
+  "/page": "app/page.js",
+  "/contact/page": "app/contact/page.js"
+}
