@@ -15,48 +15,65 @@ export default function ResidentialJunkRemovalPage() {
   return (
     <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
-        <div className="bg-gray-900 text-white py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <div className="inline-flex items-center space-x-2 bg-yellow-400 text-gray-900 px-4 py-2 rounded-md mb-6">
-              <Home className="w-5 h-5" />
-              <span className="text-sm font-bold">RESIDENTIAL JUNK REMOVAL</span>
-            </div>
-            
-            <h1 className="text-4xl lg:text-6xl font-bold mb-6">
-              Residential
-              <br />
-              <span className="text-yellow-400">Junk Removal Services</span>
-            </h1>
-            
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Professional residential junk removal services for Jacksonville homes. 
-              Home cleanouts, furniture removal, and residential waste disposal that makes your home clean and organized.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="tel:+19047423531"
-                className="bg-yellow-400 hover:bg-yellow-500 text-gray-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 flex items-center justify-center space-x-2"
-              >
-                <Phone className="w-5 h-5" />
-                <span>Call (904) 742-3531</span>
-              </a>
-              <Link
-                href="/estimation"
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-gray-900 transition-colors duration-200"
-              >
-                Get Free Quote
-              </Link>
+      <section className="relative min-h-[70vh] flex items-center justify-center bg-primary overflow-hidden py-20 border-b-4 border-secondary">
+        <div className="absolute inset-0 z-0">
+          <img
+            src="/hero_junk_truck.png"
+            alt="Jacksonville Junk Removal Services"
+            className="w-full h-full object-cover object-center"
+          />
+          <div className="absolute inset-0 bg-black/50 md:bg-transparent md:bg-gradient-to-r md:from-primary/95 md:via-primary/80 md:to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-transparent to-transparent md:hidden"></div>
+        </div>
+        
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full animate-fade-in text-center lg:text-left">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="space-y-8">
+              <div className="inline-flex items-center space-x-2 bg-secondary/10 border border-secondary/30 rounded-full px-4 py-2 backdrop-blur-md shadow-lg shadow-black/20 mx-auto lg:mx-0">
+                <div className="flex -space-x-1">
+                  {[1, 2, 3, 4, 5].map((star) => (
+                    <Star key={star} className="w-4 h-4 text-secondary fill-secondary drop-shadow-md" />
+                  ))}
+                </div>
+                <span className="text-sm font-bold text-white tracking-wide uppercase ml-2 text-shadow-sm">Top-Rated Local Service</span>
+              </div>
+
+              <div className="space-y-6">
+                <h1 className="text-5xl lg:text-6xl font-extrabold text-white leading-tight tracking-tight drop-shadow-xl">
+                  Residential<br/>Junk Removal Services
+                </h1>
+                
+                <p className="text-xl text-gray-200 leading-relaxed max-w-xl font-medium drop-shadow-md mx-auto lg:mx-0">
+                  Professional residential junk removal services for Jacksonville homes. Home cleanouts, furniture removal, and residential waste disposal that makes your home clean and organized.
+                </p>
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-5 pt-4 justify-center lg:justify-start">
+                <Link
+                  href="tel:+19044563851"
+                  className="bg-secondary hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 flex items-center justify-center space-x-3 shadow-xl shadow-secondary/20 hover:shadow-secondary/40 hover:-translate-y-1"
+                >
+                  <Phone className="w-6 h-6 animate-bounce-gentle" />
+                  <span>Call (904) 456-3851</span>
+                </Link>
+                <Link
+                  href="/contact"
+                  className="bg-white/10 hover:bg-white/20 backdrop-blur-md border-2 border-white/30 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 flex items-center justify-center shadow-xl hover:-translate-y-1"
+                >
+                  <span>Get Free Quote</span>
+                </Link>
+              </div>
             </div>
           </div>
         </div>
+      </section>
 
         {/* Service Overview */}
         <div className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               <div>
-                <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+                <h2 className="text-3xl lg:text-4xl font-bold text-primary mb-6">
                   Professional Residential Cleanup
                 </h2>
                 <p className="text-lg text-gray-600 mb-6">
@@ -71,11 +88,11 @@ export default function ResidentialJunkRemovalPage() {
                 {/* Quick Stats */}
                 <div className="grid grid-cols-2 gap-6">
                   <div className="text-center p-4 bg-gray-50 rounded-lg">
-                    <div className="text-2xl font-bold text-gray-900">Home</div>
+                    <div className="text-2xl font-bold text-primary">Home</div>
                     <div className="text-sm text-gray-600">Focused</div>
                   </div>
                   <div className="text-center p-4 bg-gray-50 rounded-lg">
-                    <div className="text-2xl font-bold text-gray-900">Family</div>
+                    <div className="text-2xl font-bold text-primary">Family</div>
                     <div className="text-sm text-gray-600">Friendly</div>
                   </div>
                 </div>
@@ -84,7 +101,7 @@ export default function ResidentialJunkRemovalPage() {
               <div className="bg-gray-100 rounded-lg p-8">
                 <div className="text-center">
                   <div className="text-6xl mb-4">🏠</div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">Residential Junk Removal</h3>
+                  <h3 className="text-xl font-semibold text-primary mb-3">Residential Junk Removal</h3>
                   <p className="text-gray-600 mb-6">
                     Professional cleanup services for Jacksonville homes, helping families 
                     maintain clean, organized living spaces.
@@ -114,7 +131,7 @@ export default function ResidentialJunkRemovalPage() {
         <div className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-3xl lg:text-4xl font-bold text-primary mb-4">
                 Residential Junk Removal Services
               </h2>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -126,10 +143,10 @@ export default function ResidentialJunkRemovalPage() {
               <div className="bg-white rounded-lg p-8 shadow-sm border border-gray-100">
                 <div className="flex items-start space-x-4 mb-6">
                   <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Home className="w-6 h-6 text-gray-900" />
+                    <Home className="w-6 h-6 text-primary" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                    <h3 className="text-xl font-semibold text-primary mb-2">
                       Home Cleanouts
                     </h3>
                     <p className="text-gray-600 text-sm">
@@ -161,10 +178,10 @@ export default function ResidentialJunkRemovalPage() {
               <div className="bg-white rounded-lg p-8 shadow-sm border border-gray-100">
                 <div className="flex items-start space-x-4 mb-6">
                   <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Truck className="w-6 h-6 text-gray-900" />
+                    <Truck className="w-6 h-6 text-primary" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                    <h3 className="text-xl font-semibold text-primary mb-2">
                       Furniture Removal
                     </h3>
                     <p className="text-gray-600 text-sm">
@@ -196,10 +213,10 @@ export default function ResidentialJunkRemovalPage() {
               <div className="bg-white rounded-lg p-8 shadow-sm border border-gray-100">
                 <div className="flex items-start space-x-4 mb-6">
                   <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Heart className="w-6 h-6 text-gray-900" />
+                    <Heart className="w-6 h-6 text-primary" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                    <h3 className="text-xl font-semibold text-primary mb-2">
                       Residential Waste Disposal
                     </h3>
                     <p className="text-gray-600 text-sm">
@@ -231,10 +248,10 @@ export default function ResidentialJunkRemovalPage() {
               <div className="bg-white rounded-lg p-8 shadow-sm border border-gray-100">
                 <div className="flex items-start space-x-4 mb-6">
                   <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Users className="w-6 h-6 text-gray-900" />
+                    <Users className="w-6 h-6 text-primary" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                    <h3 className="text-xl font-semibold text-primary mb-2">
                       Family-Friendly Service
                     </h3>
                     <p className="text-gray-600 text-sm">
@@ -270,7 +287,7 @@ export default function ResidentialJunkRemovalPage() {
         <div className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-3xl lg:text-4xl font-bold text-primary mb-4">
                 Why Choose Us for Residential Junk Removal?
               </h2>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -281,9 +298,9 @@ export default function ResidentialJunkRemovalPage() {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="text-center">
                 <div className="w-16 h-16 bg-gray-100 rounded-lg flex items-center justify-center mx-auto mb-6">
-                  <Star className="w-8 h-8 text-gray-900" />
+                  <Star className="w-8 h-8 text-primary" />
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">
+                <h3 className="text-lg font-semibold text-primary mb-4">
                   Residential Expertise
                 </h3>
                 <p className="text-gray-600">
@@ -292,9 +309,9 @@ export default function ResidentialJunkRemovalPage() {
               </div>
               <div className="text-center">
                 <div className="w-16 h-16 bg-gray-100 rounded-lg flex items-center justify-center mx-auto mb-6">
-                  <Heart className="w-8 h-8 text-gray-900" />
+                  <Heart className="w-8 h-8 text-primary" />
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">
+                <h3 className="text-lg font-semibold text-primary mb-4">
                   Family-Friendly Approach
                 </h3>
                 <p className="text-gray-600">
@@ -303,9 +320,9 @@ export default function ResidentialJunkRemovalPage() {
               </div>
               <div className="text-center">
                 <div className="w-16 h-16 bg-gray-100 rounded-lg flex items-center justify-center mx-auto mb-6">
-                  <MapPin className="w-8 h-8 text-gray-900" />
+                  <MapPin className="w-8 h-8 text-primary" />
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">
+                <h3 className="text-lg font-semibold text-primary mb-4">
                   Local Jacksonville Service
                 </h3>
                 <p className="text-gray-600">
@@ -314,9 +331,9 @@ export default function ResidentialJunkRemovalPage() {
               </div>
               <div className="text-center">
                 <div className="w-16 h-16 bg-gray-100 rounded-lg flex items-center justify-center mx-auto mb-6">
-                  <Truck className="w-8 h-8 text-gray-900" />
+                  <Truck className="w-8 h-8 text-primary" />
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">
+                <h3 className="text-lg font-semibold text-primary mb-4">
                   Professional Equipment
                 </h3>
                 <p className="text-gray-600">
@@ -325,9 +342,9 @@ export default function ResidentialJunkRemovalPage() {
               </div>
               <div className="text-center">
                 <div className="w-16 h-16 bg-gray-100 rounded-lg flex items-center justify-center mx-auto mb-6">
-                  <Clock className="w-8 h-8 text-gray-900" />
+                  <Clock className="w-8 h-8 text-primary" />
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">
+                <h3 className="text-lg font-semibold text-primary mb-4">
                   Flexible Scheduling
                 </h3>
                 <p className="text-gray-600">
@@ -336,9 +353,9 @@ export default function ResidentialJunkRemovalPage() {
               </div>
               <div className="text-center">
                 <div className="w-16 h-16 bg-gray-100 rounded-lg flex items-center justify-center mx-auto mb-6">
-                  <Shield className="w-8 h-8 text-gray-900" />
+                  <Shield className="w-8 h-8 text-primary" />
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">
+                <h3 className="text-lg font-semibold text-primary mb-4">
                   Licensed & Insured
                 </h3>
                 <p className="text-gray-600">
@@ -350,7 +367,7 @@ export default function ResidentialJunkRemovalPage() {
         </div>
 
         {/* CTA Section */}
-        <div className="bg-gray-900 text-white py-16">
+        <div className="bg-primary text-white py-16">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl font-bold mb-6">
               Ready for Residential Junk Removal?
@@ -362,13 +379,13 @@ export default function ResidentialJunkRemovalPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="tel:+19047423531"
-                className="bg-yellow-400 hover:bg-yellow-500 text-gray-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200"
+                className="bg-secondary hover:bg-orange-600 text-primary px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200"
               >
                 Call (904) 742-3531
               </a>
               <Link
                 href="/estimation"
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-gray-900 transition-colors duration-200"
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-primary transition-colors duration-200"
               >
                 Get Free Quote
               </Link>

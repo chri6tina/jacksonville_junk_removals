@@ -17,38 +17,61 @@ export default function HoardingHousingSupportPage() {
       
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-purple-50 to-indigo-100 py-20">
-        <div className="container mx-auto px-4 text-center">
-          <div className="flex justify-center mb-6">
-            <Home className="w-16 h-16 text-purple-600" />
-          </div>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-gray-900">
-            Hoarding Housing Support Jacksonville
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-700 mb-8 max-w-4xl mx-auto">
-            Comprehensive hoarding housing support services including housing assistance, accommodation services, housing coordination, and housing advocacy. Our housing specialists help ensure stable housing for individuals affected by hoarding.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/estimation" 
-              className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition duration-300 inline-flex items-center gap-2"
-            >
-              <Phone className="w-5 h-5" />
-              Get Housing Help
-            </Link>
-            <Link 
-              href="/contact" 
-              className="bg-white hover:bg-gray-50 text-purple-600 border-2 border-purple-600 px-8 py-4 rounded-lg font-semibold text-lg transition duration-300 inline-flex items-center gap-2"
-            >
-              <MapPin className="w-5 h-5" />
-              Housing Consultation
-            </Link>
+      <section className="relative min-h-[70vh] flex items-center justify-center bg-primary overflow-hidden py-20 border-b-4 border-secondary">
+        <div className="absolute inset-0 z-0">
+          <img
+            src="/hero_junk_truck.png"
+            alt="Jacksonville Junk Removal Services"
+            className="w-full h-full object-cover object-center"
+          />
+          <div className="absolute inset-0 bg-black/50 md:bg-transparent md:bg-gradient-to-r md:from-primary/95 md:via-primary/80 md:to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-transparent to-transparent md:hidden"></div>
+        </div>
+        
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full animate-fade-in text-center lg:text-left">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="space-y-8">
+              <div className="inline-flex items-center space-x-2 bg-secondary/10 border border-secondary/30 rounded-full px-4 py-2 backdrop-blur-md shadow-lg shadow-black/20 mx-auto lg:mx-0">
+                <div className="flex -space-x-1">
+                  {[1, 2, 3, 4, 5].map((star) => (
+                    <Star key={star} className="w-4 h-4 text-secondary fill-secondary drop-shadow-md" />
+                  ))}
+                </div>
+                <span className="text-sm font-bold text-white tracking-wide uppercase ml-2 text-shadow-sm">Top-Rated Local Service</span>
+              </div>
+
+              <div className="space-y-6">
+                <h1 className="text-5xl lg:text-6xl font-extrabold text-white leading-tight tracking-tight drop-shadow-xl">
+                  Hoarding Housing Support Jacksonville
+                </h1>
+                
+                <p className="text-xl text-gray-200 leading-relaxed max-w-xl font-medium drop-shadow-md mx-auto lg:mx-0">
+                  Comprehensive hoarding housing support services including housing assistance, accommodation services, housing coordination, and housing advocacy. Our housing specialists help ensure stable housing for individuals affected by hoarding.
+                </p>
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-5 pt-4 justify-center lg:justify-start">
+                <Link
+                  href="tel:+19044563851"
+                  className="bg-secondary hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 flex items-center justify-center space-x-3 shadow-xl shadow-secondary/20 hover:shadow-secondary/40 hover:-translate-y-1"
+                >
+                  <Phone className="w-6 h-6 animate-bounce-gentle" />
+                  <span>Call (904) 456-3851</span>
+                </Link>
+                <Link
+                  href="/contact"
+                  className="bg-white/10 hover:bg-white/20 backdrop-blur-md border-2 border-white/30 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 flex items-center justify-center shadow-xl hover:-translate-y-1"
+                >
+                  <span>Get Free Quote</span>
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Service Alert */}
-      <section className="bg-purple-600 text-white py-6">
+      <section className="bg-primary text-white py-6">
         <div className="container mx-auto px-4 text-center">
           <div className="flex items-center justify-center gap-3">
             <Home className="w-5 h-5" />
@@ -73,8 +96,8 @@ export default function HoardingHousingSupportPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-gray-50 rounded-lg p-8 border border-gray-200">
-              <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
-                <Home className="w-6 h-6 text-purple-600" />
+              <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-6">
+                <Home className="w-6 h-6 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">
                 Housing Assistance
@@ -84,27 +107,27 @@ export default function HoardingHousingSupportPage() {
               </p>
               <ul className="text-sm text-gray-600 space-y-2">
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-purple-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Housing search
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-purple-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Application assistance
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-purple-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Housing placement
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-purple-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Housing maintenance
                 </li>
               </ul>
             </div>
 
             <div className="bg-gray-50 rounded-lg p-8 border border-gray-200">
-              <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
-                <Key className="w-6 h-6 text-purple-600" />
+              <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-6">
+                <Key className="w-6 h-6 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">
                 Accommodation Services
@@ -114,27 +137,27 @@ export default function HoardingHousingSupportPage() {
               </p>
               <ul className="text-sm text-gray-600 space-y-2">
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-purple-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Specialized housing
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-purple-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Supportive housing
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-purple-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Transitional housing
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-purple-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Emergency housing
                 </li>
               </ul>
             </div>
 
             <div className="bg-gray-50 rounded-lg p-8 border border-gray-200">
-              <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
-                <Shield className="w-6 h-6 text-purple-600" />
+              <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-6">
+                <Shield className="w-6 h-6 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">
                 Housing Advocacy
@@ -144,19 +167,19 @@ export default function HoardingHousingSupportPage() {
               </p>
               <ul className="text-sm text-gray-600 space-y-2">
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-purple-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Rights protection
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-purple-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Discrimination prevention
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-purple-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Policy advocacy
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-purple-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Legal support
                 </li>
               </ul>
@@ -179,8 +202,8 @@ export default function HoardingHousingSupportPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white rounded-lg p-8 border border-gray-200 shadow-sm">
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Home className="w-8 h-8 text-purple-600" />
+              <div className="w-16 h-16 bg-secondary/10 border border-secondary/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Home className="w-8 h-8 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4 text-center">Housing Search</h3>
               <p className="text-gray-600 text-center mb-4">
@@ -188,23 +211,23 @@ export default function HoardingHousingSupportPage() {
               </p>
               <ul className="text-sm text-gray-600 space-y-2">
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-purple-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Housing identification
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-purple-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Location preferences
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-purple-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Accessibility needs
                 </li>
               </ul>
             </div>
 
             <div className="bg-white rounded-lg p-8 border border-gray-200 shadow-sm">
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Key className="w-8 h-8 text-purple-600" />
+              <div className="w-16 h-16 bg-secondary/10 border border-secondary/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Key className="w-8 h-8 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4 text-center">Housing Placement</h3>
               <p className="text-gray-600 text-center mb-4">
@@ -212,23 +235,23 @@ export default function HoardingHousingSupportPage() {
               </p>
               <ul className="text-sm text-gray-600 space-y-2">
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-purple-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Application assistance
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-purple-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Documentation support
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-purple-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Interview preparation
                 </li>
               </ul>
             </div>
 
             <div className="bg-white rounded-lg p-8 border border-gray-200 shadow-sm">
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Shield className="w-8 h-8 text-purple-600" />
+              <div className="w-16 h-16 bg-secondary/10 border border-secondary/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Shield className="w-8 h-8 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4 text-center">Housing Advocacy</h3>
               <p className="text-gray-600 text-center mb-4">
@@ -236,23 +259,23 @@ export default function HoardingHousingSupportPage() {
               </p>
               <ul className="text-sm text-gray-600 space-y-2">
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-purple-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Rights protection
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-purple-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Discrimination prevention
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-purple-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Policy advocacy
                 </li>
               </ul>
             </div>
 
             <div className="bg-white rounded-lg p-8 border border-gray-200 shadow-sm">
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Users className="w-8 h-8 text-purple-600" />
+              <div className="w-16 h-16 bg-secondary/10 border border-secondary/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Users className="w-8 h-8 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4 text-center">Supportive Housing</h3>
               <p className="text-gray-600 text-center mb-4">
@@ -260,23 +283,23 @@ export default function HoardingHousingSupportPage() {
               </p>
               <ul className="text-sm text-gray-600 space-y-2">
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-purple-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Integrated services
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-purple-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   On-site support
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-purple-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Community integration
                 </li>
               </ul>
             </div>
 
             <div className="bg-white rounded-lg p-8 border border-gray-200 shadow-sm">
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                <MessageCircle className="w-8 h-8 text-purple-600" />
+              <div className="w-16 h-16 bg-secondary/10 border border-secondary/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                <MessageCircle className="w-8 h-8 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4 text-center">Housing Coordination</h3>
               <p className="text-gray-600 text-center mb-4">
@@ -284,23 +307,23 @@ export default function HoardingHousingSupportPage() {
               </p>
               <ul className="text-sm text-gray-600 space-y-2">
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-purple-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Service integration
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-purple-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Care coordination
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-purple-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Communication support
                 </li>
               </ul>
             </div>
 
             <div className="bg-white rounded-lg p-8 border border-gray-200 shadow-sm">
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Building className="w-8 h-8 text-purple-600" />
+              <div className="w-16 h-16 bg-secondary/10 border border-secondary/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Building className="w-8 h-8 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4 text-center">Housing Maintenance</h3>
               <p className="text-gray-600 text-center mb-4">
@@ -308,15 +331,15 @@ export default function HoardingHousingSupportPage() {
               </p>
               <ul className="text-sm text-gray-600 space-y-2">
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-purple-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Maintenance support
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-purple-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Prevention strategies
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-purple-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Crisis intervention
                 </li>
               </ul>
@@ -339,8 +362,8 @@ export default function HoardingHousingSupportPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="w-20 h-20 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                <span className="text-3xl font-bold text-purple-600">1</span>
+              <div className="w-20 h-20 bg-secondary/10 border border-secondary/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                <span className="text-3xl font-bold text-secondary">1</span>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Housing Assessment</h3>
               <p className="text-gray-600">
@@ -349,8 +372,8 @@ export default function HoardingHousingSupportPage() {
             </div>
 
             <div className="text-center">
-              <div className="w-20 h-20 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                <span className="text-3xl font-bold text-purple-600">2</span>
+              <div className="w-20 h-20 bg-secondary/10 border border-secondary/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                <span className="text-3xl font-bold text-secondary">2</span>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Housing Plan Development</h3>
               <p className="text-gray-600">
@@ -359,8 +382,8 @@ export default function HoardingHousingSupportPage() {
             </div>
 
             <div className="text-center">
-              <div className="w-20 h-20 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                <span className="text-3xl font-bold text-purple-600">3</span>
+              <div className="w-20 h-20 bg-secondary/10 border border-secondary/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                <span className="text-3xl font-bold text-secondary">3</span>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Housing Implementation</h3>
               <p className="text-gray-600">
@@ -369,8 +392,8 @@ export default function HoardingHousingSupportPage() {
             </div>
 
             <div className="text-center">
-              <div className="w-20 h-20 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                <span className="text-3xl font-bold text-purple-600">4</span>
+              <div className="w-20 h-20 bg-secondary/10 border border-secondary/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                <span className="text-3xl font-bold text-secondary">4</span>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Ongoing Support</h3>
               <p className="text-gray-600">
@@ -394,8 +417,8 @@ export default function HoardingHousingSupportPage() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="text-center">
-            <div className="w-20 h-20 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
-              <Shield className="w-10 h-10 text-purple-600" />
+            <div className="w-20 h-20 bg-secondary/10 border border-secondary/20 rounded-full flex items-center justify-center mx-auto mb-6">
+              <Shield className="w-10 h-10 text-secondary" />
             </div>
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Housing Stability</h3>
             <p className="text-gray-600">
@@ -404,8 +427,8 @@ export default function HoardingHousingSupportPage() {
           </div>
 
           <div className="text-center">
-            <div className="w-20 h-20 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
-              <Home className="w-10 h-10 text-purple-600" />
+            <div className="w-20 h-20 bg-secondary/10 border border-secondary/20 rounded-full flex items-center justify-center mx-auto mb-6">
+              <Home className="w-10 h-10 text-secondary" />
             </div>
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Safe Environment</h3>
             <p className="text-gray-600">
@@ -414,8 +437,8 @@ export default function HoardingHousingSupportPage() {
           </div>
 
           <div className="text-center">
-            <div className="w-20 h-20 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
-              <Users className="w-10 h-10 text-purple-600" />
+            <div className="w-20 h-20 bg-secondary/10 border border-secondary/20 rounded-full flex items-center justify-center mx-auto mb-6">
+              <Users className="w-10 h-10 text-secondary" />
             </div>
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Community Integration</h3>
             <p className="text-gray-600">
@@ -424,8 +447,8 @@ export default function HoardingHousingSupportPage() {
           </div>
 
           <div className="text-center">
-            <div className="w-20 h-20 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
-              <Target className="w-10 h-10 text-purple-600" />
+            <div className="w-20 h-20 bg-secondary/10 border border-secondary/20 rounded-full flex items-center justify-center mx-auto mb-6">
+              <Target className="w-10 h-10 text-secondary" />
             </div>
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Better Outcomes</h3>
             <p className="text-gray-600">
@@ -434,8 +457,8 @@ export default function HoardingHousingSupportPage() {
           </div>
 
           <div className="text-center">
-            <div className="w-20 h-20 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
-              <MessageCircle className="w-10 h-10 text-purple-600" />
+            <div className="w-20 h-20 bg-secondary/10 border border-secondary/20 rounded-full flex items-center justify-center mx-auto mb-6">
+              <MessageCircle className="w-10 h-10 text-secondary" />
             </div>
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Reduced Stress</h3>
             <p className="text-gray-600">
@@ -444,8 +467,8 @@ export default function HoardingHousingSupportPage() {
           </div>
 
           <div className="text-center">
-            <div className="w-20 h-20 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
-              <Key className="w-10 h-10 text-purple-600" />
+            <div className="w-20 h-20 bg-secondary/10 border border-secondary/20 rounded-full flex items-center justify-center mx-auto mb-6">
+              <Key className="w-10 h-10 text-secondary" />
             </div>
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Access to Services</h3>
             <p className="text-gray-600">
@@ -469,8 +492,8 @@ export default function HoardingHousingSupportPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="text-center">
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Award className="w-8 h-8 text-purple-600" />
+              <div className="w-16 h-16 bg-secondary/10 border border-secondary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Award className="w-8 h-8 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Housing Specialists</h3>
               <p className="text-gray-600">
@@ -479,8 +502,8 @@ export default function HoardingHousingSupportPage() {
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Home className="w-8 h-8 text-purple-600" />
+              <div className="w-16 h-16 bg-secondary/10 border border-secondary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Home className="w-8 h-8 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Comprehensive Support</h3>
               <p className="text-gray-600">
@@ -489,8 +512,8 @@ export default function HoardingHousingSupportPage() {
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Shield className="w-8 h-8 text-purple-600" />
+              <div className="w-16 h-16 bg-secondary/10 border border-secondary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Shield className="w-8 h-8 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Housing Advocacy</h3>
               <p className="text-gray-600">
@@ -499,8 +522,8 @@ export default function HoardingHousingSupportPage() {
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Users className="w-8 h-8 text-purple-600" />
+              <div className="w-16 h-16 bg-secondary/10 border border-secondary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Users className="w-8 h-8 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Client Support</h3>
               <p className="text-gray-600">
@@ -509,8 +532,8 @@ export default function HoardingHousingSupportPage() {
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Clock className="w-8 h-8 text-purple-600" />
+              <div className="w-16 h-16 bg-secondary/10 border border-secondary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Clock className="w-8 h-8 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Quick Response</h3>
               <p className="text-gray-600">
@@ -519,8 +542,8 @@ export default function HoardingHousingSupportPage() {
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Target className="w-8 h-8 text-purple-600" />
+              <div className="w-16 h-16 bg-secondary/10 border border-secondary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Target className="w-8 h-8 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Personalized Approach</h3>
               <p className="text-gray-600">
@@ -532,7 +555,7 @@ export default function HoardingHousingSupportPage() {
       </section>
 
       {/* Contact Section */}
-      <section className="py-16 bg-purple-600 text-white">
+      <section className="py-16 bg-primary text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Need Housing Support?
@@ -543,14 +566,14 @@ export default function HoardingHousingSupportPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
               href="/estimation" 
-              className="bg-white hover:bg-gray-100 text-purple-600 px-8 py-4 rounded-lg font-semibold text-lg transition duration-300 inline-flex items-center gap-2"
+              className="bg-white hover:bg-gray-100 text-secondary px-8 py-4 rounded-lg font-semibold text-lg transition duration-300 inline-flex items-center gap-2"
             >
               <Phone className="w-5 h-5" />
               Get Housing Help
             </Link>
             <Link 
               href="/contact" 
-              className="bg-transparent hover:bg-white hover:text-purple-600 border-2 border-white px-8 py-4 rounded-lg font-semibold text-lg transition duration-300 inline-flex items-center gap-2"
+              className="bg-transparent hover:bg-white hover:text-secondary border-2 border-white px-8 py-4 rounded-lg font-semibold text-lg transition duration-300 inline-flex items-center gap-2"
             >
               <Calendar className="w-5 h-5" />
               Housing Consultation
@@ -573,11 +596,11 @@ export default function HoardingHousingSupportPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <Link href="/hoarding-legal-support" className="group">
-              <div className="bg-white rounded-lg p-6 border border-gray-200 hover:border-purple-300 transition duration-300 group-hover:shadow-lg">
-                <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-purple-200 transition duration-300">
-                  <Shield className="w-6 h-6 text-purple-600" />
+              <div className="bg-white rounded-lg p-6 border border-gray-200 hover:border-secondary/30 transition duration-300 group-hover:shadow-lg">
+                <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-purple-200 transition duration-300">
+                  <Shield className="w-6 h-6 text-secondary" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-purple-600 transition duration-300">
+                <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-secondary transition duration-300">
                   Legal Support
                 </h3>
                 <p className="text-gray-600">
@@ -587,11 +610,11 @@ export default function HoardingHousingSupportPage() {
             </Link>
 
             <Link href="/hoarding-financial-support" className="group">
-              <div className="bg-white rounded-lg p-6 border border-gray-200 hover:border-purple-300 transition duration-300 group-hover:shadow-lg">
-                <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-purple-200 transition duration-300">
-                  <Target className="w-6 h-6 text-purple-600" />
+              <div className="bg-white rounded-lg p-6 border border-gray-200 hover:border-secondary/30 transition duration-300 group-hover:shadow-lg">
+                <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-purple-200 transition duration-300">
+                  <Target className="w-6 h-6 text-secondary" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-purple-600 transition duration-300">
+                <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-secondary transition duration-300">
                   Financial Support
                 </h3>
                 <p className="text-gray-600">
@@ -601,11 +624,11 @@ export default function HoardingHousingSupportPage() {
             </Link>
 
             <Link href="/hoarding-assessment" className="group">
-              <div className="bg-white rounded-lg p-6 border border-gray-200 hover:border-purple-300 transition duration-300 group-hover:shadow-lg">
-                <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-purple-200 transition duration-300">
-                  <Eye className="w-6 h-6 text-purple-600" />
+              <div className="bg-white rounded-lg p-6 border border-gray-200 hover:border-secondary/30 transition duration-300 group-hover:shadow-lg">
+                <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-purple-200 transition duration-300">
+                  <Eye className="w-6 h-6 text-secondary" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-purple-600 transition duration-300">
+                <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-secondary transition duration-300">
                   Hoarding Assessment
                 </h3>
                 <p className="text-gray-600">

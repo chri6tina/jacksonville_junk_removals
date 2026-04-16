@@ -15,42 +15,61 @@ export default function EwasteJunkRemovalPage() {
   return (
     <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-purple-900 via-purple-800 to-purple-700 text-white">
-          <div className="absolute inset-0 bg-black bg-opacity-40"></div>
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-            <div className="text-center">
-              <div className="flex justify-center mb-6">
-                <Monitor className="w-16 h-16 text-purple-400" />
+      <section className="relative min-h-[70vh] flex items-center justify-center bg-primary overflow-hidden py-20 border-b-4 border-secondary">
+        <div className="absolute inset-0 z-0">
+          <img
+            src="/hero_junk_truck.png"
+            alt="Jacksonville Junk Removal Services"
+            className="w-full h-full object-cover object-center"
+          />
+          <div className="absolute inset-0 bg-black/50 md:bg-transparent md:bg-gradient-to-r md:from-primary/95 md:via-primary/80 md:to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-transparent to-transparent md:hidden"></div>
+        </div>
+        
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full animate-fade-in text-center lg:text-left">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="space-y-8">
+              <div className="inline-flex items-center space-x-2 bg-secondary/10 border border-secondary/30 rounded-full px-4 py-2 backdrop-blur-md shadow-lg shadow-black/20 mx-auto lg:mx-0">
+                <div className="flex -space-x-1">
+                  {[1, 2, 3, 4, 5].map((star) => (
+                    <Star key={star} className="w-4 h-4 text-secondary fill-secondary drop-shadow-md" />
+                  ))}
+                </div>
+                <span className="text-sm font-bold text-white tracking-wide uppercase ml-2 text-shadow-sm">Top-Rated Local Service</span>
               </div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-                E-Waste Junk Removal Jacksonville
-              </h1>
-              <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto">
-                <span className="text-purple-300 font-bold">SECURE & ECO-FRIENDLY</span><br />
-                Professional e-waste disposal with data security and recycling focus.<br />
-                Safe disposal of all electronic devices and components.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+
+              <div className="space-y-6">
+                <h1 className="text-5xl lg:text-6xl font-extrabold text-white leading-tight tracking-tight drop-shadow-xl">
+                  E-Waste Junk Removal Jacksonville
+                </h1>
+                
+                <p className="text-xl text-gray-200 leading-relaxed max-w-xl font-medium drop-shadow-md mx-auto lg:mx-0">
+                  <span className="text-purple-300 font-bold">SECURE & ECO-FRIENDLY</span><br /> Professional e-waste disposal with data security and recycling focus.<br /> Safe disposal of all electronic devices and components.
+                </p>
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-5 pt-4 justify-center lg:justify-start">
                 <Link
-                  href="/contact"
-                  className="bg-purple-500 hover:bg-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 flex items-center justify-center space-x-2"
+                  href="tel:+19044563851"
+                  className="bg-secondary hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 flex items-center justify-center space-x-3 shadow-xl shadow-secondary/20 hover:shadow-secondary/40 hover:-translate-y-1"
                 >
-                  <Phone className="w-5 h-5" />
-                  <span>Get E-Waste Quote</span>
+                  <Phone className="w-6 h-6 animate-bounce-gentle" />
+                  <span>Call (904) 456-3851</span>
                 </Link>
                 <Link
-                  href="/estimation"
-                  className="border-2 border-white text-white hover:bg-white hover:text-purple-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 flex items-center justify-center"
+                  href="/contact"
+                  className="bg-white/10 hover:bg-white/20 backdrop-blur-md border-2 border-white/30 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 flex items-center justify-center shadow-xl hover:-translate-y-1"
                 >
-                  <span>Free Consultation</span>
+                  <span>Get Free Quote</span>
                 </Link>
               </div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
         {/* Service Alert */}
-        <section className="bg-purple-600 text-white py-6">
+        <section className="bg-primary text-white py-6">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div className="flex items-center justify-center space-x-3">
               <Monitor className="w-6 h-6" />
@@ -79,9 +98,9 @@ export default function EwasteJunkRemovalPage() {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {/* Computer Disposal */}
-              <div className="bg-purple-50 rounded-lg p-8 border border-purple-200">
-                <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
-                  <Laptop className="w-6 h-6 text-purple-600" />
+              <div className="bg-gray-50 rounded-lg p-8 border border-gray-200">
+                <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-6">
+                  <Laptop className="w-6 h-6 text-secondary" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">
                   Computer Disposal
@@ -98,9 +117,9 @@ export default function EwasteJunkRemovalPage() {
               </div>
 
               {/* TV & Monitor Disposal */}
-              <div className="bg-purple-50 rounded-lg p-8 border border-purple-200">
-                <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
-                  <Monitor className="w-6 h-6 text-purple-600" />
+              <div className="bg-gray-50 rounded-lg p-8 border border-gray-200">
+                <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-6">
+                  <Monitor className="w-6 h-6 text-secondary" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">
                   TV & Monitor Disposal
@@ -117,9 +136,9 @@ export default function EwasteJunkRemovalPage() {
               </div>
 
               {/* Mobile Device Disposal */}
-              <div className="bg-purple-50 rounded-lg p-8 border border-purple-200">
-                <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
-                  <Smartphone className="w-6 h-6 text-purple-600" />
+              <div className="bg-gray-50 rounded-lg p-8 border border-gray-200">
+                <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-6">
+                  <Smartphone className="w-6 h-6 text-secondary" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">
                   Mobile Device Disposal
@@ -136,9 +155,9 @@ export default function EwasteJunkRemovalPage() {
               </div>
 
               {/* Office Electronics */}
-              <div className="bg-purple-50 rounded-lg p-8 border border-purple-200">
-                <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
-                  <Zap className="w-6 h-6 text-purple-600" />
+              <div className="bg-gray-50 rounded-lg p-8 border border-gray-200">
+                <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-6">
+                  <Zap className="w-6 h-6 text-secondary" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">
                   Office Electronics
@@ -155,9 +174,9 @@ export default function EwasteJunkRemovalPage() {
               </div>
 
               {/* Gaming Consoles */}
-              <div className="bg-purple-50 rounded-lg p-8 border border-purple-200">
-                <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
-                  <Monitor className="w-6 h-6 text-purple-600" />
+              <div className="bg-gray-50 rounded-lg p-8 border border-gray-200">
+                <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-6">
+                  <Monitor className="w-6 h-6 text-secondary" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">
                   Gaming Consoles
@@ -174,9 +193,9 @@ export default function EwasteJunkRemovalPage() {
               </div>
 
               {/* Battery Disposal */}
-              <div className="bg-purple-50 rounded-lg p-8 border border-purple-200">
-                <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
-                  <Zap className="w-6 h-6 text-purple-600" />
+              <div className="bg-gray-50 rounded-lg p-8 border border-gray-200">
+                <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-6">
+                  <Zap className="w-6 h-6 text-secondary" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">
                   Battery Disposal
@@ -209,24 +228,24 @@ export default function EwasteJunkRemovalPage() {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="text-center">
-                <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Shield className="w-8 h-8 text-purple-600" />
+                <div className="w-16 h-16 bg-secondary/10 border border-secondary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Shield className="w-8 h-8 text-secondary" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">Data Security</h3>
                 <p className="text-gray-600">Complete data destruction and secure handling of sensitive information.</p>
               </div>
 
               <div className="text-center">
-                <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <FileText className="w-8 h-8 text-purple-600" />
+                <div className="w-16 h-16 bg-secondary/10 border border-secondary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <FileText className="w-8 h-8 text-secondary" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">Certified Disposal</h3>
                 <p className="text-gray-600">EPA compliant disposal methods with proper documentation and tracking.</p>
               </div>
 
               <div className="text-center">
-                <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Truck className="w-8 h-8 text-purple-600" />
+                <div className="w-16 h-16 bg-secondary/10 border border-secondary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Truck className="w-8 h-8 text-secondary" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">Recycling Focus</h3>
                 <p className="text-gray-600">Maximum recycling and recovery of valuable materials and components.</p>

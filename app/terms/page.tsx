@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import type { Metadata } from 'next'
-import { FileText, CheckCircle, AlertTriangle, Shield, Phone, Mail, Clock } from 'lucide-react'
+import { FileText, CheckCircle, AlertTriangle, Shield, Phone, Mail, Clock, Star } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Terms of Service | Jacksonville Junk Removals | Service Agreement & Policies (904) 456-3851',
@@ -15,24 +15,58 @@ export default function TermsPage() {
   return (
     <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-green-900 via-green-800 to-green-700 text-white">
-          <div className="absolute inset-0 bg-black bg-opacity-40"></div>
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-            <div className="text-center">
-              <div className="flex justify-center mb-6">
-                <FileText className="w-16 h-16 text-green-400" />
+      <section className="relative min-h-[70vh] flex items-center justify-center bg-primary overflow-hidden py-20 border-b-4 border-secondary">
+        <div className="absolute inset-0 z-0">
+          <img
+            src="/hero_junk_truck.png"
+            alt="Jacksonville Junk Removal Services"
+            className="w-full h-full object-cover object-center"
+          />
+          <div className="absolute inset-0 bg-black/50 md:bg-transparent md:bg-gradient-to-r md:from-primary/95 md:via-primary/80 md:to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-transparent to-transparent md:hidden"></div>
+        </div>
+        
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full animate-fade-in text-center lg:text-left">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="space-y-8">
+              <div className="inline-flex items-center space-x-2 bg-secondary/10 border border-secondary/30 rounded-full px-4 py-2 backdrop-blur-md shadow-lg shadow-black/20 mx-auto lg:mx-0">
+                <div className="flex -space-x-1">
+                  {[1, 2, 3, 4, 5].map((star) => (
+                    <Star key={star} className="w-4 h-4 text-secondary fill-secondary drop-shadow-md" />
+                  ))}
+                </div>
+                <span className="text-sm font-bold text-white tracking-wide uppercase ml-2 text-shadow-sm">Top-Rated Local Service</span>
               </div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-                Terms of Service
-              </h1>
-              <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto">
-                <span className="text-green-300 font-bold">SERVICE AGREEMENT & POLICIES</span><br />
-                These terms govern our junk removal services and outline the agreement between
-                Jacksonville Junk Removals and our customers.
-              </p>
+
+              <div className="space-y-6">
+                <h1 className="text-5xl lg:text-6xl font-extrabold text-white leading-tight tracking-tight drop-shadow-xl">
+                  Terms of Service
+                </h1>
+                
+                <p className="text-xl text-gray-200 leading-relaxed max-w-xl font-medium drop-shadow-md mx-auto lg:mx-0">
+                  <span className="text-green-300 font-bold">SERVICE AGREEMENT & POLICIES</span><br /> These terms govern our junk removal services and outline the agreement between Jacksonville Junk Removals and our customers.
+                </p>
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-5 pt-4 justify-center lg:justify-start">
+                <Link
+                  href="tel:+19044563851"
+                  className="bg-secondary hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 flex items-center justify-center space-x-3 shadow-xl shadow-secondary/20 hover:shadow-secondary/40 hover:-translate-y-1"
+                >
+                  <Phone className="w-6 h-6 animate-bounce-gentle" />
+                  <span>Call (904) 456-3851</span>
+                </Link>
+                <Link
+                  href="/contact"
+                  className="bg-white/10 hover:bg-white/20 backdrop-blur-md border-2 border-white/30 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 flex items-center justify-center shadow-xl hover:-translate-y-1"
+                >
+                  <span>Get Free Quote</span>
+                </Link>
+              </div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
         {/* Terms Content */}
         <section className="py-20 bg-white">
@@ -51,7 +85,7 @@ export default function TermsPage() {
                 {/* Acceptance of Terms */}
                 <div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
-                    <CheckCircle className="w-8 h-8 text-green-600 mr-3" />
+                    <CheckCircle className="w-8 h-8 text-secondary mr-3" />
                     Acceptance of Terms
                   </h3>
                   <div className="bg-gray-50 rounded-lg p-6">
@@ -64,7 +98,7 @@ export default function TermsPage() {
                 {/* Service Description */}
                 <div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
-                    <FileText className="w-8 h-8 text-blue-600 mr-3" />
+                    <FileText className="w-8 h-8 text-secondary mr-3" />
                     Service Description
                   </h3>
                   <div className="bg-gray-50 rounded-lg p-6">
@@ -131,7 +165,7 @@ export default function TermsPage() {
                 {/* Prohibited Items */}
                 <div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
-                    <AlertTriangle className="w-8 h-8 text-red-600 mr-3" />
+                    <AlertTriangle className="w-8 h-8 text-secondary mr-3" />
                     Prohibited Items
                   </h3>
                   <div className="bg-gray-50 rounded-lg p-6">
@@ -155,7 +189,7 @@ export default function TermsPage() {
                 {/* Pricing & Payment */}
                 <div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
-                    <CheckCircle className="w-8 h-8 text-blue-600 mr-3" />
+                    <CheckCircle className="w-8 h-8 text-secondary mr-3" />
                     Pricing & Payment
                   </h3>
                   <div className="bg-gray-50 rounded-lg p-6">
@@ -180,7 +214,7 @@ export default function TermsPage() {
                 {/* Liability & Insurance */}
                 <div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
-                    <Shield className="w-8 h-8 text-purple-600 mr-3" />
+                    <Shield className="w-8 h-8 text-secondary mr-3" />
                     Liability & Insurance
                   </h3>
                   <div className="bg-gray-50 rounded-lg p-6">
@@ -205,7 +239,7 @@ export default function TermsPage() {
                 {/* Disposal & Environmental */}
                 <div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
-                    <CheckCircle className="w-8 h-8 text-green-600 mr-3" />
+                    <CheckCircle className="w-8 h-8 text-secondary mr-3" />
                     Disposal & Environmental Responsibility
                   </h3>
                   <div className="bg-gray-50 rounded-lg p-6">
@@ -225,7 +259,7 @@ export default function TermsPage() {
                 {/* Service Guarantee */}
                 <div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
-                    <CheckCircle className="w-8 h-8 text-blue-600 mr-3" />
+                    <CheckCircle className="w-8 h-8 text-secondary mr-3" />
                     Service Guarantee
                   </h3>
                   <div className="bg-gray-50 rounded-lg p-6">
@@ -244,12 +278,12 @@ export default function TermsPage() {
                 {/* Privacy & Data */}
                 <div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
-                    <Shield className="w-8 h-8 text-blue-600 mr-3" />
+                    <Shield className="w-8 h-8 text-secondary mr-3" />
                     Privacy & Data Protection
                   </h3>
                   <div className="bg-gray-50 rounded-lg p-6">
                     <p className="text-gray-700">
-                      We protect your privacy and personal information. Please review our <Link href="/privacy" className="text-blue-600 hover:text-blue-800">Privacy Policy</Link> for details on how we collect, use, and protect your data.
+                      We protect your privacy and personal information. Please review our <Link href="/privacy" className="text-secondary hover:text-primary">Privacy Policy</Link> for details on how we collect, use, and protect your data.
                     </p>
                   </div>
                 </div>
@@ -270,7 +304,7 @@ export default function TermsPage() {
                 {/* Contact Information */}
                 <div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
-                    <Phone className="w-8 h-8 text-blue-600 mr-3" />
+                    <Phone className="w-8 h-8 text-secondary mr-3" />
                     Contact Information
                   </h3>
                   <div className="bg-gray-50 rounded-lg p-6">
@@ -278,8 +312,8 @@ export default function TermsPage() {
                       For questions about these terms or our services:
                     </p>
                     <div className="space-y-2 text-gray-700">
-                      <p><strong>Phone:</strong> <a href="tel:+1-904-456-3851" className="text-blue-600 hover:text-blue-800">(904) 456-3851</a></p>
-                      <p><strong>Email:</strong> <a href="mailto:info@jacksonvillejunkremovals.com" className="text-blue-600 hover:text-blue-800">info@jacksonvillejunkremovals.com</a></p>
+                      <p><strong>Phone:</strong> <a href="tel:+1-904-456-3851" className="text-secondary hover:text-primary">(904) 456-3851</a></p>
+                      <p><strong>Email:</strong> <a href="mailto:info@jacksonvillejunkremovals.com" className="text-secondary hover:text-primary">info@jacksonvillejunkremovals.com</a></p>
                       <p><strong>Address:</strong> Jacksonville, FL</p>
                     </div>
                   </div>
@@ -297,7 +331,7 @@ export default function TermsPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-green-600 text-white">
+        <section className="py-20 bg-primary text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl lg:text-4xl font-bold mb-6">
               Questions About Our Terms?
@@ -308,14 +342,14 @@ export default function TermsPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="tel:+1-904-456-3851"
-                className="bg-white hover:bg-gray-100 text-green-600 px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 flex items-center justify-center space-x-2"
+                className="bg-white hover:bg-gray-100 text-secondary px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 flex items-center justify-center space-x-2"
               >
                 <Phone className="w-5 h-5" />
                 <span>Call (904) 456-3851</span>
               </a>
               <Link
                 href="/contact"
-                className="border-2 border-white text-white hover:bg-white hover:text-green-600 px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 flex items-center justify-center"
+                className="border-2 border-white text-white hover:bg-white hover:text-secondary px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 flex items-center justify-center"
               >
                 <span>Contact Us</span>
               </Link>

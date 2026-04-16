@@ -16,38 +16,61 @@ export default function SchoolCleanoutPage() {
     <>
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-green-50 to-emerald-100 py-20">
-        <div className="container mx-auto px-4 text-center">
-          <div className="flex justify-center mb-6">
-            <GraduationCap className="w-16 h-16 text-green-600" />
-          </div>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-gray-900">
-            School Cleanout Jacksonville
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-700 mb-8 max-w-4xl mx-auto">
-            Professional school cleanout with educational facility expertise and student safety focus. We handle school cleanup, educational facility cleanout, and academic environment management efficiently.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/estimation" 
-              className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition duration-300 inline-flex items-center gap-2"
-            >
-              <Phone className="w-5 h-5" />
-              Get Free Quote
-            </Link>
-            <Link 
-              href="/contact" 
-              className="bg-white hover:bg-gray-50 text-green-600 border-2 border-green-600 px-8 py-4 rounded-lg font-semibold text-lg transition duration-300 inline-flex items-center gap-2"
-            >
-              <MapPin className="w-5 h-5" />
-              Schedule Service
-            </Link>
+      <section className="relative min-h-[70vh] flex items-center justify-center bg-primary overflow-hidden py-20 border-b-4 border-secondary">
+        <div className="absolute inset-0 z-0">
+          <img
+            src="/hero_junk_truck.png"
+            alt="Jacksonville Junk Removal Services"
+            className="w-full h-full object-cover object-center"
+          />
+          <div className="absolute inset-0 bg-black/50 md:bg-transparent md:bg-gradient-to-r md:from-primary/95 md:via-primary/80 md:to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-transparent to-transparent md:hidden"></div>
+        </div>
+        
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full animate-fade-in text-center lg:text-left">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="space-y-8">
+              <div className="inline-flex items-center space-x-2 bg-secondary/10 border border-secondary/30 rounded-full px-4 py-2 backdrop-blur-md shadow-lg shadow-black/20 mx-auto lg:mx-0">
+                <div className="flex -space-x-1">
+                  {[1, 2, 3, 4, 5].map((star) => (
+                    <Star key={star} className="w-4 h-4 text-secondary fill-secondary drop-shadow-md" />
+                  ))}
+                </div>
+                <span className="text-sm font-bold text-white tracking-wide uppercase ml-2 text-shadow-sm">Top-Rated Local Service</span>
+              </div>
+
+              <div className="space-y-6">
+                <h1 className="text-5xl lg:text-6xl font-extrabold text-white leading-tight tracking-tight drop-shadow-xl">
+                  School Cleanout Jacksonville
+                </h1>
+                
+                <p className="text-xl text-gray-200 leading-relaxed max-w-xl font-medium drop-shadow-md mx-auto lg:mx-0">
+                  Professional school cleanout with educational facility expertise and student safety focus. We handle school cleanup, educational facility cleanout, and academic environment management efficiently.
+                </p>
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-5 pt-4 justify-center lg:justify-start">
+                <Link
+                  href="tel:+19044563851"
+                  className="bg-secondary hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 flex items-center justify-center space-x-3 shadow-xl shadow-secondary/20 hover:shadow-secondary/40 hover:-translate-y-1"
+                >
+                  <Phone className="w-6 h-6 animate-bounce-gentle" />
+                  <span>Call (904) 456-3851</span>
+                </Link>
+                <Link
+                  href="/contact"
+                  className="bg-white/10 hover:bg-white/20 backdrop-blur-md border-2 border-white/30 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 flex items-center justify-center shadow-xl hover:-translate-y-1"
+                >
+                  <span>Get Free Quote</span>
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Service Alert */}
-      <section className="bg-green-600 text-white py-6">
+      <section className="bg-primary text-white py-6">
         <div className="container mx-auto px-4 text-center">
           <div className="flex items-center justify-center gap-3">
             <BookOpen className="w-5 h-5" />
@@ -73,8 +96,8 @@ export default function SchoolCleanoutPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Educational Facility Expertise */}
             <div className="bg-gray-50 rounded-lg p-8 border border-gray-200">
-              <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
-                <GraduationCap className="w-6 h-6 text-green-600" />
+              <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-6">
+                <GraduationCap className="w-6 h-6 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">
                 Educational Facility Expertise
@@ -84,19 +107,19 @@ export default function SchoolCleanoutPage() {
               </p>
               <ul className="text-sm text-gray-600 space-y-2">
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-green-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Academic standards
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-green-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Educational protocols
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-green-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Facility requirements
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-green-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Safety standards
                 </li>
               </ul>
@@ -104,8 +127,8 @@ export default function SchoolCleanoutPage() {
 
             {/* Student Safety Focus */}
             <div className="bg-gray-50 rounded-lg p-8 border border-gray-200">
-              <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
-                <Shield className="w-6 h-6 text-green-600" />
+              <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-6">
+                <Shield className="w-6 h-6 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">
                 Student Safety Focus
@@ -115,19 +138,19 @@ export default function SchoolCleanoutPage() {
               </p>
               <ul className="text-sm text-gray-600 space-y-2">
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-green-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Safety protocols
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-green-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Hazard prevention
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-green-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Child protection
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-green-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Risk management
                 </li>
               </ul>
@@ -135,8 +158,8 @@ export default function SchoolCleanoutPage() {
 
             {/* Academic Environment Knowledge */}
             <div className="bg-gray-50 rounded-lg p-8 border border-gray-200">
-              <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
-                <BookOpen className="w-6 h-6 text-green-600" />
+              <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-6">
+                <BookOpen className="w-6 h-6 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">
                 Academic Environment Knowledge
@@ -146,19 +169,19 @@ export default function SchoolCleanoutPage() {
               </p>
               <ul className="text-sm text-gray-600 space-y-2">
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-green-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Learning environments
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-green-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Educational workflows
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-green-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Academic protocols
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-green-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Facility standards
                 </li>
               </ul>
@@ -166,8 +189,8 @@ export default function SchoolCleanoutPage() {
 
             {/* Classroom & Equipment Cleanout */}
             <div className="bg-gray-50 rounded-lg p-8 border border-gray-200">
-              <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
-                <Wrench className="w-6 h-6 text-green-600" />
+              <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-6">
+                <Wrench className="w-6 h-6 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">
                 Classroom & Equipment Cleanout
@@ -177,19 +200,19 @@ export default function SchoolCleanoutPage() {
               </p>
               <ul className="text-sm text-gray-600 space-y-2">
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-green-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Classroom furniture
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-green-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Educational equipment
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-green-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Academic materials
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-green-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Learning tools
                 </li>
               </ul>
@@ -197,8 +220,8 @@ export default function SchoolCleanoutPage() {
 
             {/* Administrative Area Cleanup */}
             <div className="bg-gray-50 rounded-lg p-8 border border-gray-200">
-              <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
-                <Truck className="w-6 h-6 text-green-600" />
+              <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-6">
+                <Truck className="w-6 h-6 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">
                 Administrative Area Cleanup
@@ -208,19 +231,19 @@ export default function SchoolCleanoutPage() {
               </p>
               <ul className="text-sm text-gray-600 space-y-2">
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-green-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Office spaces
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-green-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Meeting rooms
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-green-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Common areas
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-green-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Administrative equipment
                 </li>
               </ul>
@@ -228,8 +251,8 @@ export default function SchoolCleanoutPage() {
 
             {/* Specialized Equipment Handling */}
             <div className="bg-gray-50 rounded-lg p-8 border border-gray-200">
-              <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
-                <Users className="w-6 h-6 text-green-600" />
+              <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-6">
+                <Users className="w-6 h-6 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">
                 Specialized Equipment Handling
@@ -239,19 +262,19 @@ export default function SchoolCleanoutPage() {
               </p>
               <ul className="text-sm text-gray-600 space-y-2">
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-green-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Educational equipment
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-green-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Academic machinery
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-green-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Safe removal
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-green-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Equipment protection
                 </li>
               </ul>
@@ -274,8 +297,8 @@ export default function SchoolCleanoutPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="text-center">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <GraduationCap className="w-8 h-8 text-green-600" />
+              <div className="w-16 h-16 bg-secondary/10 border border-secondary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <GraduationCap className="w-8 h-8 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Educational Facility</h3>
               <p className="text-gray-600">
@@ -284,8 +307,8 @@ export default function SchoolCleanoutPage() {
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Shield className="w-8 h-8 text-green-600" />
+              <div className="w-16 h-16 bg-secondary/10 border border-secondary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Shield className="w-8 h-8 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Student Safety</h3>
               <p className="text-gray-600">
@@ -294,8 +317,8 @@ export default function SchoolCleanoutPage() {
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <BookOpen className="w-8 h-8 text-green-600" />
+              <div className="w-16 h-16 bg-secondary/10 border border-secondary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <BookOpen className="w-8 h-8 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Academic Environment</h3>
               <p className="text-gray-600">
@@ -304,8 +327,8 @@ export default function SchoolCleanoutPage() {
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Wrench className="w-8 h-8 text-green-600" />
+              <div className="w-16 h-16 bg-secondary/10 border border-secondary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Wrench className="w-8 h-8 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Classroom & Equipment</h3>
               <p className="text-gray-600">
@@ -314,8 +337,8 @@ export default function SchoolCleanoutPage() {
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <MapPin className="w-8 h-8 text-green-600" />
+              <div className="w-16 h-16 bg-secondary/10 border border-secondary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <MapPin className="w-8 h-8 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Local Knowledge</h3>
               <p className="text-gray-600">
@@ -324,8 +347,8 @@ export default function SchoolCleanoutPage() {
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Star className="w-8 h-8 text-green-600" />
+              <div className="w-16 h-16 bg-secondary/10 border border-secondary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Star className="w-8 h-8 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">5-Star Service</h3>
               <p className="text-gray-600">
@@ -350,7 +373,7 @@ export default function SchoolCleanoutPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8">
             <div className="text-center">
-              <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-white font-bold text-xl">1</span>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Educational Assessment</h3>
@@ -360,7 +383,7 @@ export default function SchoolCleanoutPage() {
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-white font-bold text-xl">2</span>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Safety Planning</h3>
@@ -370,7 +393,7 @@ export default function SchoolCleanoutPage() {
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-white font-bold text-xl">3</span>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Professional Removal</h3>
@@ -380,7 +403,7 @@ export default function SchoolCleanoutPage() {
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-white font-bold text-xl">4</span>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Deep Cleaning</h3>
@@ -390,7 +413,7 @@ export default function SchoolCleanoutPage() {
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-white font-bold text-xl">5</span>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Completion</h3>
@@ -403,7 +426,7 @@ export default function SchoolCleanoutPage() {
       </section>
 
       {/* Educational Benefits */}
-      <section className="py-16 bg-green-50">
+      <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
@@ -415,80 +438,80 @@ export default function SchoolCleanoutPage() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white rounded-lg p-6 border border-green-200 shadow-sm">
-              <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
-                <Shield className="w-6 h-6 text-green-600" />
+            <div className="bg-white rounded-lg p-6 border border-gray-200 shadow-sm">
+              <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-4">
+                <Shield className="w-6 h-6 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Student Safety</h3>
               <p className="text-gray-600 mb-4">
                 Maintain student safety standards and protect children during cleanout operations.
               </p>
-              <div className="text-sm text-green-600 font-semibold">
+              <div className="text-sm text-secondary font-semibold">
                 Protect students
               </div>
             </div>
 
-            <div className="bg-white rounded-lg p-6 border border-green-200 shadow-sm">
-              <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
-                <DollarSign className="w-6 h-6 text-green-600" />
+            <div className="bg-white rounded-lg p-6 border border-gray-200 shadow-sm">
+              <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-4">
+                <DollarSign className="w-6 h-6 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Cost Efficiency</h3>
               <p className="text-gray-600 mb-4">
                 Reduce costs associated with safety violations and non-compliance issues.
               </p>
-              <div className="text-sm text-green-600 font-semibold">
+              <div className="text-sm text-secondary font-semibold">
                 Save money
               </div>
             </div>
 
-            <div className="bg-white rounded-lg p-6 border border-green-200 shadow-sm">
-              <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
-                <GraduationCap className="w-6 h-6 text-green-600" />
+            <div className="bg-white rounded-lg p-6 border border-gray-200 shadow-sm">
+              <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-4">
+                <GraduationCap className="w-6 h-6 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Educational Standards</h3>
               <p className="text-gray-600 mb-4">
                 Ensure compliance with educational facility standards and academic requirements.
               </p>
-              <div className="text-sm text-green-600 font-semibold">
+              <div className="text-sm text-secondary font-semibold">
                 Stay compliant
               </div>
             </div>
 
-            <div className="bg-white rounded-lg p-6 border border-green-200 shadow-sm">
-              <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
-                <BookOpen className="w-6 h-6 text-green-600" />
+            <div className="bg-white rounded-lg p-6 border border-gray-200 shadow-sm">
+              <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-4">
+                <BookOpen className="w-6 h-6 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Learning Environment</h3>
               <p className="text-gray-600 mb-4">
                 Optimize learning environments and classroom layouts for improved educational efficiency.
               </p>
-              <div className="text-sm text-green-600 font-semibold">
+              <div className="text-sm text-secondary font-semibold">
                 Boost learning
               </div>
             </div>
 
-            <div className="bg-white rounded-lg p-6 border border-green-200 shadow-sm">
-              <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
-                <Users className="w-6 h-6 text-green-600" />
+            <div className="bg-white rounded-lg p-6 border border-gray-200 shadow-sm">
+              <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-4">
+                <Users className="w-6 h-6 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Staff Safety</h3>
               <p className="text-gray-600 mb-4">
                 Create safer working environments for teachers and educational staff.
               </p>
-              <div className="text-sm text-green-600 font-semibold">
+              <div className="text-sm text-secondary font-semibold">
                 Protect your team
               </div>
             </div>
 
-            <div className="bg-white rounded-lg p-6 border border-green-200 shadow-sm">
-              <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
-                <Star className="w-6 h-6 text-green-600" />
+            <div className="bg-white rounded-lg p-6 border border-gray-200 shadow-sm">
+              <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-4">
+                <Star className="w-6 h-6 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Professional Results</h3>
               <p className="text-gray-600 mb-4">
                 Professional school cleanout with guaranteed educational facility expertise.
               </p>
-              <div className="text-sm text-green-600 font-semibold">
+              <div className="text-sm text-secondary font-semibold">
                 Quality guaranteed
               </div>
             </div>
@@ -514,7 +537,7 @@ export default function SchoolCleanoutPage() {
               <p className="text-gray-600 mb-4">
                 Coastal school cleanout with special attention to beach educational considerations and seasonal operations.
               </p>
-              <div className="flex items-center gap-2 text-green-600">
+              <div className="flex items-center gap-2 text-secondary">
                 <CheckCircle className="w-5 h-5" />
                 <span className="font-semibold">Same-day service available</span>
               </div>
@@ -525,7 +548,7 @@ export default function SchoolCleanoutPage() {
               <p className="text-gray-600 mb-4">
                 Suburban school cleanout with large property access and upscale educational organization.
               </p>
-              <div className="flex items-center gap-2 text-green-600">
+              <div className="flex items-center gap-2 text-secondary">
                 <CheckCircle className="w-5 h-5" />
                 <span className="font-semibold">Large property specialists</span>
               </div>
@@ -536,7 +559,7 @@ export default function SchoolCleanoutPage() {
               <p className="text-gray-600 mb-4">
                 Historic district school cleanout with careful handling of older buildings and renovation projects.
               </p>
-              <div className="flex items-center gap-2 text-green-600">
+              <div className="flex items-center gap-2 text-secondary">
                 <CheckCircle className="w-5 h-5" />
                 <span className="font-semibold">Historic building experts</span>
               </div>
@@ -547,7 +570,7 @@ export default function SchoolCleanoutPage() {
               <p className="text-gray-600 mb-4">
                 Upscale neighborhood school cleanout with premium service and careful educational protection.
               </p>
-              <div className="flex items-center gap-2 text-green-600">
+              <div className="flex items-center gap-2 text-secondary">
                 <CheckCircle className="w-5 h-5" />
                 <span className="font-semibold">Premium service available</span>
               </div>
@@ -558,7 +581,7 @@ export default function SchoolCleanoutPage() {
               <p className="text-gray-600 mb-4">
                 Commercial and residential school cleanout with bulk cleanup and educational project services.
               </p>
-              <div className="flex items-center gap-2 text-green-600">
+              <div className="flex items-center gap-2 text-secondary">
                 <CheckCircle className="w-5 h-5" />
                 <span className="font-semibold">Educational specialists</span>
               </div>
@@ -569,7 +592,7 @@ export default function SchoolCleanoutPage() {
               <p className="text-gray-600 mb-4">
                 Suburban school cleanout with large lot access and family educational organization.
               </p>
-              <div className="flex items-center gap-2 text-green-600">
+              <div className="flex items-center gap-2 text-secondary">
                 <CheckCircle className="w-5 h-5" />
                 <span className="font-semibold">Family education experts</span>
               </div>
@@ -579,7 +602,7 @@ export default function SchoolCleanoutPage() {
       </section>
 
       {/* Contact Section */}
-      <section className="py-16 bg-green-600 text-white">
+      <section className="py-16 bg-primary text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Ready for Professional School Cleanout?
@@ -590,14 +613,14 @@ export default function SchoolCleanoutPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
               href="/estimation" 
-              className="bg-white hover:bg-gray-100 text-green-600 px-8 py-4 rounded-lg font-semibold text-lg transition duration-300 inline-flex items-center gap-2"
+              className="bg-white hover:bg-gray-100 text-secondary px-8 py-4 rounded-lg font-semibold text-lg transition duration-300 inline-flex items-center gap-2"
             >
               <Phone className="w-5 h-5" />
               Get Free Quote
             </Link>
             <Link 
               href="/contact" 
-              className="bg-transparent hover:bg-white hover:text-green-600 border-2 border-white px-8 py-4 rounded-lg font-semibold text-lg transition duration-300 inline-flex items-center gap-2"
+              className="bg-transparent hover:bg-white hover:text-secondary border-2 border-white px-8 py-4 rounded-lg font-semibold text-lg transition duration-300 inline-flex items-center gap-2"
             >
               <MapPin className="w-5 h-5" />
               Schedule Service
@@ -620,11 +643,11 @@ export default function SchoolCleanoutPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <Link href="/hotel-cleanout" className="group">
-              <div className="bg-white rounded-lg p-6 border border-gray-200 hover:border-green-300 transition duration-300 group-hover:shadow-lg">
-                <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-green-200 transition duration-300">
-                  <GraduationCap className="w-6 h-6 text-green-600" />
+              <div className="bg-white rounded-lg p-6 border border-gray-200 hover:border-secondary/30 transition duration-300 group-hover:shadow-lg">
+                <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-green-200 transition duration-300">
+                  <GraduationCap className="w-6 h-6 text-secondary" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-green-600 transition duration-300">
+                <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-secondary transition duration-300">
                   Hotel Cleanout
                 </h3>
                 <p className="text-gray-600">
@@ -634,11 +657,11 @@ export default function SchoolCleanoutPage() {
             </Link>
 
             <Link href="/medical-office-cleanout" className="group">
-              <div className="bg-white rounded-lg p-6 border border-gray-200 hover:border-green-300 transition duration-300 group-hover:shadow-lg">
-                <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-green-200 transition duration-300">
-                  <Wrench className="w-6 h-6 text-green-600" />
+              <div className="bg-white rounded-lg p-6 border border-gray-200 hover:border-secondary/30 transition duration-300 group-hover:shadow-lg">
+                <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-green-200 transition duration-300">
+                  <Wrench className="w-6 h-6 text-secondary" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-green-600 transition duration-300">
+                <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-secondary transition duration-300">
                   Medical Office Cleanout
                 </h3>
                 <p className="text-gray-600">
@@ -648,11 +671,11 @@ export default function SchoolCleanoutPage() {
             </Link>
 
             <Link href="/apartment-cleanout" className="group">
-              <div className="bg-white rounded-lg p-6 border border-gray-200 hover:border-green-300 transition duration-300 group-hover:shadow-lg">
-                <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-green-200 transition duration-300">
-                  <Users className="w-6 h-6 text-green-600" />
+              <div className="bg-white rounded-lg p-6 border border-gray-200 hover:border-secondary/30 transition duration-300 group-hover:shadow-lg">
+                <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-green-200 transition duration-300">
+                  <Users className="w-6 h-6 text-secondary" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-green-600 transition duration-300">
+                <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-secondary transition duration-300">
                   Apartment Cleanout
                 </h3>
                 <p className="text-gray-600">
@@ -662,11 +685,11 @@ export default function SchoolCleanoutPage() {
             </Link>
 
             <Link href="/emergency-cleanup" className="group">
-              <div className="bg-white rounded-lg p-6 border border-gray-200 hover:border-green-300 transition duration-300 group-hover:shadow-lg">
-                <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-green-200 transition duration-300">
-                  <AlertTriangle className="w-6 h-6 text-green-600" />
+              <div className="bg-white rounded-lg p-6 border border-gray-200 hover:border-secondary/30 transition duration-300 group-hover:shadow-lg">
+                <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-green-200 transition duration-300">
+                  <AlertTriangle className="w-6 h-6 text-secondary" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-green-600 transition duration-300">
+                <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-secondary transition duration-300">
                   Emergency Cleanup
                 </h3>
                 <p className="text-gray-600">
@@ -676,11 +699,11 @@ export default function SchoolCleanoutPage() {
             </Link>
 
             <Link href="/hazardous-waste-removal" className="group">
-              <div className="bg-white rounded-lg p-6 border border-gray-200 hover:border-green-300 transition duration-300 group-hover:shadow-lg">
-                <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-green-200 transition duration-300">
-                  <Shield className="w-6 h-6 text-green-600" />
+              <div className="bg-white rounded-lg p-6 border border-gray-200 hover:border-secondary/30 transition duration-300 group-hover:shadow-lg">
+                <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-green-200 transition duration-300">
+                  <Shield className="w-6 h-6 text-secondary" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-green-600 transition duration-300">
+                <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-secondary transition duration-300">
                   Hazardous Waste
                 </h3>
                 <p className="text-gray-600">
@@ -690,11 +713,11 @@ export default function SchoolCleanoutPage() {
             </Link>
 
             <Link href="/services" className="group">
-              <div className="bg-white rounded-lg p-6 border border-gray-200 hover:border-green-300 transition duration-300 group-hover:shadow-lg">
-                <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-green-200 transition duration-300">
-                  <Star className="w-6 h-6 text-green-600" />
+              <div className="bg-white rounded-lg p-6 border border-gray-200 hover:border-secondary/30 transition duration-300 group-hover:shadow-lg">
+                <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-green-200 transition duration-300">
+                  <Star className="w-6 h-6 text-secondary" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-green-600 transition duration-300">
+                <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-secondary transition duration-300">
                   All Services
                 </h3>
                 <p className="text-gray-600">

@@ -17,38 +17,61 @@ export default function EmergencyHoardingCleanupPage() {
       
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-red-50 to-orange-100 py-20">
-        <div className="container mx-auto px-4 text-center">
-          <div className="flex justify-center mb-6">
-                            <AlertTriangle className="w-16 h-16 text-red-600" />
-          </div>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-gray-900">
-            24/7 Emergency Hoarding Cleanup
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-700 mb-8 max-w-4xl mx-auto">
-            Immediate crisis response for urgent hoarding situations. Our emergency team is available round-the-clock with rapid intervention, professional assessment, and immediate cleanup services.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
-              href="tel:+1-904-456-3851" 
-              className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition duration-300 inline-flex items-center gap-2"
-            >
-              <PhoneCall className="w-5 h-5" />
-              Call Emergency Hotline
-            </a>
-            <Link 
-              href="/contact" 
-              className="bg-white hover:bg-gray-50 text-red-600 border-2 border-red-600 px-8 py-4 rounded-lg font-semibold text-lg transition duration-300 inline-flex items-center gap-2"
-            >
-              <MapPin className="w-5 h-5" />
-              Schedule Emergency Service
-            </Link>
+      <section className="relative min-h-[70vh] flex items-center justify-center bg-primary overflow-hidden py-20 border-b-4 border-secondary">
+        <div className="absolute inset-0 z-0">
+          <img
+            src="/hero_junk_truck.png"
+            alt="Jacksonville Junk Removal Services"
+            className="w-full h-full object-cover object-center"
+          />
+          <div className="absolute inset-0 bg-black/50 md:bg-transparent md:bg-gradient-to-r md:from-primary/95 md:via-primary/80 md:to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-transparent to-transparent md:hidden"></div>
+        </div>
+        
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full animate-fade-in text-center lg:text-left">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="space-y-8">
+              <div className="inline-flex items-center space-x-2 bg-secondary/10 border border-secondary/30 rounded-full px-4 py-2 backdrop-blur-md shadow-lg shadow-black/20 mx-auto lg:mx-0">
+                <div className="flex -space-x-1">
+                  {[1, 2, 3, 4, 5].map((star) => (
+                    <Star key={star} className="w-4 h-4 text-secondary fill-secondary drop-shadow-md" />
+                  ))}
+                </div>
+                <span className="text-sm font-bold text-white tracking-wide uppercase ml-2 text-shadow-sm">Top-Rated Local Service</span>
+              </div>
+
+              <div className="space-y-6">
+                <h1 className="text-5xl lg:text-6xl font-extrabold text-white leading-tight tracking-tight drop-shadow-xl">
+                  24/7 Emergency Hoarding Cleanup
+                </h1>
+                
+                <p className="text-xl text-gray-200 leading-relaxed max-w-xl font-medium drop-shadow-md mx-auto lg:mx-0">
+                  Immediate crisis response for urgent hoarding situations. Our emergency team is available round-the-clock with rapid intervention, professional assessment, and immediate cleanup services.
+                </p>
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-5 pt-4 justify-center lg:justify-start">
+                <Link
+                  href="tel:+19044563851"
+                  className="bg-secondary hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 flex items-center justify-center space-x-3 shadow-xl shadow-secondary/20 hover:shadow-secondary/40 hover:-translate-y-1"
+                >
+                  <Phone className="w-6 h-6 animate-bounce-gentle" />
+                  <span>Call (904) 456-3851</span>
+                </Link>
+                <Link
+                  href="/contact"
+                  className="bg-white/10 hover:bg-white/20 backdrop-blur-md border-2 border-white/30 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 flex items-center justify-center shadow-xl hover:-translate-y-1"
+                >
+                  <span>Get Free Quote</span>
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Emergency Alert */}
-      <section className="bg-red-600 text-white py-6">
+      <section className="bg-primary text-white py-6">
         <div className="container mx-auto px-4 text-center">
           <div className="flex items-center justify-center gap-3">
             <AlertTriangle className="w-5 h-5" />
@@ -62,9 +85,9 @@ export default function EmergencyHoardingCleanupPage() {
       {/* Emergency Hotline Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <div className="bg-red-50 border-2 border-red-200 rounded-lg p-8 text-center">
+          <div className="bg-gray-50 border-2 border-gray-200 rounded-lg p-8 text-center">
             <div className="flex justify-center mb-6">
-              <PhoneCall className="w-16 h-16 text-red-600" />
+              <PhoneCall className="w-16 h-16 text-secondary" />
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Emergency Hoarding Cleanup Hotline
@@ -72,10 +95,10 @@ export default function EmergencyHoardingCleanupPage() {
             <p className="text-xl text-gray-700 mb-6 max-w-3xl mx-auto">
               Available 24/7 for immediate crisis response and emergency hoarding cleanup services
             </p>
-            <div className="bg-white rounded-lg p-6 border border-red-200 max-w-md mx-auto">
+            <div className="bg-white rounded-lg p-6 border border-gray-200 max-w-md mx-auto">
               <a 
                 href="tel:+1-904-456-3851" 
-                className="text-4xl font-bold text-red-600 hover:text-red-700 transition duration-300"
+                className="text-4xl font-bold text-secondary hover:text-primary transition duration-300"
               >
                 (904) 456-3851
               </a>
@@ -84,14 +107,14 @@ export default function EmergencyHoardingCleanupPage() {
             <div className="mt-6 flex flex-col sm:flex-row gap-4 justify-center">
               <a 
                 href="tel:+1-904-456-3851" 
-                className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition duration-300 inline-flex items-center gap-2"
+                className="bg-primary hover:opacity-90 text-white px-8 py-4 rounded-lg font-semibold text-lg transition duration-300 inline-flex items-center gap-2"
               >
                 <PhoneCall className="w-5 h-5" />
                 Call Now for Immediate Help
               </a>
               <Link 
                 href="/contact" 
-                className="bg-white hover:bg-gray-50 text-red-600 border-2 border-red-600 px-8 py-4 rounded-lg font-semibold text-lg transition duration-300 inline-flex items-center gap-2"
+                className="bg-white hover:bg-gray-50 text-secondary border-2 border-primary px-8 py-4 rounded-lg font-semibold text-lg transition duration-300 inline-flex items-center gap-2"
               >
                 <Calendar className="w-5 h-5" />
                 Schedule Emergency Service
@@ -115,8 +138,8 @@ export default function EmergencyHoardingCleanupPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white rounded-lg p-8 border border-gray-200 shadow-sm">
-              <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-6">
-                <AlertTriangle className="w-6 h-6 text-red-600" />
+              <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-6">
+                <AlertTriangle className="w-6 h-6 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">
                 Safety Hazards
@@ -126,27 +149,27 @@ export default function EmergencyHoardingCleanupPage() {
               </p>
               <ul className="text-sm text-gray-600 space-y-2">
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-red-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Fire hazards
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-red-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Structural damage
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-red-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Blocked exits
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-red-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Falling debris risk
                 </li>
               </ul>
             </div>
 
             <div className="bg-white rounded-lg p-8 border border-gray-200 shadow-sm">
-              <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-6">
-                <Shield className="w-6 h-6 text-red-600" />
+              <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-6">
+                <Shield className="w-6 h-6 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">
                 Health Emergencies
@@ -156,27 +179,27 @@ export default function EmergencyHoardingCleanupPage() {
               </p>
               <ul className="text-sm text-gray-600 space-y-2">
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-red-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Biohazard exposure
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-red-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Mold infestation
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-red-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Pest infestation
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-red-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Air quality issues
                 </li>
               </ul>
             </div>
 
             <div className="bg-white rounded-lg p-8 border border-gray-200 shadow-sm">
-              <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-6">
-                <Users className="w-6 h-6 text-red-600" />
+              <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-6">
+                <Users className="w-6 h-6 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">
                 Crisis Situations
@@ -186,19 +209,19 @@ export default function EmergencyHoardingCleanupPage() {
               </p>
               <ul className="text-sm text-gray-600 space-y-2">
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-red-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Family emergencies
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-red-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Medical emergencies
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-red-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Legal deadlines
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-red-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Property violations
                 </li>
               </ul>
@@ -221,7 +244,7 @@ export default function EmergencyHoardingCleanupPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-white font-bold text-xl">1</span>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Emergency Call</h3>
@@ -231,7 +254,7 @@ export default function EmergencyHoardingCleanupPage() {
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-white font-bold text-xl">2</span>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Rapid Response</h3>
@@ -241,7 +264,7 @@ export default function EmergencyHoardingCleanupPage() {
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-white font-bold text-xl">3</span>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Immediate Action</h3>
@@ -251,7 +274,7 @@ export default function EmergencyHoardingCleanupPage() {
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-white font-bold text-xl">4</span>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Follow-up Plan</h3>
@@ -277,79 +300,79 @@ export default function EmergencyHoardingCleanupPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white rounded-lg p-6 border border-gray-200 shadow-sm">
-              <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
-                <Zap className="w-6 h-6 text-red-600" />
+              <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-4">
+                <Zap className="w-6 h-6 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Immediate Crisis Intervention</h3>
               <p className="text-gray-600 mb-4">
                 Professional crisis intervention with immediate assessment and safety evaluation.
               </p>
-              <div className="text-sm text-red-600 font-semibold">
+              <div className="text-sm text-secondary font-semibold">
                 Available 24/7
               </div>
             </div>
 
             <div className="bg-white rounded-lg p-6 border border-gray-200 shadow-sm">
-              <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
-                <Truck className="w-6 h-6 text-red-600" />
+              <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-4">
+                <Truck className="w-6 h-6 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Rapid Cleanup Response</h3>
               <p className="text-gray-600 mb-4">
                 Immediate cleanup of safety hazards and emergency conditions within 1-2 hours.
               </p>
-              <div className="text-sm text-red-600 font-semibold">
+              <div className="text-sm text-secondary font-semibold">
                 Rapid response
               </div>
             </div>
 
             <div className="bg-white rounded-lg p-6 border border-gray-200 shadow-sm">
-              <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
-                <Shield className="w-6 h-6 text-red-600" />
+              <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-4">
+                <Shield className="w-6 h-6 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Safety Hazard Removal</h3>
               <p className="text-gray-600 mb-4">
                 Immediate removal of fire hazards, structural dangers, and safety risks.
               </p>
-              <div className="text-sm text-red-600 font-semibold">
+              <div className="text-sm text-secondary font-semibold">
                 Safety first
               </div>
             </div>
 
             <div className="bg-white rounded-lg p-6 border border-gray-200 shadow-sm">
-              <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
-                <Wrench className="w-6 h-6 text-red-600" />
+              <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-4">
+                <Wrench className="w-6 h-6 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Emergency Repairs</h3>
               <p className="text-gray-600 mb-4">
                 Basic emergency repairs to restore safety and prevent further damage.
               </p>
-              <div className="text-sm text-red-600 font-semibold">
+              <div className="text-sm text-secondary font-semibold">
                 Damage control
               </div>
             </div>
 
             <div className="bg-white rounded-lg p-6 border border-gray-200 shadow-sm">
-              <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
-                <Recycle className="w-6 h-6 text-red-600" />
+              <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-4">
+                <Recycle className="w-6 h-6 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Biohazard Cleanup</h3>
               <p className="text-gray-600 mb-4">
                 Emergency biohazard cleanup and contamination removal for health safety.
               </p>
-              <div className="text-sm text-red-600 font-semibold">
+              <div className="text-sm text-secondary font-semibold">
                 Health protection
               </div>
             </div>
 
             <div className="bg-white rounded-lg p-6 border border-gray-200 shadow-sm">
-              <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
-                <UserCheck className="w-6 h-6 text-red-600" />
+              <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-4">
+                <UserCheck className="w-6 h-6 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Family Support</h3>
               <p className="text-gray-600 mb-4">
                 Immediate family support and crisis counseling during emergency situations.
               </p>
-              <div className="text-sm text-red-600 font-semibold">
+              <div className="text-sm text-secondary font-semibold">
                 Family care
               </div>
             </div>
@@ -371,8 +394,8 @@ export default function EmergencyHoardingCleanupPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="text-center">
-              <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Clock className="w-8 h-8 text-red-600" />
+              <div className="w-16 h-16 bg-secondary/10 border border-secondary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Clock className="w-8 h-8 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">24/7 Availability</h3>
               <p className="text-gray-600">
@@ -381,8 +404,8 @@ export default function EmergencyHoardingCleanupPage() {
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Zap className="w-8 h-8 text-red-600" />
+              <div className="w-16 h-16 bg-secondary/10 border border-secondary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Zap className="w-8 h-8 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Rapid Response</h3>
               <p className="text-gray-600">
@@ -391,8 +414,8 @@ export default function EmergencyHoardingCleanupPage() {
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Award className="w-8 h-8 text-red-600" />
+              <div className="w-16 h-16 bg-secondary/10 border border-secondary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Award className="w-8 h-8 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Specialized Training</h3>
               <p className="text-gray-600">
@@ -401,8 +424,8 @@ export default function EmergencyHoardingCleanupPage() {
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Heart className="w-8 h-8 text-red-600" />
+              <div className="w-16 h-16 bg-secondary/10 border border-secondary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Heart className="w-8 h-8 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Compassionate Care</h3>
               <p className="text-gray-600">
@@ -411,8 +434,8 @@ export default function EmergencyHoardingCleanupPage() {
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Shield className="w-8 h-8 text-red-600" />
+              <div className="w-16 h-16 bg-secondary/10 border border-secondary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Shield className="w-8 h-8 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Safety First</h3>
               <p className="text-gray-600">
@@ -421,8 +444,8 @@ export default function EmergencyHoardingCleanupPage() {
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Star className="w-8 h-8 text-red-600" />
+              <div className="w-16 h-16 bg-secondary/10 border border-secondary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Star className="w-8 h-8 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Professional Network</h3>
               <p className="text-gray-600">
@@ -434,7 +457,7 @@ export default function EmergencyHoardingCleanupPage() {
       </section>
 
       {/* Emergency Contact Section */}
-      <section className="py-16 bg-red-600 text-white">
+      <section className="py-16 bg-primary text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Need Emergency Hoarding Cleanup?
@@ -445,14 +468,14 @@ export default function EmergencyHoardingCleanupPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
               href="tel:+1-904-456-3851" 
-              className="bg-white hover:bg-gray-100 text-red-600 px-8 py-4 rounded-lg font-semibold text-lg transition duration-300 inline-flex items-center gap-2"
+              className="bg-white hover:bg-gray-100 text-secondary px-8 py-4 rounded-lg font-semibold text-lg transition duration-300 inline-flex items-center gap-2"
             >
               <PhoneCall className="w-5 h-5" />
               Call Emergency Hotline
             </a>
             <Link 
               href="/contact" 
-              className="bg-transparent hover:bg-white hover:text-red-600 border-2 border-white px-8 py-4 rounded-lg font-semibold text-lg transition duration-300 inline-flex items-center gap-2"
+              className="bg-transparent hover:bg-white hover:text-secondary border-2 border-white px-8 py-4 rounded-lg font-semibold text-lg transition duration-300 inline-flex items-center gap-2"
             >
               <Calendar className="w-5 h-5" />
               Schedule Emergency Service
@@ -479,11 +502,11 @@ export default function EmergencyHoardingCleanupPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <Link href="/emergency-cleanup" className="group">
-              <div className="bg-white rounded-lg p-6 border border-gray-200 hover:border-red-300 transition duration-300 group-hover:shadow-lg">
-                <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-red-200 transition duration-300">
-                  <AlertTriangle className="w-6 h-6 text-red-600" />
+              <div className="bg-white rounded-lg p-6 border border-gray-200 hover:border-secondary/30 transition duration-300 group-hover:shadow-lg">
+                <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-red-200 transition duration-300">
+                  <AlertTriangle className="w-6 h-6 text-secondary" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-red-600 transition duration-300">
+                <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-secondary transition duration-300">
                   Emergency Cleanup
                 </h3>
                 <p className="text-gray-600">
@@ -493,11 +516,11 @@ export default function EmergencyHoardingCleanupPage() {
             </Link>
 
             <Link href="/hoarding-cleanup" className="group">
-              <div className="bg-white rounded-lg p-6 border border-gray-200 hover:border-red-300 transition duration-300 group-hover:shadow-lg">
-                <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-red-200 transition duration-300">
-                  <Home className="w-6 h-6 text-red-600" />
+              <div className="bg-white rounded-lg p-6 border border-gray-200 hover:border-secondary/30 transition duration-300 group-hover:shadow-lg">
+                <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-red-200 transition duration-300">
+                  <Home className="w-6 h-6 text-secondary" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-red-600 transition duration-300">
+                <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-secondary transition duration-300">
                   Hoarding Cleanup
                 </h3>
                 <p className="text-gray-600">
@@ -507,11 +530,11 @@ export default function EmergencyHoardingCleanupPage() {
             </Link>
 
             <Link href="/hazardous-waste-removal" className="group">
-              <div className="bg-white rounded-lg p-6 border border-gray-200 hover:border-red-300 transition duration-300 group-hover:shadow-lg">
-                <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-red-200 transition duration-300">
-                  <Shield className="w-6 h-6 text-red-600" />
+              <div className="bg-white rounded-lg p-6 border border-gray-200 hover:border-secondary/30 transition duration-300 group-hover:shadow-lg">
+                <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-red-200 transition duration-300">
+                  <Shield className="w-6 h-6 text-secondary" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-red-600 transition duration-300">
+                <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-secondary transition duration-300">
                   Hazardous Waste
                 </h3>
                 <p className="text-gray-600">
@@ -521,11 +544,11 @@ export default function EmergencyHoardingCleanupPage() {
             </Link>
 
             <Link href="/biohazard-hoarding-cleanup" className="group">
-              <div className="bg-white rounded-lg p-6 border border-gray-200 hover:border-red-300 transition duration-300 group-hover:shadow-lg">
-                <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-red-200 transition duration-300">
-                  <Wrench className="w-6 h-6 text-red-600" />
+              <div className="bg-white rounded-lg p-6 border border-gray-200 hover:border-secondary/30 transition duration-300 group-hover:shadow-lg">
+                <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-red-200 transition duration-300">
+                  <Wrench className="w-6 h-6 text-secondary" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-red-600 transition duration-300">
+                <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-secondary transition duration-300">
                   Biohazard Cleanup
                 </h3>
                 <p className="text-gray-600">
@@ -535,11 +558,11 @@ export default function EmergencyHoardingCleanupPage() {
             </Link>
 
             <Link href="/hoarding-intervention" className="group">
-              <div className="bg-white rounded-lg p-6 border border-gray-200 hover:border-red-300 transition duration-300 group-hover:shadow-lg">
-                <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-red-200 transition duration-300">
-                  <UserCheck className="w-6 h-6 text-red-600" />
+              <div className="bg-white rounded-lg p-6 border border-gray-200 hover:border-secondary/30 transition duration-300 group-hover:shadow-lg">
+                <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-red-200 transition duration-300">
+                  <UserCheck className="w-6 h-6 text-secondary" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-red-600 transition duration-300">
+                <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-secondary transition duration-300">
                   Hoarding Intervention
                 </h3>
                 <p className="text-gray-600">
@@ -549,11 +572,11 @@ export default function EmergencyHoardingCleanupPage() {
             </Link>
 
             <Link href="/services" className="group">
-              <div className="bg-white rounded-lg p-6 border border-gray-200 hover:border-red-300 transition duration-300 group-hover:shadow-lg">
-                <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-red-200 transition duration-300">
-                  <Star className="w-6 h-6 text-red-600" />
+              <div className="bg-white rounded-lg p-6 border border-gray-200 hover:border-secondary/30 transition duration-300 group-hover:shadow-lg">
+                <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-red-200 transition duration-300">
+                  <Star className="w-6 h-6 text-secondary" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-red-600 transition duration-300">
+                <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-secondary transition duration-300">
                   All Services
                 </h3>
                 <p className="text-gray-600">

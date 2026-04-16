@@ -16,45 +16,61 @@ export default function JacksonvilleBeachPostConstructionCleanupPage() {
   return (
     <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/70 to-black/85"></div>
-          
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-            <div className="text-center">
-              <div className="flex justify-center mb-6">
-                <Home className="w-16 h-16 text-blue-400" />
+      <section className="relative min-h-[70vh] flex items-center justify-center bg-primary overflow-hidden py-20 border-b-4 border-secondary">
+        <div className="absolute inset-0 z-0">
+          <img
+            src="/hero_junk_truck.png"
+            alt="Jacksonville Junk Removal Services"
+            className="w-full h-full object-cover object-center"
+          />
+          <div className="absolute inset-0 bg-black/50 md:bg-transparent md:bg-gradient-to-r md:from-primary/95 md:via-primary/80 md:to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-transparent to-transparent md:hidden"></div>
+        </div>
+        
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full animate-fade-in text-center lg:text-left">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="space-y-8">
+              <div className="inline-flex items-center space-x-2 bg-secondary/10 border border-secondary/30 rounded-full px-4 py-2 backdrop-blur-md shadow-lg shadow-black/20 mx-auto lg:mx-0">
+                <div className="flex -space-x-1">
+                  {[1, 2, 3, 4, 5].map((star) => (
+                    <Star key={star} className="w-4 h-4 text-secondary fill-secondary drop-shadow-md" />
+                  ))}
+                </div>
+                <span className="text-sm font-bold text-white tracking-wide uppercase ml-2 text-shadow-sm">Top-Rated Local Service</span>
               </div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-                Jacksonville Beach
-                <br />
-                <span className="text-blue-300">Post-Construction Cleanup</span>
-              </h1>
-              <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto">
-                <span className="text-blue-300 font-bold">BEACH AREA CONSTRUCTION CLEANUP SPECIALISTS</span><br />
-                Serving Jacksonville Beach, Atlantic Beach, Neptune Beach & Ponte Vedra Beach<br />
-                Transform construction sites into pristine, beach-ready spaces.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+
+              <div className="space-y-6">
+                <h1 className="text-5xl lg:text-6xl font-extrabold text-white leading-tight tracking-tight drop-shadow-xl">
+                  Jacksonville Beach <br /> <span className="text-blue-300">Post-Construction Cleanup</span>
+                </h1>
+                
+                <p className="text-xl text-gray-200 leading-relaxed max-w-xl font-medium drop-shadow-md mx-auto lg:mx-0">
+                  <span className="text-blue-300 font-bold">BEACH AREA CONSTRUCTION CLEANUP SPECIALISTS</span><br /> Serving Jacksonville Beach, Atlantic Beach, Neptune Beach & Ponte Vedra Beach<br /> Transform construction sites into pristine, beach-ready spaces.
+                </p>
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-5 pt-4 justify-center lg:justify-start">
                 <Link
-                  href="/estimation"
-                  className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xl"
+                  href="tel:+19044563851"
+                  className="bg-secondary hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 flex items-center justify-center space-x-3 shadow-xl shadow-secondary/20 hover:shadow-secondary/40 hover:-translate-y-1"
                 >
-                  <Phone className="w-5 h-5" />
-                  <span>Get Beach Area Quote</span>
+                  <Phone className="w-6 h-6 animate-bounce-gentle" />
+                  <span>Call (904) 456-3851</span>
                 </Link>
                 <Link
                   href="/contact"
-                  className="border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 flex items-center justify-center shadow-lg hover:shadow-xl"
+                  className="bg-white/10 hover:bg-white/20 backdrop-blur-md border-2 border-white/30 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 flex items-center justify-center shadow-xl hover:-translate-y-1"
                 >
-                  <span>Schedule Beach Cleanup</span>
+                  <span>Get Free Quote</span>
                 </Link>
               </div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
         {/* Beach Area Service Alert */}
-        <section className="bg-blue-600 text-white py-6">
+        <section className="bg-primary text-white py-6">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div className="flex items-center justify-center space-x-3">
               <Home className="w-6 h-6" />
@@ -84,8 +100,8 @@ export default function JacksonvilleBeachPostConstructionCleanupPage() {
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {/* Jacksonville Beach */}
               <div className="text-center">
-                <div className="w-20 h-20 bg-blue-100 rounded-xl flex items-center justify-center mx-auto mb-6">
-                  <Home className="w-10 h-10 text-blue-600" />
+                <div className="w-20 h-20 bg-secondary/10 border border-secondary/20 rounded-xl flex items-center justify-center mx-auto mb-6">
+                  <Home className="w-10 h-10 text-secondary" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Jacksonville Beach</h3>
                 <p className="text-gray-600 mb-4">
@@ -101,8 +117,8 @@ export default function JacksonvilleBeachPostConstructionCleanupPage() {
 
               {/* Atlantic Beach */}
               <div className="text-center">
-                <div className="w-20 h-20 bg-green-100 rounded-xl flex items-center justify-center mx-auto mb-6">
-                  <Waves className="w-10 h-10 text-green-600" />
+                <div className="w-20 h-20 bg-secondary/10 border border-secondary/20 rounded-xl flex items-center justify-center mx-auto mb-6">
+                  <Waves className="w-10 h-10 text-secondary" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Atlantic Beach</h3>
                 <p className="text-gray-600 mb-4">
@@ -118,8 +134,8 @@ export default function JacksonvilleBeachPostConstructionCleanupPage() {
 
               {/* Neptune Beach */}
               <div className="text-center">
-                <div className="w-20 h-20 bg-purple-100 rounded-xl flex items-center justify-center mx-auto mb-6">
-                  <Sun className="w-10 h-10 text-purple-600" />
+                <div className="w-20 h-20 bg-secondary/10 border border-secondary/20 rounded-xl flex items-center justify-center mx-auto mb-6">
+                  <Sun className="w-10 h-10 text-secondary" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Neptune Beach</h3>
                 <p className="text-gray-600 mb-4">
@@ -169,7 +185,7 @@ export default function JacksonvilleBeachPostConstructionCleanupPage() {
               {/* Salt Air Protection */}
               <div className="bg-white rounded-lg p-8 shadow-lg">
                 <div className="flex items-center mb-6">
-                  <Shield className="w-12 h-12 text-blue-600 mr-4" />
+                  <Shield className="w-12 h-12 text-secondary mr-4" />
                   <h3 className="text-2xl font-bold text-gray-900">Salt Air Protection</h3>
                 </div>
                 <p className="text-gray-700 mb-4">
@@ -186,7 +202,7 @@ export default function JacksonvilleBeachPostConstructionCleanupPage() {
               {/* Beachfront Property Expertise */}
               <div className="bg-white rounded-lg p-8 shadow-lg">
                 <div className="flex items-center mb-6">
-                  <Building className="w-12 h-12 text-green-600 mr-4" />
+                  <Building className="w-12 h-12 text-secondary mr-4" />
                   <h3 className="text-2xl font-bold text-gray-900">Beachfront Properties</h3>
                 </div>
                 <p className="text-gray-700 mb-4">
@@ -203,7 +219,7 @@ export default function JacksonvilleBeachPostConstructionCleanupPage() {
               {/* Resort & Hotel Specialization */}
               <div className="bg-white rounded-lg p-8 shadow-lg">
                 <div className="flex items-center mb-6">
-                  <Star className="w-12 h-12 text-purple-600 mr-4" />
+                  <Star className="w-12 h-12 text-secondary mr-4" />
                   <h3 className="text-2xl font-bold text-gray-900">Resort & Hotel</h3>
                 </div>
                 <p className="text-gray-700 mb-4">
@@ -253,8 +269,8 @@ export default function JacksonvilleBeachPostConstructionCleanupPage() {
                     <span className="font-semibold text-gray-700">Special Requirements:</span>
                     <span className="text-gray-600">Salt air protection, luxury finishes</span>
                   </div>
-                  <div className="bg-blue-100 rounded-lg p-4 mt-4">
-                    <p className="text-blue-800 font-semibold">
+                  <div className="bg-secondary/10 border border-secondary/20 rounded-lg p-4 mt-4">
+                    <p className="text-primary font-semibold">
                       Result: Hotel reopened on schedule with pristine, beach-ready guest areas and protected luxury finishes.
                     </p>
                   </div>
@@ -281,8 +297,8 @@ export default function JacksonvilleBeachPostConstructionCleanupPage() {
                     <span className="font-semibold text-gray-700">Special Requirements:</span>
                     <span className="text-gray-600">High-end finishes, coastal protection</span>
                   </div>
-                  <div className="bg-green-100 rounded-lg p-4 mt-4">
-                    <p className="text-green-800 font-semibold">
+                  <div className="bg-secondary/10 border border-secondary/20 rounded-lg p-4 mt-4">
+                    <p className="text-primary font-semibold">
                       Result: Luxury home ready for immediate occupancy with protected finishes and coastal-optimized cleaning.
                     </p>
                   </div>
@@ -306,24 +322,24 @@ export default function JacksonvilleBeachPostConstructionCleanupPage() {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="text-center">
-                <div className="bg-blue-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
-                  <MapPin className="w-10 h-10 text-blue-600" />
+                <div className="bg-secondary/10 border border-secondary/20 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
+                  <MapPin className="w-10 h-10 text-secondary" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Local Beach Expertise</h3>
                 <p className="text-gray-600">Deep understanding of beach area construction challenges and local building codes</p>
               </div>
 
               <div className="text-center">
-                <div className="bg-green-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
-                  <Clock className="w-10 h-10 text-green-600" />
+                <div className="bg-secondary/10 border border-secondary/20 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
+                  <Clock className="w-10 h-10 text-secondary" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Rapid Response</h3>
                 <p className="text-gray-600">Same-day service available for urgent beach area cleanup needs</p>
               </div>
 
               <div className="text-center">
-                <div className="bg-purple-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
-                  <Shield className="w-10 h-10 text-purple-600" />
+                <div className="bg-secondary/10 border border-secondary/20 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
+                  <Shield className="w-10 h-10 text-secondary" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Beach Protection</h3>
                 <p className="text-gray-600">Specialized protocols to protect against salt air and coastal elements</p>
@@ -354,14 +370,14 @@ export default function JacksonvilleBeachPostConstructionCleanupPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/estimation"
-                className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors duration-200 flex items-center justify-center space-x-2"
+                className="bg-white text-secondary px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors duration-200 flex items-center justify-center space-x-2"
               >
                 <Phone className="w-5 h-5" />
                 <span>Get Beach Area Quote</span>
               </Link>
               <Link
                 href="/contact"
-                className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 flex items-center justify-center"
+                className="border-2 border-white text-white hover:bg-white hover:text-secondary px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 flex items-center justify-center"
               >
                 <span>Contact Beach Specialists</span>
               </Link>

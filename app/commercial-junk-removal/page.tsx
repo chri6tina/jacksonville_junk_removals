@@ -306,8 +306,8 @@ export default function CommercialJunkRemovalPage() {
           <div className="grid md:grid-cols-2 gap-8">
             <div className="space-y-6">
               <div className="flex items-start space-x-4">
-                <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
-                  <Shield className="w-5 h-5 text-blue-600" />
+                <div className="w-8 h-8 bg-secondary/10 border border-secondary/20 rounded-full flex items-center justify-center flex-shrink-0">
+                  <Shield className="w-5 h-5 text-secondary" />
                 </div>
                 <div>
                   <h3 className="font-semibold text-gray-900 mb-2">Licensing & Compliance</h3>
@@ -318,8 +318,8 @@ export default function CommercialJunkRemovalPage() {
               </div>
               
               <div className="flex items-start space-x-4">
-                <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
-                  <Clock className="w-5 h-5 text-green-600" />
+                <div className="w-8 h-8 bg-secondary/10 border border-secondary/20 rounded-full flex items-center justify-center flex-shrink-0">
+                  <Clock className="w-5 h-5 text-secondary" />
                 </div>
                 <div>
                   <h3 className="font-semibold text-gray-900 mb-2">Scheduling Flexibility</h3>
@@ -330,8 +330,8 @@ export default function CommercialJunkRemovalPage() {
               </div>
               
               <div className="flex items-start space-x-4">
-                <div className="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0">
-                  <Users className="w-5 h-5 text-purple-600" />
+                <div className="w-8 h-8 bg-secondary/10 border border-secondary/20 rounded-full flex items-center justify-center flex-shrink-0">
+                  <Users className="w-5 h-5 text-secondary" />
                 </div>
                 <div>
                   <h3 className="font-semibold text-gray-900 mb-2">Professional Crews</h3>

@@ -275,7 +275,7 @@ export default function OfficeFurnitureRemovalPage() {
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
                   {method.method}
                 </h3>
-                <div className="text-3xl font-bold text-green-600 mb-3">
+                <div className="text-3xl font-bold text-secondary mb-3">
                   {method.percentage}
                 </div>
                 <p className="text-gray-600 text-sm">
@@ -358,8 +358,8 @@ export default function OfficeFurnitureRemovalPage() {
           <div className="grid md:grid-cols-2 gap-8">
             <div className="space-y-6">
               <div className="flex items-start space-x-4">
-                <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
-                  <Building2 className="w-5 h-5 text-blue-600" />
+                <div className="w-8 h-8 bg-secondary/10 border border-secondary/20 rounded-full flex items-center justify-center flex-shrink-0">
+                  <Building2 className="w-5 h-5 text-secondary" />
                 </div>
                 <div>
                   <h3 className="font-semibold text-gray-900 mb-2">Desks & Workstations</h3>
@@ -370,8 +370,8 @@ export default function OfficeFurnitureRemovalPage() {
               </div>
               
               <div className="flex items-start space-x-4">
-                <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
-                  <Users className="w-5 h-5 text-green-600" />
+                <div className="w-8 h-8 bg-secondary/10 border border-secondary/20 rounded-full flex items-center justify-center flex-shrink-0">
+                  <Users className="w-5 h-5 text-secondary" />
                 </div>
                 <div>
                   <h3 className="font-semibold text-gray-900 mb-2">Conference Furniture</h3>
@@ -382,8 +382,8 @@ export default function OfficeFurnitureRemovalPage() {
               </div>
               
               <div className="flex items-start space-x-4">
-                <div className="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0">
-                  <Truck className="w-5 h-5 text-purple-600" />
+                <div className="w-8 h-8 bg-secondary/10 border border-secondary/20 rounded-full flex items-center justify-center flex-shrink-0">
+                  <Truck className="w-5 h-5 text-secondary" />
                 </div>
                 <div>
                   <h3 className="font-semibold text-gray-900 mb-2">Storage & Filing</h3>

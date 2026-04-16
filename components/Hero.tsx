@@ -17,8 +17,8 @@ const Hero = () => {
           className="object-cover object-center"
         />
         {/* Gradient overlays for readability */}
-        <div className="absolute inset-0 bg-primary/80 bg-gradient-to-r from-primary/95 via-primary/80 to-transparent"></div>
-        <div className="absolute inset-0 bg-gradient-to-t from-primary/95 via-transparent to-transparent md:hidden"></div>
+        <div className="absolute inset-0 bg-black/50 md:bg-transparent md:bg-gradient-to-r md:from-primary/95 md:via-primary/80 md:to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-transparent to-transparent md:hidden"></div>
       </div>
       
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20 w-full animate-fade-in">

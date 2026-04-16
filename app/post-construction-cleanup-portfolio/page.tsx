@@ -15,40 +15,58 @@ export default function PostConstructionCleanupPortfolioPage() {
   return (
     <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-rose-900 via-rose-800 to-rose-700 text-white overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/70 to-black/85"></div>
-          
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-            <div className="text-center">
-              <div className="flex justify-center mb-6">
-                <Image className="w-16 h-16 text-rose-400" />
+      <section className="relative min-h-[70vh] flex items-center justify-center bg-primary overflow-hidden py-20 border-b-4 border-secondary">
+        <div className="absolute inset-0 z-0">
+          <img
+            src="/hero_junk_truck.png"
+            alt="Jacksonville Junk Removal Services"
+            className="w-full h-full object-cover object-center"
+          />
+          <div className="absolute inset-0 bg-black/50 md:bg-transparent md:bg-gradient-to-r md:from-primary/95 md:via-primary/80 md:to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-transparent to-transparent md:hidden"></div>
+        </div>
+        
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full animate-fade-in text-center lg:text-left">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="space-y-8">
+              <div className="inline-flex items-center space-x-2 bg-secondary/10 border border-secondary/30 rounded-full px-4 py-2 backdrop-blur-md shadow-lg shadow-black/20 mx-auto lg:mx-0">
+                <div className="flex -space-x-1">
+                  {[1, 2, 3, 4, 5].map((star) => (
+                    <Star key={star} className="w-4 h-4 text-secondary fill-secondary drop-shadow-md" />
+                  ))}
+                </div>
+                <span className="text-sm font-bold text-white tracking-wide uppercase ml-2 text-shadow-sm">Top-Rated Local Service</span>
               </div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-                Project Portfolio Gallery
-              </h1>
-              <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto">
-                <span className="text-rose-300 font-bold">SEE THE TRANSFORMATION</span><br />
-                Browse our completed post-construction cleanup projects across all industries.<br />
-                Real results, real projects, real satisfaction.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+
+              <div className="space-y-6">
+                <h1 className="text-5xl lg:text-6xl font-extrabold text-white leading-tight tracking-tight drop-shadow-xl">
+                  Project Portfolio Gallery
+                </h1>
+                
+                <p className="text-xl text-gray-200 leading-relaxed max-w-xl font-medium drop-shadow-md mx-auto lg:mx-0">
+                  <span className="text-rose-300 font-bold">SEE THE TRANSFORMATION</span><br /> Browse our completed post-construction cleanup projects across all industries.<br /> Real results, real projects, real satisfaction.
+                </p>
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-5 pt-4 justify-center lg:justify-start">
                 <Link
-                  href="#portfolio"
-                  className="bg-rose-500 hover:bg-rose-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xl"
+                  href="tel:+19044563851"
+                  className="bg-secondary hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 flex items-center justify-center space-x-3 shadow-xl shadow-secondary/20 hover:shadow-secondary/40 hover:-translate-y-1"
                 >
-                  <Eye className="w-5 h-5" />
-                  <span>View Portfolio</span>
+                  <Phone className="w-6 h-6 animate-bounce-gentle" />
+                  <span>Call (904) 456-3851</span>
                 </Link>
                 <Link
                   href="/contact"
-                  className="border-2 border-white text-white hover:bg-white hover:text-rose-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 flex items-center justify-center shadow-lg hover:shadow-xl"
+                  className="bg-white/10 hover:bg-white/20 backdrop-blur-md border-2 border-white/30 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 flex items-center justify-center shadow-xl hover:-translate-y-1"
                 >
-                  <span>Start Your Project</span>
+                  <span>Get Free Quote</span>
                 </Link>
               </div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
         {/* Portfolio Navigation */}
         <section id="portfolio" className="py-16 bg-white">
@@ -94,7 +112,7 @@ export default function PostConstructionCleanupPortfolioPage() {
               <div className="bg-white rounded-lg shadow-lg overflow-hidden group">
                 <div className="relative overflow-hidden">
                   <div className="aspect-w-16 aspect-h-9 bg-gradient-to-br from-red-100 to-red-200 flex items-center justify-center">
-                    <Stethoscope className="w-24 h-24 text-red-600" />
+                    <Stethoscope className="w-24 h-24 text-secondary" />
                   </div>
                   <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center">
                     <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center">
@@ -105,8 +123,8 @@ export default function PostConstructionCleanupPortfolioPage() {
                 </div>
                 <div className="p-6">
                   <div className="flex items-center mb-3">
-                    <Stethoscope className="w-5 h-5 text-red-600 mr-2" />
-                    <span className="text-red-600 font-semibold text-sm">Medical Facility</span>
+                    <Stethoscope className="w-5 h-5 text-secondary mr-2" />
+                    <span className="text-secondary font-semibold text-sm">Medical Facility</span>
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-2">
                     Baptist Medical Center - New Wing
@@ -126,7 +144,7 @@ export default function PostConstructionCleanupPortfolioPage() {
               <div className="bg-white rounded-lg shadow-lg overflow-hidden group">
                 <div className="relative overflow-hidden">
                   <div className="aspect-w-16 aspect-h-9 bg-gradient-to-br from-purple-100 to-purple-200 flex items-center justify-center">
-                    <Hotel className="w-24 h-24 text-purple-600" />
+                    <Hotel className="w-24 h-24 text-secondary" />
                   </div>
                   <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center">
                     <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center">
@@ -137,8 +155,8 @@ export default function PostConstructionCleanupPortfolioPage() {
                 </div>
                 <div className="p-6">
                   <div className="flex items-center mb-3">
-                    <Hotel className="w-5 h-5 text-purple-600 mr-2" />
-                    <span className="text-purple-600 font-semibold text-sm">Luxury Hotel</span>
+                    <Hotel className="w-5 h-5 text-secondary mr-2" />
+                    <span className="text-secondary font-semibold text-sm">Luxury Hotel</span>
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-2">
                     The Ritz-Carlton Jacksonville
@@ -158,7 +176,7 @@ export default function PostConstructionCleanupPortfolioPage() {
               <div className="bg-white rounded-lg shadow-lg overflow-hidden group">
                 <div className="relative overflow-hidden">
                   <div className="aspect-w-16 aspect-h-9 bg-gradient-to-br from-green-100 to-green-200 flex items-center justify-center">
-                    <Utensils className="w-24 h-24 text-green-600" />
+                    <Utensils className="w-24 h-24 text-secondary" />
                   </div>
                   <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center">
                     <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center">
@@ -169,8 +187,8 @@ export default function PostConstructionCleanupPortfolioPage() {
                 </div>
                 <div className="p-6">
                   <div className="flex items-center mb-3">
-                    <Utensils className="w-5 h-5 text-green-600 mr-2" />
-                    <span className="text-green-600 font-semibold text-sm">Fine Dining</span>
+                    <Utensils className="w-5 h-5 text-secondary mr-2" />
+                    <span className="text-secondary font-semibold text-sm">Fine Dining</span>
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-2">
                     Ruth's Chris Steakhouse
@@ -222,7 +240,7 @@ export default function PostConstructionCleanupPortfolioPage() {
               <div className="bg-white rounded-lg shadow-lg overflow-hidden group">
                 <div className="relative overflow-hidden">
                   <div className="aspect-w-16 aspect-h-9 bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center">
-                    <GraduationCap className="w-24 h-24 text-blue-600" />
+                    <GraduationCap className="w-24 h-24 text-secondary" />
                   </div>
                   <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center">
                     <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center">
@@ -233,8 +251,8 @@ export default function PostConstructionCleanupPortfolioPage() {
                 </div>
                 <div className="p-6">
                   <div className="flex items-center mb-3">
-                    <GraduationCap className="w-5 h-5 text-blue-600 mr-2" />
-                    <span className="text-blue-600 font-semibold text-sm">University</span>
+                    <GraduationCap className="w-5 h-5 text-secondary mr-2" />
+                    <span className="text-secondary font-semibold text-sm">University</span>
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-2">
                     University of North Florida
@@ -352,20 +370,20 @@ export default function PostConstructionCleanupPortfolioPage() {
                 <div className="space-y-6">
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-2">Before</h4>
-                    <div className="bg-red-100 rounded-lg p-6 text-center">
-                      <Stethoscope className="w-16 h-16 text-red-600 mx-auto mb-2" />
+                    <div className="bg-secondary/10 border border-secondary/20 rounded-lg p-6 text-center">
+                      <Stethoscope className="w-16 h-16 text-secondary mx-auto mb-2" />
                       <p className="text-gray-600">Construction debris, dust, and materials throughout the facility</p>
                     </div>
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-2">After</h4>
-                    <div className="bg-green-100 rounded-lg p-6 text-center">
-                      <CheckCircle className="w-16 h-16 text-green-600 mx-auto mb-2" />
+                    <div className="bg-secondary/10 border border-secondary/20 rounded-lg p-6 text-center">
+                      <CheckCircle className="w-16 h-16 text-secondary mx-auto mb-2" />
                       <p className="text-gray-600">Sterile, healthcare-compliant environment ready for patient care</p>
                     </div>
                   </div>
                   <div className="text-center">
-                    <span className="bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-semibold">
+                    <span className="bg-secondary/10 border border-secondary/20 text-primary px-4 py-2 rounded-full text-sm font-semibold">
                       Healthcare Compliant • 45K sq ft • 4 Days
                     </span>
                   </div>
@@ -385,13 +403,13 @@ export default function PostConstructionCleanupPortfolioPage() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-2">After</h4>
-                    <div className="bg-purple-100 rounded-lg p-6 text-center">
-                      <Star className="w-16 h-16 text-purple-600 mx-auto mb-2" />
+                    <div className="bg-secondary/10 border border-secondary/20 rounded-lg p-6 text-center">
+                      <Star className="w-16 h-16 text-secondary mx-auto mb-2" />
                       <p className="text-gray-600">5-star presentation with luxury finishes protected</p>
                     </div>
                   </div>
                   <div className="text-center">
-                    <span className="bg-purple-100 text-purple-800 px-4 py-2 rounded-full text-sm font-semibold">
+                    <span className="bg-secondary/10 border border-secondary/20 text-primary px-4 py-2 rounded-full text-sm font-semibold">
                       5-Star Standards • 28K sq ft • 3 Days
                     </span>
                   </div>

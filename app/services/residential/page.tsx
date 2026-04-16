@@ -15,42 +15,61 @@ export default function ResidentialJunkRemovalPage() {
   return (
     <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white">
-          <div className="absolute inset-0 bg-black bg-opacity-40"></div>
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-            <div className="text-center">
-              <div className="flex justify-center mb-6">
-                <Home className="w-16 h-16 text-blue-400" />
+      <section className="relative min-h-[70vh] flex items-center justify-center bg-primary overflow-hidden py-20 border-b-4 border-secondary">
+        <div className="absolute inset-0 z-0">
+          <img
+            src="/hero_junk_truck.png"
+            alt="Jacksonville Junk Removal Services"
+            className="w-full h-full object-cover object-center"
+          />
+          <div className="absolute inset-0 bg-black/50 md:bg-transparent md:bg-gradient-to-r md:from-primary/95 md:via-primary/80 md:to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-transparent to-transparent md:hidden"></div>
+        </div>
+        
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full animate-fade-in text-center lg:text-left">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="space-y-8">
+              <div className="inline-flex items-center space-x-2 bg-secondary/10 border border-secondary/30 rounded-full px-4 py-2 backdrop-blur-md shadow-lg shadow-black/20 mx-auto lg:mx-0">
+                <div className="flex -space-x-1">
+                  {[1, 2, 3, 4, 5].map((star) => (
+                    <Star key={star} className="w-4 h-4 text-secondary fill-secondary drop-shadow-md" />
+                  ))}
+                </div>
+                <span className="text-sm font-bold text-white tracking-wide uppercase ml-2 text-shadow-sm">Top-Rated Local Service</span>
               </div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-                Residential Junk Removal Jacksonville
-              </h1>
-              <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto">
-                <span className="text-blue-300 font-bold">PROFESSIONAL & COMPASSIONATE</span><br />
-                Complete home cleanouts, garage organization, and residential property cleanup.<br />
-                Making your home clean, organized, and clutter-free.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+
+              <div className="space-y-6">
+                <h1 className="text-5xl lg:text-6xl font-extrabold text-white leading-tight tracking-tight drop-shadow-xl">
+                  Residential Junk Removal Jacksonville
+                </h1>
+                
+                <p className="text-xl text-gray-200 leading-relaxed max-w-xl font-medium drop-shadow-md mx-auto lg:mx-0">
+                  <span className="text-blue-300 font-bold">PROFESSIONAL & COMPASSIONATE</span><br /> Complete home cleanouts, garage organization, and residential property cleanup.<br /> Making your home clean, organized, and clutter-free.
+                </p>
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-5 pt-4 justify-center lg:justify-start">
                 <Link
-                  href="/contact"
-                  className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 flex items-center justify-center space-x-2"
+                  href="tel:+19044563851"
+                  className="bg-secondary hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 flex items-center justify-center space-x-3 shadow-xl shadow-secondary/20 hover:shadow-secondary/40 hover:-translate-y-1"
                 >
-                  <Phone className="w-5 h-5" />
-                  <span>Get Residential Cleanout Quote</span>
+                  <Phone className="w-6 h-6 animate-bounce-gentle" />
+                  <span>Call (904) 456-3851</span>
                 </Link>
                 <Link
-                  href="/estimation"
-                  className="border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 flex items-center justify-center"
+                  href="/contact"
+                  className="bg-white/10 hover:bg-white/20 backdrop-blur-md border-2 border-white/30 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 flex items-center justify-center shadow-xl hover:-translate-y-1"
                 >
-                  <span>Free Consultation</span>
+                  <span>Get Free Quote</span>
                 </Link>
               </div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
         {/* Service Alert */}
-        <section className="bg-blue-600 text-white py-6">
+        <section className="bg-primary text-white py-6">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div className="flex items-center justify-center space-x-3">
               <Home className="w-6 h-6" />
@@ -79,9 +98,9 @@ export default function ResidentialJunkRemovalPage() {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {/* Home Cleanouts */}
-              <div className="bg-blue-50 rounded-lg p-8 border border-blue-200">
-                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
-                  <Home className="w-6 h-6 text-blue-600" />
+              <div className="bg-gray-50 rounded-lg p-8 border border-gray-200">
+                <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-6">
+                  <Home className="w-6 h-6 text-secondary" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">
                   Complete Home Cleanouts
@@ -98,9 +117,9 @@ export default function ResidentialJunkRemovalPage() {
               </div>
 
               {/* Garage Cleanout */}
-              <div className="bg-blue-50 rounded-lg p-8 border border-blue-200">
-                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
-                  <Warehouse className="w-6 h-6 text-blue-600" />
+              <div className="bg-gray-50 rounded-lg p-8 border border-gray-200">
+                <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-6">
+                  <Warehouse className="w-6 h-6 text-secondary" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">
                   Garage Organization
@@ -117,9 +136,9 @@ export default function ResidentialJunkRemovalPage() {
               </div>
 
               {/* Moving Cleanup */}
-              <div className="bg-blue-50 rounded-lg p-8 border border-blue-200">
-                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
-                  <Truck className="w-6 h-6 text-blue-600" />
+              <div className="bg-gray-50 rounded-lg p-8 border border-gray-200">
+                <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-6">
+                  <Truck className="w-6 h-6 text-secondary" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">
                   Moving Preparation
@@ -136,9 +155,9 @@ export default function ResidentialJunkRemovalPage() {
               </div>
 
               {/* Furniture Removal */}
-              <div className="bg-blue-50 rounded-lg p-8 border border-blue-200">
-                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
-                  <Sofa className="w-6 h-6 text-blue-600" />
+              <div className="bg-gray-50 rounded-lg p-8 border border-gray-200">
+                <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-6">
+                  <Sofa className="w-6 h-6 text-secondary" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">
                   Furniture Removal
@@ -155,9 +174,9 @@ export default function ResidentialJunkRemovalPage() {
               </div>
 
               {/* Appliance Removal */}
-              <div className="bg-blue-50 rounded-lg p-8 border border-blue-200">
-                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
-                  <Refrigerator className="w-6 h-6 text-blue-600" />
+              <div className="bg-gray-50 rounded-lg p-8 border border-gray-200">
+                <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-6">
+                  <Refrigerator className="w-6 h-6 text-secondary" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">
                   Appliance Removal
@@ -174,9 +193,9 @@ export default function ResidentialJunkRemovalPage() {
               </div>
 
               {/* Yard Waste */}
-              <div className="bg-blue-50 rounded-lg p-8 border border-blue-200">
-                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
-                  <Leaf className="w-6 h-6 text-blue-600" />
+              <div className="bg-gray-50 rounded-lg p-8 border border-gray-200">
+                <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-6">
+                  <Leaf className="w-6 h-6 text-secondary" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">
                   Yard Waste Removal
@@ -209,24 +228,24 @@ export default function ResidentialJunkRemovalPage() {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="text-center">
-                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Shield className="w-8 h-8 text-blue-600" />
+                <div className="w-16 h-16 bg-secondary/10 border border-secondary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Shield className="w-8 h-8 text-secondary" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">Licensed & Insured</h3>
                 <p className="text-gray-600">Full protection for your home and peace of mind during cleanup projects.</p>
               </div>
 
               <div className="text-center">
-                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Leaf className="w-8 h-8 text-blue-600" />
+                <div className="w-16 h-16 bg-secondary/10 border border-secondary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Leaf className="w-8 h-8 text-secondary" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">Eco-Friendly Disposal</h3>
                 <p className="text-gray-600">Responsible disposal with recycling and donation options for usable items.</p>
               </div>
 
               <div className="text-center">
-                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Clock className="w-8 h-8 text-blue-600" />
+                <div className="w-16 h-16 bg-secondary/10 border border-secondary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Clock className="w-8 h-8 text-secondary" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">Same-Day Service</h3>
                 <p className="text-gray-600">Quick response times for urgent cleanup needs and flexible scheduling.</p>
@@ -250,7 +269,7 @@ export default function ResidentialJunkRemovalPage() {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="bg-gray-50 rounded-lg p-8 border border-gray-200 text-center">
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Small Cleanout</h3>
-                <div className="text-4xl font-bold text-blue-600 mb-4">$150</div>
+                <div className="text-4xl font-bold text-secondary mb-4">$150</div>
                 <p className="text-gray-600 mb-6">Perfect for single rooms or small areas</p>
                 <ul className="text-sm text-gray-600 space-y-2 mb-6">
                   <li>• 1-2 truck loads</li>
@@ -260,12 +279,12 @@ export default function ResidentialJunkRemovalPage() {
                 </ul>
               </div>
 
-              <div className="bg-blue-50 rounded-lg p-8 border-2 border-blue-500 text-center relative">
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+              <div className="bg-gray-50 rounded-lg p-8 border-2 border-blue-500 text-center relative">
+                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gray-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
                   Most Popular
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Medium Cleanout</h3>
-                <div className="text-4xl font-bold text-blue-600 mb-4">$300</div>
+                <div className="text-4xl font-bold text-secondary mb-4">$300</div>
                 <p className="text-gray-600 mb-6">Ideal for garage cleanouts or moving prep</p>
                 <ul className="text-sm text-gray-600 space-y-2 mb-6">
                   <li>• 2-3 truck loads</li>
@@ -277,7 +296,7 @@ export default function ResidentialJunkRemovalPage() {
 
               <div className="bg-gray-50 rounded-lg p-8 border border-gray-200 text-center">
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Large Cleanout</h3>
-                <div className="text-4xl font-bold text-blue-600 mb-4">$500+</div>
+                <div className="text-4xl font-bold text-secondary mb-4">$500+</div>
                 <p className="text-gray-600 mb-6">Complete home cleanouts and major projects</p>
                 <ul className="text-sm text-gray-600 space-y-2 mb-6">
                   <li>• 4+ truck loads</li>

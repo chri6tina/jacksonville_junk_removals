@@ -15,42 +15,61 @@ export default function ResidentialPostConstructionCleanupPage() {
   return (
     <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-green-900 via-green-800 to-green-700 text-white">
-          <div className="absolute inset-0 bg-black bg-opacity-40"></div>
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-            <div className="text-center">
-              <div className="flex justify-center mb-6">
-                <Home className="w-16 h-16 text-green-400" />
+      <section className="relative min-h-[70vh] flex items-center justify-center bg-primary overflow-hidden py-20 border-b-4 border-secondary">
+        <div className="absolute inset-0 z-0">
+          <img
+            src="/hero_junk_truck.png"
+            alt="Jacksonville Junk Removal Services"
+            className="w-full h-full object-cover object-center"
+          />
+          <div className="absolute inset-0 bg-black/50 md:bg-transparent md:bg-gradient-to-r md:from-primary/95 md:via-primary/80 md:to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-transparent to-transparent md:hidden"></div>
+        </div>
+        
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full animate-fade-in text-center lg:text-left">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="space-y-8">
+              <div className="inline-flex items-center space-x-2 bg-secondary/10 border border-secondary/30 rounded-full px-4 py-2 backdrop-blur-md shadow-lg shadow-black/20 mx-auto lg:mx-0">
+                <div className="flex -space-x-1">
+                  {[1, 2, 3, 4, 5].map((star) => (
+                    <Star key={star} className="w-4 h-4 text-secondary fill-secondary drop-shadow-md" />
+                  ))}
+                </div>
+                <span className="text-sm font-bold text-white tracking-wide uppercase ml-2 text-shadow-sm">Top-Rated Local Service</span>
               </div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-                Residential Post-Construction Cleanup Jacksonville
-              </h1>
-              <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto">
-                <span className="text-green-300 font-bold">SPECIALIZED CLEANUP FOR NEW HOMES & RENOVATIONS</span><br />
-                Transform your construction site into a move-in-ready dream home.<br />
-                Professional cleaning that makes your new space shine.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+
+              <div className="space-y-6">
+                <h1 className="text-5xl lg:text-6xl font-extrabold text-white leading-tight tracking-tight drop-shadow-xl">
+                  Residential Post-Construction Cleanup Jacksonville
+                </h1>
+                
+                <p className="text-xl text-gray-200 leading-relaxed max-w-xl font-medium drop-shadow-md mx-auto lg:mx-0">
+                  <span className="text-green-300 font-bold">SPECIALIZED CLEANUP FOR NEW HOMES & RENOVATIONS</span><br /> Transform your construction site into a move-in-ready dream home.<br /> Professional cleaning that makes your new space shine.
+                </p>
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-5 pt-4 justify-center lg:justify-start">
                 <Link
-                  href="/estimation"
-                  className="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 flex items-center justify-center space-x-2"
+                  href="tel:+19044563851"
+                  className="bg-secondary hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 flex items-center justify-center space-x-3 shadow-xl shadow-secondary/20 hover:shadow-secondary/40 hover:-translate-y-1"
                 >
-                  <Phone className="w-5 h-5" />
-                  <span>Get Instant Quote</span>
+                  <Phone className="w-6 h-6 animate-bounce-gentle" />
+                  <span>Call (904) 456-3851</span>
                 </Link>
                 <Link
                   href="/contact"
-                  className="border-2 border-white text-white hover:bg-white hover:text-green-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 flex items-center justify-center"
+                  className="bg-white/10 hover:bg-white/20 backdrop-blur-md border-2 border-white/30 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 flex items-center justify-center shadow-xl hover:-translate-y-1"
                 >
-                  <span>Schedule Cleanup</span>
+                  <span>Get Free Quote</span>
                 </Link>
               </div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
         {/* Service Alert */}
-        <section className="bg-green-600 text-white py-6">
+        <section className="bg-primary text-white py-6">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div className="flex items-center justify-center space-x-3">
               <Home className="w-6 h-6" />
@@ -79,9 +98,9 @@ export default function ResidentialPostConstructionCleanupPage() {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {/* Residential Expertise */}
-              <div className="bg-green-50 rounded-lg p-8 border border-green-200">
-                <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
-                  <Heart className="w-6 h-6 text-green-600" />
+              <div className="bg-gray-50 rounded-lg p-8 border border-gray-200">
+                <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-6">
+                  <Heart className="w-6 h-6 text-secondary" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">
                   Residential Expertise
@@ -91,28 +110,28 @@ export default function ResidentialPostConstructionCleanupPage() {
                 </p>
                 <ul className="text-sm text-gray-600 space-y-2">
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-600" />
+                    <CheckCircle className="w-4 h-4 text-secondary" />
                     New home construction
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-600" />
+                    <CheckCircle className="w-4 h-4 text-secondary" />
                     Home renovations
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-600" />
+                    <CheckCircle className="w-4 h-4 text-secondary" />
                     Remodeling projects
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-600" />
+                    <CheckCircle className="w-4 h-4 text-secondary" />
                     Addition construction
                   </li>
                 </ul>
               </div>
 
               {/* Family-Safe Cleaning */}
-              <div className="bg-green-50 rounded-lg p-8 border border-green-200">
-                <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
-                  <Shield className="w-6 h-6 text-green-600" />
+              <div className="bg-gray-50 rounded-lg p-8 border border-gray-200">
+                <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-6">
+                  <Shield className="w-6 h-6 text-secondary" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">
                   Family-Safe Cleaning
@@ -122,28 +141,28 @@ export default function ResidentialPostConstructionCleanupPage() {
                 </p>
                 <ul className="text-sm text-gray-600 space-y-2">
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-600" />
+                    <CheckCircle className="w-4 h-4 text-secondary" />
                     Non-toxic cleaners
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-600" />
+                    <CheckCircle className="w-4 h-4 text-secondary" />
                     HEPA filtration
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-600" />
+                    <CheckCircle className="w-4 h-4 text-secondary" />
                     Pet-safe products
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-600" />
+                    <CheckCircle className="w-4 h-4 text-secondary" />
                     Child-friendly methods
                   </li>
                 </ul>
               </div>
 
               {/* Move-in Ready Results */}
-              <div className="bg-green-50 rounded-lg p-8 border border-green-200">
-                <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
-                  <Sparkles className="w-6 h-6 text-green-600" />
+              <div className="bg-gray-50 rounded-lg p-8 border border-gray-200">
+                <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-6">
+                  <Sparkles className="w-6 h-6 text-secondary" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">
                   Move-in Ready Results
@@ -153,19 +172,19 @@ export default function ResidentialPostConstructionCleanupPage() {
                 </p>
                 <ul className="text-sm text-gray-600 space-y-2">
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-600" />
+                    <CheckCircle className="w-4 h-4 text-secondary" />
                     Spotless surfaces
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-600" />
+                    <CheckCircle className="w-4 h-4 text-secondary" />
                     No construction dust
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-600" />
+                    <CheckCircle className="w-4 h-4 text-secondary" />
                     Fresh air quality
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-600" />
+                    <CheckCircle className="w-4 h-4 text-secondary" />
                     Immediate occupancy
                   </li>
                 </ul>
@@ -189,8 +208,8 @@ export default function ResidentialPostConstructionCleanupPage() {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {/* New Home Construction */}
               <div className="bg-white rounded-lg p-8 border border-gray-200 shadow-sm">
-                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <Home className="w-8 h-8 text-green-600" />
+                <div className="w-16 h-16 bg-secondary/10 border border-secondary/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <Home className="w-8 h-8 text-secondary" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4 text-center">New Home Construction</h3>
                 <p className="text-gray-600 text-center mb-4">
@@ -198,19 +217,19 @@ export default function ResidentialPostConstructionCleanupPage() {
                 </p>
                 <ul className="text-sm text-gray-600 space-y-2">
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-600" />
+                    <CheckCircle className="w-4 h-4 text-secondary" />
                     Foundation cleanup
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-600" />
+                    <CheckCircle className="w-4 h-4 text-secondary" />
                     Framing debris removal
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-600" />
+                    <CheckCircle className="w-4 h-4 text-secondary" />
                     Drywall dust removal
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-600" />
+                    <CheckCircle className="w-4 h-4 text-secondary" />
                     Final finishing cleanup
                   </li>
                 </ul>
@@ -218,8 +237,8 @@ export default function ResidentialPostConstructionCleanupPage() {
 
               {/* Home Renovations */}
               <div className="bg-white rounded-lg p-8 border border-gray-200 shadow-sm">
-                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <Hammer className="w-8 h-8 text-green-600" />
+                <div className="w-16 h-16 bg-secondary/10 border border-secondary/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <Hammer className="w-8 h-8 text-secondary" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4 text-center">Home Renovations</h3>
                 <p className="text-gray-600 text-center mb-4">
@@ -227,19 +246,19 @@ export default function ResidentialPostConstructionCleanupPage() {
                 </p>
                 <ul className="text-sm text-gray-600 space-y-2">
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-600" />
+                    <CheckCircle className="w-4 h-4 text-secondary" />
                     Kitchen remodel cleanup
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-600" />
+                    <CheckCircle className="w-4 h-4 text-secondary" />
                     Bathroom renovation
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-600" />
+                    <CheckCircle className="w-4 h-4 text-secondary" />
                     Basement finishing
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-600" />
+                    <CheckCircle className="w-4 h-4 text-secondary" />
                     Garage conversion
                   </li>
                 </ul>
@@ -247,8 +266,8 @@ export default function ResidentialPostConstructionCleanupPage() {
 
               {/* Interior Finishing */}
               <div className="bg-white rounded-lg p-8 border border-gray-200 shadow-sm">
-                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <Sparkles className="w-8 h-8 text-green-600" />
+                <div className="w-16 h-16 bg-secondary/10 border border-secondary/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <Sparkles className="w-8 h-8 text-secondary" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4 text-center">Interior Finishing</h3>
                 <p className="text-gray-600 text-center mb-4">
@@ -256,19 +275,19 @@ export default function ResidentialPostConstructionCleanupPage() {
                 </p>
                 <ul className="text-sm text-gray-600 space-y-2">
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-600" />
+                    <CheckCircle className="w-4 h-4 text-secondary" />
                     Wall & ceiling cleaning
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-600" />
+                    <CheckCircle className="w-4 h-4 text-secondary" />
                     Floor restoration
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-600" />
+                    <CheckCircle className="w-4 h-4 text-secondary" />
                     Fixture polishing
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-600" />
+                    <CheckCircle className="w-4 h-4 text-secondary" />
                     Window cleaning
                   </li>
                 </ul>
@@ -276,8 +295,8 @@ export default function ResidentialPostConstructionCleanupPage() {
 
               {/* Kitchen & Bathroom */}
               <div className="bg-white rounded-lg p-8 border border-gray-200 shadow-sm">
-                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <Wrench className="w-8 h-8 text-green-600" />
+                <div className="w-16 h-16 bg-secondary/10 border border-secondary/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <Wrench className="w-8 h-8 text-secondary" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4 text-center">Kitchen & Bathroom</h3>
                 <p className="text-gray-600 text-center mb-4">
@@ -285,19 +304,19 @@ export default function ResidentialPostConstructionCleanupPage() {
                 </p>
                 <ul className="text-sm text-gray-600 space-y-2">
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-600" />
+                    <CheckCircle className="w-4 h-4 text-secondary" />
                     Appliance cleaning
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-600" />
+                    <CheckCircle className="w-4 h-4 text-secondary" />
                     Cabinet detailing
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-600" />
+                    <CheckCircle className="w-4 h-4 text-secondary" />
                     Countertop restoration
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-600" />
+                    <CheckCircle className="w-4 h-4 text-secondary" />
                     Fixture sanitization
                   </li>
                 </ul>
@@ -305,8 +324,8 @@ export default function ResidentialPostConstructionCleanupPage() {
 
               {/* Floor & Carpet Care */}
               <div className="bg-white rounded-lg p-8 border border-gray-200 shadow-sm">
-                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <Home className="w-8 h-8 text-green-600" />
+                <div className="w-16 h-16 bg-secondary/10 border border-secondary/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <Home className="w-8 h-8 text-secondary" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4 text-center">Floor & Carpet Care</h3>
                 <p className="text-gray-600 text-center mb-4">
@@ -314,19 +333,19 @@ export default function ResidentialPostConstructionCleanupPage() {
                 </p>
                 <ul className="text-sm text-gray-600 space-y-2">
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-600" />
+                    <CheckCircle className="w-4 h-4 text-secondary" />
                     Hardwood restoration
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-600" />
+                    <CheckCircle className="w-4 h-4 text-secondary" />
                     Tile & grout cleaning
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-600" />
+                    <CheckCircle className="w-4 h-4 text-secondary" />
                     Carpet deep cleaning
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-600" />
+                    <CheckCircle className="w-4 h-4 text-secondary" />
                     Concrete polishing
                   </li>
                 </ul>
@@ -334,8 +353,8 @@ export default function ResidentialPostConstructionCleanupPage() {
 
               {/* Air Quality Restoration */}
               <div className="bg-white rounded-lg p-8 border border-gray-200 shadow-sm">
-                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <Zap className="w-8 h-8 text-green-600" />
+                <div className="w-16 h-16 bg-secondary/10 border border-secondary/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <Zap className="w-8 h-8 text-secondary" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4 text-center">Air Quality Restoration</h3>
                 <p className="text-gray-600 text-center mb-4">
@@ -343,19 +362,19 @@ export default function ResidentialPostConstructionCleanupPage() {
                 </p>
                 <ul className="text-sm text-gray-600 space-y-2">
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-600" />
+                    <CheckCircle className="w-4 h-4 text-secondary" />
                     HVAC duct cleaning
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-600" />
+                    <CheckCircle className="w-4 h-4 text-secondary" />
                     Vent cleaning
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-600" />
+                    <CheckCircle className="w-4 h-4 text-secondary" />
                     Air filtration
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-600" />
+                    <CheckCircle className="w-4 h-4 text-secondary" />
                     Dust removal
                   </li>
                 </ul>
@@ -378,8 +397,8 @@ export default function ResidentialPostConstructionCleanupPage() {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="text-center">
-                <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <span className="text-3xl font-bold text-green-600">1</span>
+                <div className="w-20 h-20 bg-secondary/10 border border-secondary/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <span className="text-3xl font-bold text-secondary">1</span>
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Site Assessment</h3>
                 <p className="text-gray-600">
@@ -388,8 +407,8 @@ export default function ResidentialPostConstructionCleanupPage() {
               </div>
 
               <div className="text-center">
-                <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <span className="text-3xl font-bold text-green-600">2</span>
+                <div className="w-20 h-20 bg-secondary/10 border border-secondary/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <span className="text-3xl font-bold text-secondary">2</span>
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Debris Removal</h3>
                 <p className="text-gray-600">
@@ -398,8 +417,8 @@ export default function ResidentialPostConstructionCleanupPage() {
               </div>
 
               <div className="text-center">
-                <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <span className="text-3xl font-bold text-green-600">3</span>
+                <div className="w-20 h-20 bg-secondary/10 border border-secondary/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <span className="text-3xl font-bold text-secondary">3</span>
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Detailed Cleaning</h3>
                 <p className="text-gray-600">
@@ -408,8 +427,8 @@ export default function ResidentialPostConstructionCleanupPage() {
               </div>
 
               <div className="text-center">
-                <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <span className="text-3xl font-bold text-green-600">4</span>
+                <div className="w-20 h-20 bg-secondary/10 border border-secondary/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <span className="text-3xl font-bold text-secondary">4</span>
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Final Inspection</h3>
                 <p className="text-gray-600">
@@ -440,77 +459,77 @@ export default function ResidentialPostConstructionCleanupPage() {
                   <p className="text-gray-600">Small renovations & updates</p>
                 </div>
                 <div className="text-center mb-6">
-                  <span className="text-3xl font-bold text-green-600">$0.75</span>
+                  <span className="text-3xl font-bold text-secondary">$0.75</span>
                   <span className="text-gray-600">/sq ft</span>
                 </div>
                 <ul className="text-sm text-gray-600 space-y-3 mb-6">
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-600" />
+                    <CheckCircle className="w-4 h-4 text-secondary" />
                     Basic debris removal
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-600" />
+                    <CheckCircle className="w-4 h-4 text-secondary" />
                     Surface cleaning
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-600" />
+                    <CheckCircle className="w-4 h-4 text-secondary" />
                     Floor cleaning
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-600" />
+                    <CheckCircle className="w-4 h-4 text-secondary" />
                     Basic sanitization
                   </li>
                 </ul>
                 <Link
                   href="/estimation"
-                  className="w-full bg-green-600 hover:bg-green-700 text-white py-3 px-6 rounded-lg font-semibold text-center block transition-colors duration-200"
+                  className="w-full bg-primary hover:opacity-90 text-white py-3 px-6 rounded-lg font-semibold text-center block transition-colors duration-200"
                 >
                   Get Instant Quote
                 </Link>
               </div>
 
               {/* Standard Package */}
-              <div className="bg-green-50 rounded-lg p-8 border-2 border-green-300 relative">
+              <div className="bg-gray-50 rounded-lg p-8 border-2 border-secondary/30 relative">
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                  <span className="bg-green-600 text-white px-4 py-2 rounded-full text-sm font-semibold">MOST POPULAR</span>
+                  <span className="bg-primary text-white px-4 py-2 rounded-full text-sm font-semibold">MOST POPULAR</span>
                 </div>
                 <div className="text-center mb-6">
                   <h3 className="text-2xl font-semibold text-gray-900 mb-2">Standard Package</h3>
                   <p className="text-gray-600">Complete home renovations</p>
                 </div>
                 <div className="text-center mb-6">
-                  <span className="text-3xl font-bold text-green-600">$1.15</span>
+                  <span className="text-3xl font-bold text-secondary">$1.15</span>
                   <span className="text-gray-600">/sq ft</span>
                 </div>
                 <ul className="text-sm text-gray-600 space-y-3 mb-6">
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-600" />
+                    <CheckCircle className="w-4 h-4 text-secondary" />
                     Full debris removal
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-600" />
+                    <CheckCircle className="w-4 h-4 text-secondary" />
                     Deep surface cleaning
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-600" />
+                    <CheckCircle className="w-4 h-4 text-secondary" />
                     Floor restoration
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-600" />
+                    <CheckCircle className="w-4 h-4 text-secondary" />
                     Fixture polishing
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-600" />
+                    <CheckCircle className="w-4 h-4 text-secondary" />
                     Window cleaning
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-600" />
+                    <CheckCircle className="w-4 h-4 text-secondary" />
                     Complete sanitization
                   </li>
                 </ul>
                 <Link
                   href="/estimation"
-                  className="w-full bg-green-600 hover:bg-green-700 text-white py-3 px-6 rounded-lg font-semibold text-center block transition-colors duration-200"
+                  className="w-full bg-primary hover:opacity-90 text-white py-3 px-6 rounded-lg font-semibold text-center block transition-colors duration-200"
                 >
                   Get Instant Quote
                 </Link>
@@ -523,34 +542,34 @@ export default function ResidentialPostConstructionCleanupPage() {
                   <p className="text-gray-600">Luxury finishes & new construction</p>
                 </div>
                 <div className="text-center mb-6">
-                  <span className="text-3xl font-bold text-green-600">$1.65</span>
+                  <span className="text-3xl font-bold text-secondary">$1.65</span>
                   <span className="text-gray-600">/sq ft</span>
                 </div>
                 <ul className="text-sm text-gray-600 space-y-3 mb-6">
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-600" />
+                    <CheckCircle className="w-4 h-4 text-secondary" />
                     Everything in Standard
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-600" />
+                    <CheckCircle className="w-4 h-4 text-secondary" />
                     Debris haul-off included
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-600" />
+                    <CheckCircle className="w-4 h-4 text-secondary" />
                     Pressure washing
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-600" />
+                    <CheckCircle className="w-4 h-4 text-secondary" />
                     Air quality restoration
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-green-600" />
+                    <CheckCircle className="w-4 h-4 text-secondary" />
                     Final inspection
                   </li>
                 </ul>
                 <Link
                   href="/estimation"
-                  className="w-full bg-green-600 hover:bg-green-700 text-white py-3 px-6 rounded-lg font-semibold text-center block transition-colors duration-200"
+                  className="w-full bg-primary hover:opacity-90 text-white py-3 px-6 rounded-lg font-semibold text-center block transition-colors duration-200"
                 >
                   Get Instant Quote
                 </Link>
@@ -560,7 +579,7 @@ export default function ResidentialPostConstructionCleanupPage() {
         </section>
 
         {/* Call to Action */}
-        <section className="py-20 bg-green-600 text-white">
+        <section className="py-20 bg-primary text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl lg:text-4xl font-bold mb-6">
               Ready to Make Your New Home Move-in Ready?
@@ -572,14 +591,14 @@ export default function ResidentialPostConstructionCleanupPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/estimation"
-                className="bg-white hover:bg-gray-100 text-green-600 px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 flex items-center justify-center space-x-2"
+                className="bg-white hover:bg-gray-100 text-secondary px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 flex items-center justify-center space-x-2"
               >
                 <Phone className="w-5 h-5" />
                 <span>Get Instant Quote</span>
               </Link>
               <Link
                 href="/contact"
-                className="border-2 border-white text-white hover:bg-white hover:text-green-600 px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 flex items-center justify-center"
+                className="border-2 border-white text-white hover:bg-white hover:text-secondary px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 flex items-center justify-center"
               >
                 <span>Schedule Consultation</span>
               </Link>
@@ -601,11 +620,11 @@ export default function ResidentialPostConstructionCleanupPage() {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               <Link href="/post-construction-cleanup" className="group">
-                <div className="bg-white rounded-lg p-6 border border-gray-200 hover:border-green-300 transition duration-300 group-hover:shadow-lg">
-                  <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-green-200 transition duration-300">
-                    <Hammer className="w-6 h-6 text-green-600" />
+                <div className="bg-white rounded-lg p-6 border border-gray-200 hover:border-secondary/30 transition duration-300 group-hover:shadow-lg">
+                  <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-green-200 transition duration-300">
+                    <Hammer className="w-6 h-6 text-secondary" />
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-green-600 transition duration-300">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-secondary transition duration-300">
                     Post-Construction Cleanup
                   </h3>
                   <p className="text-gray-600">
@@ -615,11 +634,11 @@ export default function ResidentialPostConstructionCleanupPage() {
               </Link>
 
               <Link href="/renovation-cleanup" className="group">
-                <div className="bg-white rounded-lg p-6 border border-gray-200 hover:border-green-300 transition duration-300 group-hover:shadow-lg">
-                  <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-green-200 transition duration-300">
-                    <Wrench className="w-6 h-6 text-green-600" />
+                <div className="bg-white rounded-lg p-6 border border-gray-200 hover:border-secondary/30 transition duration-300 group-hover:shadow-lg">
+                  <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-green-200 transition duration-300">
+                    <Wrench className="w-6 h-6 text-secondary" />
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-green-600 transition duration-300">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-secondary transition duration-300">
                     Renovation Cleanup
                   </h3>
                   <p className="text-gray-600">
@@ -629,11 +648,11 @@ export default function ResidentialPostConstructionCleanupPage() {
               </Link>
 
               <Link href="/construction-debris-removal" className="group">
-                <div className="bg-white rounded-lg p-6 border border-gray-200 hover:border-green-300 transition duration-300 group-hover:shadow-lg">
-                  <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-green-200 transition duration-300">
-                    <Truck className="w-6 h-6 text-green-600" />
+                <div className="bg-white rounded-lg p-6 border border-gray-200 hover:border-secondary/30 transition duration-300 group-hover:shadow-lg">
+                  <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-green-200 transition duration-300">
+                    <Truck className="w-6 h-6 text-secondary" />
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-green-600 transition duration-300">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-secondary transition duration-300">
                     Construction Debris Removal
                   </h3>
                   <p className="text-gray-600">

@@ -116,8 +116,8 @@ export default function SpecialOfferPage() {
           <div className="grid md:grid-cols-2 gap-8">
             <div className="space-y-6">
               <div className="flex items-start space-x-4">
-                <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
-                  <CheckCircle className="w-5 h-5 text-green-600" />
+                <div className="w-8 h-8 bg-secondary/10 border border-secondary/20 rounded-full flex items-center justify-center flex-shrink-0">
+                  <CheckCircle className="w-5 h-5 text-secondary" />
                 </div>
                 <div>
                   <h3 className="font-semibold text-gray-900 mb-2">Licensed & Insured</h3>
@@ -129,8 +129,8 @@ export default function SpecialOfferPage() {
               </div>
 
               <div className="flex items-start space-x-4">
-                <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
-                  <CheckCircle className="w-5 h-5 text-green-600" />
+                <div className="w-8 h-8 bg-secondary/10 border border-secondary/20 rounded-full flex items-center justify-center flex-shrink-0">
+                  <CheckCircle className="w-5 h-5 text-secondary" />
                 </div>
                 <div>
                   <h3 className="font-semibold text-gray-900 mb-2">No Hidden Fees</h3>
@@ -142,8 +142,8 @@ export default function SpecialOfferPage() {
               </div>
 
               <div className="flex items-start space-x-4">
-                <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
-                  <CheckCircle className="w-5 h-5 text-green-600" />
+                <div className="w-8 h-8 bg-secondary/10 border border-secondary/20 rounded-full flex items-center justify-center flex-shrink-0">
+                  <CheckCircle className="w-5 h-5 text-secondary" />
                 </div>
                 <div>
                   <h3 className="font-semibold text-gray-900 mb-2">Professional Equipment</h3>

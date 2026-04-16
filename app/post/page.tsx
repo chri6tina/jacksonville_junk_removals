@@ -63,7 +63,7 @@ export default async function BlogPage() {
                   </div>
                 ) : (
                   <div className="aspect-video bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center">
-                    <div className="text-center text-blue-600">
+                    <div className="text-center text-secondary">
                       <div className="text-4xl mb-2">📝</div>
                       <div className="text-sm font-medium">No Image</div>
                     </div>
@@ -116,7 +116,7 @@ export default async function BlogPage() {
                   {/* Read More Link */}
                   <Link
                     href={`/post/${post.slug}`}
-                    className="text-blue-600 hover:text-blue-800 font-medium text-sm flex items-center space-x-1"
+                    className="text-secondary hover:text-primary font-medium text-sm flex items-center space-x-1"
                   >
                     <span>Read More</span>
                     <ArrowRight className="w-5 h-5" />
@@ -134,14 +134,14 @@ export default async function BlogPage() {
           <div className="text-center">
             <div className="text-6xl mb-4">⚠️</div>
             <h3 className="text-xl font-medium text-red-900 mb-2">Error Loading Blog Posts</h3>
-            <p className="text-red-600 mb-6">
+            <p className="text-secondary mb-6">
               {error}
             </p>
             <Link
               href="https://app.contentful.com/spaces/xpopyri6s8gv/entries"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-red-600 hover:bg-red-700"
+              className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-primary hover:opacity-90"
             >
               Check Contentful
             </Link>
@@ -168,7 +168,7 @@ export default async function BlogPage() {
               href="https://app.contentful.com/spaces/xpopyri6s8gv/entries"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
+              className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-primary hover:opacity-90"
             >
               Check Contentful
             </Link>

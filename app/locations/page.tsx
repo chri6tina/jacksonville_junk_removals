@@ -202,7 +202,7 @@ export default function LocationsPage() {
                       <div className="space-y-1 mb-4">
                         {area.features.slice(0, 2).map((feature, featureIndex) => (
                           <div key={featureIndex} className="flex items-center space-x-2">
-                            <div className="w-1.5 h-1.5 bg-green-500 rounded-full"></div>
+                            <div className="w-1.5 h-1.5 bg-gray-500 rounded-full"></div>
                             <span className="text-xs text-gray-600">{feature}</span>
                           </div>
                         ))}

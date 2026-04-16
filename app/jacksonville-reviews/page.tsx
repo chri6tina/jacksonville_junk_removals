@@ -17,45 +17,61 @@ export default function JacksonvilleReviewsPage() {
   return (
     <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/70 to-black/85"></div>
-          
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-            <div className="text-center">
-              <div className="flex justify-center mb-6">
-                <Star className="w-16 h-16 text-yellow-400" />
+      <section className="relative min-h-[70vh] flex items-center justify-center bg-primary overflow-hidden py-20 border-b-4 border-secondary">
+        <div className="absolute inset-0 z-0">
+          <img
+            src="/hero_junk_truck.png"
+            alt="Jacksonville Junk Removal Services"
+            className="w-full h-full object-cover object-center"
+          />
+          <div className="absolute inset-0 bg-black/50 md:bg-transparent md:bg-gradient-to-r md:from-primary/95 md:via-primary/80 md:to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-transparent to-transparent md:hidden"></div>
+        </div>
+        
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full animate-fade-in text-center lg:text-left">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="space-y-8">
+              <div className="inline-flex items-center space-x-2 bg-secondary/10 border border-secondary/30 rounded-full px-4 py-2 backdrop-blur-md shadow-lg shadow-black/20 mx-auto lg:mx-0">
+                <div className="flex -space-x-1">
+                  {[1, 2, 3, 4, 5].map((star) => (
+                    <Star key={star} className="w-4 h-4 text-secondary fill-secondary drop-shadow-md" />
+                  ))}
+                </div>
+                <span className="text-sm font-bold text-white tracking-wide uppercase ml-2 text-shadow-sm">Top-Rated Local Service</span>
               </div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-                Jacksonville Customer
-                <br />
-                <span className="text-yellow-300">Reviews & Testimonials</span>
-              </h1>
-              <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto">
-                <span className="text-yellow-300 font-bold">VERIFIED 5-STAR REVIEWS FROM JACKSONVILLE CUSTOMERS</span><br />
-                Real feedback from real Jacksonville residents and businesses<br />
-                Trusted by thousands across all Jacksonville areas for post-construction cleanup.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+
+              <div className="space-y-6">
+                <h1 className="text-5xl lg:text-6xl font-extrabold text-white leading-tight tracking-tight drop-shadow-xl">
+                  Jacksonville Customer <br /> <span className="text-yellow-300">Reviews & Testimonials</span>
+                </h1>
+                
+                <p className="text-xl text-gray-200 leading-relaxed max-w-xl font-medium drop-shadow-md mx-auto lg:mx-0">
+                  <span className="text-yellow-300 font-bold">VERIFIED 5-STAR REVIEWS FROM JACKSONVILLE CUSTOMERS</span><br /> Real feedback from real Jacksonville residents and businesses<br /> Trusted by thousands across all Jacksonville areas for post-construction cleanup.
+                </p>
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-5 pt-4 justify-center lg:justify-start">
                 <Link
-                  href="/contact"
-                  className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xl"
+                  href="tel:+19044563851"
+                  className="bg-secondary hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 flex items-center justify-center space-x-3 shadow-xl shadow-secondary/20 hover:shadow-secondary/40 hover:-translate-y-1"
                 >
-                  <Phone className="w-5 h-5" />
-                  <span>Get Free Estimate</span>
+                  <Phone className="w-6 h-6 animate-bounce-gentle" />
+                  <span>Call (904) 456-3851</span>
                 </Link>
                 <Link
-                  href="/post-construction-cleanup"
-                  className="border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 flex items-center justify-center shadow-lg hover:shadow-xl"
+                  href="/contact"
+                  className="bg-white/10 hover:bg-white/20 backdrop-blur-md border-2 border-white/30 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 flex items-center justify-center shadow-xl hover:-translate-y-1"
                 >
-                  <span>View Our Services</span>
+                  <span>Get Free Quote</span>
                 </Link>
               </div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
         {/* Jacksonville Reviews Alert */}
-        <section className="bg-blue-600 text-white py-6">
+        <section className="bg-primary text-white py-6">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div className="flex items-center justify-center space-x-3">
               <Star className="w-6 h-6" />
@@ -96,19 +112,19 @@ export default function JacksonvilleReviewsPage() {
 
               {/* Total Reviews */}
               <div className="text-center bg-white rounded-lg p-8 shadow-lg">
-                <div className="text-4xl font-bold text-blue-600 mb-2">127+</div>
+                <div className="text-4xl font-bold text-secondary mb-2">127+</div>
                 <div className="text-gray-600">Verified Reviews</div>
               </div>
 
               {/* Areas Served */}
               <div className="text-center bg-white rounded-lg p-8 shadow-lg">
-                <div className="text-4xl font-bold text-green-600 mb-2">15+</div>
+                <div className="text-4xl font-bold text-secondary mb-2">15+</div>
                 <div className="text-gray-600">Jacksonville Areas</div>
               </div>
 
               {/* Years of Service */}
               <div className="text-center bg-white rounded-lg p-8 shadow-lg">
-                <div className="text-4xl font-bold text-purple-600 mb-2">4+</div>
+                <div className="text-4xl font-bold text-secondary mb-2">4+</div>
                 <div className="text-gray-600">Years of Service</div>
               </div>
             </div>
@@ -132,24 +148,24 @@ export default function JacksonvilleReviewsPage() {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="text-center">
-                <div className="bg-blue-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
-                  <MapPin className="w-10 h-10 text-blue-600" />
+                <div className="bg-secondary/10 border border-secondary/20 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
+                  <MapPin className="w-10 h-10 text-secondary" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Local Area Expertise</h3>
                 <p className="text-gray-600">Deep knowledge of Jacksonville construction codes, regulations, and area-specific requirements</p>
               </div>
 
               <div className="text-center">
-                <div className="bg-green-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
-                  <Clock className="w-10 h-10 text-green-600" />
+                <div className="bg-secondary/10 border border-secondary/20 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
+                  <Clock className="w-10 h-10 text-secondary" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Reliable Scheduling</h3>
                 <p className="text-gray-600">Consistent on-time performance and flexible scheduling for Jacksonville projects</p>
               </div>
 
               <div className="text-center">
-                <div className="bg-purple-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
-                  <Shield className="w-10 h-10 text-purple-600" />
+                <div className="bg-secondary/10 border border-secondary/20 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
+                  <Shield className="w-10 h-10 text-secondary" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Quality Assurance</h3>
                 <p className="text-gray-600">Proven quality protocols and satisfaction guarantee for all Jacksonville projects</p>
@@ -164,16 +180,16 @@ export default function JacksonvilleReviewsPage() {
               </div>
 
               <div className="text-center">
-                <div className="bg-red-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
-                  <Users className="w-10 h-10 text-red-600" />
+                <div className="bg-secondary/10 border border-secondary/20 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
+                  <Users className="w-10 h-10 text-secondary" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Experienced Team</h3>
                 <p className="text-gray-600">Skilled professionals with years of Jacksonville construction cleanup experience</p>
               </div>
 
               <div className="text-center">
-                <div className="bg-indigo-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
-                  <DollarSign className="w-10 h-10 text-indigo-600" />
+                <div className="bg-secondary/10 border border-secondary/20 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
+                  <DollarSign className="w-10 h-10 text-secondary" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Competitive Pricing</h3>
                 <p className="text-gray-600">Fair, transparent pricing with free estimates for all Jacksonville projects</p>
@@ -198,7 +214,7 @@ export default function JacksonvilleReviewsPage() {
               {/* Residential */}
               <div className="bg-white rounded-lg p-8 shadow-lg">
                 <div className="flex items-center mb-6">
-                  <Home className="w-12 h-12 text-blue-600 mr-4" />
+                  <Home className="w-12 h-12 text-secondary mr-4" />
                   <h3 className="text-2xl font-bold text-gray-900">Residential</h3>
                 </div>
                 <div className="flex items-center mb-4">
@@ -216,7 +232,7 @@ export default function JacksonvilleReviewsPage() {
               {/* Commercial */}
               <div className="bg-white rounded-lg p-8 shadow-lg">
                 <div className="flex items-center mb-6">
-                  <Building className="w-12 h-12 text-green-600 mr-4" />
+                  <Building className="w-12 h-12 text-secondary mr-4" />
                   <h3 className="text-2xl font-bold text-gray-900">Commercial</h3>
                 </div>
                 <div className="flex items-center mb-4">
@@ -234,7 +250,7 @@ export default function JacksonvilleReviewsPage() {
               {/* Medical */}
               <div className="bg-white rounded-lg p-8 shadow-lg">
                 <div className="flex items-center mb-6">
-                  <Hospital className="w-12 h-12 text-red-600 mr-4" />
+                  <Hospital className="w-12 h-12 text-secondary mr-4" />
                   <h3 className="text-2xl font-bold text-gray-900">Medical</h3>
                 </div>
                 <div className="flex items-center mb-4">
@@ -252,7 +268,7 @@ export default function JacksonvilleReviewsPage() {
               {/* Hospitality */}
               <div className="bg-white rounded-lg p-8 shadow-lg">
                 <div className="flex items-center mb-6">
-                  <Building2 className="w-12 h-12 text-purple-600 mr-4" />
+                  <Building2 className="w-12 h-12 text-secondary mr-4" />
                   <h3 className="text-2xl font-bold text-gray-900">Hospitality</h3>
                 </div>
                 <div className="flex items-center mb-4">
@@ -288,7 +304,7 @@ export default function JacksonvilleReviewsPage() {
               {/* Educational */}
               <div className="bg-white rounded-lg p-8 shadow-lg">
                 <div className="flex items-center mb-6">
-                  <GraduationCap className="w-12 h-12 text-indigo-600 mr-4" />
+                  <GraduationCap className="w-12 h-12 text-secondary mr-4" />
                   <h3 className="text-2xl font-bold text-gray-900">Educational</h3>
                 </div>
                 <div className="flex items-center mb-4">
@@ -328,14 +344,14 @@ export default function JacksonvilleReviewsPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/contact"
-                className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors duration-200 flex items-center justify-center space-x-2"
+                className="bg-white text-secondary px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors duration-200 flex items-center justify-center space-x-2"
               >
                 <Phone className="w-5 h-5" />
                 <span>Get Free Estimate</span>
               </Link>
               <Link
                 href="/post-construction-cleanup"
-                className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 flex items-center justify-center"
+                className="border-2 border-white text-white hover:bg-white hover:text-secondary px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 flex items-center justify-center"
               >
                 <span>View Our Services</span>
               </Link>

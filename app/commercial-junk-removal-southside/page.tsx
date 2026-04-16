@@ -126,7 +126,7 @@ export default function CommercialJunkRemovalSouthsidePage() {
       </div>
 
       {/* Southside Service Alert */}
-      <section className="bg-blue-600 text-white py-6">
+      <section className="bg-primary text-white py-6">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="flex items-center justify-center space-x-3">
             <Building2 className="w-6 h-6" />
@@ -156,8 +156,8 @@ export default function CommercialJunkRemovalSouthsidePage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Baymeadows */}
             <div className="text-center">
-              <div className="w-20 h-20 bg-blue-100 rounded-xl flex items-center justify-center mx-auto mb-6">
-                <Building className="w-10 h-10 text-blue-600" />
+              <div className="w-20 h-20 bg-secondary/10 border border-secondary/20 rounded-xl flex items-center justify-center mx-auto mb-6">
+                <Building className="w-10 h-10 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Baymeadows</h3>
               <p className="text-gray-600 mb-4">
@@ -173,8 +173,8 @@ export default function CommercialJunkRemovalSouthsidePage() {
 
             {/* Southside Business District */}
             <div className="text-center">
-              <div className="w-20 h-20 bg-green-100 rounded-xl flex items-center justify-center mx-auto mb-6">
-                <Briefcase className="w-10 h-10 text-green-600" />
+              <div className="w-20 h-20 bg-secondary/10 border border-secondary/20 rounded-xl flex items-center justify-center mx-auto mb-6">
+                <Briefcase className="w-10 h-10 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Business District</h3>
               <p className="text-gray-600 mb-4">
@@ -190,8 +190,8 @@ export default function CommercialJunkRemovalSouthsidePage() {
 
             {/* Southside Retail */}
             <div className="text-center">
-              <div className="w-20 h-20 bg-purple-100 rounded-xl flex items-center justify-center mx-auto mb-6">
-                <ShoppingBag className="w-10 h-10 text-purple-600" />
+              <div className="w-20 h-20 bg-secondary/10 border border-secondary/20 rounded-xl flex items-center justify-center mx-auto mb-6">
+                <ShoppingBag className="w-10 h-10 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Southside Retail</h3>
               <p className="text-gray-600 mb-4">
@@ -241,7 +241,7 @@ export default function CommercialJunkRemovalSouthsidePage() {
             {commercialServices.map((service, index) => (
               <div key={index} className="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-shadow duration-200">
                 <div className="flex items-center mb-6">
-                  <service.icon className="w-12 h-12 text-blue-600 mr-4" />
+                  <service.icon className="w-12 h-12 text-secondary mr-4" />
                   <div>
                     <h3 className="text-2xl font-bold text-gray-900">{service.name}</h3>
                     <p className="text-gray-600">{service.description}</p>
@@ -249,7 +249,7 @@ export default function CommercialJunkRemovalSouthsidePage() {
                 </div>
                 <div className="mb-6">
                   <div className="flex items-center justify-between mb-4">
-                    <span className="text-3xl font-bold text-green-600">${service.startingPrice}</span>
+                    <span className="text-3xl font-bold text-secondary">${service.startingPrice}</span>
                     <span className="text-gray-500">Starting Price</span>
                   </div>
                   <ul className="space-y-2">
@@ -263,7 +263,7 @@ export default function CommercialJunkRemovalSouthsidePage() {
                 </div>
                 <Link
                   href="/estimation"
-                  className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 px-4 rounded-lg font-semibold text-center transition-colors duration-200 block"
+                  className="w-full bg-primary hover:opacity-90 text-white py-3 px-4 rounded-lg font-semibold text-center transition-colors duration-200 block"
                 >
                   Get Southside Quote
                 </Link>
@@ -353,8 +353,8 @@ export default function CommercialJunkRemovalSouthsidePage() {
                   <span className="font-semibold text-gray-700">Services:</span>
                   <span className="text-gray-600">Office furniture, equipment, documents</span>
                 </div>
-                <div className="bg-blue-100 rounded-lg p-4 mt-4">
-                  <p className="text-blue-800 font-semibold">
+                <div className="bg-secondary/10 border border-secondary/20 rounded-lg p-4 mt-4">
+                  <p className="text-primary font-semibold">
                     Result: Office complex cleaned and ready for new tenants with zero business disruption.
                   </p>
                 </div>
@@ -381,8 +381,8 @@ export default function CommercialJunkRemovalSouthsidePage() {
                   <span className="font-semibold text-gray-700">Services:</span>
                   <span className="text-gray-600">Kitchen equipment, dining furniture, fixtures</span>
                 </div>
-                <div className="bg-green-100 rounded-lg p-4 mt-4">
-                  <p className="text-green-800 font-semibold">
+                <div className="bg-secondary/10 border border-secondary/20 rounded-lg p-4 mt-4">
+                  <p className="text-primary font-semibold">
                     Result: Restaurant renovation completed on schedule with health department approval.
                   </p>
                 </div>

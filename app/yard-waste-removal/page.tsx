@@ -17,38 +17,61 @@ export default function YardWasteRemovalPage() {
       
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-green-50 to-emerald-100 py-20">
-        <div className="container mx-auto px-4 text-center">
-          <div className="flex justify-center mb-6">
-            <Leaf className="w-16 h-16 text-green-600" />
-          </div>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-gray-900">
-            Yard Waste Removal Jacksonville
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-700 mb-8 max-w-4xl mx-auto">
-            Professional yard waste removal and landscaping debris cleanup. We handle everything from palm fronds to tree trimmings with eco-friendly disposal.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/estimation" 
-              className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition duration-300 inline-flex items-center gap-2"
-            >
-              <Phone className="w-5 h-5" />
-              Get Free Quote
-            </Link>
-            <Link 
-              href="/contact" 
-              className="bg-white hover:bg-gray-50 text-green-600 border-2 border-green-600 px-8 py-4 rounded-lg font-semibold text-lg transition duration-300 inline-flex items-center gap-2"
-            >
-              <MapPin className="w-5 h-5" />
-              Schedule Service
-            </Link>
+      <section className="relative min-h-[70vh] flex items-center justify-center bg-primary overflow-hidden py-20 border-b-4 border-secondary">
+        <div className="absolute inset-0 z-0">
+          <img
+            src="/hero_junk_truck.png"
+            alt="Jacksonville Junk Removal Services"
+            className="w-full h-full object-cover object-center"
+          />
+          <div className="absolute inset-0 bg-black/50 md:bg-transparent md:bg-gradient-to-r md:from-primary/95 md:via-primary/80 md:to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-transparent to-transparent md:hidden"></div>
+        </div>
+        
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full animate-fade-in text-center lg:text-left">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="space-y-8">
+              <div className="inline-flex items-center space-x-2 bg-secondary/10 border border-secondary/30 rounded-full px-4 py-2 backdrop-blur-md shadow-lg shadow-black/20 mx-auto lg:mx-0">
+                <div className="flex -space-x-1">
+                  {[1, 2, 3, 4, 5].map((star) => (
+                    <Star key={star} className="w-4 h-4 text-secondary fill-secondary drop-shadow-md" />
+                  ))}
+                </div>
+                <span className="text-sm font-bold text-white tracking-wide uppercase ml-2 text-shadow-sm">Top-Rated Local Service</span>
+              </div>
+
+              <div className="space-y-6">
+                <h1 className="text-5xl lg:text-6xl font-extrabold text-white leading-tight tracking-tight drop-shadow-xl">
+                  Yard Waste Removal Jacksonville
+                </h1>
+                
+                <p className="text-xl text-gray-200 leading-relaxed max-w-xl font-medium drop-shadow-md mx-auto lg:mx-0">
+                  Professional yard waste removal and landscaping debris cleanup. We handle everything from palm fronds to tree trimmings with eco-friendly disposal.
+                </p>
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-5 pt-4 justify-center lg:justify-start">
+                <Link
+                  href="tel:+19044563851"
+                  className="bg-secondary hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 flex items-center justify-center space-x-3 shadow-xl shadow-secondary/20 hover:shadow-secondary/40 hover:-translate-y-1"
+                >
+                  <Phone className="w-6 h-6 animate-bounce-gentle" />
+                  <span>Call (904) 456-3851</span>
+                </Link>
+                <Link
+                  href="/contact"
+                  className="bg-white/10 hover:bg-white/20 backdrop-blur-md border-2 border-white/30 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 flex items-center justify-center shadow-xl hover:-translate-y-1"
+                >
+                  <span>Get Free Quote</span>
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Service Alert */}
-      <section className="bg-green-600 text-white py-6">
+      <section className="bg-primary text-white py-6">
         <div className="container mx-auto px-4 text-center">
           <div className="flex items-center justify-center gap-3">
             <Clock className="w-5 h-5" />
@@ -74,8 +97,8 @@ export default function YardWasteRemovalPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Tree Trimmings & Branches */}
             <div className="bg-gray-50 rounded-lg p-8 border border-gray-200">
-              <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
-                <TreePine className="w-6 h-6 text-green-600" />
+              <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-6">
+                <TreePine className="w-6 h-6 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">
                 Tree Trimmings & Branches
@@ -85,15 +108,15 @@ export default function YardWasteRemovalPage() {
               </p>
               <ul className="text-sm text-gray-600 space-y-2">
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-green-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Fallen branches and limbs
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-green-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Tree trimming debris
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-green-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Stump grinding waste
                 </li>
               </ul>
@@ -101,8 +124,8 @@ export default function YardWasteRemovalPage() {
 
             {/* Palm Fronds & Tropical Debris */}
             <div className="bg-gray-50 rounded-lg p-8 border border-gray-200">
-              <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
-                <Leaf className="w-6 h-6 text-green-600" />
+              <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-6">
+                <Leaf className="w-6 h-6 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">
                 Palm Fronds & Tropical Debris
@@ -112,15 +135,15 @@ export default function YardWasteRemovalPage() {
               </p>
               <ul className="text-sm text-gray-600 space-y-2">
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-green-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Palm fronds and leaves
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-green-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Tropical plant debris
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-green-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Seasonal leaf cleanup
                 </li>
               </ul>
@@ -128,8 +151,8 @@ export default function YardWasteRemovalPage() {
 
             {/* Landscaping & Garden Debris */}
             <div className="bg-gray-50 rounded-lg p-8 border border-gray-200">
-              <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
-                <Scissors className="w-6 h-6 text-green-600" />
+              <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-6">
+                <Scissors className="w-6 h-6 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">
                 Landscaping & Garden Debris
@@ -139,15 +162,15 @@ export default function YardWasteRemovalPage() {
               </p>
               <ul className="text-sm text-gray-600 space-y-2">
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-green-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Hedge trimmings
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-green-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Garden waste
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-green-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Mulch and soil debris
                 </li>
               </ul>
@@ -155,8 +178,8 @@ export default function YardWasteRemovalPage() {
 
             {/* Storm & Hurricane Debris */}
             <div className="bg-gray-50 rounded-lg p-8 border border-gray-200">
-              <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
-                <Truck className="w-6 h-6 text-green-600" />
+              <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-6">
+                <Truck className="w-6 h-6 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">
                 Storm & Hurricane Debris
@@ -166,15 +189,15 @@ export default function YardWasteRemovalPage() {
               </p>
               <ul className="text-sm text-gray-600 space-y-2">
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-green-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Storm debris removal
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-green-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Hurricane yard cleanup
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-green-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Emergency response
                 </li>
               </ul>
@@ -182,8 +205,8 @@ export default function YardWasteRemovalPage() {
 
             {/* Seasonal Yard Cleanup */}
             <div className="bg-gray-50 rounded-lg p-8 border border-gray-200">
-              <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
-                <Sprout className="w-6 h-6 text-green-600" />
+              <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-6">
+                <Sprout className="w-6 h-6 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">
                 Seasonal Yard Cleanup
@@ -193,15 +216,15 @@ export default function YardWasteRemovalPage() {
               </p>
               <ul className="text-sm text-gray-600 space-y-2">
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-green-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Spring yard preparation
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-green-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Fall leaf removal
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-green-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Winter cleanup
                 </li>
               </ul>
@@ -209,8 +232,8 @@ export default function YardWasteRemovalPage() {
 
             {/* Eco-Friendly Disposal */}
             <div className="bg-gray-50 rounded-lg p-8 border border-gray-200">
-              <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
-                <Recycle className="w-6 h-6 text-green-600" />
+              <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-6">
+                <Recycle className="w-6 h-6 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">
                 Eco-Friendly Disposal
@@ -220,15 +243,15 @@ export default function YardWasteRemovalPage() {
               </p>
               <ul className="text-sm text-gray-600 space-y-2">
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-green-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Composting services
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-green-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Mulch production
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-green-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Green waste recycling
                 </li>
               </ul>
@@ -251,8 +274,8 @@ export default function YardWasteRemovalPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="text-center">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <MapPin className="w-8 h-8 text-green-600" />
+              <div className="w-16 h-16 bg-secondary/10 border border-secondary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <MapPin className="w-8 h-8 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Local Expertise</h3>
               <p className="text-gray-600">
@@ -261,8 +284,8 @@ export default function YardWasteRemovalPage() {
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Clock className="w-8 h-8 text-green-600" />
+              <div className="w-16 h-16 bg-secondary/10 border border-secondary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Clock className="w-8 h-8 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Year-Round Service</h3>
               <p className="text-gray-600">
@@ -271,8 +294,8 @@ export default function YardWasteRemovalPage() {
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Shield className="w-8 h-8 text-green-600" />
+              <div className="w-16 h-16 bg-secondary/10 border border-secondary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Shield className="w-8 h-8 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Licensed & Insured</h3>
               <p className="text-gray-600">
@@ -281,8 +304,8 @@ export default function YardWasteRemovalPage() {
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Truck className="w-8 h-8 text-green-600" />
+              <div className="w-16 h-16 bg-secondary/10 border border-secondary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Truck className="w-8 h-8 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Specialized Equipment</h3>
               <p className="text-gray-600">
@@ -291,8 +314,8 @@ export default function YardWasteRemovalPage() {
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Recycle className="w-8 h-8 text-green-600" />
+              <div className="w-16 h-16 bg-secondary/10 border border-secondary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Recycle className="w-8 h-8 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Eco-Friendly</h3>
               <p className="text-gray-600">
@@ -301,8 +324,8 @@ export default function YardWasteRemovalPage() {
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Star className="w-8 h-8 text-green-600" />
+              <div className="w-16 h-16 bg-secondary/10 border border-secondary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Star className="w-8 h-8 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">5-Star Service</h3>
               <p className="text-gray-600">
@@ -331,7 +354,7 @@ export default function YardWasteRemovalPage() {
               <p className="text-gray-600 mb-4">
                 Coastal yard waste removal including salt-tolerant plant debris and beach cleanup services.
               </p>
-              <div className="flex items-center gap-2 text-green-600">
+              <div className="flex items-center gap-2 text-secondary">
                 <CheckCircle className="w-5 h-5" />
                 <span className="font-semibold">Same-day service available</span>
               </div>
@@ -342,7 +365,7 @@ export default function YardWasteRemovalPage() {
               <p className="text-gray-600 mb-4">
                 Suburban yard waste removal with large property cleanup and landscaping debris removal.
               </p>
-              <div className="flex items-center gap-2 text-green-600">
+              <div className="flex items-center gap-2 text-secondary">
                 <CheckCircle className="w-5 h-5" />
                 <span className="font-semibold">Large property specialists</span>
               </div>
@@ -353,7 +376,7 @@ export default function YardWasteRemovalPage() {
               <p className="text-gray-600 mb-4">
                 Historic district yard waste removal with tree preservation and careful debris handling.
               </p>
-              <div className="flex items-center gap-2 text-green-600">
+              <div className="flex items-center gap-2 text-secondary">
                 <CheckCircle className="w-5 h-5" />
                 <span className="font-semibold">Tree preservation experts</span>
               </div>
@@ -364,7 +387,7 @@ export default function YardWasteRemovalPage() {
               <p className="text-gray-600 mb-4">
                 Upscale neighborhood yard waste removal with premium landscaping debris cleanup.
               </p>
-              <div className="flex items-center gap-2 text-green-600">
+              <div className="flex items-center gap-2 text-secondary">
                 <CheckCircle className="w-5 h-5" />
                 <span className="font-semibold">Premium service available</span>
               </div>
@@ -375,7 +398,7 @@ export default function YardWasteRemovalPage() {
               <p className="text-gray-600 mb-4">
                 Commercial and residential yard waste removal with bulk debris cleanup services.
               </p>
-              <div className="flex items-center gap-2 text-green-600">
+              <div className="flex items-center gap-2 text-secondary">
                 <CheckCircle className="w-5 h-5" />
                 <span className="font-semibold">Commercial specialists</span>
               </div>
@@ -386,7 +409,7 @@ export default function YardWasteRemovalPage() {
               <p className="text-gray-600 mb-4">
                 Suburban yard waste removal with large lot cleanup and seasonal maintenance services.
               </p>
-              <div className="flex items-center gap-2 text-green-600">
+              <div className="flex items-center gap-2 text-secondary">
                 <CheckCircle className="w-5 h-5" />
                 <span className="font-semibold">Seasonal maintenance</span>
               </div>
@@ -396,7 +419,7 @@ export default function YardWasteRemovalPage() {
       </section>
 
       {/* Contact Section */}
-      <section className="py-16 bg-green-600 text-white">
+      <section className="py-16 bg-primary text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Ready for Professional Yard Waste Removal?
@@ -407,14 +430,14 @@ export default function YardWasteRemovalPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
               href="/estimation" 
-              className="bg-white hover:bg-gray-100 text-green-600 px-8 py-4 rounded-lg font-semibold text-lg transition duration-300 inline-flex items-center gap-2"
+              className="bg-white hover:bg-gray-100 text-secondary px-8 py-4 rounded-lg font-semibold text-lg transition duration-300 inline-flex items-center gap-2"
             >
               <Phone className="w-5 h-5" />
               Get Free Quote
             </Link>
             <Link 
               href="/contact" 
-              className="bg-transparent hover:bg-white hover:text-green-600 border-2 border-white px-8 py-4 rounded-lg font-semibold text-lg transition duration-300 inline-flex items-center gap-2"
+              className="bg-transparent hover:bg-white hover:text-secondary border-2 border-white px-8 py-4 rounded-lg font-semibold text-lg transition duration-300 inline-flex items-center gap-2"
             >
               <MapPin className="w-5 h-5" />
               Schedule Service
@@ -437,11 +460,11 @@ export default function YardWasteRemovalPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <Link href="/tree-debris-removal" className="group">
-              <div className="bg-white rounded-lg p-6 border border-gray-200 hover:border-green-300 transition duration-300 group-hover:shadow-lg">
-                <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-green-200 transition duration-300">
-                  <TreePine className="w-6 h-6 text-green-600" />
+              <div className="bg-white rounded-lg p-6 border border-gray-200 hover:border-secondary/30 transition duration-300 group-hover:shadow-lg">
+                <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-green-200 transition duration-300">
+                  <TreePine className="w-6 h-6 text-secondary" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-green-600 transition duration-300">
+                <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-secondary transition duration-300">
                   Tree Debris Removal
                 </h3>
                 <p className="text-gray-600">
@@ -451,11 +474,11 @@ export default function YardWasteRemovalPage() {
             </Link>
 
             <Link href="/storm-cleanup" className="group">
-              <div className="bg-white rounded-lg p-6 border border-gray-200 hover:border-green-300 transition duration-300 group-hover:shadow-lg">
-                <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-green-200 transition duration-300">
-                  <Truck className="w-6 h-6 text-green-600" />
+              <div className="bg-white rounded-lg p-6 border border-gray-200 hover:border-secondary/30 transition duration-300 group-hover:shadow-lg">
+                <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-green-200 transition duration-300">
+                  <Truck className="w-6 h-6 text-secondary" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-green-600 transition duration-300">
+                <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-secondary transition duration-300">
                   Storm Cleanup
                 </h3>
                 <p className="text-gray-600">
@@ -465,11 +488,11 @@ export default function YardWasteRemovalPage() {
             </Link>
 
             <Link href="/hurricane-debris-removal" className="group">
-              <div className="bg-white rounded-lg p-6 border border-gray-200 hover:border-green-300 transition duration-300 group-hover:shadow-lg">
-                <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-green-200 transition duration-300">
-                  <AlertTriangle className="w-6 h-6 text-green-600" />
+              <div className="bg-white rounded-lg p-6 border border-gray-200 hover:border-secondary/30 transition duration-300 group-hover:shadow-lg">
+                <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-green-200 transition duration-300">
+                  <AlertTriangle className="w-6 h-6 text-secondary" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-green-600 transition duration-300">
+                <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-secondary transition duration-300">
                   Hurricane Debris Removal
                 </h3>
                 <p className="text-gray-600">
@@ -479,11 +502,11 @@ export default function YardWasteRemovalPage() {
             </Link>
 
             <Link href="/same-day-junk-removal" className="group">
-              <div className="bg-white rounded-lg p-6 border border-gray-200 hover:border-green-300 transition duration-300 group-hover:shadow-lg">
-                <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-green-200 transition duration-300">
-                  <Clock className="w-6 h-6 text-green-600" />
+              <div className="bg-white rounded-lg p-6 border border-gray-200 hover:border-secondary/30 transition duration-300 group-hover:shadow-lg">
+                <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-green-200 transition duration-300">
+                  <Clock className="w-6 h-6 text-secondary" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-green-600 transition duration-300">
+                <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-secondary transition duration-300">
                   Same-Day Junk Removal
                 </h3>
                 <p className="text-gray-600">
@@ -493,11 +516,11 @@ export default function YardWasteRemovalPage() {
             </Link>
 
             <Link href="/emergency-cleanup" className="group">
-              <div className="bg-white rounded-lg p-6 border border-gray-200 hover:border-green-300 transition duration-300 group-hover:shadow-lg">
-                <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-green-200 transition duration-300">
-                  <AlertCircle className="w-6 h-6 text-green-600" />
+              <div className="bg-white rounded-lg p-6 border border-gray-200 hover:border-secondary/30 transition duration-300 group-hover:shadow-lg">
+                <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-green-200 transition duration-300">
+                  <AlertCircle className="w-6 h-6 text-secondary" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-green-600 transition duration-300">
+                <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-secondary transition duration-300">
                   Emergency Cleanup
                 </h3>
                 <p className="text-gray-600">
@@ -507,11 +530,11 @@ export default function YardWasteRemovalPage() {
             </Link>
 
             <Link href="/services" className="group">
-              <div className="bg-white rounded-lg p-6 border border-gray-200 hover:border-green-300 transition duration-300 group-hover:shadow-lg">
-                <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-green-200 transition duration-300">
-                  <Star className="w-6 h-6 text-green-600" />
+              <div className="bg-white rounded-lg p-6 border border-gray-200 hover:border-secondary/30 transition duration-300 group-hover:shadow-lg">
+                <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-green-200 transition duration-300">
+                  <Star className="w-6 h-6 text-secondary" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-green-600 transition duration-300">
+                <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-secondary transition duration-300">
                   All Services
                 </h3>
                 <p className="text-gray-600">

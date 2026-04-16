@@ -182,7 +182,7 @@ export default function ServicesPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/cheap-junk-removal-jacksonville"
-              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200"
+              className="bg-primary hover:opacity-90 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200"
             >
               View Our Cheap Prices
             </Link>
@@ -233,7 +233,7 @@ export default function ServicesPage() {
                     <div className="space-y-2">
                       {service.features.map((feature, featureIndex) => (
                         <div key={featureIndex} className="flex items-center space-x-2">
-                          <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                          <div className="w-2 h-2 bg-gray-500 rounded-full"></div>
                           <span className="text-sm text-gray-600">{feature}</span>
                         </div>
                       ))}

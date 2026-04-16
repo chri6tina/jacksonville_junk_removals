@@ -15,42 +15,61 @@ export default function BiohazardHoardingCleanupPage() {
   return (
     <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-red-900 via-red-800 to-red-700 text-white">
-          <div className="absolute inset-0 bg-black bg-opacity-40"></div>
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-            <div className="text-center">
-              <div className="flex justify-center mb-6">
-                <Biohazard className="w-16 h-16 text-red-400" />
+      <section className="relative min-h-[70vh] flex items-center justify-center bg-primary overflow-hidden py-20 border-b-4 border-secondary">
+        <div className="absolute inset-0 z-0">
+          <img
+            src="/hero_junk_truck.png"
+            alt="Jacksonville Junk Removal Services"
+            className="w-full h-full object-cover object-center"
+          />
+          <div className="absolute inset-0 bg-black/50 md:bg-transparent md:bg-gradient-to-r md:from-primary/95 md:via-primary/80 md:to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-transparent to-transparent md:hidden"></div>
+        </div>
+        
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full animate-fade-in text-center lg:text-left">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="space-y-8">
+              <div className="inline-flex items-center space-x-2 bg-secondary/10 border border-secondary/30 rounded-full px-4 py-2 backdrop-blur-md shadow-lg shadow-black/20 mx-auto lg:mx-0">
+                <div className="flex -space-x-1">
+                  {[1, 2, 3, 4, 5].map((star) => (
+                    <Star key={star} className="w-4 h-4 text-secondary fill-secondary drop-shadow-md" />
+                  ))}
+                </div>
+                <span className="text-sm font-bold text-white tracking-wide uppercase ml-2 text-shadow-sm">Top-Rated Local Service</span>
               </div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-                Biohazard Hoarding Cleanup
-              </h1>
-              <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto">
-                <span className="text-red-300 font-bold">PROFESSIONAL CONTAMINATION CLEANUP</span><br />
-                Specialized biohazard cleanup for hoarding situations with contamination and health hazards.
-                Licensed, certified, and equipped for the most challenging cleanup scenarios.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="tel:+1-904-456-3851"
-                  className="bg-red-500 hover:bg-red-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 flex items-center justify-center space-x-2"
+
+              <div className="space-y-6">
+                <h1 className="text-5xl lg:text-6xl font-extrabold text-white leading-tight tracking-tight drop-shadow-xl">
+                  Biohazard Hoarding Cleanup
+                </h1>
+                
+                <p className="text-xl text-gray-200 leading-relaxed max-w-xl font-medium drop-shadow-md mx-auto lg:mx-0">
+                  <span className="text-red-300 font-bold">PROFESSIONAL CONTAMINATION CLEANUP</span><br /> Specialized biohazard cleanup for hoarding situations with contamination and health hazards. Licensed, certified, and equipped for the most challenging cleanup scenarios.
+                </p>
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-5 pt-4 justify-center lg:justify-start">
+                <Link
+                  href="tel:+19044563851"
+                  className="bg-secondary hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 flex items-center justify-center space-x-3 shadow-xl shadow-secondary/20 hover:shadow-secondary/40 hover:-translate-y-1"
                 >
-                  <Phone className="w-5 h-5" />
+                  <Phone className="w-6 h-6 animate-bounce-gentle" />
                   <span>Call (904) 456-3851</span>
-                </a>
+                </Link>
                 <Link
                   href="/contact"
-                  className="border-2 border-white text-white hover:bg-white hover:text-red-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 flex items-center justify-center"
+                  className="bg-white/10 hover:bg-white/20 backdrop-blur-md border-2 border-white/30 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 flex items-center justify-center shadow-xl hover:-translate-y-1"
                 >
-                  <span>Get Biohazard Quote</span>
+                  <span>Get Free Quote</span>
                 </Link>
               </div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
         {/* Safety Alert */}
-        <section className="bg-red-600 text-white py-6">
+        <section className="bg-primary text-white py-6">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div className="flex items-center justify-center space-x-3">
               <AlertTriangle className="w-6 h-6" />
@@ -80,8 +99,8 @@ export default function BiohazardHoardingCleanupPage() {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {/* Biological Contamination */}
               <div className="bg-gray-50 rounded-lg p-8 border border-gray-200">
-                <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-6">
-                  <Biohazard className="w-6 h-6 text-red-600" />
+                <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-6">
+                  <Biohazard className="w-6 h-6 text-secondary" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">
                   Biological Contamination
@@ -118,8 +137,8 @@ export default function BiohazardHoardingCleanupPage() {
 
               {/* Mold & Mildew */}
               <div className="bg-gray-50 rounded-lg p-8 border border-gray-200">
-                <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
-                  <Shield className="w-6 h-6 text-green-600" />
+                <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-6">
+                  <Shield className="w-6 h-6 text-secondary" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">
                   Mold & Mildew
@@ -137,8 +156,8 @@ export default function BiohazardHoardingCleanupPage() {
 
               {/* Sewage & Water Damage */}
               <div className="bg-gray-50 rounded-lg p-8 border border-gray-200">
-                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
-                  <AlertTriangle className="w-6 h-6 text-blue-600" />
+                <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-6">
+                  <AlertTriangle className="w-6 h-6 text-secondary" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">
                   Sewage & Water Damage
@@ -156,8 +175,8 @@ export default function BiohazardHoardingCleanupPage() {
 
               {/* Animal Waste & Contamination */}
               <div className="bg-gray-50 rounded-lg p-8 border border-gray-200">
-                <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
-                  <UserCheck className="w-6 h-6 text-purple-600" />
+                <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-6">
+                  <UserCheck className="w-6 h-6 text-secondary" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">
                   Animal Waste & Contamination
@@ -212,28 +231,28 @@ export default function BiohazardHoardingCleanupPage() {
                 <h3 className="text-2xl font-bold text-gray-900 mb-6">Safety Equipment</h3>
                 <div className="space-y-4">
                   <div className="flex items-start space-x-3">
-                    <CheckCircle className="w-6 h-6 text-green-600 mt-1 flex-shrink-0" />
+                    <CheckCircle className="w-6 h-6 text-secondary mt-1 flex-shrink-0" />
                     <div>
                       <h4 className="font-semibold text-gray-900">Personal Protective Equipment (PPE)</h4>
                       <p className="text-gray-600">Full-body suits, respirators, gloves, and safety footwear</p>
                     </div>
                   </div>
                   <div className="flex items-start space-x-3">
-                    <CheckCircle className="w-6 h-6 text-green-600 mt-1 flex-shrink-0" />
+                    <CheckCircle className="w-6 h-6 text-secondary mt-1 flex-shrink-0" />
                     <div>
                       <h4 className="font-semibold text-gray-900">HEPA Filtration Systems</h4>
                       <p className="text-gray-600">Advanced air filtration to remove contaminants and pathogens</p>
                     </div>
                   </div>
                   <div className="flex items-start space-x-3">
-                    <CheckCircle className="w-6 h-6 text-green-600 mt-1 flex-shrink-0" />
+                    <CheckCircle className="w-6 h-6 text-secondary mt-1 flex-shrink-0" />
                     <div>
                       <h4 className="font-semibold text-gray-900">Professional Cleaning Agents</h4>
                       <p className="text-gray-600">Hospital-grade disinfectants and sanitizers</p>
                     </div>
                   </div>
                   <div className="flex items-start space-x-3">
-                    <CheckCircle className="w-6 h-6 text-green-600 mt-1 flex-shrink-0" />
+                    <CheckCircle className="w-6 h-6 text-secondary mt-1 flex-shrink-0" />
                     <div>
                       <h4 className="font-semibold text-gray-900">Containment Systems</h4>
                       <p className="text-gray-600">Negative air pressure systems and containment barriers</p>
@@ -246,28 +265,28 @@ export default function BiohazardHoardingCleanupPage() {
                 <h3 className="text-2xl font-bold text-gray-900 mb-6">Safety Protocols</h3>
                 <div className="space-y-4">
                   <div className="flex items-start space-x-3">
-                    <CheckCircle className="w-6 h-6 text-green-600 mt-1 flex-shrink-0" />
+                    <CheckCircle className="w-6 h-6 text-secondary mt-1 flex-shrink-0" />
                     <div>
                       <h4 className="font-semibold text-gray-900">Risk Assessment</h4>
                       <p className="text-gray-600">Comprehensive evaluation before beginning any cleanup</p>
                     </div>
                   </div>
                   <div className="flex items-start space-x-3">
-                    <CheckCircle className="w-6 h-6 text-green-600 mt-1 flex-shrink-0" />
+                    <CheckCircle className="w-6 h-6 text-secondary mt-1 flex-shrink-0" />
                     <div>
                       <h4 className="font-semibold text-gray-900">Containment Procedures</h4>
                       <p className="text-gray-600">Isolation of affected areas to prevent cross-contamination</p>
                     </div>
                   </div>
                   <div className="flex items-start space-x-3">
-                    <CheckCircle className="w-6 h-6 text-green-600 mt-1 flex-shrink-0" />
+                    <CheckCircle className="w-6 h-6 text-secondary mt-1 flex-shrink-0" />
                     <div>
                       <h4 className="font-semibold text-gray-900">Decontamination Process</h4>
                       <p className="text-gray-600">Multi-stage cleaning and sanitization procedures</p>
                     </div>
                   </div>
                   <div className="flex items-start space-x-3">
-                    <CheckCircle className="w-6 h-6 text-green-600 mt-1 flex-shrink-0" />
+                    <CheckCircle className="w-6 h-6 text-secondary mt-1 flex-shrink-0" />
                     <div>
                       <h4 className="font-semibold text-gray-900">Waste Disposal</h4>
                       <p className="text-gray-600">Proper disposal of contaminated materials and waste</p>
@@ -293,32 +312,32 @@ export default function BiohazardHoardingCleanupPage() {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="text-center">
-                <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Shield className="w-8 h-8 text-red-600" />
+                <div className="w-16 h-16 bg-secondary/10 border border-secondary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Shield className="w-8 h-8 text-secondary" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Licensed & Certified</h3>
                 <p className="text-gray-600">Fully licensed and certified for biohazard cleanup operations</p>
               </div>
 
               <div className="text-center">
-                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Wrench className="w-8 h-8 text-blue-600" />
+                <div className="w-16 h-16 bg-secondary/10 border border-secondary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Wrench className="w-8 h-8 text-secondary" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Professional Equipment</h3>
                 <p className="text-gray-600">State-of-the-art equipment and safety gear for all cleanup scenarios</p>
               </div>
 
               <div className="text-center">
-                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <UserCheck className="w-8 h-8 text-green-600" />
+                <div className="w-16 h-16 bg-secondary/10 border border-secondary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <UserCheck className="w-8 h-8 text-secondary" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Trained Technicians</h3>
                 <p className="text-gray-600">Certified technicians with specialized biohazard cleanup training</p>
               </div>
 
               <div className="text-center">
-                <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Star className="w-8 h-8 text-purple-600" />
+                <div className="w-16 h-16 bg-secondary/10 border border-secondary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Star className="w-8 h-8 text-secondary" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Compassionate Service</h3>
                 <p className="text-gray-600">Understanding and respectful approach to sensitive situations</p>
@@ -328,7 +347,7 @@ export default function BiohazardHoardingCleanupPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-red-600 text-white">
+        <section className="py-20 bg-primary text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl lg:text-4xl font-bold mb-6">
               Need Biohazard Cleanup?
@@ -339,14 +358,14 @@ export default function BiohazardHoardingCleanupPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="tel:+1-904-456-3851"
-                className="bg-white hover:bg-gray-100 text-red-600 px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 flex items-center justify-center space-x-2"
+                className="bg-white hover:bg-gray-100 text-secondary px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 flex items-center justify-center space-x-2"
               >
                 <Phone className="w-5 h-5" />
                 <span>Call (904) 456-3851</span>
               </a>
               <Link
                 href="/contact"
-                className="border-2 border-white text-white hover:bg-white hover:text-red-600 px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 flex items-center justify-center"
+                className="border-2 border-white text-white hover:bg-white hover:text-secondary px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 flex items-center justify-center"
               >
                 <span>Get Free Quote</span>
               </Link>

@@ -15,39 +15,58 @@ export default function EmergencyCleanupPage() {
   return (
     <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-orange-900 via-orange-800 to-orange-700 text-white">
-          <div className="absolute inset-0 bg-black bg-opacity-40"></div>
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-            <div className="text-center">
-              <div className="flex justify-center mb-6">
-                <AlertCircle className="w-16 h-16 text-orange-400" />
+      <section className="relative min-h-[70vh] flex items-center justify-center bg-primary overflow-hidden py-20 border-b-4 border-secondary">
+        <div className="absolute inset-0 z-0">
+          <img
+            src="/hero_junk_truck.png"
+            alt="Jacksonville Junk Removal Services"
+            className="w-full h-full object-cover object-center"
+          />
+          <div className="absolute inset-0 bg-black/50 md:bg-transparent md:bg-gradient-to-r md:from-primary/95 md:via-primary/80 md:to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-transparent to-transparent md:hidden"></div>
+        </div>
+        
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full animate-fade-in text-center lg:text-left">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="space-y-8">
+              <div className="inline-flex items-center space-x-2 bg-secondary/10 border border-secondary/30 rounded-full px-4 py-2 backdrop-blur-md shadow-lg shadow-black/20 mx-auto lg:mx-0">
+                <div className="flex -space-x-1">
+                  {[1, 2, 3, 4, 5].map((star) => (
+                    <Star key={star} className="w-4 h-4 text-secondary fill-secondary drop-shadow-md" />
+                  ))}
+                </div>
+                <span className="text-sm font-bold text-white tracking-wide uppercase ml-2 text-shadow-sm">Top-Rated Local Service</span>
               </div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-                Emergency Cleanup Jacksonville
-              </h1>
-              <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto">
-                <span className="text-orange-300 font-bold">24/7 EMERGENCY RESPONSE</span><br />
-                When disaster strikes, we're here to help immediately. 
-                Professional emergency cleanup service throughout Jacksonville.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="tel:+1-904-456-3851"
-                  className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 flex items-center justify-center space-x-2"
+
+              <div className="space-y-6">
+                <h1 className="text-5xl lg:text-6xl font-extrabold text-white leading-tight tracking-tight drop-shadow-xl">
+                  Emergency Cleanup Jacksonville
+                </h1>
+                
+                <p className="text-xl text-gray-200 leading-relaxed max-w-xl font-medium drop-shadow-md mx-auto lg:mx-0">
+                  <span className="text-orange-300 font-bold">24/7 EMERGENCY RESPONSE</span><br /> When disaster strikes, we're here to help immediately. Professional emergency cleanup service throughout Jacksonville.
+                </p>
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-5 pt-4 justify-center lg:justify-start">
+                <Link
+                  href="tel:+19044563851"
+                  className="bg-secondary hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 flex items-center justify-center space-x-3 shadow-xl shadow-secondary/20 hover:shadow-secondary/40 hover:-translate-y-1"
                 >
-                  <Phone className="w-5 h-5" />
-                  <span>EMERGENCY: (904) 456-3851</span>
-                </a>
+                  <Phone className="w-6 h-6 animate-bounce-gentle" />
+                  <span>Call (904) 456-3851</span>
+                </Link>
                 <Link
                   href="/contact"
-                  className="border-2 border-white text-white hover:bg-white hover:text-orange-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 flex items-center justify-center"
+                  className="bg-white/10 hover:bg-white/20 backdrop-blur-md border-2 border-white/30 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 flex items-center justify-center shadow-xl hover:-translate-y-1"
                 >
-                  <span>Get Emergency Quote</span>
+                  <span>Get Free Quote</span>
                 </Link>
               </div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
         {/* Emergency Alert */}
         <section className="bg-orange-600 text-white py-6">
@@ -99,8 +118,8 @@ export default function EmergencyCleanupPage() {
 
               {/* Fire Damage */}
               <div className="bg-gray-50 rounded-lg p-8 border border-gray-200">
-                <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-6">
-                  <AlertCircle className="w-6 h-6 text-red-600" />
+                <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-6">
+                  <AlertCircle className="w-6 h-6 text-secondary" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">
                   Fire Damage Cleanup
@@ -118,8 +137,8 @@ export default function EmergencyCleanupPage() {
 
               {/* Water Damage */}
               <div className="bg-gray-50 rounded-lg p-8 border border-gray-200">
-                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
-                  <Truck className="w-6 h-6 text-blue-600" />
+                <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-6">
+                  <Truck className="w-6 h-6 text-secondary" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">
                   Water Damage Cleanup
@@ -156,8 +175,8 @@ export default function EmergencyCleanupPage() {
 
               {/* Biohazard Cleanup */}
               <div className="bg-gray-50 rounded-lg p-8 border border-gray-200">
-                <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
-                  <CheckCircle className="w-6 h-6 text-purple-600" />
+                <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-6">
+                  <CheckCircle className="w-6 h-6 text-secondary" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">
                   Biohazard Cleanup
@@ -175,8 +194,8 @@ export default function EmergencyCleanupPage() {
 
               {/* Vehicle Accidents */}
               <div className="bg-gray-50 rounded-lg p-8 border border-gray-200">
-                <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-6">
-                  <Clock className="w-6 h-6 text-indigo-600" />
+                <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-6">
+                  <Clock className="w-6 h-6 text-secondary" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">
                   Vehicle Accident Cleanup
@@ -229,8 +248,8 @@ export default function EmergencyCleanupPage() {
 
               {/* Fast Response */}
               <div className="bg-white rounded-lg p-8 border border-gray-200 shadow-lg">
-                <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-6">
-                  <Zap className="w-6 h-6 text-red-600" />
+                <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-6">
+                  <Zap className="w-6 h-6 text-secondary" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">
                   Lightning Fast Response
@@ -248,8 +267,8 @@ export default function EmergencyCleanupPage() {
 
               {/* Professional Equipment */}
               <div className="bg-white rounded-lg p-8 border border-gray-200 shadow-lg">
-                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
-                  <Truck className="w-6 h-6 text-blue-600" />
+                <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-6">
+                  <Truck className="w-6 h-6 text-secondary" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">
                   Professional Equipment
@@ -267,8 +286,8 @@ export default function EmergencyCleanupPage() {
 
               {/* Licensed & Insured */}
               <div className="bg-white rounded-lg p-8 border border-gray-200 shadow-lg">
-                <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
-                  <Shield className="w-6 h-6 text-green-600" />
+                <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-6">
+                  <Shield className="w-6 h-6 text-secondary" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">
                   Licensed & Insured
@@ -286,8 +305,8 @@ export default function EmergencyCleanupPage() {
 
               {/* Local Knowledge */}
               <div className="bg-white rounded-lg p-8 border border-gray-200 shadow-lg">
-                <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
-                  <MapPin className="w-6 h-6 text-purple-600" />
+                <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-6">
+                  <MapPin className="w-6 h-6 text-secondary" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">
                   Local Jacksonville Knowledge
@@ -305,8 +324,8 @@ export default function EmergencyCleanupPage() {
 
               {/* Experience */}
               <div className="bg-white rounded-lg p-8 border border-gray-200 shadow-lg">
-                <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-6">
-                  <Star className="w-6 h-6 text-indigo-600" />
+                <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-6">
+                  <Star className="w-6 h-6 text-secondary" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">
                   Emergency Experience
@@ -413,23 +432,23 @@ export default function EmergencyCleanupPage() {
                 </h3>
                 <div className="space-y-4">
                   <div className="flex items-center space-x-3">
-                    <CheckCircle className="w-5 h-5 text-green-600" />
+                    <CheckCircle className="w-5 h-5 text-secondary" />
                     <span className="text-gray-700">Hurricane damage cleanup</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <CheckCircle className="w-5 h-5 text-green-600" />
+                    <CheckCircle className="w-5 h-5 text-secondary" />
                     <span className="text-gray-700">Flood damage restoration</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <CheckCircle className="w-5 h-5 text-green-600" />
+                    <CheckCircle className="w-5 h-5 text-secondary" />
                     <span className="text-gray-700">Tornado damage cleanup</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <CheckCircle className="w-5 h-5 text-green-600" />
+                    <CheckCircle className="w-5 h-5 text-secondary" />
                     <span className="text-gray-700">Storm debris removal</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <CheckCircle className="w-5 h-5 text-green-600" />
+                    <CheckCircle className="w-5 h-5 text-secondary" />
                     <span className="text-gray-700">Wind damage cleanup</span>
                   </div>
                 </div>
@@ -442,23 +461,23 @@ export default function EmergencyCleanupPage() {
                 </h3>
                 <div className="space-y-4">
                   <div className="flex items-center space-x-3">
-                    <CheckCircle className="w-5 h-5 text-green-600" />
+                    <CheckCircle className="w-5 h-5 text-secondary" />
                     <span className="text-gray-700">Fire damage cleanup</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <CheckCircle className="w-5 h-5 text-green-600" />
+                    <CheckCircle className="w-5 h-5 text-secondary" />
                     <span className="text-gray-700">Vehicle accident cleanup</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <CheckCircle className="w-5 h-5 text-green-600" />
+                    <CheckCircle className="w-5 h-5 text-secondary" />
                     <span className="text-gray-700">Building collapse cleanup</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <CheckCircle className="w-5 h-5 text-green-600" />
+                    <CheckCircle className="w-5 h-5 text-secondary" />
                     <span className="text-gray-700">Chemical spill cleanup</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <CheckCircle className="w-5 h-5 text-green-600" />
+                    <CheckCircle className="w-5 h-5 text-secondary" />
                     <span className="text-gray-700">Biohazard cleanup</span>
                   </div>
                 </div>
@@ -652,10 +671,10 @@ export default function EmergencyCleanupPage() {
                 href="/storm-cleanup"
                 className="group bg-gray-50 rounded-lg p-6 text-center hover:bg-orange-50 transition-colors duration-200"
               >
-                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4 mx-auto group-hover:bg-blue-200 transition-colors duration-200">
-                  <Truck className="w-6 h-6 text-blue-600" />
+                <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-4 mx-auto group-hover:bg-blue-200 transition-colors duration-200">
+                  <Truck className="w-6 h-6 text-secondary" />
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors duration-200">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-secondary transition-colors duration-200">
                   Storm Cleanup
                 </h3>
                 <p className="text-sm text-gray-600">
@@ -667,10 +686,10 @@ export default function EmergencyCleanupPage() {
                 href="/flood-cleanup"
                 className="group bg-gray-50 rounded-lg p-6 text-center hover:bg-orange-50 transition-colors duration-200"
               >
-                <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4 mx-auto group-hover:bg-green-200 transition-colors duration-200">
-                  <CheckCircle className="w-6 h-6 text-green-600" />
+                <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-4 mx-auto group-hover:bg-green-200 transition-colors duration-200">
+                  <CheckCircle className="w-6 h-6 text-secondary" />
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-green-600 transition-colors duration-200">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-secondary transition-colors duration-200">
                   Flood Cleanup
                 </h3>
                 <p className="text-sm text-gray-600">
@@ -682,10 +701,10 @@ export default function EmergencyCleanupPage() {
                 href="/construction-debris-removal"
                 className="group bg-gray-50 rounded-lg p-6 text-center hover:bg-orange-50 transition-colors duration-200"
               >
-                <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4 mx-auto group-hover:bg-purple-200 transition-colors duration-200">
-                  <Shield className="w-6 h-6 text-purple-600" />
+                <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-4 mx-auto group-hover:bg-purple-200 transition-colors duration-200">
+                  <Shield className="w-6 h-6 text-secondary" />
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-purple-600 transition-colors duration-200">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-secondary transition-colors duration-200">
                   Construction Debris
                 </h3>
                 <p className="text-sm text-gray-600">

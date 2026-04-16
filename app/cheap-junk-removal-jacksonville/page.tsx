@@ -97,7 +97,7 @@ export default function CheapJunkRemovalPage() {
       <div className="bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="mb-6">
-            <span className="bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-bold">
+            <span className="bg-primary text-white px-4 py-2 rounded-full text-sm font-bold">
               ⭐ #1 CHEAP JUNK REMOVAL IN JACKSONVILLE
             </span>
           </div>
@@ -116,7 +116,7 @@ export default function CheapJunkRemovalPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <a
               href="tel:+19047423531"
-              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 flex items-center justify-center space-x-2"
+              className="bg-primary hover:opacity-90 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 flex items-center justify-center space-x-2"
             >
               <Phone className="w-5 h-5" />
               <span>Call (904) 742-3531</span>
@@ -169,13 +169,13 @@ export default function CheapJunkRemovalPage() {
                 key={index}
                 className={`relative bg-white border-2 rounded-lg p-8 ${
                   tier.popular 
-                    ? 'border-blue-600 shadow-lg transform scale-105' 
+                    ? 'border-primary shadow-lg transform scale-105' 
                     : 'border-gray-200 hover:border-gray-300'
                 } transition-all duration-200`}
               >
                 {tier.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <div className="bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-bold">
+                    <div className="bg-primary text-white px-4 py-2 rounded-full text-sm font-bold">
                       ⭐ MOST POPULAR
                     </div>
                   </div>
@@ -187,7 +187,7 @@ export default function CheapJunkRemovalPage() {
                     <span className="text-4xl font-bold text-gray-900">{tier.price}</span>
                     <span className="text-lg text-gray-500 line-through">{tier.originalPrice}</span>
                   </div>
-                  <div className="text-green-600 font-semibold">Save {tier.savings}!</div>
+                  <div className="text-secondary font-semibold">Save {tier.savings}!</div>
                   <p className="text-sm text-gray-600 mt-2">{tier.description}</p>
                 </div>
 
@@ -211,7 +211,7 @@ export default function CheapJunkRemovalPage() {
                   href="tel:+19047423531"
                   className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-colors duration-200 ${
                     tier.popular
-                      ? 'bg-blue-600 hover:bg-blue-700 text-white'
+                      ? 'bg-primary hover:opacity-90 text-white'
                       : 'bg-gray-900 hover:bg-gray-800 text-white'
                   }`}
                 >
@@ -222,9 +222,9 @@ export default function CheapJunkRemovalPage() {
           </div>
 
           {/* Price Match Guarantee */}
-          <div className="mt-12 bg-green-50 border border-green-200 rounded-lg p-6 text-center">
-            <h3 className="text-xl font-semibold text-green-800 mb-2">Price Match Guarantee</h3>
-            <p className="text-green-700">
+          <div className="mt-12 bg-gray-50 border border-gray-200 rounded-lg p-6 text-center">
+            <h3 className="text-xl font-semibold text-primary mb-2">Price Match Guarantee</h3>
+            <p className="text-primary">
               Found a lower price? We'll beat any written estimate by 10%. That's our promise to you.
             </p>
           </div>
@@ -246,7 +246,7 @@ export default function CheapJunkRemovalPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {whyChooseUs.map((feature, index) => (
               <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-blue-600 rounded-lg flex items-center justify-center mx-auto mb-6">
+                <div className="w-16 h-16 bg-primary rounded-lg flex items-center justify-center mx-auto mb-6">
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">{feature.title}</h3>
@@ -272,7 +272,7 @@ export default function CheapJunkRemovalPage() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {serviceAreas.map((area, index) => (
               <div key={index} className="flex items-center space-x-2 p-3 bg-gray-50 rounded-lg">
-                <MapPin className="w-4 h-4 text-blue-600" />
+                <MapPin className="w-4 h-4 text-secondary" />
                 <span className="text-gray-700 font-medium">{area}</span>
               </div>
             ))}
@@ -338,7 +338,7 @@ export default function CheapJunkRemovalPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="tel:+19047423531"
-              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200"
+              className="bg-primary hover:opacity-90 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200"
             >
               Call (904) 742-3531
             </a>

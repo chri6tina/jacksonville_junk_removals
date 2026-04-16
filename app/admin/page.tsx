@@ -20,8 +20,8 @@ export default function AdminDashboardPage() {
             <div className="grid md:grid-cols-3 gap-6 mb-8">
               <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
                 <div className="flex items-center">
-                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
-                    <FileText className="w-6 h-6 text-blue-600" />
+                  <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center">
+                    <FileText className="w-6 h-6 text-secondary" />
                   </div>
                   <div className="ml-4">
                     <p className="text-sm font-medium text-gray-600">Blog Management</p>
@@ -44,8 +44,8 @@ export default function AdminDashboardPage() {
 
               <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
                 <div className="flex items-center">
-                  <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
-                    <BarChart3 className="w-6 h-6 text-green-600" />
+                  <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center">
+                    <BarChart3 className="w-6 h-6 text-secondary" />
                   </div>
                   <div className="ml-4">
                     <p className="text-sm font-medium text-gray-600">Website Pages</p>
@@ -62,9 +62,9 @@ export default function AdminDashboardPage() {
                 <div className="space-y-3">
                   <Link
                     href="/admin/blog"
-                    className="flex items-center space-x-3 p-3 bg-blue-50 hover:bg-blue-100 rounded-lg transition-colors duration-200"
+                    className="flex items-center space-x-3 p-3 bg-gray-50 hover:bg-secondary/10 border border-secondary/20 rounded-lg transition-colors duration-200"
                   >
-                    <FileText className="w-5 h-5 text-blue-600" />
+                    <FileText className="w-5 h-5 text-secondary" />
                     <span className="font-medium text-blue-900">Manage Blog Posts</span>
                   </Link>
                   
@@ -72,9 +72,9 @@ export default function AdminDashboardPage() {
                     href="https://app.contentful.com/spaces/xpopyri6s8gv/entries"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center space-x-3 p-3 bg-green-50 hover:bg-green-100 rounded-lg transition-colors duration-200"
+                    className="flex items-center space-x-3 p-3 bg-gray-50 hover:bg-secondary/10 border border-secondary/20 rounded-lg transition-colors duration-200"
                   >
-                    <Plus className="w-5 h-5 text-green-600" />
+                    <Plus className="w-5 h-5 text-secondary" />
                     <span className="font-medium text-green-900">Create New Post</span>
                   </Link>
                   
@@ -97,7 +97,7 @@ export default function AdminDashboardPage() {
                   </p>
                   <Link
                     href="/admin/blog"
-                    className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
+                    className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-primary hover:opacity-90"
                   >
                     View All Posts
                   </Link>
@@ -111,7 +111,7 @@ export default function AdminDashboardPage() {
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
                 <div className="p-4 border border-gray-200 rounded-lg">
                   <div className="flex items-center space-x-3 mb-2">
-                    <FileText className="w-5 h-5 text-blue-600" />
+                    <FileText className="w-5 h-5 text-secondary" />
                     <h3 className="font-medium text-gray-900">Blog Management</h3>
                   </div>
                   <p className="text-sm text-gray-600 mb-3">
@@ -119,7 +119,7 @@ export default function AdminDashboardPage() {
                   </p>
                   <Link
                     href="/admin/blog"
-                    className="text-blue-600 hover:text-blue-800 text-sm font-medium"
+                    className="text-secondary hover:text-primary text-sm font-medium"
                   >
                     Manage Blog →
                   </Link>
@@ -154,12 +154,12 @@ export default function AdminDashboardPage() {
             </div>
 
             {/* Help Section */}
-            <div className="mt-8 bg-blue-50 rounded-lg p-6">
+            <div className="mt-8 bg-gray-50 rounded-lg p-6">
               <h3 className="text-lg font-semibold text-blue-900 mb-2">Need Help?</h3>
-              <p className="text-blue-700 text-sm mb-3">
+              <p className="text-primary text-sm mb-3">
                 Here are some tips for managing your website:
               </p>
-              <ul className="text-blue-700 text-sm space-y-1">
+              <ul className="text-primary text-sm space-y-1">
                 <li>• Use HTML and CSS directly in Contentful for rich blog content</li>
                 <li>• Add relevant meta titles and descriptions for better SEO</li>
                 <li>• Set featured posts to highlight your best content</li>

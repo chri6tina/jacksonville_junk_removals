@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import type { Metadata } from 'next'
-import { Shield, Lock, Eye, CheckCircle, Phone, Mail } from 'lucide-react'
+import { Shield, Lock, Eye, CheckCircle, Phone, Mail, Star } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Privacy Policy | Jacksonville Junk Removals | Data Protection & Privacy (904) 456-3851',
@@ -15,24 +15,58 @@ export default function PrivacyPage() {
   return (
     <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white">
-          <div className="absolute inset-0 bg-black bg-opacity-40"></div>
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-            <div className="text-center">
-              <div className="flex justify-center mb-6">
-                <Shield className="w-16 h-16 text-blue-400" />
+      <section className="relative min-h-[70vh] flex items-center justify-center bg-primary overflow-hidden py-20 border-b-4 border-secondary">
+        <div className="absolute inset-0 z-0">
+          <img
+            src="/hero_junk_truck.png"
+            alt="Jacksonville Junk Removal Services"
+            className="w-full h-full object-cover object-center"
+          />
+          <div className="absolute inset-0 bg-black/50 md:bg-transparent md:bg-gradient-to-r md:from-primary/95 md:via-primary/80 md:to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-transparent to-transparent md:hidden"></div>
+        </div>
+        
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full animate-fade-in text-center lg:text-left">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="space-y-8">
+              <div className="inline-flex items-center space-x-2 bg-secondary/10 border border-secondary/30 rounded-full px-4 py-2 backdrop-blur-md shadow-lg shadow-black/20 mx-auto lg:mx-0">
+                <div className="flex -space-x-1">
+                  {[1, 2, 3, 4, 5].map((star) => (
+                    <Star key={star} className="w-4 h-4 text-secondary fill-secondary drop-shadow-md" />
+                  ))}
+                </div>
+                <span className="text-sm font-bold text-white tracking-wide uppercase ml-2 text-shadow-sm">Top-Rated Local Service</span>
               </div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-                Privacy Policy
-              </h1>
-              <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto">
-                <span className="text-blue-300 font-bold">YOUR PRIVACY MATTERS TO US</span><br />
-                We are committed to protecting your personal information and maintaining your privacy.
-                This policy explains how we collect, use, and safeguard your data.
-              </p>
+
+              <div className="space-y-6">
+                <h1 className="text-5xl lg:text-6xl font-extrabold text-white leading-tight tracking-tight drop-shadow-xl">
+                  Privacy Policy
+                </h1>
+                
+                <p className="text-xl text-gray-200 leading-relaxed max-w-xl font-medium drop-shadow-md mx-auto lg:mx-0">
+                  <span className="text-blue-300 font-bold">YOUR PRIVACY MATTERS TO US</span><br /> We are committed to protecting your personal information and maintaining your privacy. This policy explains how we collect, use, and safeguard your data.
+                </p>
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-5 pt-4 justify-center lg:justify-start">
+                <Link
+                  href="tel:+19044563851"
+                  className="bg-secondary hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 flex items-center justify-center space-x-3 shadow-xl shadow-secondary/20 hover:shadow-secondary/40 hover:-translate-y-1"
+                >
+                  <Phone className="w-6 h-6 animate-bounce-gentle" />
+                  <span>Call (904) 456-3851</span>
+                </Link>
+                <Link
+                  href="/contact"
+                  className="bg-white/10 hover:bg-white/20 backdrop-blur-md border-2 border-white/30 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 flex items-center justify-center shadow-xl hover:-translate-y-1"
+                >
+                  <span>Get Free Quote</span>
+                </Link>
+              </div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
         {/* Privacy Content */}
         <section className="py-20 bg-white">
@@ -51,7 +85,7 @@ export default function PrivacyPage() {
                 {/* Information We Collect */}
                 <div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
-                    <Eye className="w-8 h-8 text-blue-600 mr-3" />
+                    <Eye className="w-8 h-8 text-secondary mr-3" />
                     Information We Collect
                   </h3>
                   <div className="bg-gray-50 rounded-lg p-6">
@@ -76,7 +110,7 @@ export default function PrivacyPage() {
                 {/* How We Use Information */}
                 <div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
-                    <CheckCircle className="w-8 h-8 text-green-600 mr-3" />
+                    <CheckCircle className="w-8 h-8 text-secondary mr-3" />
                     How We Use Your Information
                   </h3>
                   <div className="bg-gray-50 rounded-lg p-6">
@@ -94,7 +128,7 @@ export default function PrivacyPage() {
                 {/* Information Sharing */}
                 <div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
-                    <Lock className="w-8 h-8 text-red-600 mr-3" />
+                    <Lock className="w-8 h-8 text-secondary mr-3" />
                     Information Sharing
                   </h3>
                   <div className="bg-gray-50 rounded-lg p-6">
@@ -114,7 +148,7 @@ export default function PrivacyPage() {
                 {/* Data Security */}
                 <div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
-                    <Shield className="w-8 h-8 text-purple-600 mr-3" />
+                    <Shield className="w-8 h-8 text-secondary mr-3" />
                     Data Security
                   </h3>
                   <div className="bg-gray-50 rounded-lg p-6">
@@ -134,7 +168,7 @@ export default function PrivacyPage() {
                 {/* Your Rights */}
                 <div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
-                    <CheckCircle className="w-8 h-8 text-blue-600 mr-3" />
+                    <CheckCircle className="w-8 h-8 text-secondary mr-3" />
                     Your Privacy Rights
                   </h3>
                   <div className="bg-gray-50 rounded-lg p-6">
@@ -177,7 +211,7 @@ export default function PrivacyPage() {
                 {/* Children's Privacy */}
                 <div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
-                    <Shield className="w-8 h-8 text-green-600 mr-3" />
+                    <Shield className="w-8 h-8 text-secondary mr-3" />
                     Children's Privacy
                   </h3>
                   <div className="bg-gray-50 rounded-lg p-6">
@@ -190,7 +224,7 @@ export default function PrivacyPage() {
                 {/* Policy Updates */}
                 <div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
-                    <CheckCircle className="w-8 h-8 text-purple-600 mr-3" />
+                    <CheckCircle className="w-8 h-8 text-secondary mr-3" />
                     Policy Updates
                   </h3>
                   <div className="bg-gray-50 rounded-lg p-6">
@@ -203,7 +237,7 @@ export default function PrivacyPage() {
                 {/* Contact Information */}
                 <div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
-                    <Phone className="w-8 h-8 text-blue-600 mr-3" />
+                    <Phone className="w-8 h-8 text-secondary mr-3" />
                     Contact Us
                   </h3>
                   <div className="bg-gray-50 rounded-lg p-6">
@@ -211,8 +245,8 @@ export default function PrivacyPage() {
                       If you have questions about this privacy policy or our privacy practices, please contact us:
                     </p>
                     <div className="space-y-2 text-gray-700">
-                      <p><strong>Phone:</strong> <a href="tel:+1-904-456-3851" className="text-blue-600 hover:text-blue-800">(904) 456-3851</a></p>
-                      <p><strong>Email:</strong> <a href="mailto:privacy@jacksonvillejunkremovals.com" className="text-blue-600 hover:text-blue-800">privacy@jacksonvillejunkremovals.com</a></p>
+                      <p><strong>Phone:</strong> <a href="tel:+1-904-456-3851" className="text-secondary hover:text-primary">(904) 456-3851</a></p>
+                      <p><strong>Email:</strong> <a href="mailto:privacy@jacksonvillejunkremovals.com" className="text-secondary hover:text-primary">privacy@jacksonvillejunkremovals.com</a></p>
                       <p><strong>Address:</strong> Jacksonville, FL</p>
                     </div>
                   </div>
@@ -230,7 +264,7 @@ export default function PrivacyPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-blue-600 text-white">
+        <section className="py-20 bg-primary text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl lg:text-4xl font-bold mb-6">
               Questions About Privacy?
@@ -241,14 +275,14 @@ export default function PrivacyPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="tel:+1-904-456-3851"
-                className="bg-white hover:bg-gray-100 text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 flex items-center justify-center space-x-2"
+                className="bg-white hover:bg-gray-100 text-secondary px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 flex items-center justify-center space-x-2"
               >
                 <Phone className="w-5 h-5" />
                 <span>Call (904) 456-3851</span>
               </a>
               <Link
                 href="/contact"
-                className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 flex items-center justify-center"
+                className="border-2 border-white text-white hover:bg-white hover:text-secondary px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 flex items-center justify-center"
               >
                 <span>Contact Us</span>
               </Link>

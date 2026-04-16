@@ -214,7 +214,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                     }
                     if (node.nodeType === 'heading-1') {
                       return (
-                        <h1 key={index} className="text-3xl font-bold text-blue-600 mb-6">{node.content?.[0]?.value || ''}</h1>
+                        <h1 key={index} className="text-3xl font-bold text-secondary mb-6">{node.content?.[0]?.value || ''}</h1>
                       )
                     }
                     if (node.nodeType === 'heading-2') {
@@ -285,7 +285,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             <div className="flex items-center justify-between">
               <Link
                 href="/post"
-                className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-200"
+                className="inline-flex items-center text-secondary hover:text-primary transition-colors duration-200"
               >
                 <ArrowLeft className="w-4 h-4 mr-2" />
                 Back to Blog

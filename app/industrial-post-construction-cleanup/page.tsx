@@ -15,47 +15,65 @@ export default function IndustrialPostConstructionCleanupPage() {
   return (
     <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-700 text-white overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/70 to-black/85"></div>
-          
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-            <div className="text-center">
-              <div className="flex justify-center mb-6">
-                <Factory className="w-16 h-16 text-blue-400" />
+      <section className="relative min-h-[70vh] flex items-center justify-center bg-primary overflow-hidden py-20 border-b-4 border-secondary">
+        <div className="absolute inset-0 z-0">
+          <img
+            src="/hero_junk_truck.png"
+            alt="Jacksonville Junk Removal Services"
+            className="w-full h-full object-cover object-center"
+          />
+          <div className="absolute inset-0 bg-black/50 md:bg-transparent md:bg-gradient-to-r md:from-primary/95 md:via-primary/80 md:to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-transparent to-transparent md:hidden"></div>
+        </div>
+        
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full animate-fade-in text-center lg:text-left">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="space-y-8">
+              <div className="inline-flex items-center space-x-2 bg-secondary/10 border border-secondary/30 rounded-full px-4 py-2 backdrop-blur-md shadow-lg shadow-black/20 mx-auto lg:mx-0">
+                <div className="flex -space-x-1">
+                  {[1, 2, 3, 4, 5].map((star) => (
+                    <Star key={star} className="w-4 h-4 text-secondary fill-secondary drop-shadow-md" />
+                  ))}
+                </div>
+                <span className="text-sm font-bold text-white tracking-wide uppercase ml-2 text-shadow-sm">Top-Rated Local Service</span>
               </div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-                Industrial Post-Construction Cleanup
-              </h1>
-              <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto">
-                <span className="text-blue-300 font-bold">JACKSONVILLE'S #1 INDUSTRIAL CONSTRUCTION CLEANUP SERVICE</span><br />
-                Specialized cleaning for manufacturing facilities, warehouses, and industrial plants.<br />
-                OSHA compliance, safety standards, and production-ready environments.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+
+              <div className="space-y-6">
+                <h1 className="text-5xl lg:text-6xl font-extrabold text-white leading-tight tracking-tight drop-shadow-xl">
+                  Industrial Post-Construction Cleanup
+                </h1>
+                
+                <p className="text-xl text-gray-200 leading-relaxed max-w-xl font-medium drop-shadow-md mx-auto lg:mx-0">
+                  <span className="text-blue-300 font-bold">JACKSONVILLE'S #1 INDUSTRIAL CONSTRUCTION CLEANUP SERVICE</span><br /> Specialized cleaning for manufacturing facilities, warehouses, and industrial plants.<br /> OSHA compliance, safety standards, and production-ready environments.
+                </p>
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-5 pt-4 justify-center lg:justify-start">
                 <Link
-                  href="/estimation"
-                  className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xl"
+                  href="tel:+19044563851"
+                  className="bg-secondary hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 flex items-center justify-center space-x-3 shadow-xl shadow-secondary/20 hover:shadow-secondary/40 hover:-translate-y-1"
                 >
-                  <Phone className="w-5 h-5" />
-                  <span>Get Free Estimate</span>
+                  <Phone className="w-6 h-6 animate-bounce-gentle" />
+                  <span>Call (904) 456-3851</span>
                 </Link>
                 <Link
                   href="/contact"
-                  className="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 flex items-center justify-center shadow-lg hover:shadow-xl"
+                  className="bg-white/10 hover:bg-white/20 backdrop-blur-md border-2 border-white/30 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 flex items-center justify-center shadow-xl hover:-translate-y-1"
                 >
-                  <span>Schedule Service</span>
+                  <span>Get Free Quote</span>
                 </Link>
               </div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
         {/* Service Alert */}
-        <section className="bg-blue-50 border-b border-blue-200">
+        <section className="bg-gray-50 border-b border-gray-200">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
             <div className="flex items-center justify-center space-x-3">
-              <AlertTriangle className="w-6 h-6 text-blue-600" />
-              <p className="text-blue-800 font-semibold text-lg">
+              <AlertTriangle className="w-6 h-6 text-secondary" />
+              <p className="text-primary font-semibold text-lg">
                 <strong>Industrial Safety Compliance Required:</strong> All industrial facility cleanups follow strict OSHA standards and safety protocols for production environments.
               </p>
             </div>
@@ -78,12 +96,12 @@ export default function IndustrialPostConstructionCleanupPage() {
               {/* Basic Industrial Cleanup */}
               <div className="bg-gray-50 rounded-lg p-8 border-2 border-gray-200">
                 <div className="text-center mb-6">
-                  <Cog className="w-12 h-12 text-blue-600 mx-auto mb-4" />
+                  <Cog className="w-12 h-12 text-secondary mx-auto mb-4" />
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">Basic Industrial Cleanup</h3>
                   <p className="text-gray-600">Small warehouses & workshops</p>
                 </div>
                 <div className="text-center mb-6">
-                  <span className="text-4xl font-bold text-blue-600">$2.00</span>
+                  <span className="text-4xl font-bold text-secondary">$2.00</span>
                   <span className="text-gray-600">/sq ft</span>
                 </div>
                 <ul className="space-y-3 mb-8">
@@ -106,24 +124,24 @@ export default function IndustrialPostConstructionCleanupPage() {
                 </ul>
                 <Link
                   href="/estimation"
-                  className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-200 block text-center"
+                  className="w-full bg-primary text-white py-3 px-6 rounded-lg font-semibold hover:opacity-90 transition-colors duration-200 block text-center"
                 >
                   Get Estimate
                 </Link>
               </div>
 
               {/* Standard Industrial Cleanup */}
-              <div className="bg-blue-50 rounded-lg p-8 border-2 border-blue-300 relative">
+              <div className="bg-gray-50 rounded-lg p-8 border-2 border-secondary/30 relative">
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                  <span className="bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold">Most Popular</span>
+                  <span className="bg-primary text-white px-4 py-2 rounded-full text-sm font-semibold">Most Popular</span>
                 </div>
                 <div className="text-center mb-6">
-                  <HardHat className="w-12 h-12 text-blue-600 mx-auto mb-4" />
+                  <HardHat className="w-12 h-12 text-secondary mx-auto mb-4" />
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">Standard Industrial Cleanup</h3>
                   <p className="text-gray-600">Manufacturing plants & factories</p>
                 </div>
                 <div className="text-center mb-6">
-                  <span className="text-4xl font-bold text-blue-600">$3.25</span>
+                  <span className="text-4xl font-bold text-secondary">$3.25</span>
                   <span className="text-gray-600">/sq ft</span>
                 </div>
                 <ul className="space-y-3 mb-8">
@@ -150,7 +168,7 @@ export default function IndustrialPostConstructionCleanupPage() {
                 </ul>
                 <Link
                   href="/estimation"
-                  className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-200 block text-center"
+                  className="w-full bg-primary text-white py-3 px-6 rounded-lg font-semibold hover:opacity-90 transition-colors duration-200 block text-center"
                 >
                   Get Estimate
                 </Link>
@@ -159,12 +177,12 @@ export default function IndustrialPostConstructionCleanupPage() {
               {/* Premium Industrial Cleanup */}
               <div className="bg-gray-50 rounded-lg p-8 border-2 border-gray-200">
                 <div className="text-center mb-6">
-                  <Gauge className="w-12 h-12 text-blue-600 mx-auto mb-4" />
+                  <Gauge className="w-12 h-12 text-secondary mx-auto mb-4" />
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">Premium Industrial Cleanup</h3>
                   <p className="text-gray-600">High-tech & precision manufacturing</p>
                 </div>
                 <div className="text-center mb-6">
-                  <span className="text-4xl font-bold text-blue-600">$4.50</span>
+                  <span className="text-4xl font-bold text-secondary">$4.50</span>
                   <span className="text-gray-600">/sq ft</span>
                 </div>
                 <ul className="space-y-3 mb-8">
@@ -191,7 +209,7 @@ export default function IndustrialPostConstructionCleanupPage() {
                 </ul>
                 <Link
                   href="/estimation"
-                  className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-200 block text-center"
+                  className="w-full bg-primary text-white py-3 px-6 rounded-lg font-semibold hover:opacity-90 transition-colors duration-200 block text-center"
                 >
                   Get Estimate
                 </Link>
@@ -215,7 +233,7 @@ export default function IndustrialPostConstructionCleanupPage() {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="bg-white rounded-lg p-6 shadow-lg">
                 <div className="flex items-center mb-4">
-                  <Shield className="w-8 h-8 text-blue-600 mr-3" />
+                  <Shield className="w-8 h-8 text-secondary mr-3" />
                   <h3 className="text-xl font-semibold text-gray-900">OSHA Compliance</h3>
                 </div>
                 <p className="text-gray-600">
@@ -225,7 +243,7 @@ export default function IndustrialPostConstructionCleanupPage() {
 
               <div className="bg-white rounded-lg p-6 shadow-lg">
                 <div className="flex items-center mb-4">
-                  <HardHat className="w-8 h-8 text-blue-600 mr-3" />
+                  <HardHat className="w-8 h-8 text-secondary mr-3" />
                   <h3 className="text-xl font-semibold text-gray-900">Safety Protocols</h3>
                 </div>
                 <p className="text-gray-600">
@@ -235,7 +253,7 @@ export default function IndustrialPostConstructionCleanupPage() {
 
               <div className="bg-white rounded-lg p-6 shadow-lg">
                 <div className="flex items-center mb-4">
-                  <Award className="w-8 h-8 text-blue-600 mr-3" />
+                  <Award className="w-8 h-8 text-secondary mr-3" />
                   <h3 className="text-xl font-semibold text-gray-900">Industrial Certified</h3>
                 </div>
                 <p className="text-gray-600">
@@ -245,7 +263,7 @@ export default function IndustrialPostConstructionCleanupPage() {
 
               <div className="bg-white rounded-lg p-6 shadow-lg">
                 <div className="flex items-center mb-4">
-                  <Leaf className="w-8 h-8 text-blue-600 mr-3" />
+                  <Leaf className="w-8 h-8 text-secondary mr-3" />
                   <h3 className="text-xl font-semibold text-gray-900">Eco-Friendly Solutions</h3>
                 </div>
                 <p className="text-gray-600">
@@ -255,7 +273,7 @@ export default function IndustrialPostConstructionCleanupPage() {
 
               <div className="bg-white rounded-lg p-6 shadow-lg">
                 <div className="flex items-center mb-4">
-                  <Zap className="w-8 h-8 text-blue-600 mr-3" />
+                  <Zap className="w-8 h-8 text-secondary mr-3" />
                   <h3 className="text-xl font-semibold text-gray-900">Contamination Control</h3>
                 </div>
                 <p className="text-gray-600">
@@ -265,7 +283,7 @@ export default function IndustrialPostConstructionCleanupPage() {
 
               <div className="bg-white rounded-lg p-6 shadow-lg">
                 <div className="flex items-center mb-4">
-                  <CheckSquare className="w-8 h-8 text-blue-600 mr-3" />
+                  <CheckSquare className="w-8 h-8 text-secondary mr-3" />
                   <h3 className="text-xl font-semibold text-gray-900">Quality Assurance</h3>
                 </div>
                 <p className="text-gray-600">
@@ -290,7 +308,7 @@ export default function IndustrialPostConstructionCleanupPage() {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="text-center">
-                <Factory className="w-16 h-16 text-blue-600 mx-auto mb-4" />
+                <Factory className="w-16 h-16 text-secondary mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Manufacturing Plants</h3>
                 <p className="text-gray-600">
                   Automotive, electronics, pharmaceuticals, and consumer goods
@@ -298,7 +316,7 @@ export default function IndustrialPostConstructionCleanupPage() {
               </div>
 
               <div className="text-center">
-                <Building className="w-16 h-16 text-blue-600 mx-auto mb-4" />
+                <Building className="w-16 h-16 text-secondary mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Warehouses & Distribution</h3>
                 <p className="text-gray-600">
                   Storage facilities, logistics centers, and distribution hubs
@@ -306,7 +324,7 @@ export default function IndustrialPostConstructionCleanupPage() {
               </div>
 
               <div className="text-center">
-                <Cog className="w-16 h-16 text-blue-600 mx-auto mb-4" />
+                <Cog className="w-16 h-16 text-secondary mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Assembly Lines</h3>
                 <p className="text-gray-600">
                   Production lines, assembly areas, and quality control stations
@@ -314,7 +332,7 @@ export default function IndustrialPostConstructionCleanupPage() {
               </div>
 
               <div className="text-center">
-                <Gauge className="w-16 h-16 text-blue-600 mx-auto mb-4" />
+                <Gauge className="w-16 h-16 text-secondary mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Clean Rooms</h3>
                 <p className="text-gray-600">
                   Semiconductor, medical device, and precision manufacturing
@@ -322,7 +340,7 @@ export default function IndustrialPostConstructionCleanupPage() {
               </div>
 
               <div className="text-center">
-                <Settings className="w-16 h-16 text-blue-600 mx-auto mb-4" />
+                <Settings className="w-16 h-16 text-secondary mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Machine Shops</h3>
                 <p className="text-gray-600">
                   Metalworking, woodworking, and precision machining facilities
@@ -330,7 +348,7 @@ export default function IndustrialPostConstructionCleanupPage() {
               </div>
 
               <div className="text-center">
-                <HardHat className="w-16 h-16 text-blue-600 mx-auto mb-4" />
+                <HardHat className="w-16 h-16 text-secondary mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Industrial Workshops</h3>
                 <p className="text-gray-600">
                   Maintenance shops, repair facilities, and testing laboratories
@@ -341,7 +359,7 @@ export default function IndustrialPostConstructionCleanupPage() {
         </section>
 
         {/* Why Choose Us */}
-        <section className="py-16 bg-blue-50">
+        <section className="py-16 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -418,7 +436,7 @@ export default function IndustrialPostConstructionCleanupPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-16 bg-blue-600">
+        <section className="py-16 bg-primary">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready for Production-Ready Industrial Cleanup?
@@ -429,14 +447,14 @@ export default function IndustrialPostConstructionCleanupPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/estimation"
-                className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors duration-200 flex items-center justify-center space-x-2"
+                className="bg-white text-secondary px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors duration-200 flex items-center justify-center space-x-2"
               >
                 <Phone className="w-5 h-5" />
                 <span>Get Free Estimate</span>
               </Link>
               <Link
                 href="/contact"
-                className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 flex items-center justify-center"
+                className="border-2 border-white text-white hover:bg-white hover:text-secondary px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 flex items-center justify-center"
               >
                 <span>Contact Us</span>
               </Link>
@@ -451,24 +469,24 @@ export default function IndustrialPostConstructionCleanupPage() {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               <Link href="/commercial-post-construction-cleanup" className="group">
                 <div className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow duration-200">
-                  <Building className="w-8 h-8 text-blue-600 mb-3" />
-                  <h3 className="font-semibold text-gray-900 group-hover:text-blue-600">Commercial Post-Construction</h3>
+                  <Building className="w-8 h-8 text-secondary mb-3" />
+                  <h3 className="font-semibold text-gray-900 group-hover:text-secondary">Commercial Post-Construction</h3>
                   <p className="text-gray-600 text-sm">Office buildings and commercial facilities</p>
                 </div>
               </Link>
               
               <Link href="/medical-facility-post-construction-cleanup" className="group">
                 <div className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow duration-200">
-                  <Stethoscope className="w-8 h-8 text-blue-600 mb-3" />
-                  <h3 className="font-semibold text-gray-900 group-hover:text-blue-600">Medical Facility Cleanup</h3>
+                  <Stethoscope className="w-8 h-8 text-secondary mb-3" />
+                  <h3 className="font-semibold text-gray-900 group-hover:text-secondary">Medical Facility Cleanup</h3>
                   <p className="text-gray-600 text-sm">Healthcare compliance cleaning</p>
                 </div>
               </Link>
               
               <Link href="/post-construction-cleanup" className="group">
                 <div className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow duration-200">
-                  <Wrench className="w-8 h-8 text-blue-600 mb-3" />
-                  <h3 className="font-semibold text-gray-900 group-hover:text-blue-600">General Post-Construction</h3>
+                  <Wrench className="w-8 h-8 text-secondary mb-3" />
+                  <h3 className="font-semibold text-gray-900 group-hover:text-secondary">General Post-Construction</h3>
                   <p className="text-gray-600 text-sm">All types of construction cleanup</p>
                 </div>
               </Link>

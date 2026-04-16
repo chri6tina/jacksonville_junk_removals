@@ -17,38 +17,61 @@ export default function FurnitureRemovalPage() {
       
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-purple-50 to-pink-100 py-20">
-        <div className="container mx-auto px-4 text-center">
-          <div className="flex justify-center mb-6">
-            <Sofa className="w-16 h-16 text-purple-600" />
-          </div>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-gray-900">
-            Furniture Removal Jacksonville
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-700 mb-8 max-w-4xl mx-auto">
-            Professional furniture removal with donation partnerships and careful handling. We give your furniture a second life through charity donations.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/estimation" 
-              className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition duration-300 inline-flex items-center gap-2"
-            >
-              <Phone className="w-5 h-5" />
-              Get Free Quote
-            </Link>
-            <Link 
-              href="/contact" 
-              className="bg-white hover:bg-gray-50 text-purple-600 border-2 border-purple-600 px-8 py-4 rounded-lg font-semibold text-lg transition duration-300 inline-flex items-center gap-2"
-            >
-              <MapPin className="w-5 h-5" />
-              Schedule Pickup
-            </Link>
+      <section className="relative min-h-[70vh] flex items-center justify-center bg-primary overflow-hidden py-20 border-b-4 border-secondary">
+        <div className="absolute inset-0 z-0">
+          <img
+            src="/hero_junk_truck.png"
+            alt="Jacksonville Junk Removal Services"
+            className="w-full h-full object-cover object-center"
+          />
+          <div className="absolute inset-0 bg-black/50 md:bg-transparent md:bg-gradient-to-r md:from-primary/95 md:via-primary/80 md:to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-transparent to-transparent md:hidden"></div>
+        </div>
+        
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full animate-fade-in text-center lg:text-left">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="space-y-8">
+              <div className="inline-flex items-center space-x-2 bg-secondary/10 border border-secondary/30 rounded-full px-4 py-2 backdrop-blur-md shadow-lg shadow-black/20 mx-auto lg:mx-0">
+                <div className="flex -space-x-1">
+                  {[1, 2, 3, 4, 5].map((star) => (
+                    <Star key={star} className="w-4 h-4 text-secondary fill-secondary drop-shadow-md" />
+                  ))}
+                </div>
+                <span className="text-sm font-bold text-white tracking-wide uppercase ml-2 text-shadow-sm">Top-Rated Local Service</span>
+              </div>
+
+              <div className="space-y-6">
+                <h1 className="text-5xl lg:text-6xl font-extrabold text-white leading-tight tracking-tight drop-shadow-xl">
+                  Furniture Removal Jacksonville
+                </h1>
+                
+                <p className="text-xl text-gray-200 leading-relaxed max-w-xl font-medium drop-shadow-md mx-auto lg:mx-0">
+                  Professional furniture removal with donation partnerships and careful handling. We give your furniture a second life through charity donations.
+                </p>
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-5 pt-4 justify-center lg:justify-start">
+                <Link
+                  href="tel:+19044563851"
+                  className="bg-secondary hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 flex items-center justify-center space-x-3 shadow-xl shadow-secondary/20 hover:shadow-secondary/40 hover:-translate-y-1"
+                >
+                  <Phone className="w-6 h-6 animate-bounce-gentle" />
+                  <span>Call (904) 456-3851</span>
+                </Link>
+                <Link
+                  href="/contact"
+                  className="bg-white/10 hover:bg-white/20 backdrop-blur-md border-2 border-white/30 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 flex items-center justify-center shadow-xl hover:-translate-y-1"
+                >
+                  <span>Get Free Quote</span>
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Service Alert */}
-      <section className="bg-purple-600 text-white py-6">
+      <section className="bg-primary text-white py-6">
         <div className="container mx-auto px-4 text-center">
           <div className="flex items-center justify-center gap-3">
             <Heart className="w-5 h-5" />
@@ -74,8 +97,8 @@ export default function FurnitureRemovalPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Living Room Furniture */}
             <div className="bg-gray-50 rounded-lg p-8 border border-gray-200">
-              <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
-                <Home className="w-6 h-6 text-purple-600" />
+              <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-6">
+                <Home className="w-6 h-6 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">
                 Living Room Furniture
@@ -85,19 +108,19 @@ export default function FurnitureRemovalPage() {
               </p>
               <ul className="text-sm text-gray-600 space-y-2">
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-purple-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Sofas & loveseats
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-purple-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Armchairs & recliners
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-purple-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Coffee tables & end tables
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-purple-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Entertainment centers
                 </li>
               </ul>
@@ -105,8 +128,8 @@ export default function FurnitureRemovalPage() {
 
             {/* Bedroom Furniture */}
             <div className="bg-gray-50 rounded-lg p-8 border border-gray-200">
-              <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
-                <Package className="w-6 h-6 text-purple-600" />
+              <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-6">
+                <Package className="w-6 h-6 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">
                 Bedroom Furniture
@@ -116,19 +139,19 @@ export default function FurnitureRemovalPage() {
               </p>
               <ul className="text-sm text-gray-600 space-y-2">
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-purple-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Beds & bed frames
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-purple-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Dressers & chests
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-purple-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Nightstands
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-purple-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Wardrobes & armoires
                 </li>
               </ul>
@@ -136,8 +159,8 @@ export default function FurnitureRemovalPage() {
 
             {/* Dining Room Furniture */}
             <div className="bg-gray-50 rounded-lg p-8 border border-gray-200">
-              <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
-                <Users className="w-6 h-6 text-purple-600" />
+              <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-6">
+                <Users className="w-6 h-6 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">
                 Dining Room Furniture
@@ -147,19 +170,19 @@ export default function FurnitureRemovalPage() {
               </p>
               <ul className="text-sm text-gray-600 space-y-2">
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-purple-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Dining tables
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-purple-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Dining chairs
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-purple-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Buffets & sideboards
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-purple-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   China cabinets
                 </li>
               </ul>
@@ -167,8 +190,8 @@ export default function FurnitureRemovalPage() {
 
             {/* Office Furniture */}
             <div className="bg-gray-50 rounded-lg p-8 border border-gray-200">
-              <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
-                <Building className="w-6 h-6 text-purple-600" />
+              <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-6">
+                <Building className="w-6 h-6 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">
                 Office Furniture
@@ -178,19 +201,19 @@ export default function FurnitureRemovalPage() {
               </p>
               <ul className="text-sm text-gray-600 space-y-2">
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-purple-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Office desks
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-purple-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Office chairs
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-purple-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Filing cabinets
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-purple-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Conference tables
                 </li>
               </ul>
@@ -198,8 +221,8 @@ export default function FurnitureRemovalPage() {
 
             {/* Outdoor Furniture */}
             <div className="bg-gray-50 rounded-lg p-8 border border-gray-200">
-              <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
-                <Home className="w-6 h-6 text-purple-600" />
+              <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-6">
+                <Home className="w-6 h-6 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">
                 Outdoor Furniture
@@ -209,19 +232,19 @@ export default function FurnitureRemovalPage() {
               </p>
               <ul className="text-sm text-gray-600 space-y-2">
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-purple-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Patio tables & chairs
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-purple-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Outdoor umbrellas
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-purple-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Garden furniture
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-purple-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Pool furniture
                 </li>
               </ul>
@@ -229,8 +252,8 @@ export default function FurnitureRemovalPage() {
 
             {/* Donation & Recycling */}
             <div className="bg-gray-50 rounded-lg p-8 border border-gray-200">
-              <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
-                <Heart className="w-6 h-6 text-purple-600" />
+              <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-6">
+                <Heart className="w-6 h-6 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">
                 Donation & Recycling
@@ -240,19 +263,19 @@ export default function FurnitureRemovalPage() {
               </p>
               <ul className="text-sm text-gray-600 space-y-2">
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-purple-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Charity donations
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-purple-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Habitat for Humanity
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-purple-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Local shelters
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-purple-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Eco-friendly disposal
                 </li>
               </ul>
@@ -275,8 +298,8 @@ export default function FurnitureRemovalPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="text-center">
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Heart className="w-8 h-8 text-purple-600" />
+              <div className="w-16 h-16 bg-secondary/10 border border-secondary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Heart className="w-8 h-8 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Donation Partnerships</h3>
               <p className="text-gray-600">
@@ -285,8 +308,8 @@ export default function FurnitureRemovalPage() {
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Shield className="w-8 h-8 text-purple-600" />
+              <div className="w-16 h-16 bg-secondary/10 border border-secondary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Shield className="w-8 h-8 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Careful Handling</h3>
               <p className="text-gray-600">
@@ -295,8 +318,8 @@ export default function FurnitureRemovalPage() {
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Clock className="w-8 h-8 text-purple-600" />
+              <div className="w-16 h-16 bg-secondary/10 border border-secondary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Clock className="w-8 h-8 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Same-Day Service</h3>
               <p className="text-gray-600">
@@ -305,8 +328,8 @@ export default function FurnitureRemovalPage() {
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <MapPin className="w-8 h-8 text-purple-600" />
+              <div className="w-16 h-16 bg-secondary/10 border border-secondary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <MapPin className="w-8 h-8 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Local Expertise</h3>
               <p className="text-gray-600">
@@ -315,8 +338,8 @@ export default function FurnitureRemovalPage() {
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Truck className="w-8 h-8 text-purple-600" />
+              <div className="w-16 h-16 bg-secondary/10 border border-secondary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Truck className="w-8 h-8 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Professional Equipment</h3>
               <p className="text-gray-600">
@@ -325,8 +348,8 @@ export default function FurnitureRemovalPage() {
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Star className="w-8 h-8 text-purple-600" />
+              <div className="w-16 h-16 bg-secondary/10 border border-secondary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Star className="w-8 h-8 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">5-Star Service</h3>
               <p className="text-gray-600">
@@ -351,7 +374,7 @@ export default function FurnitureRemovalPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-white font-bold text-xl">1</span>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Assessment</h3>
@@ -361,7 +384,7 @@ export default function FurnitureRemovalPage() {
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-white font-bold text-xl">2</span>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Preparation</h3>
@@ -371,7 +394,7 @@ export default function FurnitureRemovalPage() {
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-white font-bold text-xl">3</span>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Careful Removal</h3>
@@ -381,7 +404,7 @@ export default function FurnitureRemovalPage() {
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-white font-bold text-xl">4</span>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Donation & Disposal</h3>
@@ -394,7 +417,7 @@ export default function FurnitureRemovalPage() {
       </section>
 
       {/* Donation Partnerships */}
-      <section className="py-16 bg-purple-50">
+      <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
@@ -406,80 +429,80 @@ export default function FurnitureRemovalPage() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white rounded-lg p-6 border border-purple-200 shadow-sm">
-              <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
-                <Heart className="w-6 h-6 text-purple-600" />
+            <div className="bg-white rounded-lg p-6 border border-gray-200 shadow-sm">
+              <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-4">
+                <Heart className="w-6 h-6 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Habitat for Humanity</h3>
               <p className="text-gray-600 mb-4">
                 Donate furniture to help build homes for families in need throughout Jacksonville.
               </p>
-              <div className="text-sm text-purple-600 font-semibold">
+              <div className="text-sm text-secondary font-semibold">
                 Building homes, changing lives
               </div>
             </div>
 
-            <div className="bg-white rounded-lg p-6 border border-purple-200 shadow-sm">
-              <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
-                <Users className="w-6 h-6 text-purple-600" />
+            <div className="bg-white rounded-lg p-6 border border-gray-200 shadow-sm">
+              <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-4">
+                <Users className="w-6 h-6 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Local Shelters</h3>
               <p className="text-gray-600 mb-4">
                 Support homeless shelters and transitional housing programs with furniture donations.
               </p>
-              <div className="text-sm text-purple-600 font-semibold">
+              <div className="text-sm text-secondary font-semibold">
                 Supporting our community
               </div>
             </div>
 
-            <div className="bg-white rounded-lg p-6 border border-purple-200 shadow-sm">
-              <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
-                <Gift className="w-6 h-6 text-purple-600" />
+            <div className="bg-white rounded-lg p-6 border border-gray-200 shadow-sm">
+              <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-4">
+                <Gift className="w-6 h-6 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Veterans Organizations</h3>
               <p className="text-gray-600 mb-4">
                 Help veterans and their families by donating furniture to veteran support programs.
               </p>
-              <div className="text-sm text-purple-600 font-semibold">
+              <div className="text-sm text-secondary font-semibold">
                 Honoring our heroes
               </div>
             </div>
 
-            <div className="bg-white rounded-lg p-6 border border-purple-200 shadow-sm">
-              <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
-                <Home className="w-6 h-6 text-purple-600" />
+            <div className="bg-white rounded-lg p-6 border border-gray-200 shadow-sm">
+              <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-4">
+                <Home className="w-6 h-6 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Family Services</h3>
               <p className="text-gray-600 mb-4">
                 Support families in crisis through donations to family service organizations.
               </p>
-              <div className="text-sm text-purple-600 font-semibold">
+              <div className="text-sm text-secondary font-semibold">
                 Strengthening families
               </div>
             </div>
 
-            <div className="bg-white rounded-lg p-6 border border-purple-200 shadow-sm">
-              <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
-                <Building className="w-6 h-6 text-purple-600" />
+            <div className="bg-white rounded-lg p-6 border border-gray-200 shadow-sm">
+              <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-4">
+                <Building className="w-6 h-6 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Youth Programs</h3>
               <p className="text-gray-600 mb-4">
                 Help youth organizations and after-school programs with furniture donations.
               </p>
-              <div className="text-sm text-purple-600 font-semibold">
+              <div className="text-sm text-secondary font-semibold">
                 Investing in our future
               </div>
             </div>
 
-            <div className="bg-white rounded-lg p-6 border border-purple-200 shadow-sm">
-              <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
-                <Star className="w-6 h-6 text-purple-600" />
+            <div className="bg-white rounded-lg p-6 border border-gray-200 shadow-sm">
+              <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-4">
+                <Star className="w-6 h-6 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Community Centers</h3>
               <p className="text-gray-600 mb-4">
                 Support community centers and neighborhood programs throughout Jacksonville.
               </p>
-              <div className="text-sm text-purple-600 font-semibold">
+              <div className="text-sm text-secondary font-semibold">
                 Building community
               </div>
             </div>
@@ -505,7 +528,7 @@ export default function FurnitureRemovalPage() {
               <p className="text-gray-600 mb-4">
                 Coastal furniture removal with special attention to beach property considerations and salt air protection.
               </p>
-              <div className="flex items-center gap-2 text-purple-600">
+              <div className="flex items-center gap-2 text-secondary">
                 <CheckCircle className="w-5 h-5" />
                 <span className="font-semibold">Same-day service available</span>
               </div>
@@ -516,7 +539,7 @@ export default function FurnitureRemovalPage() {
               <p className="text-gray-600 mb-4">
                 Suburban furniture removal with large property access and upscale furniture handling.
               </p>
-              <div className="flex items-center gap-2 text-purple-600">
+              <div className="flex items-center gap-2 text-secondary">
                 <CheckCircle className="w-5 h-5" />
                 <span className="font-semibold">Large property specialists</span>
               </div>
@@ -527,7 +550,7 @@ export default function FurnitureRemovalPage() {
               <p className="text-gray-600 mb-4">
                 Historic district furniture removal with careful handling of older homes and antique furniture.
               </p>
-              <div className="flex items-center gap-2 text-purple-600">
+              <div className="flex items-center gap-2 text-secondary">
                 <CheckCircle className="w-5 h-5" />
                 <span className="font-semibold">Antique furniture experts</span>
               </div>
@@ -538,7 +561,7 @@ export default function FurnitureRemovalPage() {
               <p className="text-gray-600 mb-4">
                 Upscale neighborhood furniture removal with premium service and careful property protection.
               </p>
-              <div className="flex items-center gap-2 text-purple-600">
+              <div className="flex items-center gap-2 text-secondary">
                 <CheckCircle className="w-5 h-5" />
                 <span className="font-semibold">Premium service available</span>
               </div>
@@ -549,7 +572,7 @@ export default function FurnitureRemovalPage() {
               <p className="text-gray-600 mb-4">
                 Commercial and residential furniture removal with bulk furniture and business cleanup services.
               </p>
-              <div className="flex items-center gap-2 text-purple-600">
+              <div className="flex items-center gap-2 text-secondary">
                 <CheckCircle className="w-5 h-5" />
                 <span className="font-semibold">Commercial specialists</span>
               </div>
@@ -560,7 +583,7 @@ export default function FurnitureRemovalPage() {
               <p className="text-gray-600 mb-4">
                 Suburban furniture removal with large lot access and family home furniture handling.
               </p>
-              <div className="flex items-center gap-2 text-purple-600">
+              <div className="flex items-center gap-2 text-secondary">
                 <CheckCircle className="w-5 h-5" />
                 <span className="font-semibold">Family home experts</span>
               </div>
@@ -570,7 +593,7 @@ export default function FurnitureRemovalPage() {
       </section>
 
       {/* Contact Section */}
-      <section className="py-16 bg-purple-600 text-white">
+      <section className="py-16 bg-primary text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Ready for Professional Furniture Removal?
@@ -581,14 +604,14 @@ export default function FurnitureRemovalPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
               href="/estimation" 
-              className="bg-white hover:bg-gray-100 text-purple-600 px-8 py-4 rounded-lg font-semibold text-lg transition duration-300 inline-flex items-center gap-2"
+              className="bg-white hover:bg-gray-100 text-secondary px-8 py-4 rounded-lg font-semibold text-lg transition duration-300 inline-flex items-center gap-2"
             >
               <Phone className="w-5 h-5" />
               Get Free Quote
             </Link>
             <Link 
               href="/contact" 
-              className="bg-transparent hover:bg-white hover:text-purple-600 border-2 border-white px-8 py-4 rounded-lg font-semibold text-lg transition duration-300 inline-flex items-center gap-2"
+              className="bg-transparent hover:bg-white hover:text-secondary border-2 border-white px-8 py-4 rounded-lg font-semibold text-lg transition duration-300 inline-flex items-center gap-2"
             >
               <MapPin className="w-5 h-5" />
               Schedule Pickup
@@ -611,11 +634,11 @@ export default function FurnitureRemovalPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <Link href="/appliance-removal" className="group">
-              <div className="bg-white rounded-lg p-6 border border-gray-200 hover:border-purple-300 transition duration-300 group-hover:shadow-lg">
-                <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-purple-200 transition duration-300">
-                  <Home className="w-6 h-6 text-purple-600" />
+              <div className="bg-white rounded-lg p-6 border border-gray-200 hover:border-secondary/30 transition duration-300 group-hover:shadow-lg">
+                <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-purple-200 transition duration-300">
+                  <Home className="w-6 h-6 text-secondary" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-purple-600 transition duration-300">
+                <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-secondary transition duration-300">
                   Appliance Removal
                 </h3>
                 <p className="text-gray-600">
@@ -625,11 +648,11 @@ export default function FurnitureRemovalPage() {
             </Link>
 
             <Link href="/commercial-junk-removal" className="group">
-              <div className="bg-white rounded-lg p-6 border border-gray-200 hover:border-purple-300 transition duration-300 group-hover:shadow-lg">
-                <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-purple-200 transition duration-300">
-                  <Building className="w-6 h-6 text-purple-600" />
+              <div className="bg-white rounded-lg p-6 border border-gray-200 hover:border-secondary/30 transition duration-300 group-hover:shadow-lg">
+                <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-purple-200 transition duration-300">
+                  <Building className="w-6 h-6 text-secondary" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-purple-600 transition duration-300">
+                <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-secondary transition duration-300">
                   Commercial Cleanout
                 </h3>
                 <p className="text-gray-600">
@@ -639,11 +662,11 @@ export default function FurnitureRemovalPage() {
             </Link>
 
             <Link href="/estate-cleanout" className="group">
-              <div className="bg-white rounded-lg p-6 border border-gray-200 hover:border-purple-300 transition duration-300 group-hover:shadow-lg">
-                <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-purple-200 transition duration-300">
-                  <Users className="w-6 h-6 text-purple-600" />
+              <div className="bg-white rounded-lg p-6 border border-gray-200 hover:border-secondary/30 transition duration-300 group-hover:shadow-lg">
+                <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-purple-200 transition duration-300">
+                  <Users className="w-6 h-6 text-secondary" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-purple-600 transition duration-300">
+                <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-secondary transition duration-300">
                   Estate Cleanout
                 </h3>
                 <p className="text-gray-600">
@@ -653,11 +676,11 @@ export default function FurnitureRemovalPage() {
             </Link>
 
             <Link href="/same-day-junk-removal" className="group">
-              <div className="bg-white rounded-lg p-6 border border-gray-200 hover:border-purple-300 transition duration-300 group-hover:shadow-lg">
-                <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-purple-200 transition duration-300">
-                  <Clock className="w-6 h-6 text-purple-600" />
+              <div className="bg-white rounded-lg p-6 border border-gray-200 hover:border-secondary/30 transition duration-300 group-hover:shadow-lg">
+                <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-purple-200 transition duration-300">
+                  <Clock className="w-6 h-6 text-secondary" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-purple-600 transition duration-300">
+                <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-secondary transition duration-300">
                   Same-Day Junk Removal
                 </h3>
                 <p className="text-gray-600">
@@ -667,11 +690,11 @@ export default function FurnitureRemovalPage() {
             </Link>
 
             <Link href="/emergency-cleanup" className="group">
-              <div className="bg-white rounded-lg p-6 border border-gray-200 hover:border-purple-300 transition duration-300 group-hover:shadow-lg">
-                <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-purple-200 transition duration-300">
-                  <Shield className="w-6 h-6 text-purple-600" />
+              <div className="bg-white rounded-lg p-6 border border-gray-200 hover:border-secondary/30 transition duration-300 group-hover:shadow-lg">
+                <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-purple-200 transition duration-300">
+                  <Shield className="w-6 h-6 text-secondary" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-purple-600 transition duration-300">
+                <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-secondary transition duration-300">
                   Emergency Cleanup
                 </h3>
                 <p className="text-gray-600">
@@ -681,11 +704,11 @@ export default function FurnitureRemovalPage() {
             </Link>
 
             <Link href="/services" className="group">
-              <div className="bg-white rounded-lg p-6 border border-gray-200 hover:border-purple-300 transition duration-300 group-hover:shadow-lg">
-                <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-purple-200 transition duration-300">
-                  <Star className="w-6 h-6 text-purple-600" />
+              <div className="bg-white rounded-lg p-6 border border-gray-200 hover:border-secondary/30 transition duration-300 group-hover:shadow-lg">
+                <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-purple-200 transition duration-300">
+                  <Star className="w-6 h-6 text-secondary" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-purple-600 transition duration-300">
+                <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-secondary transition duration-300">
                   All Services
                 </h3>
                 <p className="text-gray-600">

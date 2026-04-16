@@ -15,42 +15,61 @@ export default function CommercialPostConstructionCleanupPage() {
   return (
     <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-indigo-900 via-indigo-800 to-indigo-700 text-white">
-          <div className="absolute inset-0 bg-black bg-opacity-40"></div>
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-            <div className="text-center">
-              <div className="flex justify-center mb-6">
-                <Building className="w-16 h-16 text-indigo-400" />
+      <section className="relative min-h-[70vh] flex items-center justify-center bg-primary overflow-hidden py-20 border-b-4 border-secondary">
+        <div className="absolute inset-0 z-0">
+          <img
+            src="/hero_junk_truck.png"
+            alt="Jacksonville Junk Removal Services"
+            className="w-full h-full object-cover object-center"
+          />
+          <div className="absolute inset-0 bg-black/50 md:bg-transparent md:bg-gradient-to-r md:from-primary/95 md:via-primary/80 md:to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-transparent to-transparent md:hidden"></div>
+        </div>
+        
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full animate-fade-in text-center lg:text-left">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="space-y-8">
+              <div className="inline-flex items-center space-x-2 bg-secondary/10 border border-secondary/30 rounded-full px-4 py-2 backdrop-blur-md shadow-lg shadow-black/20 mx-auto lg:mx-0">
+                <div className="flex -space-x-1">
+                  {[1, 2, 3, 4, 5].map((star) => (
+                    <Star key={star} className="w-4 h-4 text-secondary fill-secondary drop-shadow-md" />
+                  ))}
+                </div>
+                <span className="text-sm font-bold text-white tracking-wide uppercase ml-2 text-shadow-sm">Top-Rated Local Service</span>
               </div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-                Commercial Post-Construction Cleanup Jacksonville
-              </h1>
-              <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto">
-                <span className="text-indigo-300 font-bold">PROFESSIONAL CLEANUP FOR COMMERCIAL FACILITIES</span><br />
-                Transform your construction site into a business-ready commercial space.<br />
-                Specialized cleaning for offices, retail, warehouses, and commercial facilities.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+
+              <div className="space-y-6">
+                <h1 className="text-5xl lg:text-6xl font-extrabold text-white leading-tight tracking-tight drop-shadow-xl">
+                  Commercial Post-Construction Cleanup Jacksonville
+                </h1>
+                
+                <p className="text-xl text-gray-200 leading-relaxed max-w-xl font-medium drop-shadow-md mx-auto lg:mx-0">
+                  <span className="text-indigo-300 font-bold">PROFESSIONAL CLEANUP FOR COMMERCIAL FACILITIES</span><br /> Transform your construction site into a business-ready commercial space.<br /> Specialized cleaning for offices, retail, warehouses, and commercial facilities.
+                </p>
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-5 pt-4 justify-center lg:justify-start">
                 <Link
-                  href="/estimation"
-                  className="bg-indigo-500 hover:bg-indigo-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 flex items-center justify-center space-x-2"
+                  href="tel:+19044563851"
+                  className="bg-secondary hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 flex items-center justify-center space-x-3 shadow-xl shadow-secondary/20 hover:shadow-secondary/40 hover:-translate-y-1"
                 >
-                  <Phone className="w-5 h-5" />
-                  <span>Get Instant Quote</span>
+                  <Phone className="w-6 h-6 animate-bounce-gentle" />
+                  <span>Call (904) 456-3851</span>
                 </Link>
                 <Link
                   href="/contact"
-                  className="border-2 border-white text-white hover:bg-white hover:text-indigo-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 flex items-center justify-center"
+                  className="bg-white/10 hover:bg-white/20 backdrop-blur-md border-2 border-white/30 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 flex items-center justify-center shadow-xl hover:-translate-y-1"
                 >
-                  <span>Schedule Cleanup</span>
+                  <span>Get Free Quote</span>
                 </Link>
               </div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
         {/* Service Alert */}
-        <section className="bg-indigo-600 text-white py-6">
+        <section className="bg-primary text-white py-6">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div className="flex items-center justify-center space-x-3">
               <Building className="w-6 h-6" />
@@ -79,9 +98,9 @@ export default function CommercialPostConstructionCleanupPage() {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {/* Commercial Expertise */}
-              <div className="bg-indigo-50 rounded-lg p-8 border border-indigo-200">
-                <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-6">
-                  <Briefcase className="w-6 h-6 text-indigo-600" />
+              <div className="bg-gray-50 rounded-lg p-8 border border-gray-200">
+                <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-6">
+                  <Briefcase className="w-6 h-6 text-secondary" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">
                   Commercial Expertise
@@ -91,28 +110,28 @@ export default function CommercialPostConstructionCleanupPage() {
                 </p>
                 <ul className="text-sm text-gray-600 space-y-2">
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-indigo-600" />
+                    <CheckCircle className="w-4 h-4 text-secondary" />
                     Office buildings
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-indigo-600" />
+                    <CheckCircle className="w-4 h-4 text-secondary" />
                     Retail facilities
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-indigo-600" />
+                    <CheckCircle className="w-4 h-4 text-secondary" />
                     Warehouse spaces
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-indigo-600" />
+                    <CheckCircle className="w-4 h-4 text-secondary" />
                     Industrial facilities
                   </li>
                 </ul>
               </div>
 
               {/* Business-Ready Results */}
-              <div className="bg-indigo-50 rounded-lg p-8 border border-indigo-200">
-                <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-6">
-                  <Target className="w-6 h-6 text-indigo-600" />
+              <div className="bg-gray-50 rounded-lg p-8 border border-gray-200">
+                <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-6">
+                  <Target className="w-6 h-6 text-secondary" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">
                   Business-Ready Results
@@ -122,28 +141,28 @@ export default function CommercialPostConstructionCleanupPage() {
                 </p>
                 <ul className="text-sm text-gray-600 space-y-2">
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-indigo-600" />
+                    <CheckCircle className="w-4 h-4 text-secondary" />
                     Customer-ready spaces
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-indigo-600" />
+                    <CheckCircle className="w-4 h-4 text-secondary" />
                     No construction dust
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-indigo-600" />
+                    <CheckCircle className="w-4 h-4 text-secondary" />
                     Professional appearance
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-indigo-600" />
+                    <CheckCircle className="w-4 h-4 text-secondary" />
                     Immediate occupancy
                   </li>
                 </ul>
               </div>
 
               {/* Compliance & Safety */}
-              <div className="bg-indigo-50 rounded-lg p-8 border border-indigo-200">
-                <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-6">
-                  <Shield className="w-6 h-6 text-indigo-600" />
+              <div className="bg-gray-50 rounded-lg p-8 border border-gray-200">
+                <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-6">
+                  <Shield className="w-6 h-6 text-secondary" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">
                   Compliance & Safety
@@ -153,19 +172,19 @@ export default function CommercialPostConstructionCleanupPage() {
                 </p>
                 <ul className="text-sm text-gray-600 space-y-2">
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-indigo-600" />
+                    <CheckCircle className="w-4 h-4 text-secondary" />
                     OSHA compliance
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-indigo-600" />
+                    <CheckCircle className="w-4 h-4 text-secondary" />
                     Safety protocols
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-indigo-600" />
+                    <CheckCircle className="w-4 h-4 text-secondary" />
                     Commercial standards
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-indigo-600" />
+                    <CheckCircle className="w-4 h-4 text-secondary" />
                     Liability protection
                   </li>
                 </ul>
@@ -189,8 +208,8 @@ export default function CommercialPostConstructionCleanupPage() {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {/* Office Buildings */}
               <div className="bg-white rounded-lg p-8 border border-gray-200 shadow-sm">
-                <div className="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <Building className="w-8 h-8 text-indigo-600" />
+                <div className="w-16 h-16 bg-secondary/10 border border-secondary/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <Building className="w-8 h-8 text-secondary" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4 text-center">Office Buildings</h3>
                 <p className="text-gray-600 text-center mb-4">
@@ -198,19 +217,19 @@ export default function CommercialPostConstructionCleanupPage() {
                 </p>
                 <ul className="text-sm text-gray-600 space-y-2">
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-indigo-600" />
+                    <CheckCircle className="w-4 h-4 text-secondary" />
                     Executive suites
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-indigo-600" />
+                    <CheckCircle className="w-4 h-4 text-secondary" />
                     Conference rooms
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-indigo-600" />
+                    <CheckCircle className="w-4 h-4 text-secondary" />
                     Common areas
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-indigo-600" />
+                    <CheckCircle className="w-4 h-4 text-secondary" />
                     Break rooms
                   </li>
                 </ul>
@@ -218,8 +237,8 @@ export default function CommercialPostConstructionCleanupPage() {
 
               {/* Retail Stores */}
               <div className="bg-white rounded-lg p-8 border border-gray-200 shadow-sm">
-                <div className="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <Briefcase className="w-8 h-8 text-indigo-600" />
+                <div className="w-16 h-16 bg-secondary/10 border border-secondary/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <Briefcase className="w-8 h-8 text-secondary" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4 text-center">Retail Stores</h3>
                 <p className="text-gray-600 text-center mb-4">
@@ -227,19 +246,19 @@ export default function CommercialPostConstructionCleanupPage() {
                 </p>
                 <ul className="text-sm text-gray-600 space-y-2">
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-indigo-600" />
+                    <CheckCircle className="w-4 h-4 text-secondary" />
                     Sales floors
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-indigo-600" />
+                    <CheckCircle className="w-4 h-4 text-secondary" />
                     Fitting rooms
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-indigo-600" />
+                    <CheckCircle className="w-4 h-4 text-secondary" />
                     Storage areas
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-indigo-600" />
+                    <CheckCircle className="w-4 h-4 text-secondary" />
                     Customer service areas
                   </li>
                 </ul>
@@ -247,8 +266,8 @@ export default function CommercialPostConstructionCleanupPage() {
 
               {/* Warehouses */}
               <div className="bg-white rounded-lg p-8 border border-gray-200 shadow-sm">
-                <div className="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <Truck className="w-8 h-8 text-indigo-600" />
+                <div className="w-16 h-16 bg-secondary/10 border border-secondary/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <Truck className="w-8 h-8 text-secondary" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4 text-center">Warehouses</h3>
                 <p className="text-gray-600 text-center mb-4">
@@ -256,19 +275,19 @@ export default function CommercialPostConstructionCleanupPage() {
                 </p>
                 <ul className="text-sm text-gray-600 space-y-2">
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-indigo-600" />
+                    <CheckCircle className="w-4 h-4 text-secondary" />
                     Loading docks
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-indigo-600" />
+                    <CheckCircle className="w-4 h-4 text-secondary" />
                     Storage areas
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-indigo-600" />
+                    <CheckCircle className="w-4 h-4 text-secondary" />
                     Office spaces
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-indigo-600" />
+                    <CheckCircle className="w-4 h-4 text-secondary" />
                     Equipment areas
                   </li>
                 </ul>
@@ -276,8 +295,8 @@ export default function CommercialPostConstructionCleanupPage() {
 
               {/* Medical Facilities */}
               <div className="bg-white rounded-lg p-8 border border-gray-200 shadow-sm">
-                <div className="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <Shield className="w-8 h-8 text-indigo-600" />
+                <div className="w-16 h-16 bg-secondary/10 border border-secondary/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <Shield className="w-8 h-8 text-secondary" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4 text-center">Medical Facilities</h3>
                 <p className="text-gray-600 text-center mb-4">
@@ -285,19 +304,19 @@ export default function CommercialPostConstructionCleanupPage() {
                 </p>
                 <ul className="text-sm text-gray-600 space-y-2">
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-indigo-600" />
+                    <CheckCircle className="w-4 h-4 text-secondary" />
                     Exam rooms
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-indigo-600" />
+                    <CheckCircle className="w-4 h-4 text-secondary" />
                     Waiting areas
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-indigo-600" />
+                    <CheckCircle className="w-4 h-4 text-secondary" />
                     Sterile environments
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-indigo-600" />
+                    <CheckCircle className="w-4 h-4 text-secondary" />
                     Compliance standards
                   </li>
                 </ul>
@@ -305,8 +324,8 @@ export default function CommercialPostConstructionCleanupPage() {
 
               {/* Restaurants */}
               <div className="bg-white rounded-lg p-8 border border-gray-200 shadow-sm">
-                <div className="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <Wrench className="w-8 h-8 text-indigo-600" />
+                <div className="w-16 h-16 bg-secondary/10 border border-secondary/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <Wrench className="w-8 h-8 text-secondary" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4 text-center">Restaurants</h3>
                 <p className="text-gray-600 text-center mb-4">
@@ -314,19 +333,19 @@ export default function CommercialPostConstructionCleanupPage() {
                 </p>
                 <ul className="text-sm text-gray-600 space-y-2">
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-indigo-600" />
+                    <CheckCircle className="w-4 h-4 text-secondary" />
                     Kitchen areas
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-indigo-600" />
+                    <CheckCircle className="w-4 h-4 text-secondary" />
                     Dining rooms
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-indigo-600" />
+                    <CheckCircle className="w-4 h-4 text-secondary" />
                     Food prep areas
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-indigo-600" />
+                    <CheckCircle className="w-4 h-4 text-secondary" />
                     Health code compliance
                   </li>
                 </ul>
@@ -334,8 +353,8 @@ export default function CommercialPostConstructionCleanupPage() {
 
               {/* Industrial Facilities */}
               <div className="bg-white rounded-lg p-8 border border-gray-200 shadow-sm">
-                <div className="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <Zap className="w-8 h-8 text-indigo-600" />
+                <div className="w-16 h-16 bg-secondary/10 border border-secondary/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <Zap className="w-8 h-8 text-secondary" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4 text-center">Industrial Facilities</h3>
                 <p className="text-gray-600 text-center mb-4">
@@ -343,19 +362,19 @@ export default function CommercialPostConstructionCleanupPage() {
                 </p>
                 <ul className="text-sm text-gray-600 space-y-2">
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-indigo-600" />
+                    <CheckCircle className="w-4 h-4 text-secondary" />
                     Production areas
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-indigo-600" />
+                    <CheckCircle className="w-4 h-4 text-secondary" />
                     Equipment cleaning
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-indigo-600" />
+                    <CheckCircle className="w-4 h-4 text-secondary" />
                     Safety compliance
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-indigo-600" />
+                    <CheckCircle className="w-4 h-4 text-secondary" />
                     Hazardous material handling
                   </li>
                 </ul>
@@ -378,8 +397,8 @@ export default function CommercialPostConstructionCleanupPage() {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="text-center">
-                <div className="w-20 h-20 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <span className="text-3xl font-bold text-indigo-600">1</span>
+                <div className="w-20 h-20 bg-secondary/10 border border-secondary/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <span className="text-3xl font-bold text-secondary">1</span>
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Commercial Assessment</h3>
                 <p className="text-gray-600">
@@ -388,8 +407,8 @@ export default function CommercialPostConstructionCleanupPage() {
               </div>
 
               <div className="text-center">
-                <div className="w-20 h-20 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <span className="text-3xl font-bold text-indigo-600">2</span>
+                <div className="w-20 h-20 bg-secondary/10 border border-secondary/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <span className="text-3xl font-bold text-secondary">2</span>
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Debris Removal</h3>
                 <p className="text-gray-600">
@@ -398,8 +417,8 @@ export default function CommercialPostConstructionCleanupPage() {
               </div>
 
               <div className="text-center">
-                <div className="w-20 h-20 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <span className="text-3xl font-bold text-indigo-600">3</span>
+                <div className="w-20 h-20 bg-secondary/10 border border-secondary/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <span className="text-3xl font-bold text-secondary">3</span>
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Commercial Cleaning</h3>
                 <p className="text-gray-600">
@@ -408,8 +427,8 @@ export default function CommercialPostConstructionCleanupPage() {
               </div>
 
               <div className="text-center">
-                <div className="w-20 h-20 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <span className="text-3xl font-bold text-indigo-600">4</span>
+                <div className="w-20 h-20 bg-secondary/10 border border-secondary/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <span className="text-3xl font-bold text-secondary">4</span>
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Business Readiness</h3>
                 <p className="text-gray-600">
@@ -440,77 +459,77 @@ export default function CommercialPostConstructionCleanupPage() {
                   <p className="text-gray-600">Small commercial projects</p>
                 </div>
                 <div className="text-center mb-6">
-                  <span className="text-3xl font-bold text-indigo-600">$0.95</span>
+                  <span className="text-3xl font-bold text-secondary">$0.95</span>
                   <span className="text-gray-600">/sq ft</span>
                 </div>
                 <ul className="text-sm text-gray-600 space-y-3 mb-6">
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-indigo-600" />
+                    <CheckCircle className="w-4 h-4 text-secondary" />
                     Basic debris removal
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-indigo-600" />
+                    <CheckCircle className="w-4 h-4 text-secondary" />
                     Surface cleaning
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-indigo-600" />
+                    <CheckCircle className="w-4 h-4 text-secondary" />
                     Floor cleaning
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-indigo-600" />
+                    <CheckCircle className="w-4 h-4 text-secondary" />
                     Basic sanitization
                   </li>
                 </ul>
                 <Link
                   href="/estimation"
-                  className="w-full bg-indigo-600 hover:bg-indigo-700 text-white py-3 px-6 rounded-lg font-semibold text-center block transition-colors duration-200"
+                  className="w-full bg-primary hover:opacity-90 text-white py-3 px-6 rounded-lg font-semibold text-center block transition-colors duration-200"
                 >
                   Get Instant Quote
                 </Link>
               </div>
 
               {/* Standard Commercial Package */}
-              <div className="bg-indigo-50 rounded-lg p-8 border-2 border-indigo-300 relative">
+              <div className="bg-gray-50 rounded-lg p-8 border-2 border-secondary/30 relative">
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                  <span className="bg-indigo-600 text-white px-4 py-2 rounded-full text-sm font-semibold">MOST POPULAR</span>
+                  <span className="bg-primary text-white px-4 py-2 rounded-full text-sm font-semibold">MOST POPULAR</span>
                 </div>
                 <div className="text-center mb-6">
                   <h3 className="text-2xl font-semibold text-gray-900 mb-2">Standard Commercial</h3>
                   <p className="text-gray-600">Complete commercial facilities</p>
                 </div>
                 <div className="text-center mb-6">
-                  <span className="text-3xl font-bold text-indigo-600">$1.35</span>
+                  <span className="text-3xl font-bold text-secondary">$1.35</span>
                   <span className="text-gray-600">/sq ft</span>
                 </div>
                 <ul className="text-sm text-gray-600 space-y-3 mb-6">
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-indigo-600" />
+                    <CheckCircle className="w-4 h-4 text-secondary" />
                     Full debris removal
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-indigo-600" />
+                    <CheckCircle className="w-4 h-4 text-secondary" />
                     Deep surface cleaning
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-indigo-600" />
+                    <CheckCircle className="w-4 h-4 text-secondary" />
                     Floor restoration
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-indigo-600" />
+                    <CheckCircle className="w-4 h-4 text-secondary" />
                     Fixture polishing
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-indigo-600" />
+                    <CheckCircle className="w-4 h-4 text-secondary" />
                     Window cleaning
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-indigo-600" />
+                    <CheckCircle className="w-4 h-4 text-secondary" />
                     Complete sanitization
                   </li>
                 </ul>
                 <Link
                   href="/estimation"
-                  className="w-full bg-indigo-600 hover:bg-indigo-700 text-white py-3 px-6 rounded-lg font-semibold text-center block transition-colors duration-200"
+                  className="w-full bg-primary hover:opacity-90 text-white py-3 px-6 rounded-lg font-semibold text-center block transition-colors duration-200"
                 >
                   Get Instant Quote
                 </Link>
@@ -523,34 +542,34 @@ export default function CommercialPostConstructionCleanupPage() {
                   <p className="text-gray-600">Luxury finishes & large facilities</p>
                 </div>
                 <div className="text-center mb-6">
-                  <span className="text-3xl font-bold text-indigo-600">$1.95</span>
+                  <span className="text-3xl font-bold text-secondary">$1.95</span>
                   <span className="text-gray-600">/sq ft</span>
                 </div>
                 <ul className="text-sm text-gray-600 space-y-3 mb-6">
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-indigo-600" />
+                    <CheckCircle className="w-4 h-4 text-secondary" />
                     Everything in Standard
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-indigo-600" />
+                    <CheckCircle className="w-4 h-4 text-secondary" />
                     Debris haul-off included
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-indigo-600" />
+                    <CheckCircle className="w-4 h-4 text-secondary" />
                     Pressure washing
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-indigo-600" />
+                    <CheckCircle className="w-4 h-4 text-secondary" />
                     Air quality restoration
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-indigo-600" />
+                    <CheckCircle className="w-4 h-4 text-secondary" />
                     Final inspection
                   </li>
                 </ul>
                 <Link
                   href="/estimation"
-                  className="w-full bg-indigo-600 hover:bg-indigo-700 text-white py-3 px-6 rounded-lg font-semibold text-center block transition-colors duration-200"
+                  className="w-full bg-primary hover:opacity-90 text-white py-3 px-6 rounded-lg font-semibold text-center block transition-colors duration-200"
                 >
                   Get Instant Quote
                 </Link>
@@ -560,7 +579,7 @@ export default function CommercialPostConstructionCleanupPage() {
         </section>
 
         {/* Call to Action */}
-        <section className="py-20 bg-indigo-600 text-white">
+        <section className="py-20 bg-primary text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl lg:text-4xl font-bold mb-6">
               Ready to Make Your Commercial Facility Business-Ready?
@@ -572,14 +591,14 @@ export default function CommercialPostConstructionCleanupPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/estimation"
-                className="bg-white hover:bg-gray-100 text-indigo-600 px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 flex items-center justify-center space-x-2"
+                className="bg-white hover:bg-gray-100 text-secondary px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 flex items-center justify-center space-x-2"
               >
                 <Phone className="w-5 h-5" />
                 <span>Get Instant Quote</span>
               </Link>
               <Link
                 href="/contact"
-                className="border-2 border-white text-white hover:bg-white hover:text-indigo-600 px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 flex items-center justify-center"
+                className="border-2 border-white text-white hover:bg-white hover:text-secondary px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 flex items-center justify-center"
               >
                 <span>Schedule Consultation</span>
               </Link>
@@ -601,11 +620,11 @@ export default function CommercialPostConstructionCleanupPage() {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               <Link href="/post-construction-cleanup" className="group">
-                <div className="bg-white rounded-lg p-6 border border-gray-200 hover:border-indigo-300 transition duration-300 group-hover:shadow-lg">
-                  <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-indigo-200 transition duration-300">
-                    <Hammer className="w-6 h-6 text-indigo-600" />
+                <div className="bg-white rounded-lg p-6 border border-gray-200 hover:border-secondary/30 transition duration-300 group-hover:shadow-lg">
+                  <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-indigo-200 transition duration-300">
+                    <Hammer className="w-6 h-6 text-secondary" />
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-indigo-600 transition duration-300">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-secondary transition duration-300">
                     Post-Construction Cleanup
                   </h3>
                   <p className="text-gray-600">
@@ -615,11 +634,11 @@ export default function CommercialPostConstructionCleanupPage() {
               </Link>
 
               <Link href="/commercial-cleanout" className="group">
-                <div className="bg-white rounded-lg p-6 border border-gray-200 hover:border-indigo-300 transition duration-300 group-hover:shadow-lg">
-                  <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-indigo-200 transition duration-300">
-                    <Building className="w-6 h-6 text-indigo-600" />
+                <div className="bg-white rounded-lg p-6 border border-gray-200 hover:border-secondary/30 transition duration-300 group-hover:shadow-lg">
+                  <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-indigo-200 transition duration-300">
+                    <Building className="w-6 h-6 text-secondary" />
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-indigo-600 transition duration-300">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-secondary transition duration-300">
                     Commercial Cleanout
                   </h3>
                   <p className="text-gray-600">
@@ -629,11 +648,11 @@ export default function CommercialPostConstructionCleanupPage() {
               </Link>
 
               <Link href="/construction-debris-removal" className="group">
-                <div className="bg-white rounded-lg p-6 border border-gray-200 hover:border-indigo-300 transition duration-300 group-hover:shadow-lg">
-                  <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-indigo-200 transition duration-300">
-                    <Truck className="w-6 h-6 text-indigo-600" />
+                <div className="bg-white rounded-lg p-6 border border-gray-200 hover:border-secondary/30 transition duration-300 group-hover:shadow-lg">
+                  <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-indigo-200 transition duration-300">
+                    <Truck className="w-6 h-6 text-secondary" />
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-indigo-600 transition duration-300">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-secondary transition duration-300">
                     Construction Debris Removal
                   </h3>
                   <p className="text-gray-600">

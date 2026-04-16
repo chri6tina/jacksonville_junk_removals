@@ -68,7 +68,7 @@ export default function AdminBlogPage() {
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
         <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto mb-4"></div>
           <p className="text-gray-600">Loading blog posts...</p>
         </div>
       </div>
@@ -79,12 +79,12 @@ export default function AdminBlogPage() {
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
         <div className="text-center">
-          <div className="text-red-600 text-6xl mb-4">⚠️</div>
+          <div className="text-secondary text-6xl mb-4">⚠️</div>
           <h2 className="text-xl font-semibold text-gray-900 mb-2">Error Loading Posts</h2>
           <p className="text-gray-600 mb-4">{error}</p>
           <button
             onClick={fetchPosts}
-            className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700"
+            className="px-4 py-2 bg-primary text-white rounded-md hover:opacity-90"
           >
             Try Again
           </button>
@@ -108,7 +108,7 @@ export default function AdminBlogPage() {
                 href="https://app.contentful.com/spaces/xpopyri6s8gv/entries"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-primary hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
               >
                 <Plus className="w-4 h-4 mr-2" />
                 Create New Post
@@ -128,16 +128,16 @@ export default function AdminBlogPage() {
       <div className="py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Info Banner */}
-          <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-6">
+          <div className="bg-gray-50 border border-gray-200 rounded-lg p-4 mb-6">
             <div className="flex">
               <div className="flex-shrink-0">
                 <div className="text-blue-400 text-2xl">ℹ️</div>
               </div>
               <div className="ml-3">
-                <h3 className="text-sm font-medium text-blue-800">
+                <h3 className="text-sm font-medium text-primary">
                   Content Management Moved to Contentful
                 </h3>
-                <div className="mt-2 text-sm text-blue-700">
+                <div className="mt-2 text-sm text-primary">
                   <p>
                     All blog post creation, editing, and deletion is now handled directly in Contentful. 
                     Use the "Create New Post" button above to manage your content.
@@ -166,7 +166,7 @@ export default function AdminBlogPage() {
                   href="https://app.contentful.com/spaces/xpopyri6s8gv/entries"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
+                  className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-primary hover:opacity-90"
                 >
                   Create Blog Post
                 </Link>
@@ -252,7 +252,7 @@ export default function AdminBlogPage() {
                         
                         <button
                           onClick={() => handleDelete(post.id)}
-                          className="inline-flex items-center px-3 py-2 border border-red-300 text-sm font-medium rounded-md text-red-700 bg-white hover:bg-red-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500"
+                          className="inline-flex items-center px-3 py-2 border border-secondary/30 text-sm font-medium rounded-md text-primary bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500"
                         >
                           <Trash2 className="w-4 h-4 mr-1" />
                           Delete

@@ -17,38 +17,61 @@ export default function MattressRemovalPage() {
       
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-green-50 to-emerald-100 py-20">
-        <div className="container mx-auto px-4 text-center">
-          <div className="flex justify-center mb-6">
-            <Bed className="w-16 h-16 text-green-600" />
-          </div>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-gray-900">
-            Mattress Removal Jacksonville
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-700 mb-8 max-w-4xl mx-auto">
-            Professional mattress removal with eco-friendly disposal and recycling partnerships. We handle all mattress types, box springs, and bed frames responsibly.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/estimation" 
-              className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition duration-300 inline-flex items-center gap-2"
-            >
-              <Phone className="w-5 h-5" />
-              Get Free Quote
-            </Link>
-            <Link 
-              href="/contact" 
-              className="bg-white hover:bg-gray-50 text-green-600 border-2 border-green-600 px-8 py-4 rounded-lg font-semibold text-lg transition duration-300 inline-flex items-center gap-2"
-            >
-              <MapPin className="w-5 h-5" />
-              Schedule Service
-            </Link>
+      <section className="relative min-h-[70vh] flex items-center justify-center bg-primary overflow-hidden py-20 border-b-4 border-secondary">
+        <div className="absolute inset-0 z-0">
+          <img
+            src="/hero_junk_truck.png"
+            alt="Jacksonville Junk Removal Services"
+            className="w-full h-full object-cover object-center"
+          />
+          <div className="absolute inset-0 bg-black/50 md:bg-transparent md:bg-gradient-to-r md:from-primary/95 md:via-primary/80 md:to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-transparent to-transparent md:hidden"></div>
+        </div>
+        
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full animate-fade-in text-center lg:text-left">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="space-y-8">
+              <div className="inline-flex items-center space-x-2 bg-secondary/10 border border-secondary/30 rounded-full px-4 py-2 backdrop-blur-md shadow-lg shadow-black/20 mx-auto lg:mx-0">
+                <div className="flex -space-x-1">
+                  {[1, 2, 3, 4, 5].map((star) => (
+                    <Star key={star} className="w-4 h-4 text-secondary fill-secondary drop-shadow-md" />
+                  ))}
+                </div>
+                <span className="text-sm font-bold text-white tracking-wide uppercase ml-2 text-shadow-sm">Top-Rated Local Service</span>
+              </div>
+
+              <div className="space-y-6">
+                <h1 className="text-5xl lg:text-6xl font-extrabold text-white leading-tight tracking-tight drop-shadow-xl">
+                  Mattress Removal Jacksonville
+                </h1>
+                
+                <p className="text-xl text-gray-200 leading-relaxed max-w-xl font-medium drop-shadow-md mx-auto lg:mx-0">
+                  Professional mattress removal with eco-friendly disposal and recycling partnerships. We handle all mattress types, box springs, and bed frames responsibly.
+                </p>
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-5 pt-4 justify-center lg:justify-start">
+                <Link
+                  href="tel:+19044563851"
+                  className="bg-secondary hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 flex items-center justify-center space-x-3 shadow-xl shadow-secondary/20 hover:shadow-secondary/40 hover:-translate-y-1"
+                >
+                  <Phone className="w-6 h-6 animate-bounce-gentle" />
+                  <span>Call (904) 456-3851</span>
+                </Link>
+                <Link
+                  href="/contact"
+                  className="bg-white/10 hover:bg-white/20 backdrop-blur-md border-2 border-white/30 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 flex items-center justify-center shadow-xl hover:-translate-y-1"
+                >
+                  <span>Get Free Quote</span>
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Service Alert */}
-      <section className="bg-green-600 text-white py-6">
+      <section className="bg-primary text-white py-6">
         <div className="container mx-auto px-4 text-center">
           <div className="flex items-center justify-center gap-3">
             <Leaf className="w-5 h-5" />
@@ -74,8 +97,8 @@ export default function MattressRemovalPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Standard Mattresses */}
             <div className="bg-gray-50 rounded-lg p-8 border border-gray-200">
-              <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
-                <Bed className="w-6 h-6 text-green-600" />
+              <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-6">
+                <Bed className="w-6 h-6 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">
                 Standard Mattresses
@@ -85,19 +108,19 @@ export default function MattressRemovalPage() {
               </p>
               <ul className="text-sm text-gray-600 space-y-2">
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-green-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Twin & twin XL
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-green-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Full & full XL
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-green-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Queen & king
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-green-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   California king
                 </li>
               </ul>
@@ -105,8 +128,8 @@ export default function MattressRemovalPage() {
 
             {/* Box Springs */}
             <div className="bg-gray-50 rounded-lg p-8 border border-gray-200">
-              <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
-                <Package className="w-6 h-6 text-green-600" />
+              <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-6">
+                <Package className="w-6 h-6 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">
                 Box Springs
@@ -116,19 +139,19 @@ export default function MattressRemovalPage() {
               </p>
               <ul className="text-sm text-gray-600 space-y-2">
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-green-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Standard box springs
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-green-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Foundation bases
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-green-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Bed support systems
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-green-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Platform beds
                 </li>
               </ul>
@@ -136,8 +159,8 @@ export default function MattressRemovalPage() {
 
             {/* Bed Frames */}
             <div className="bg-gray-50 rounded-lg p-8 border border-gray-200">
-              <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
-                <Wrench className="w-6 h-6 text-green-600" />
+              <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-6">
+                <Wrench className="w-6 h-6 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">
                 Bed Frames
@@ -147,19 +170,19 @@ export default function MattressRemovalPage() {
               </p>
               <ul className="text-sm text-gray-600 space-y-2">
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-green-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Metal bed frames
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-green-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Wooden bed frames
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-green-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Headboards & footboards
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-green-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Bed hardware
                 </li>
               </ul>
@@ -167,8 +190,8 @@ export default function MattressRemovalPage() {
 
             {/* Specialty Beds */}
             <div className="bg-gray-50 rounded-lg p-8 border border-gray-200">
-              <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
-                <Shield className="w-6 h-6 text-green-600" />
+              <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-6">
+                <Shield className="w-6 h-6 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">
                 Specialty Beds
@@ -178,19 +201,19 @@ export default function MattressRemovalPage() {
               </p>
               <ul className="text-sm text-gray-600 space-y-2">
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-green-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Adjustable beds
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-green-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Hospital beds
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-green-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Custom beds
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-green-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Bunk beds
                 </li>
               </ul>
@@ -198,8 +221,8 @@ export default function MattressRemovalPage() {
 
             {/* Memory Foam & Hybrid */}
             <div className="bg-gray-50 rounded-lg p-8 border border-gray-200">
-              <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
-                <Recycle className="w-6 h-6 text-green-600" />
+              <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-6">
+                <Recycle className="w-6 h-6 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">
                 Memory Foam & Hybrid
@@ -209,19 +232,19 @@ export default function MattressRemovalPage() {
               </p>
               <ul className="text-sm text-gray-600 space-y-2">
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-green-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Memory foam mattresses
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-green-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Hybrid mattresses
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-green-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Gel mattresses
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-green-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Latex mattresses
                 </li>
               </ul>
@@ -229,8 +252,8 @@ export default function MattressRemovalPage() {
 
             {/* Bedroom Sets */}
             <div className="bg-gray-50 rounded-lg p-8 border border-gray-200">
-              <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
-                <Truck className="w-6 h-6 text-green-600" />
+              <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-6">
+                <Truck className="w-6 h-6 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">
                 Bedroom Sets
@@ -240,19 +263,19 @@ export default function MattressRemovalPage() {
               </p>
               <ul className="text-sm text-gray-600 space-y-2">
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-green-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Complete bed sets
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-green-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Bedroom furniture
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-green-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Bedding accessories
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-green-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Room cleanouts
                 </li>
               </ul>
@@ -275,8 +298,8 @@ export default function MattressRemovalPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="text-center">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Leaf className="w-8 h-8 text-green-600" />
+              <div className="w-16 h-16 bg-secondary/10 border border-secondary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Leaf className="w-8 h-8 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Eco-Friendly Disposal</h3>
               <p className="text-gray-600">
@@ -285,8 +308,8 @@ export default function MattressRemovalPage() {
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Recycle className="w-8 h-8 text-green-600" />
+              <div className="w-16 h-16 bg-secondary/10 border border-secondary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Recycle className="w-8 h-8 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Recycling Partnerships</h3>
               <p className="text-gray-600">
@@ -295,8 +318,8 @@ export default function MattressRemovalPage() {
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Shield className="w-8 h-8 text-green-600" />
+              <div className="w-16 h-16 bg-secondary/10 border border-secondary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Shield className="w-8 h-8 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Licensed & Insured</h3>
               <p className="text-gray-600">
@@ -305,8 +328,8 @@ export default function MattressRemovalPage() {
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Truck className="w-8 h-8 text-green-600" />
+              <div className="w-16 h-16 bg-secondary/10 border border-secondary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Truck className="w-8 h-8 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Specialized Equipment</h3>
               <p className="text-gray-600">
@@ -315,8 +338,8 @@ export default function MattressRemovalPage() {
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <MapPin className="w-8 h-8 text-green-600" />
+              <div className="w-16 h-16 bg-secondary/10 border border-secondary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <MapPin className="w-8 h-8 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Local Expertise</h3>
               <p className="text-gray-600">
@@ -325,8 +348,8 @@ export default function MattressRemovalPage() {
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Star className="w-8 h-8 text-green-600" />
+              <div className="w-16 h-16 bg-secondary/10 border border-secondary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Star className="w-8 h-8 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">5-Star Service</h3>
               <p className="text-gray-600">
@@ -351,7 +374,7 @@ export default function MattressRemovalPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8">
             <div className="text-center">
-              <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-white font-bold text-xl">1</span>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Assessment</h3>
@@ -361,7 +384,7 @@ export default function MattressRemovalPage() {
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-white font-bold text-xl">2</span>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Preparation</h3>
@@ -371,7 +394,7 @@ export default function MattressRemovalPage() {
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-white font-bold text-xl">3</span>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Safe Removal</h3>
@@ -381,7 +404,7 @@ export default function MattressRemovalPage() {
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-white font-bold text-xl">4</span>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Eco-Disposal</h3>
@@ -391,7 +414,7 @@ export default function MattressRemovalPage() {
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-white font-bold text-xl">5</span>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Cleanup</h3>
@@ -404,7 +427,7 @@ export default function MattressRemovalPage() {
       </section>
 
       {/* Eco-Friendly Benefits */}
-      <section className="py-16 bg-green-50">
+      <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
@@ -416,80 +439,80 @@ export default function MattressRemovalPage() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white rounded-lg p-6 border border-green-200 shadow-sm">
-              <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
-                <Leaf className="w-6 h-6 text-green-600" />
+            <div className="bg-white rounded-lg p-6 border border-gray-200 shadow-sm">
+              <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-4">
+                <Leaf className="w-6 h-6 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Environmental Protection</h3>
               <p className="text-gray-600 mb-4">
                 Reduce landfill waste and prevent harmful chemicals from leaching into the environment.
               </p>
-              <div className="text-sm text-green-600 font-semibold">
+              <div className="text-sm text-secondary font-semibold">
                 Protect our planet
               </div>
             </div>
 
-            <div className="bg-white rounded-lg p-6 border border-green-200 shadow-sm">
-              <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
-                <Recycle className="w-6 h-6 text-green-600" />
+            <div className="bg-white rounded-lg p-6 border border-gray-200 shadow-sm">
+              <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-4">
+                <Recycle className="w-6 h-6 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Material Recovery</h3>
               <p className="text-gray-600 mb-4">
                 Recover valuable materials like steel, foam, and fabric for reuse in new products.
               </p>
-              <div className="text-sm text-green-600 font-semibold">
+              <div className="text-sm text-secondary font-semibold">
                 Maximize resource value
               </div>
             </div>
 
-            <div className="bg-white rounded-lg p-6 border border-green-200 shadow-sm">
-              <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
-                <DollarSign className="w-6 h-6 text-green-600" />
+            <div className="bg-white rounded-lg p-6 border border-gray-200 shadow-sm">
+              <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-4">
+                <DollarSign className="w-6 h-6 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Cost Savings</h3>
               <p className="text-gray-600 mb-4">
                 Avoid landfill fees and reduce disposal costs through recycling partnerships.
               </p>
-              <div className="text-sm text-green-600 font-semibold">
+              <div className="text-sm text-secondary font-semibold">
                 Save money & resources
               </div>
             </div>
 
-            <div className="bg-white rounded-lg p-6 border border-green-200 shadow-sm">
-              <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
-                <Shield className="w-6 h-6 text-green-600" />
+            <div className="bg-white rounded-lg p-6 border border-gray-200 shadow-sm">
+              <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-4">
+                <Shield className="w-6 h-6 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Regulatory Compliance</h3>
               <p className="text-gray-600 mb-4">
                 Ensure compliance with Jacksonville's waste disposal and environmental regulations.
               </p>
-              <div className="text-sm text-green-600 font-semibold">
+              <div className="text-sm text-secondary font-semibold">
                 Stay compliant
               </div>
             </div>
 
-            <div className="bg-white rounded-lg p-6 border border-green-200 shadow-sm">
-              <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
-                <Star className="w-6 h-6 text-green-600" />
+            <div className="bg-white rounded-lg p-6 border border-gray-200 shadow-sm">
+              <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-4">
+                <Star className="w-6 h-6 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Community Impact</h3>
               <p className="text-gray-600 mb-4">
                 Support local recycling initiatives and contribute to Jacksonville's sustainability goals.
               </p>
-              <div className="text-sm text-green-600 font-semibold">
+              <div className="text-sm text-secondary font-semibold">
                 Build a better community
               </div>
             </div>
 
-            <div className="bg-white rounded-lg p-6 border border-green-200 shadow-sm">
-              <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
-                <Clock className="w-6 h-6 text-green-600" />
+            <div className="bg-white rounded-lg p-6 border border-gray-200 shadow-sm">
+              <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-4">
+                <Clock className="w-6 h-6 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Future Sustainability</h3>
               <p className="text-gray-600 mb-4">
                 Help create a more sustainable future for Jacksonville and future generations.
               </p>
-              <div className="text-sm text-green-600 font-semibold">
+              <div className="text-sm text-secondary font-semibold">
                 Invest in tomorrow
               </div>
             </div>
@@ -515,7 +538,7 @@ export default function MattressRemovalPage() {
               <p className="text-gray-600 mb-4">
                 Coastal mattress removal with special attention to beach property considerations and vacation rentals.
               </p>
-              <div className="flex items-center gap-2 text-green-600">
+              <div className="flex items-center gap-2 text-secondary">
                 <CheckCircle className="w-5 h-5" />
                 <span className="font-semibold">Same-day service available</span>
               </div>
@@ -526,7 +549,7 @@ export default function MattressRemovalPage() {
               <p className="text-gray-600 mb-4">
                 Suburban mattress removal with large property access and upscale home handling.
               </p>
-              <div className="flex items-center gap-2 text-green-600">
+              <div className="flex items-center gap-2 text-secondary">
                 <CheckCircle className="w-5 h-5" />
                 <span className="font-semibold">Large property specialists</span>
               </div>
@@ -537,7 +560,7 @@ export default function MattressRemovalPage() {
               <p className="text-gray-600 mb-4">
                 Historic district mattress removal with careful handling of older homes and renovation projects.
               </p>
-              <div className="flex items-center gap-2 text-green-600">
+              <div className="flex items-center gap-2 text-secondary">
                 <CheckCircle className="w-5 h-5" />
                 <span className="font-semibold">Historic home experts</span>
               </div>
@@ -548,7 +571,7 @@ export default function MattressRemovalPage() {
               <p className="text-gray-600 mb-4">
                 Upscale neighborhood mattress removal with premium service and careful property protection.
               </p>
-              <div className="flex items-center gap-2 text-green-600">
+              <div className="flex items-center gap-2 text-secondary">
                 <CheckCircle className="w-5 h-5" />
                 <span className="font-semibold">Premium service available</span>
               </div>
@@ -559,7 +582,7 @@ export default function MattressRemovalPage() {
               <p className="text-gray-600 mb-4">
                 Commercial and residential mattress removal with bulk removal and business project services.
               </p>
-              <div className="flex items-center gap-2 text-green-600">
+              <div className="flex items-center gap-2 text-secondary">
                 <CheckCircle className="w-5 h-5" />
                 <span className="font-semibold">Commercial specialists</span>
               </div>
@@ -570,7 +593,7 @@ export default function MattressRemovalPage() {
               <p className="text-gray-600 mb-4">
                 Suburban mattress removal with large lot access and family home handling.
               </p>
-              <div className="flex items-center gap-2 text-green-600">
+              <div className="flex items-center gap-2 text-secondary">
                 <CheckCircle className="w-5 h-5" />
                 <span className="font-semibold">Family home experts</span>
               </div>
@@ -580,7 +603,7 @@ export default function MattressRemovalPage() {
       </section>
 
       {/* Contact Section */}
-      <section className="py-16 bg-green-600 text-white">
+      <section className="py-16 bg-primary text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Ready for Professional Mattress Removal?
@@ -591,14 +614,14 @@ export default function MattressRemovalPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
               href="/estimation" 
-              className="bg-white hover:bg-gray-100 text-green-600 px-8 py-4 rounded-lg font-semibold text-lg transition duration-300 inline-flex items-center gap-2"
+              className="bg-white hover:bg-gray-100 text-secondary px-8 py-4 rounded-lg font-semibold text-lg transition duration-300 inline-flex items-center gap-2"
             >
               <Phone className="w-5 h-5" />
               Get Free Quote
             </Link>
             <Link 
               href="/contact" 
-              className="bg-transparent hover:bg-white hover:text-green-600 border-2 border-white px-8 py-4 rounded-lg font-semibold text-lg transition duration-300 inline-flex items-center gap-2"
+              className="bg-transparent hover:bg-white hover:text-secondary border-2 border-white px-8 py-4 rounded-lg font-semibold text-lg transition duration-300 inline-flex items-center gap-2"
             >
               <MapPin className="w-5 h-5" />
               Schedule Service
@@ -621,11 +644,11 @@ export default function MattressRemovalPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <Link href="/furniture-removal" className="group">
-              <div className="bg-white rounded-lg p-6 border border-gray-200 hover:border-green-300 transition duration-300 group-hover:shadow-lg">
-                <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-green-200 transition duration-300">
-                  <Package className="w-6 h-6 text-green-600" />
+              <div className="bg-white rounded-lg p-6 border border-gray-200 hover:border-secondary/30 transition duration-300 group-hover:shadow-lg">
+                <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-green-200 transition duration-300">
+                  <Package className="w-6 h-6 text-secondary" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-green-600 transition duration-300">
+                <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-secondary transition duration-300">
                   Furniture Removal
                 </h3>
                 <p className="text-gray-600">
@@ -635,11 +658,11 @@ export default function MattressRemovalPage() {
             </Link>
 
             <Link href="/appliance-removal" className="group">
-              <div className="bg-white rounded-lg p-6 border border-gray-200 hover:border-green-300 transition duration-300 group-hover:shadow-lg">
-                <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-green-200 transition duration-300">
-                  <Wrench className="w-6 h-6 text-green-600" />
+              <div className="bg-white rounded-lg p-6 border border-gray-200 hover:border-secondary/30 transition duration-300 group-hover:shadow-lg">
+                <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-green-200 transition duration-300">
+                  <Wrench className="w-6 h-6 text-secondary" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-green-600 transition duration-300">
+                <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-secondary transition duration-300">
                   Appliance Removal
                 </h3>
                 <p className="text-gray-600">
@@ -649,11 +672,11 @@ export default function MattressRemovalPage() {
             </Link>
 
             <Link href="/same-day-junk-removal" className="group">
-              <div className="bg-white rounded-lg p-6 border border-gray-200 hover:border-green-300 transition duration-300 group-hover:shadow-lg">
-                <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-green-200 transition duration-300">
-                  <Clock className="w-6 h-6 text-green-600" />
+              <div className="bg-white rounded-lg p-6 border border-gray-200 hover:border-secondary/30 transition duration-300 group-hover:shadow-lg">
+                <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-green-200 transition duration-300">
+                  <Clock className="w-6 h-6 text-secondary" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-green-600 transition duration-300">
+                <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-secondary transition duration-300">
                   Same-Day Junk Removal
                 </h3>
                 <p className="text-gray-600">
@@ -663,11 +686,11 @@ export default function MattressRemovalPage() {
             </Link>
 
             <Link href="/emergency-cleanup" className="group">
-              <div className="bg-white rounded-lg p-6 border border-gray-200 hover:border-green-300 transition duration-300 group-hover:shadow-lg">
-                <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-green-200 transition duration-300">
-                  <AlertTriangle className="w-6 h-6 text-green-600" />
+              <div className="bg-white rounded-lg p-6 border border-gray-200 hover:border-secondary/30 transition duration-300 group-hover:shadow-lg">
+                <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-green-200 transition duration-300">
+                  <AlertTriangle className="w-6 h-6 text-secondary" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-green-600 transition duration-300">
+                <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-secondary transition duration-300">
                   Emergency Cleanup
                 </h3>
                 <p className="text-gray-600">
@@ -677,11 +700,11 @@ export default function MattressRemovalPage() {
             </Link>
 
             <Link href="/commercial-cleanout" className="group">
-              <div className="bg-white rounded-lg p-6 border border-gray-200 hover:border-green-300 transition duration-300 group-hover:shadow-lg">
-                <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-green-200 transition duration-300">
-                  <Bed className="w-6 h-6 text-green-600" />
+              <div className="bg-white rounded-lg p-6 border border-gray-200 hover:border-secondary/30 transition duration-300 group-hover:shadow-lg">
+                <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-green-200 transition duration-300">
+                  <Bed className="w-6 h-6 text-secondary" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-green-600 transition duration-300">
+                <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-secondary transition duration-300">
                   Commercial Cleanout
                 </h3>
                 <p className="text-gray-600">
@@ -691,11 +714,11 @@ export default function MattressRemovalPage() {
             </Link>
 
             <Link href="/services" className="group">
-              <div className="bg-white rounded-lg p-6 border border-gray-200 hover:border-green-300 transition duration-300 group-hover:shadow-lg">
-                <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-green-200 transition duration-300">
-                  <Star className="w-6 h-6 text-green-600" />
+              <div className="bg-white rounded-lg p-6 border border-gray-200 hover:border-secondary/30 transition duration-300 group-hover:shadow-lg">
+                <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-green-200 transition duration-300">
+                  <Star className="w-6 h-6 text-secondary" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-green-600 transition duration-300">
+                <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-secondary transition duration-300">
                   All Services
                 </h3>
                 <p className="text-gray-600">

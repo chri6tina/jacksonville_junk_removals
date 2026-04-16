@@ -17,38 +17,61 @@ export default function HoardingAssessmentPage() {
       
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-teal-50 to-cyan-100 py-20">
-        <div className="container mx-auto px-4 text-center">
-          <div className="flex justify-center mb-6">
-            <Clipboard className="w-16 h-16 text-teal-600" />
-          </div>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-gray-900">
-            Professional Hoarding Assessment Jacksonville
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-700 mb-8 max-w-4xl mx-auto">
-            Comprehensive hoarding assessment and evaluation services with expert analysis, risk assessment, and strategic intervention planning. Our professional team provides thorough evaluation to determine the best course of action.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/estimation" 
-              className="bg-teal-600 hover:bg-teal-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition duration-300 inline-flex items-center gap-2"
-            >
-              <Phone className="w-5 h-5" />
-              Schedule Assessment
-            </Link>
-            <Link 
-              href="/contact" 
-              className="bg-white hover:bg-gray-50 text-teal-600 border-2 border-teal-600 px-8 py-4 rounded-lg font-semibold text-lg transition duration-300 inline-flex items-center gap-2"
-            >
-              <MapPin className="w-5 h-5" />
-              Get Consultation
-            </Link>
+      <section className="relative min-h-[70vh] flex items-center justify-center bg-primary overflow-hidden py-20 border-b-4 border-secondary">
+        <div className="absolute inset-0 z-0">
+          <img
+            src="/hero_junk_truck.png"
+            alt="Jacksonville Junk Removal Services"
+            className="w-full h-full object-cover object-center"
+          />
+          <div className="absolute inset-0 bg-black/50 md:bg-transparent md:bg-gradient-to-r md:from-primary/95 md:via-primary/80 md:to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-transparent to-transparent md:hidden"></div>
+        </div>
+        
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full animate-fade-in text-center lg:text-left">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="space-y-8">
+              <div className="inline-flex items-center space-x-2 bg-secondary/10 border border-secondary/30 rounded-full px-4 py-2 backdrop-blur-md shadow-lg shadow-black/20 mx-auto lg:mx-0">
+                <div className="flex -space-x-1">
+                  {[1, 2, 3, 4, 5].map((star) => (
+                    <Star key={star} className="w-4 h-4 text-secondary fill-secondary drop-shadow-md" />
+                  ))}
+                </div>
+                <span className="text-sm font-bold text-white tracking-wide uppercase ml-2 text-shadow-sm">Top-Rated Local Service</span>
+              </div>
+
+              <div className="space-y-6">
+                <h1 className="text-5xl lg:text-6xl font-extrabold text-white leading-tight tracking-tight drop-shadow-xl">
+                  Professional Hoarding Assessment Jacksonville
+                </h1>
+                
+                <p className="text-xl text-gray-200 leading-relaxed max-w-xl font-medium drop-shadow-md mx-auto lg:mx-0">
+                  Comprehensive hoarding assessment and evaluation services with expert analysis, risk assessment, and strategic intervention planning. Our professional team provides thorough evaluation to determine the best course of action.
+                </p>
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-5 pt-4 justify-center lg:justify-start">
+                <Link
+                  href="tel:+19044563851"
+                  className="bg-secondary hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 flex items-center justify-center space-x-3 shadow-xl shadow-secondary/20 hover:shadow-secondary/40 hover:-translate-y-1"
+                >
+                  <Phone className="w-6 h-6 animate-bounce-gentle" />
+                  <span>Call (904) 456-3851</span>
+                </Link>
+                <Link
+                  href="/contact"
+                  className="bg-white/10 hover:bg-white/20 backdrop-blur-md border-2 border-white/30 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 flex items-center justify-center shadow-xl hover:-translate-y-1"
+                >
+                  <span>Get Free Quote</span>
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Service Alert */}
-      <section className="bg-teal-600 text-white py-6">
+      <section className="bg-primary text-white py-6">
         <div className="container mx-auto px-4 text-center">
           <div className="flex items-center justify-center gap-3">
             <Clipboard className="w-5 h-5" />
@@ -73,8 +96,8 @@ export default function HoardingAssessmentPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-gray-50 rounded-lg p-8 border border-gray-200">
-              <div className="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center mb-6">
-                <Search className="w-6 h-6 text-teal-600" />
+              <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-6">
+                <Search className="w-6 h-6 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">
                 Comprehensive Evaluation
@@ -84,27 +107,27 @@ export default function HoardingAssessmentPage() {
               </p>
               <ul className="text-sm text-gray-600 space-y-2">
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-teal-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Environmental analysis
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-teal-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Safety assessment
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-teal-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Individual evaluation
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-teal-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Risk identification
                 </li>
               </ul>
             </div>
 
             <div className="bg-gray-50 rounded-lg p-8 border border-gray-200">
-              <div className="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center mb-6">
-                <BarChart3 className="w-6 h-6 text-teal-600" />
+              <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-6">
+                <BarChart3 className="w-6 h-6 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">
                 Risk Analysis
@@ -114,27 +137,27 @@ export default function HoardingAssessmentPage() {
               </p>
               <ul className="text-sm text-gray-600 space-y-2">
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-teal-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Safety risk evaluation
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-teal-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Health hazard assessment
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-teal-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Emergency situation analysis
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-teal-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Risk prioritization
                 </li>
               </ul>
             </div>
 
             <div className="bg-gray-50 rounded-lg p-8 border border-gray-200">
-              <div className="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center mb-6">
-                <Target className="w-6 h-6 text-teal-600" />
+              <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-6">
+                <Target className="w-6 h-6 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">
                 Strategic Planning
@@ -144,19 +167,19 @@ export default function HoardingAssessmentPage() {
               </p>
               <ul className="text-sm text-gray-600 space-y-2">
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-teal-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Intervention strategies
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-teal-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Resource planning
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-teal-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Timeline development
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-teal-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Success metrics
                 </li>
               </ul>
@@ -179,8 +202,8 @@ export default function HoardingAssessmentPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white rounded-lg p-6 border border-gray-200 shadow-sm">
-              <div className="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center mb-4">
-                <Eye className="w-6 h-6 text-teal-600" />
+              <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-4">
+                <Eye className="w-6 h-6 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Initial Assessment</h3>
               <p className="text-gray-600 mb-4">
@@ -195,8 +218,8 @@ export default function HoardingAssessmentPage() {
             </div>
 
             <div className="bg-white rounded-lg p-6 border border-gray-200 shadow-sm">
-              <div className="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center mb-4">
-                <Shield className="w-6 h-6 text-teal-600" />
+              <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-4">
+                <Shield className="w-6 h-6 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Safety Evaluation</h3>
               <p className="text-gray-600 mb-4">
@@ -211,8 +234,8 @@ export default function HoardingAssessmentPage() {
             </div>
 
             <div className="bg-white rounded-lg p-6 border border-gray-200 shadow-sm">
-              <div className="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center mb-4">
-                <Users2 className="w-6 h-6 text-teal-600" />
+              <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-4">
+                <Users2 className="w-6 h-6 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Individual Assessment</h3>
               <p className="text-gray-600 mb-4">
@@ -227,8 +250,8 @@ export default function HoardingAssessmentPage() {
             </div>
 
             <div className="bg-white rounded-lg p-6 border border-gray-200 shadow-sm">
-              <div className="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center mb-4">
-                <BarChart3 className="w-6 h-6 text-teal-600" />
+              <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-4">
+                <BarChart3 className="w-6 h-6 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Risk Analysis</h3>
               <p className="text-gray-600 mb-4">
@@ -243,8 +266,8 @@ export default function HoardingAssessmentPage() {
             </div>
 
             <div className="bg-white rounded-lg p-6 border border-gray-200 shadow-sm">
-              <div className="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center mb-4">
-                <Target className="w-6 h-6 text-teal-600" />
+              <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-4">
+                <Target className="w-6 h-6 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Intervention Planning</h3>
               <p className="text-gray-600 mb-4">
@@ -259,8 +282,8 @@ export default function HoardingAssessmentPage() {
             </div>
 
             <div className="bg-white rounded-lg p-6 border border-gray-200 shadow-sm">
-              <div className="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center mb-4">
-                <FileText className="w-6 h-6 text-teal-600" />
+              <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-4">
+                <FileText className="w-6 h-6 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Comprehensive Reports</h3>
               <p className="text-gray-600 mb-4">
@@ -291,7 +314,7 @@ export default function HoardingAssessmentPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="w-16 h-16 bg-teal-600 rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-white font-bold text-xl">1</span>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Initial Contact</h3>
@@ -301,7 +324,7 @@ export default function HoardingAssessmentPage() {
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 bg-teal-600 rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-white font-bold text-xl">2</span>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Site Evaluation</h3>
@@ -311,7 +334,7 @@ export default function HoardingAssessmentPage() {
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 bg-teal-600 rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-white font-bold text-xl">3</span>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Analysis & Planning</h3>
@@ -321,7 +344,7 @@ export default function HoardingAssessmentPage() {
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 bg-teal-600 rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-white font-bold text-xl">4</span>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Report & Consultation</h3>
@@ -347,8 +370,8 @@ export default function HoardingAssessmentPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white rounded-lg p-8 border border-gray-200 shadow-sm">
-              <div className="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center mb-6">
-                <Shield className="w-6 h-6 text-teal-600" />
+              <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-6">
+                <Shield className="w-6 h-6 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">
                 Safety & Risk Assessment
@@ -358,27 +381,27 @@ export default function HoardingAssessmentPage() {
               </p>
               <ul className="text-sm text-gray-600 space-y-2">
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-teal-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Fire safety evaluation
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-teal-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Structural assessment
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-teal-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Health hazard analysis
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-teal-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Emergency access review
                 </li>
               </ul>
             </div>
 
             <div className="bg-white rounded-lg p-8 border border-gray-200 shadow-sm">
-              <div className="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center mb-6">
-                <BarChart3 className="w-6 h-6 text-teal-600" />
+              <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-6">
+                <BarChart3 className="w-6 h-6 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">
                 Environmental Analysis
@@ -388,27 +411,27 @@ export default function HoardingAssessmentPage() {
               </p>
               <ul className="text-sm text-gray-600 space-y-2">
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-teal-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Clutter level assessment
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-teal-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Space utilization analysis
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-teal-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Environmental impact
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-teal-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Accessibility evaluation
                 </li>
               </ul>
             </div>
 
             <div className="bg-white rounded-lg p-8 border border-gray-200 shadow-sm">
-              <div className="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center mb-6">
-                <Users2 className="w-6 h-6 text-teal-600" />
+              <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-6">
+                <Users2 className="w-6 h-6 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">
                 Individual & Family Assessment
@@ -418,19 +441,19 @@ export default function HoardingAssessmentPage() {
               </p>
               <ul className="text-sm text-gray-600 space-y-2">
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-teal-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Personal circumstances
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-teal-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Family dynamics
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-teal-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Support network analysis
                 </li>
                 <li className="flex items-center gap-2">
-                  <CheckCircle className="w-4 h-4 text-teal-600" />
+                  <CheckCircle className="w-4 h-4 text-secondary" />
                   Intervention readiness
                 </li>
               </ul>
@@ -453,8 +476,8 @@ export default function HoardingAssessmentPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="text-center">
-              <div className="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Award className="w-8 h-8 text-teal-600" />
+              <div className="w-16 h-16 bg-secondary/10 border border-secondary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Award className="w-8 h-8 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Professional Expertise</h3>
               <p className="text-gray-600">
@@ -463,8 +486,8 @@ export default function HoardingAssessmentPage() {
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <ClipboardCheck className="w-8 h-8 text-teal-600" />
+              <div className="w-16 h-16 bg-secondary/10 border border-secondary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <ClipboardCheck className="w-8 h-8 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Systematic Approach</h3>
               <p className="text-gray-600">
@@ -473,8 +496,8 @@ export default function HoardingAssessmentPage() {
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Heart className="w-8 h-8 text-teal-600" />
+              <div className="w-16 h-16 bg-secondary/10 border border-secondary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Heart className="w-8 h-8 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Compassionate Service</h3>
               <p className="text-gray-600">
@@ -483,8 +506,8 @@ export default function HoardingAssessmentPage() {
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Target className="w-8 h-8 text-teal-600" />
+              <div className="w-16 h-16 bg-secondary/10 border border-secondary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Target className="w-8 h-8 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Actionable Results</h3>
               <p className="text-gray-600">
@@ -493,8 +516,8 @@ export default function HoardingAssessmentPage() {
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <FileText className="w-8 h-8 text-teal-600" />
+              <div className="w-16 h-16 bg-secondary/10 border border-secondary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <FileText className="w-8 h-8 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Comprehensive Reports</h3>
               <p className="text-gray-600">
@@ -503,8 +526,8 @@ export default function HoardingAssessmentPage() {
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Users2 className="w-8 h-8 text-teal-600" />
+              <div className="w-16 h-16 bg-secondary/10 border border-secondary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Users2 className="w-8 h-8 text-secondary" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Ongoing Support</h3>
               <p className="text-gray-600">
@@ -516,7 +539,7 @@ export default function HoardingAssessmentPage() {
       </section>
 
       {/* Contact Section */}
-      <section className="py-16 bg-teal-600 text-white">
+      <section className="py-16 bg-primary text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Ready for Professional Hoarding Assessment?
@@ -527,14 +550,14 @@ export default function HoardingAssessmentPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
               href="/estimation" 
-              className="bg-white hover:bg-gray-100 text-teal-600 px-8 py-4 rounded-lg font-semibold text-lg transition duration-300 inline-flex items-center gap-2"
+              className="bg-white hover:bg-gray-100 text-secondary px-8 py-4 rounded-lg font-semibold text-lg transition duration-300 inline-flex items-center gap-2"
             >
               <Phone className="w-5 h-5" />
               Schedule Assessment
             </Link>
             <Link 
               href="/contact" 
-              className="bg-transparent hover:bg-white hover:text-teal-600 border-2 border-white px-8 py-4 rounded-lg font-semibold text-lg transition duration-300 inline-flex items-center gap-2"
+              className="bg-transparent hover:bg-white hover:text-secondary border-2 border-white px-8 py-4 rounded-lg font-semibold text-lg transition duration-300 inline-flex items-center gap-2"
             >
               <Clipboard className="w-5 h-5" />
               Get Consultation
@@ -557,11 +580,11 @@ export default function HoardingAssessmentPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <Link href="/hoarding-cleanup" className="group">
-              <div className="bg-white rounded-lg p-6 border border-gray-200 hover:border-teal-300 transition duration-300 group-hover:shadow-lg">
-                <div className="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-teal-200 transition duration-300">
-                  <Home className="w-6 h-6 text-teal-600" />
+              <div className="bg-white rounded-lg p-6 border border-gray-200 hover:border-secondary/30 transition duration-300 group-hover:shadow-lg">
+                <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-teal-200 transition duration-300">
+                  <Home className="w-6 h-6 text-secondary" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-teal-600 transition duration-300">
+                <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-secondary transition duration-300">
                   Hoarding Cleanup
                 </h3>
                 <p className="text-gray-600">
@@ -571,11 +594,11 @@ export default function HoardingAssessmentPage() {
             </Link>
 
             <Link href="/hoarding-intervention" className="group">
-              <div className="bg-white rounded-lg p-6 border border-gray-200 hover:border-teal-300 transition duration-300 group-hover:shadow-lg">
-                <div className="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-teal-200 transition duration-300">
-                  <UserCheck className="w-6 h-6 text-teal-600" />
+              <div className="bg-white rounded-lg p-6 border border-gray-200 hover:border-secondary/30 transition duration-300 group-hover:shadow-lg">
+                <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-teal-200 transition duration-300">
+                  <UserCheck className="w-6 h-6 text-secondary" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-teal-600 transition duration-300">
+                <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-secondary transition duration-300">
                   Hoarding Intervention
                 </h3>
                 <p className="text-gray-600">
@@ -585,11 +608,11 @@ export default function HoardingAssessmentPage() {
             </Link>
 
             <Link href="/family-hoarding-support" className="group">
-              <div className="bg-white rounded-lg p-6 border border-gray-200 hover:border-teal-300 transition duration-300 group-hover:shadow-lg">
-                <div className="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-teal-200 transition duration-300">
-                  <Users2 className="w-6 h-6 text-teal-600" />
+              <div className="bg-white rounded-lg p-6 border border-gray-200 hover:border-secondary/30 transition duration-300 group-hover:shadow-lg">
+                <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-teal-200 transition duration-300">
+                  <Users2 className="w-6 h-6 text-secondary" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-teal-600 transition duration-300">
+                <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-secondary transition duration-300">
                   Family Support
                 </h3>
                 <p className="text-gray-600">
@@ -599,11 +622,11 @@ export default function HoardingAssessmentPage() {
             </Link>
 
             <Link href="/emergency-hoarding-cleanup" className="group">
-              <div className="bg-white rounded-lg p-6 border border-gray-200 hover:border-teal-300 transition duration-300 group-hover:shadow-lg">
-                <div className="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-teal-200 transition duration-300">
-                  <AlertTriangle className="w-6 h-6 text-teal-600" />
+              <div className="bg-white rounded-lg p-6 border border-gray-200 hover:border-secondary/30 transition duration-300 group-hover:shadow-lg">
+                <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-teal-200 transition duration-300">
+                  <AlertTriangle className="w-6 h-6 text-secondary" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-teal-600 transition duration-300">
+                <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-secondary transition duration-300">
                   Emergency Cleanup
                 </h3>
                 <p className="text-gray-600">
@@ -613,11 +636,11 @@ export default function HoardingAssessmentPage() {
             </Link>
 
             <Link href="/commercial-hoarding-cleanup" className="group">
-              <div className="bg-white rounded-lg p-6 border border-gray-200 hover:border-teal-300 transition duration-300 group-hover:shadow-lg">
-                <div className="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-teal-200 transition duration-300">
-                  <Building className="w-6 h-6 text-teal-600" />
+              <div className="bg-white rounded-lg p-6 border border-gray-200 hover:border-secondary/30 transition duration-300 group-hover:shadow-lg">
+                <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-teal-200 transition duration-300">
+                  <Building className="w-6 h-6 text-secondary" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-teal-600 transition duration-300">
+                <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-secondary transition duration-300">
                   Commercial Cleanup
                 </h3>
                 <p className="text-gray-600">
@@ -627,11 +650,11 @@ export default function HoardingAssessmentPage() {
             </Link>
 
             <Link href="/services" className="group">
-              <div className="bg-white rounded-lg p-6 border border-gray-200 hover:border-teal-300 transition duration-300 group-hover:shadow-lg">
-                <div className="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-teal-200 transition duration-300">
-                  <Star className="w-6 h-6 text-teal-600" />
+              <div className="bg-white rounded-lg p-6 border border-gray-200 hover:border-secondary/30 transition duration-300 group-hover:shadow-lg">
+                <div className="w-12 h-12 bg-secondary/10 border border-secondary/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-teal-200 transition duration-300">
+                  <Star className="w-6 h-6 text-secondary" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-teal-600 transition duration-300">
+                <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-secondary transition duration-300">
                   All Services
                 </h3>
                 <p className="text-gray-600">

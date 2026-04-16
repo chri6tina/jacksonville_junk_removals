@@ -110,7 +110,7 @@ export default function ContactPage() {
                 <div className="pt-2 border-t border-gray-100">
                   <div className="flex justify-between">
                     <span className="text-gray-600">Emergency Service</span>
-                    <span className="font-medium text-green-600">24/7 Available</span>
+                    <span className="font-medium text-secondary">24/7 Available</span>
                   </div>
                 </div>
               </div>
