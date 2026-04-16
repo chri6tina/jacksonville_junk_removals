@@ -136,8 +136,15 @@ const Header = () => {
           {/* CTA Buttons - Desktop */}
           <div className="hidden lg:flex items-center space-x-4 xl:space-x-5">
             <Link
+              href="tel:+19044563851"
+              className="flex items-center space-x-2 text-primary font-bold hover:text-secondary transition-colors"
+            >
+              <Phone className="w-5 h-5 flex-shrink-0 text-secondary" />
+              <span className="text-lg">(904) 456-3851</span>
+            </Link>
+            <Link
               href="/contact"
-              className="bg-gray-900 hover:bg-gray-800 text-white px-6 xl:px-8 py-3 xl:py-4 rounded-lg font-semibold transition-all duration-200 transform hover:scale-105 shadow-lg text-base xl:text-lg"
+              className="bg-secondary hover:bg-orange-600 text-white px-6 xl:px-8 py-3 xl:py-4 rounded-lg font-bold transition-all duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-xl hover:shadow-secondary/30 text-base xl:text-lg"
             >
               Get Quote
             </Link>
@@ -212,10 +219,10 @@ const Header = () => {
               <div className="pt-6 space-y-4">
                 <Link
                   href="/contact"
-                  className="block px-6 py-4 bg-gray-900 text-white rounded-lg font-semibold text-center hover:bg-gray-800 transition-colors duration-200 text-lg"
+                  className="block px-6 py-4 bg-secondary text-white rounded-lg font-bold text-center hover:bg-orange-600 transition-all duration-300 text-lg shadow-lg shadow-secondary/30"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  Get Quote
+                  Get A Free Quote
                 </Link>
               </div>
             </div>

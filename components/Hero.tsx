@@ -1,99 +1,85 @@
 'use client'
 
 import Link from 'next/link'
-import { ArrowRight, CheckCircle } from 'lucide-react'
+import { ArrowRight, CheckCircle, PhoneCall, Star } from 'lucide-react'
+import Image from 'next/image'
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen bg-white">
-      {/* Subtle Background Pattern */}
-      <div className="absolute inset-0 bg-gradient-to-br from-gray-50 to-white"></div>
+    <section className="relative min-h-[90vh] flex items-center justify-center bg-primary overflow-hidden">
+      {/* Background Image with Overlay */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/hero_junk_truck.png"
+          alt="Jacksonville Junk Removal Truck"
+          fill
+          priority
+          className="object-cover object-center"
+        />
+        {/* Gradient overlays for readability */}
+        <div className="absolute inset-0 bg-primary/80 bg-gradient-to-r from-primary/95 via-primary/80 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-primary/95 via-transparent to-transparent md:hidden"></div>
+      </div>
       
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20 w-full animate-fade-in">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
           <div className="space-y-8">
             {/* Local Business Badge */}
-            <div className="inline-flex items-center space-x-2 bg-blue-50 border border-blue-200 rounded-md px-4 py-2">
-              <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
-              <span className="text-sm font-medium text-blue-800">Family Owned & Operated in Jacksonville</span>
+            <div className="inline-flex items-center space-x-2 bg-secondary/20 border border-secondary/40 rounded-full px-4 py-2 backdrop-blur-md shadow-lg shadow-black/20">
+              <div className="flex -space-x-1">
+                {[1, 2, 3, 4, 5].map((star) => (
+                  <Star key={star} className="w-4 h-4 text-secondary fill-secondary drop-shadow-md" />
+                ))}
+              </div>
+              <span className="text-sm font-bold text-white tracking-wide uppercase ml-2 text-shadow-sm">Top-Rated in Jacksonville</span>
             </div>
 
             <div className="space-y-6">
-              <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
-                Jacksonville Junk Removal
-                <br />
-                <span className="text-blue-600">Fast & Reliable</span>
+              <h1 className="text-5xl lg:text-7xl font-extrabold text-white leading-tight tracking-tight drop-shadow-xl">
+                Tackle The Junk. <br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-yellow-400 drop-shadow-lg">
+                  Take Back Your Space.
+                </span>
               </h1>
               
-              <p className="text-xl text-gray-600 leading-relaxed max-w-2xl">
-                Jacksonville's trusted junk removal company with fast service, fair pricing, and local expertise. 
-                We're your neighbors who care about keeping our community clean and clutter-free.
+              <p className="text-xl text-gray-200 leading-relaxed max-w-xl font-medium drop-shadow-md">
+                Jacksonville's most dependable junk removal company. Fast, upfront pricing, and eco-friendly disposal. We do the heavy lifting so you don't have to.
               </p>
             </div>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-5 pt-4">
               <Link
-                href="/contact"
-                className="bg-gray-900 hover:bg-gray-800 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 flex items-center justify-center space-x-2"
+                href="tel:+19044563851"
+                className="bg-secondary hover:bg-orange-600 text-white px-8 py-5 rounded-lg font-bold text-lg xl:text-xl transition-all duration-300 flex items-center justify-center space-x-3 shadow-xl shadow-secondary/20 hover:shadow-secondary/40 hover:-translate-y-1"
               >
-                <span>Get Free Quote</span>
-                <ArrowRight className="w-5 h-5" />
+                <PhoneCall className="w-6 h-6 animate-bounce-gentle" />
+                <span>Call (904) 456-3851</span>
               </Link>
               <Link
-                href="/estimation"
-                className="border-2 border-gray-300 text-gray-700 hover:border-gray-900 hover:text-gray-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200 flex items-center justify-center"
+                href="/contact"
+                className="bg-white/10 hover:bg-white/20 backdrop-blur-md border-2 border-white/30 text-white px-8 py-5 rounded-lg font-bold text-lg xl:text-xl transition-all duration-300 flex items-center justify-center shadow-xl hover:-translate-y-1"
               >
-                <span>Online Estimator</span>
+                <span>Get Free Quote</span>
+                <ArrowRight className="w-6 h-6 ml-2" />
               </Link>
             </div>
 
             {/* Local Trust Indicators */}
-            <div className="pt-6">
-              <div className="flex flex-wrap items-center gap-6 text-sm">
-                <div className="flex items-center space-x-2">
-                  <CheckCircle className="w-5 h-5 text-blue-600" />
-                  <span className="text-gray-600">Jacksonville Licensed & Insured</span>
+            <div className="pt-10 border-t border-white/20 mt-8">
+              <div className="flex flex-col sm:flex-row flex-wrap sm:items-center gap-4 sm:gap-8 text-sm sm:text-base font-semibold text-gray-300">
+                <div className="flex items-center space-x-3 bg-black/20 px-4 py-2 rounded-lg backdrop-blur-sm border border-white/5">
+                  <CheckCircle className="w-6 h-6 text-secondary" />
+                  <span>Licensed & Insured</span>
                 </div>
-                <div className="flex items-center space-x-2">
-                  <CheckCircle className="w-5 h-5 text-blue-600" />
-                  <span className="text-gray-600">Free Local Estimates</span>
+                <div className="flex items-center space-x-3 bg-black/20 px-4 py-2 rounded-lg backdrop-blur-sm border border-white/5">
+                  <CheckCircle className="w-6 h-6 text-secondary" />
+                  <span>Same-Day Service</span>
                 </div>
-                <div className="flex items-center space-x-2">
-                  <CheckCircle className="w-5 h-5 text-blue-600" />
-                  <span className="text-gray-600">Fast Jacksonville Service</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Local Business Visual */}
-          <div className="relative">
-            <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg p-12 h-[500px] flex flex-col items-center justify-center text-center">
-              <div className="w-24 h-24 bg-blue-600 rounded-lg flex items-center justify-center mb-6">
-                <div className="text-white text-4xl">🏠</div>
-              </div>
-              <h3 className="text-2xl font-semibold text-blue-800 mb-3">
-                Your Jacksonville Neighbors
-              </h3>
-              <p className="text-blue-700 mb-8 max-w-sm">
-                We know Jacksonville because we live here too. From the beaches to downtown, we're your local junk removal team.
-              </p>
-              
-              {/* Local Business Stats */}
-              <div className="grid grid-cols-3 gap-8">
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-blue-800">Local</div>
-                  <div className="text-sm text-blue-600">Family Business</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-blue-800">Same</div>
-                  <div className="text-sm text-blue-600">Day Service</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-blue-800">Fair</div>
-                  <div className="text-sm text-blue-600">Local Pricing</div>
+                <div className="flex items-center space-x-3 bg-black/20 px-4 py-2 rounded-lg backdrop-blur-sm border border-white/5">
+                  <CheckCircle className="w-6 h-6 text-secondary" />
+                  <span>No Hidden Fees</span>
                 </div>
               </div>
             </div>
