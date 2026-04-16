@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import ContactBar from '@/components/ContactBar'
@@ -11,6 +11,13 @@ import ServiceWorkerRegistration from '@/components/ServiceWorkerRegistration'
 
 const inter = Inter({ subsets: ['latin'] })
 
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+  userScalable: true,
+}
+
 export const metadata: Metadata = {
   title: 'Jacksonville Junk Removal | Same-Day Service | Free Estimates | (904) 456-3851',
   description: 'Jacksonville junk removal company offering same-day service, free estimates, and eco-friendly disposal. Mattress removal, furniture removal, appliance removal, garage cleanout, construction debris removal. Serving Jacksonville Beach, Riverside, Southside, Mandarin, Arlington, Orange Park, San Marco. Call (904) 456-3851 for immediate service.',
@@ -20,7 +27,6 @@ export const metadata: Metadata = {
   publisher: 'Jacksonville Junk Removals',
   category: 'Local Business',
   classification: 'Junk Removal Services',
-  viewport: 'width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes',
   manifest: '/manifest.json',
   openGraph: {
     title: 'Jacksonville Junk Removal | Same-Day Service | Free Estimates | (904) 456-3851',

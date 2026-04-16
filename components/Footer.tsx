@@ -1,5 +1,6 @@
 'use client'
 
+import { useState } from 'react'
 import Link from 'next/link'
 import { 
   Facebook, 
@@ -17,6 +18,39 @@ import {
 import Image from 'next/image'
 
 const Footer = () => {
+  const [email, setEmail] = useState('')
+  const [isSubscribing, setIsSubscribing] = useState(false)
+  const [isSubscribed, setIsSubscribed] = useState(false)
+
+  const handleSubscribe = async (e: React.FormEvent) => {
+    e.preventDefault()
+    if (!email) return
+    
+    setIsSubscribing(true)
+    try {
+      const response = await fetch('https://formspree.io/f/mwpnavgo', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          email: email,
+          _subject: 'New Newsletter Subscription',
+        }),
+      })
+
+      if (response.ok) {
+        setIsSubscribed(true)
+        setEmail('')
+        setTimeout(() => setIsSubscribed(false), 5000)
+      }
+    } catch (error) {
+      console.error('Subscription error:', error)
+    } finally {
+      setIsSubscribing(false)
+    }
+  }
+
   const currentYear = new Date().getFullYear()
 
   const quickLinks = [
@@ -223,17 +257,34 @@ const Footer = () => {
             <p className="text-gray-300 mb-4 sm:mb-6 text-sm sm:text-base">
               Get the latest junk removal tips, special offers, and company updates delivered to your inbox.
             </p>
-            <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 px-3 sm:px-4 py-2 sm:py-3 rounded-lg bg-gray-800 border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:border-gray-400 text-sm sm:text-base"
-              />
-              <button className="bg-gray-700 hover:bg-gray-600 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-semibold transition-all duration-200 flex items-center justify-center space-x-2 text-sm sm:text-base">
-                <Send className="w-4 h-4" />
-                <span>Subscribe</span>
-              </button>
-            </div>
+            {isSubscribed ? (
+              <div className="bg-green-900/50 border border-green-500 text-green-400 p-3 rounded-lg">
+                Thanks for subscribing! We'll keep you updated.
+              </div>
+            ) : (
+              <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="Enter your email"
+                  required
+                  className="flex-1 px-3 sm:px-4 py-2 sm:py-3 rounded-lg bg-gray-800 border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:border-gray-400 text-sm sm:text-base"
+                />
+                <button 
+                  type="submit" 
+                  disabled={isSubscribing}
+                  className="bg-gray-700 hover:bg-gray-600 disabled:bg-gray-800 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-semibold transition-all duration-200 flex items-center justify-center space-x-2 text-sm sm:text-base"
+                >
+                  {isSubscribing ? (
+                    <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                  ) : (
+                    <Send className="w-4 h-4" />
+                  )}
+                  <span>Subscribe</span>
+                </button>
+              </form>
+            )}
           </div>
         </div>
 
