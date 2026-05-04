@@ -1,49 +1,57 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { getBlogPosts } from '@/lib/contentful'
+import { listOwnedBlogPosts, saveOwnedBlogPost, slugify } from '@/lib/ownedBlog'
 
-// GET /api/blog - Get all blog posts from Contentful
 export async function GET() {
   try {
-    const posts = await getBlogPosts()
+    const posts = await listOwnedBlogPosts()
     return NextResponse.json(posts)
   } catch (error) {
-    console.error('API Error:', error)
-    return NextResponse.json(
-      { error: 'Failed to fetch blog posts' },
-      { status: 500 }
-    )
+    console.error('Blog API error:', error)
+    return NextResponse.json({ error: 'Failed to fetch blog posts' }, { status: 500 })
   }
 }
 
-// POST /api/blog - Create a new blog post (redirect to Contentful)
 export async function POST(request: NextRequest) {
-  return NextResponse.json(
-    { 
-      message: 'Please create blog posts directly in Contentful admin panel',
-      adminUrl: 'https://app.contentful.com/spaces/xpopyri6s8gv/entries'
-    },
-    { status: 200 }
-  )
-}
+  const authHeader = request.headers.get('authorization')
+  const xCronSecret = request.headers.get('x-cron-secret')
 
-// PUT /api/blog - Update a blog post (redirect to Contentful)
-export async function PUT(request: NextRequest) {
-  return NextResponse.json(
-    { 
-      message: 'Please edit blog posts directly in Contentful admin panel',
-      adminUrl: 'https://app.contentful.com/spaces/xpopyri6s8gv/entries'
-    },
-    { status: 200 }
-  )
-}
+  if (
+    process.env.CRON_SECRET &&
+    authHeader !== `Bearer ${process.env.CRON_SECRET}` &&
+    xCronSecret !== process.env.CRON_SECRET
+  ) {
+    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+  }
 
-// DELETE /api/blog - Delete a blog post (redirect to Contentful)
-export async function DELETE(request: NextRequest) {
-  return NextResponse.json(
-    { 
-      message: 'Please delete blog posts directly in Contentful admin panel',
-      adminUrl: 'https://app.contentful.com/spaces/xpopyri6s8gv/entries'
-    },
-    { status: 200 }
-  )
+  try {
+    const body = await request.json()
+    const title = String(body.title || '').trim()
+    const content = String(body.content || '').trim()
+
+    if (!title || !content) {
+      return NextResponse.json({ error: 'title and content are required' }, { status: 400 })
+    }
+
+    const post = await saveOwnedBlogPost({
+      title,
+      slug: body.slug ? slugify(String(body.slug)) : slugify(title),
+      excerpt: String(body.excerpt || '').trim() || content.replace(/[#*_`>\[\]()]/g, '').slice(0, 155),
+      content,
+      author: String(body.author || 'Jacksonville Junk Removals'),
+      publishDate: body.publishDate || new Date().toISOString(),
+      tags: Array.isArray(body.tags) ? body.tags.map(String) : ['junk removal', 'Jacksonville'],
+      featured: Boolean(body.featured),
+      readTime: Number(body.readTime) || 0,
+      imageUrl: body.imageUrl || '',
+      imageAltText: body.imageAltText || title,
+      metaTitle: body.metaTitle || title,
+      metaDescription: body.metaDescription || body.excerpt || '',
+      keywords: body.keywords || '',
+    })
+
+    return NextResponse.json(post, { status: 201 })
+  } catch (error) {
+    console.error('Blog create error:', error)
+    return NextResponse.json({ error: 'Failed to create blog post' }, { status: 500 })
+  }
 }

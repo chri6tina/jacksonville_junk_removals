@@ -1,10 +1,12 @@
 import { MetadataRoute } from 'next'
+import { listOwnedBlogPosts } from '@/lib/ownedBlog'
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = 'https://www.jacksonvillejunkremovals.com'
   const currentDate = new Date().toISOString()
+  const blogPosts = await listOwnedBlogPosts()
 
-  return [
+  const staticRoutes: MetadataRoute.Sitemap = [
     // Homepage
     {
       url: baseUrl,
@@ -825,4 +827,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
   ]
+
+  const blogRoutes: MetadataRoute.Sitemap = blogPosts.map((post) => ({
+    url: `${baseUrl}/post/${post.slug}`,
+    lastModified: post.publishDate,
+    changeFrequency: 'monthly',
+    priority: 0.75,
+  }))
+
+  return [...staticRoutes, ...blogRoutes]
 }

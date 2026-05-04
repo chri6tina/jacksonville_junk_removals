@@ -1,10 +1,8 @@
 'use client'
 
-import { useState, useEffect } from 'react'
-import type { Metadata } from 'next'
+import { useEffect, useState } from 'react'
 import Link from 'next/link'
-import { Plus, Edit, Trash2, Eye, Calendar, User, Clock } from 'lucide-react'
-import AdminNav from '@/components/AdminNav'
+import { Calendar, Clock, Eye, FileText, RefreshCw, Trash2, User } from 'lucide-react'
 
 interface BlogPost {
   id: string
@@ -16,9 +14,8 @@ interface BlogPost {
   readTime: number
   publishDate: string
   imageUrl?: string
+  wordCount?: number
 }
-
-// Admin pages are client components and cannot export metadata
 
 export default function AdminBlogPage() {
   const [posts, setPosts] = useState<BlogPost[]>([])
@@ -32,12 +29,10 @@ export default function AdminBlogPage() {
   const fetchPosts = async () => {
     try {
       setLoading(true)
+      setError('')
       const response = await fetch('/api/blog')
-      if (!response.ok) {
-        throw new Error('Failed to fetch posts')
-      }
-      const data = await response.json()
-      setPosts(data)
+      if (!response.ok) throw new Error('Failed to fetch posts')
+      setPosts(await response.json())
     } catch (err) {
       setError(err instanceof Error ? err.message : 'An error occurred')
     } finally {
@@ -45,21 +40,19 @@ export default function AdminBlogPage() {
     }
   }
 
-  const handleDelete = async (id: string) => {
-    if (!confirm('Are you sure you want to delete this post?')) return
+  const handleDelete = async (slug: string) => {
+    if (!confirm('Delete this owned blog post from Vercel Blob?')) return
 
     try {
-      const response = await fetch(`/api/blog/${id}`, {
-        method: 'DELETE',
-      })
-
-      if (response.ok) {
-        setPosts(posts.filter(post => post.id !== id))
-      } else {
-        const data = await response.json()
-        alert(data.message || 'Failed to delete post')
+      const response = await fetch(`/api/blog/${slug}`, { method: 'DELETE' })
+      if (!response.ok) {
+        const data = await response.json().catch(() => ({}))
+        alert(data.error || 'Failed to delete post')
+        return
       }
-    } catch (err) {
+
+      setPosts(posts.filter((post) => post.slug !== slug))
+    } catch {
       alert('Error deleting post')
     }
   }
@@ -68,8 +61,8 @@ export default function AdminBlogPage() {
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
         <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto mb-4"></div>
-          <p className="text-gray-600">Loading blog posts...</p>
+          <RefreshCw className="w-10 h-10 text-primary animate-spin mx-auto mb-4" />
+          <p className="text-gray-600">Loading owned blog posts...</p>
         </div>
       </div>
     )
@@ -79,13 +72,10 @@ export default function AdminBlogPage() {
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
         <div className="text-center">
-          <div className="text-secondary text-6xl mb-4">⚠️</div>
+          <FileText className="w-12 h-12 text-secondary mx-auto mb-4" />
           <h2 className="text-xl font-semibold text-gray-900 mb-2">Error Loading Posts</h2>
           <p className="text-gray-600 mb-4">{error}</p>
-          <button
-            onClick={fetchPosts}
-            className="px-4 py-2 bg-primary text-white rounded-md hover:opacity-90"
-          >
+          <button onClick={fetchPosts} className="px-4 py-2 bg-primary text-white rounded-md hover:opacity-90">
             Try Again
           </button>
         </div>
@@ -95,23 +85,20 @@ export default function AdminBlogPage() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Header */}
       <div className="bg-white border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-between gap-4">
             <div>
-              <h1 className="text-3xl font-bold text-gray-900">Blog Management</h1>
-              <p className="text-gray-600 mt-1">Manage your blog posts and content</p>
+              <h1 className="text-3xl font-bold text-gray-900">Owned Blog Management</h1>
+              <p className="text-gray-600 mt-1">Review posts from the autonomous Jacksonville SEO writer.</p>
             </div>
             <div className="flex space-x-3">
               <Link
-                href="https://app.contentful.com/spaces/xpopyri6s8gv/entries"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="/api/cron/generate-blog?dryRun=1"
                 className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-primary hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
               >
-                <Plus className="w-4 h-4 mr-2" />
-                Create New Post
+                <RefreshCw className="w-4 h-4 mr-2" />
+                Preview Next Topic
               </Link>
               <Link
                 href="/admin"
@@ -124,90 +111,59 @@ export default function AdminBlogPage() {
         </div>
       </div>
 
-      {/* Content */}
       <div className="py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Info Banner */}
           <div className="bg-gray-50 border border-gray-200 rounded-lg p-4 mb-6">
-            <div className="flex">
-              <div className="flex-shrink-0">
-                <div className="text-blue-400 text-2xl">ℹ️</div>
-              </div>
-              <div className="ml-3">
-                <h3 className="text-sm font-medium text-primary">
-                  Content Management Moved to Contentful
-                </h3>
-                <div className="mt-2 text-sm text-primary">
-                  <p>
-                    All blog post creation, editing, and deletion is now handled directly in Contentful. 
-                    Use the "Create New Post" button above to manage your content.
-                  </p>
-                </div>
-              </div>
-            </div>
+            <h3 className="text-sm font-medium text-primary">Autonomous Blog System Active</h3>
+            <p className="mt-2 text-sm text-primary">
+              Posts are stored in the project-owned blog system and generated weekly by the SEO cron.
+            </p>
           </div>
 
-          {/* Posts Table */}
           <div className="bg-white shadow overflow-hidden sm:rounded-md">
             <div className="px-4 py-5 sm:px-6 border-b border-gray-200">
-              <h3 className="text-lg leading-6 font-medium text-gray-900">
-                Blog Posts ({posts.length})
-              </h3>
+              <h3 className="text-lg leading-6 font-medium text-gray-900">Blog Posts ({posts.length})</h3>
             </div>
-            
+
             {posts.length === 0 ? (
               <div className="text-center py-12">
-                <div className="text-6xl mb-4">📝</div>
+                <FileText className="w-12 h-12 text-secondary mx-auto mb-4" />
                 <h3 className="text-lg font-medium text-gray-900 mb-2">No blog posts yet</h3>
-                <p className="text-gray-600 mb-6">
-                  Create your first blog post in Contentful to get started.
-                </p>
+                <p className="text-gray-600 mb-6">The autonomous writer will publish the first owned post on its next run.</p>
                 <Link
-                  href="https://app.contentful.com/spaces/xpopyri6s8gv/entries"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="/api/cron/generate-blog?dryRun=1"
                   className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-primary hover:opacity-90"
                 >
-                  Create Blog Post
+                  Preview Next Topic
                 </Link>
               </div>
             ) : (
               <ul className="divide-y divide-gray-200">
                 {posts.map((post) => (
-                  <li key={post.id} className="px-4 py-4 sm:px-6">
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center space-x-4">
-                        {/* Post Image */}
+                  <li key={post.slug} className="px-4 py-4 sm:px-6">
+                    <div className="flex items-center justify-between gap-4">
+                      <div className="flex items-center space-x-4 min-w-0">
                         {post.imageUrl ? (
-                          <img
-                            src={post.imageUrl}
-                            alt={post.title}
-                            className="w-16 h-16 object-cover rounded-lg"
-                          />
+                          <img src={post.imageUrl} alt={post.title} className="w-16 h-16 object-cover rounded-lg" />
                         ) : (
                           <div className="w-16 h-16 bg-gray-200 rounded-lg flex items-center justify-center">
-                            <div className="text-gray-400 text-2xl">📝</div>
+                            <FileText className="w-7 h-7 text-gray-400" />
                           </div>
                         )}
-                        
-                        {/* Post Info */}
+
                         <div className="flex-1 min-w-0">
                           <div className="flex items-center space-x-2 mb-1">
-                            <h4 className="text-lg font-medium text-gray-900 truncate">
-                              {post.title}
-                            </h4>
+                            <h4 className="text-lg font-medium text-gray-900 truncate">{post.title}</h4>
                             {post.featured && (
                               <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800">
                                 Featured
                               </span>
                             )}
                           </div>
-                          
-                          <p className="text-sm text-gray-600 line-clamp-2 mb-2">
-                            {post.excerpt}
-                          </p>
-                          
-                          <div className="flex items-center space-x-4 text-xs text-gray-500">
+
+                          <p className="text-sm text-gray-600 line-clamp-2 mb-2">{post.excerpt}</p>
+
+                          <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-gray-500">
                             <div className="flex items-center space-x-1">
                               <User className="w-3 h-3" />
                               <span>{post.author}</span>
@@ -218,7 +174,7 @@ export default function AdminBlogPage() {
                                 {new Date(post.publishDate).toLocaleDateString('en-US', {
                                   month: 'short',
                                   day: 'numeric',
-                                  year: 'numeric'
+                                  year: 'numeric',
                                 })}
                               </span>
                             </div>
@@ -226,12 +182,12 @@ export default function AdminBlogPage() {
                               <Clock className="w-3 h-3" />
                               <span>{post.readTime} min read</span>
                             </div>
+                            {post.wordCount ? <span>{post.wordCount.toLocaleString()} words</span> : null}
                           </div>
                         </div>
                       </div>
-                      
-                      {/* Actions */}
-                      <div className="flex items-center space-x-2">
+
+                      <div className="flex items-center space-x-2 shrink-0">
                         <Link
                           href={`/post/${post.slug}`}
                           className="inline-flex items-center px-3 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
@@ -239,19 +195,9 @@ export default function AdminBlogPage() {
                           <Eye className="w-4 h-4 mr-1" />
                           View
                         </Link>
-                        
-                        <Link
-                          href={`https://app.contentful.com/spaces/xpopyri6s8gv/entries/${post.id}`}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center px-3 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
-                        >
-                          <Edit className="w-4 h-4 mr-1" />
-                          Edit
-                        </Link>
-                        
+
                         <button
-                          onClick={() => handleDelete(post.id)}
+                          onClick={() => handleDelete(post.slug)}
                           className="inline-flex items-center px-3 py-2 border border-secondary/30 text-sm font-medium rounded-md text-primary bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500"
                         >
                           <Trash2 className="w-4 h-4 mr-1" />
